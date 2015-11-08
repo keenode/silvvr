@@ -1,0 +1,11 @@
+# TEAM
+
+    Keenan Staffieri -- Web Developer -- @keenode
+
+# THANKS
+
+    Open-Source Web Community
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, PostCSS, JavaScript (ES6), Gulp

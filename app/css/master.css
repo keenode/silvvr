@@ -1,0 +1,43 @@
+/**
+ * master.css
+ * All application styles are imported from here.
+*/
+
+/* --- variables --- */
+
+:root {
+    --bgColor: #eee;
+    --fontColor: #333;
+    --logoColor: #555;
+}
+
+
+/* --- generic styles --- */
+
+body {
+    color: var(--fontColor);
+    background-color: var(--bgColor);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    color: var(--logoColor);
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+
+/* --- helper classes --- */
+
+.inner-container {
+    @neat-outer-container;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* --- pages styles --- */
+@import 'pages/index';

@@ -1,0 +1,25 @@
+# Mac OSX Files
+.DS_Store
+.Trashes
+.Spotlight-V100
+.AppleDouble
+.LSOverride
+
+# Bower & Node Modules
+node_modules
+bower_components
+npm-debug.log
+
+# General Files
+.sass-cache
+.hg
+.idea
+.svn
+.cache
+.project
+.tmp
+.scssc
+
+# Silvvr Files
+dist
+app/assets/favicons

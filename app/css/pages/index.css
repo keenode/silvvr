@@ -1,0 +1,19 @@
+/**
+ * pages/index.css
+ * Index page specific styles.
+*/
+
+.body-content {
+    max-width: 600px;
+    padding: 10px 20px;
+    margin: 0 auto 50px auto;
+    background-color: #f9f9f9;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+}
+
+.copyright-line {
+    display: block;
+    font-size: 13px;
+    text-align: center;
+}
