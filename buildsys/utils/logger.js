@@ -34,7 +34,7 @@ export default {
 
                 case 'banner':
                     gutil.log(
-                        gutil.colors.bgBlue(
+                        gutil.colors.green.bgBlack(
                             '\n|..............................................|\n|............ ' + logString + ' ............|\n|==============================================|'
                         )
                     );
