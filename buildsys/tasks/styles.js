@@ -16,6 +16,7 @@ import cssImport from 'postcss-import';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
 import gutil from 'gulp-util';
+import plumber from 'gulp-plumber';
 
 /* $ gulp styles */
 
@@ -51,6 +52,13 @@ gulp.task('styles', function () {
 
     // Copy and process css files to build dir
     return gulp.src(`${config.appDir.css}/**/*.css`)
+        .pipe(plumber({
+            errorHandler: function (err) {
+                gutil.beep();
+                logger.log(`CSS ERROR >> ${err.name} :\n ${err.message}`);
+                this.emit('end');
+            }
+        }))
         .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
         .pipe(postcss(processors))
         .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
