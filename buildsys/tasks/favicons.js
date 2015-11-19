@@ -18,7 +18,7 @@ gulp.task(
     'generate-favicons',
     function (cb) {
 
-        logger.log('RUNNING TASK : generate-favicons', 'runTask');
+        logger.task('RUNNING TASK : generate-favicons');
 
         runSequence(
             'favicons:reset-template',
@@ -55,11 +55,11 @@ gulp.task('favicons:make', function () {
 });
 
 
-/* $ gulp favicons */
+/* $ gulp favicons:copy */
 
-gulp.task('favicons', function () {
+gulp.task('favicons:copy', function () {
 
-    logger.log('RUNNING TASK : favicons', 'runTask');
+    logger.task('RUNNING TASK : favicons:copy');
 
     // Copy favicon images to favicons build dir
     return gulp.src(`${config.appDir.favicons}/**/*.*`)

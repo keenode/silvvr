@@ -51,9 +51,9 @@ global.buildOnlyMode = buildOnlyMode;
 /**
     Startup Banner log
 */
-logger.log('S I L V V R  Started', 'banner');
-logger.log(`${pkg.name} @version ${pkg.version}`, 'header');
-logger.log(`By ${pkg.author}`, 'header');
+logger.banner('S I L V V R  Started');
+logger.header(`${pkg.name} @version ${pkg.version}`);
+logger.header(`By ${pkg.author}`);
 
 
 /**
@@ -62,7 +62,7 @@ logger.log(`By ${pkg.author}`, 'header');
 var tasks = fs.readdirSync('./buildsys/tasks/');
 tasks.forEach(function (task) {
     if(/\.js/.test(task)) {
-        logger.log('Requiring task ' + task + '...', 'info');
+        logger.info('Requiring task ' + task + '...');
         require(`./tasks/${task}`);
     }
 });

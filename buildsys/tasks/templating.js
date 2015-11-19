@@ -21,7 +21,7 @@ import runSequence from 'run-sequence';
     > Set up JavaScript bundles and minify .html files.
 */
 gulp.task('templating', function (cb) {
-    logger.log('RUNNING TASK : templating', 'runTask');
+    logger.task('RUNNING TASK : templating');
     runSequence(
         'templating:process',
         [

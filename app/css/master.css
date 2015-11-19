@@ -5,7 +5,7 @@
 
 /* --- variables --- */
 
-$globalTest: red;
+$globalTest: #eee;
 
 :root {
     --bgColor: #eee;

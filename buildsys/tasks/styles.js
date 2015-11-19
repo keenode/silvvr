@@ -22,7 +22,7 @@ import plumber from 'gulp-plumber';
 
 gulp.task('styles', function () {
 
-    logger.log('RUNNING TASK : styles', 'runTask');
+    logger.task('RUNNING TASK : styles');
 
     // Get build environment settings
     var optimizeCSS   = config.env[env].css.optimize,
@@ -55,7 +55,7 @@ gulp.task('styles', function () {
         .pipe(plumber({
             errorHandler: function (err) {
                 gutil.beep();
-                logger.log(`CSS ERROR >> ${err.name} :\n ${err.message}`);
+                logger.error(`CSS ERROR >> ${err.name} :\n ${err.message}`);
                 this.emit('end');
             }
         }))

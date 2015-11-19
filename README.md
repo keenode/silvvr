@@ -21,7 +21,7 @@ Automate your web development process with ease! When changes are made to your c
 * Uses the **PostCSS Neat grid framework** -- http://jo-asakura.github.io/postcss-neat/index.html
 
 ## Requirements
-You will need **NodeJS 4.0.0 DO NOT USE 5.0.0+** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
+You will need **NodeJS 5.0 or greater** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
 
 ## Install
 To install **silvvr**, simply clone this repo and create your own repo instance. 

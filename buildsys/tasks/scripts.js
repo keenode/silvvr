@@ -17,7 +17,7 @@ import plumber from 'gulp-plumber';
 
 gulp.task('scripts', function () {
 
-    logger.log('RUNNING TASK : scripts', 'runTask');
+    logger.task('RUNNING TASK : scripts');
 
     // Get build environment settings
     var useES6        = config.useES6,
