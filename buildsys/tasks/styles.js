@@ -9,10 +9,10 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import mqpacker from 'css-mqpacker';
 import csswring from 'csswring';
+import preCss from 'precss';
 import cssnext from 'cssnext';
 import neat from 'postcss-neat';
 import normalize from 'postcss-normalize';
-import cssImport from 'postcss-import';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
 import gutil from 'gulp-util';
@@ -30,7 +30,7 @@ gulp.task('styles', function () {
 
     // Set up PostCSS processors
     var processors = [
-        cssImport,
+        preCss,
         autoprefixer({ browsers: ['last 2 versions'] }),
         cssnext(),
         neat({

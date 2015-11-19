@@ -40,25 +40,18 @@ gulp.task('favicons:reset-template', function (cb) {
 
 gulp.task('favicons:make', function () {
     // Actually generate the favicon images
-    return gulp.src(`${config.appDir.views}/partials/favicons.html`)
+    return gulp.src(`${config.appDir.root}/assets/favicon.png`)
         .pipe(favicons({
-            files: {
-                src: config.appDir.favicon,
-                dest: '../../assets/favicons',
-                iconsPath: 'assets/favicons'
-            },
-            settings: {
-                appName: pkg.name,
-                appDescription: pkg.description,
-                developer: pkg.author,
-                version: pkg.version,
-                background: 'transparent',
-                url: pkg.homepage,
-                logging: config.verbose
-            }
-            }, function (err) {
-                logger.log(err, 'error');
-        }));
+            appName: pkg.name,
+            appDescription: pkg.description,
+            developer: pkg.author,
+            version: pkg.version,
+            background: 'transparent',
+            url: pkg.homepage,
+            logging: config.verbose,
+            html: `${config.appDir.views}/partials/favicons.html`
+        }))
+        .pipe(gulp.dest(config.appDir.favicons));
 });
 
 

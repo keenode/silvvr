@@ -13,12 +13,12 @@
 
 import runSequence from 'run-sequence';
 
-/* --- $ gulp init --- */
+/* --- $ gulp favicons --- */
 
 gulp.task(
-    'init',
+    'favicons',
     function (cb) {
-        logger.log('Running INITIALIZATION tasks...', 'command');
+        logger.log('Running FAVICONS tasks...', 'command');
         runSequence(
             'generate-favicons',
         cb);

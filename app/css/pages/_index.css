@@ -3,6 +3,10 @@
  * Index page specific styles.
 */
 
+body {
+    background-color: $globalTest;
+}
+
 .body-content {
     max-width: 600px;
     padding: 10px 20px;
