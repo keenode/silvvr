@@ -5,25 +5,21 @@
 
 /* --- variables --- */
 
-$globalTest: #eee;
-
-:root {
-    --bgColor: #eee;
-    --fontColor: #333;
-    --logoColor: #555;
-}
+$bgColor:   #eee;
+$fontColor: #333;
+$logoColor: #555;
 
 
 /* --- generic styles --- */
 
 body {
-    color: var(--fontColor);
-    background-color: var(--bgColor);
+    color: $fontColor;
+    background-color: $bgColor;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 {
-    color: var(--logoColor);
+    color: $logoColor;
     font-size: 60px;
     text-align: center;
     letter-spacing: 3px;
