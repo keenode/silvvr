@@ -40,10 +40,6 @@ gulp.task('templating:process', function () {
     var canMinifyHTML = config.env[env].html.minify,
         canBundle     = config.env[env].js.bundle;
 
-    var assets = useref.assets({
-        searchPath: buildOnlyMode ? './.tmp' : './dist'
-    });
-
     return gulp.src(`${config.appDir.root}/**/*.html`)
         .pipe(swig({
             setup: function (swig) {
@@ -54,9 +50,7 @@ gulp.task('templating:process', function () {
                 });
             }
         }))
-        .pipe(canBundle ? assets : gutil.noop())
-        .pipe(canBundle ? assets.restore() : gutil.noop())
-        .pipe(canBundle ? useref() : gutil.noop())
+        .pipe(canBundle ? useref({ searchPath: buildOnlyMode ? './.tmp' : './dist' }) : gutil.noop())
         .pipe(filter(['*.html', '**/*.js']))
         .pipe(gulp.dest(config.buildDir.root));
 });
