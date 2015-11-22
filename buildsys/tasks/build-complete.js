@@ -24,7 +24,7 @@ gulp.task('build-complete:copy-tmp', function () {
     // Only copy '.tmp' to './dist' if build-only mode is on
     if(buildOnlyMode) {
         return gulp.src('./.tmp/**/*')
-            .pipe(gulp.dest(config.buildDir.root));
+            .pipe(gulp.dest(config.oldBuildDir.root));
     }
 });
 

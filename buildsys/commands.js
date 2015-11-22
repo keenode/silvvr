@@ -51,7 +51,11 @@ gulp.task(
                 Override 'dist' dir build folder to '.tmp' for build process compilation.
             */
             var rootReplace = config.buildDir.root;
+            config.oldBuildDir = {};
             for(let folder in config.buildDir) {
+                // Copy over original build dir properties
+                config.oldBuildDir[folder] = config.buildDir[folder];
+                // Assign new build dir properties with tmp folder replacing original properties
                 config.buildDir[folder] = config.buildDir[folder].replace(rootReplace, './.tmp');
             }
         }
