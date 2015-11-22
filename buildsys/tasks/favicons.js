@@ -42,14 +42,15 @@ gulp.task('favicons:make', function () {
     // Actually generate the favicon images
     return gulp.src(`${config.appDir.root}/assets/favicon.png`)
         .pipe(favicons({
-            appName: pkg.name,
+            appName:        pkg.name,
             appDescription: pkg.description,
-            developer: pkg.author,
-            version: pkg.version,
-            background: 'transparent',
-            url: pkg.homepage,
-            logging: config.verbose,
-            html: `${config.appDir.views}/partials/favicons.html`
+            developer:      pkg.author,
+            version:        pkg.version,
+            background:     'transparent',
+            url:            pkg.homepage,
+            logging:        config.verbose,
+            path:           config.buildDir.favicons.replace(config.buildDir.root + '/', ''),
+            html:           `${config.appDir.views}/partials/favicons.html`
         }))
         .pipe(gulp.dest(config.appDir.favicons));
 });
