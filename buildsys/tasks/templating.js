@@ -6,7 +6,7 @@
 */
 
 import swig from 'gulp-swig';
-import minifyHTML from 'gulp-minify-html';
+import htmlmin from 'gulp-htmlmin';
 import browserSync from 'browser-sync';
 import filter from 'gulp-filter';
 import replace from 'gulp-replace';
@@ -75,6 +75,6 @@ gulp.task('templating:minify-html', function () {
     var canMinifyHTML = config.env[env].html.minify;
 
     return gulp.src(`${config.buildDir.root}/index.html`)
-        .pipe(canMinifyHTML ? minifyHTML() : gutil.noop())
+        .pipe(canMinifyHTML ? htmlmin({ collapseWhitespace: true }) : gutil.noop())
         .pipe(gulp.dest(config.buildDir.root));
 });
