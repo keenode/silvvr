@@ -4,7 +4,7 @@
 
 #### Front-End Gulp build system and boilerplate.
 
-Automate your web development process with ease! When changes are made to your code, **silvvr** automatically sets up a browsersync server, compiles PostCSS, bundles & uglifies JavaScript, minifies images & SVGs -- all in seconds!
+Automate your web development process with ease! When changes are made to your code, **silvvr** automatically sets up a browsersync server, compiles SASS, bundles & uglifies JavaScript, minifies images & SVGs -- all in seconds!
 
 ## Features
 * Run *Development*, *Staging*, or *Production* build environments:
@@ -12,13 +12,13 @@ Automate your web development process with ease! When changes are made to your c
     * By default, *Staging* and *Production* modes will compile your app with minified and bundled JavaScript & CSS (optimized for performance).
 * Build **configuration file** to change development server port numbers, build destinations, and other build options.
 * Starts up a **browsersync server**, so changes are immediately apparent on your browser.
-* **PostCSS** w/ **autoprefixer**, **cssnext**, and other helpful plugins.
+* **SASS** w/ **autoprefixer**, and other helpful plugins.
 * **JavaScript bundling and uglify**.
 * **Image minification** for SVGs, PNGs, JPGs, and GIFs.
 * **HTML minification**.
 * **Favicons generator**.
 * Watches all asset folders and automatically copies those files to their corresponding destination folders.
-* Uses the **PostCSS Neat grid framework** -- http://jo-asakura.github.io/postcss-neat/index.html
+* Includes **Bourbon and Neat** -- http://bourbon.io/
 
 ## Requirements
 You will need **NodeJS 5.0 or greater** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
