@@ -22,6 +22,9 @@ gulp.task('styles', function () {
     var optimizeCSS   = config.env[env].css.optimize,
         useSourcemaps = config.env[env].css.sourcemaps;
 
+    var sassOutputStyle = 'expanded';
+    if(optimizeCSS) { sassOutputStyle = 'compressed'; }
+
     // Copy and process css files to build dir
     return gulp.src(`${config.appDir.css}/**/*.{scss,sass}`)
         .pipe(plumber({
@@ -32,7 +35,7 @@ gulp.task('styles', function () {
             }
         }))
         .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({ outputStyle: sassOutputStyle }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: [ 'last 2 versions' ],
             cascade: false
