@@ -1,0 +1,29 @@
+/**
+ * typography/_headings
+ * Headings styles.
+*/
+
+h1, h2 {
+    font-family: $font-family--base;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    margin: 0 0 40px;
+    font-size: em(60px);
+    line-height: 50px;
+}
+
+h2 {
+    font-size: em(40px);
+    line-height: 50px;
+}
+
+h3 {
+    font-size: em(24px);
+    line-height: 30px;
+    font-weight: 400;
+    margin: 0 0 20px;
+    letter-spacing: 1px;
+}

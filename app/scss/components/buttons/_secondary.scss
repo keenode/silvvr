@@ -1,0 +1,8 @@
+/**
+ * components/buttons/_secondary
+ * Button (secondary) component styles.
+*/
+
+%btn--secondary {
+    @include btn(none);
+}

@@ -1,0 +1,47 @@
+/**
+ * master.css
+ * All application styles are imported from here.
+*/
+
+/* --- Bourbon & Neat --- */
+
+// Bourbon
+@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+
+// Neat
+@import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+
+/* --- normalize --- */
+@import 'normalize';
+
+
+/* --- theme settings --- */
+@import 'theme-settings/_base';
+
+
+/* --- helpers --- */
+@import 'helpers';
+
+
+/* --- generic styles --- */
+
+body {
+    color: $fontColor--base;
+    font-family: $font-family--base;
+    background-color: $bgColor;
+}
+
+
+/* --- typography --- */
+@import 'typography/_base';
+
+
+/* --- components --- */
+@import 'components/buttons/_base',
+        'components/header/_base',
+        'components/footer/_base';
+
+
+/* --- pages styles --- */
+@import 'pages/index';

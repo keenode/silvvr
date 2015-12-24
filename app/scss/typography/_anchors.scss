@@ -1,0 +1,14 @@
+/**
+ * typography/_anchors
+ * Anchor styles.
+*/
+
+a {
+    color: color('blue-md');
+    text-decoration: none;
+    transition: color 100ms ease-out;
+
+    &:hover {
+        color: color('blue-lt');
+    }
+}

@@ -1,0 +1,17 @@
+/**
+ * components/buttons/_primary
+ * Button (primary) component styles.
+*/
+
+%btn--primary,
+%btn--primary--blue {
+    @include btn(color('blue-dk'));
+}
+
+%btn--primary--green {
+    @include btn(color('green-md'));
+}
+
+%btn--primary--magenta {
+    @include btn(color('magenta-md'));
+}

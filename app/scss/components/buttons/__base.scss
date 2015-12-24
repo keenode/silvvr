@@ -1,0 +1,43 @@
+/**
+ * components/buttons/__base
+ * Button component base styles.
+*/
+
+@mixin btn(
+    $bgColor:        color('gray-md'),
+    $bgColor--hover: white,
+    $color:          white,
+    $color--hover:   black
+) {
+    display: inline-block;
+    color: $color;
+    background-color: $bgColor;
+    border: 0;
+    margin: 5px 0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: color 100ms ease-out,
+                background-color 100ms ease-out;
+
+    &:hover {
+        color: $color--hover;
+        background: $bgColor--hover;
+    }
+}
+
+%btn--base {
+    @include btn();
+}
+
+
+/* --- derivative buttons --- */
+
+/* Primary Button */
+@import 'primary';
+
+/* Secondary Button */
+@import 'secondary';
