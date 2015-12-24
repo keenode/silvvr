@@ -3,23 +3,20 @@
  * Index page specific styles.
 */
 
-.content-container {
+.index-page {
     @extend %outer-container;
-    min-height: 80vh;
     padding-top: 50px;
-}
 
-.body-content {
-    max-width: 600px;
-    padding: 10px 20px;
-    margin: 0 auto 50px auto;
-    background-color: #f9f9f9;
-    border: 3px solid #ddd;
-    border-radius: 8px;
-}
+    &__content {
+        max-width: 80%;
+        padding: 20px;
+        margin: 0 auto 50px auto;
+        text-align: center;
+        background-color: white;
+        border: 1px solid #ddd;
+    }
 
-.copyright-line {
-    display: block;
-    font-size: 13px;
-    text-align: center;
+    &__content p {
+        margin: 0;
+    }
 }

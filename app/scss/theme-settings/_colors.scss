@@ -52,10 +52,9 @@ $colors: (
 }
 
 
+/* --- background colors --- */
+$bgColor: #f6f6f6;
 
-/* --- background --- */
-$bgColor: color('gray-dk');
 
-
-/* --- fonts --- */
-$fontColor--base: #eee;
+/* --- font colors --- */
+$fontColor--base: color('gray-dk');

@@ -4,8 +4,6 @@
 */
 
 .footer {
-    background-color: black;
-    padding: 30px 0;
 
     &__container {
         @extend %outer-container;
@@ -13,7 +11,7 @@
 
     &__copyright {
         display: block;
-        color: color('gray-md');
+        color: color('gray-lt');
         font-size: em(12px);
         text-align: center;
     }

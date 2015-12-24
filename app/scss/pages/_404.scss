@@ -1,0 +1,14 @@
+/**
+ * pages/_404
+ * 404 page specific styles.
+*/
+
+.fourofour-page {
+    @extend %outer-container;
+    padding-top: 50px;
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+}

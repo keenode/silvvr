@@ -4,16 +4,16 @@
 */
 
 .header {
+    padding: 40px 0;
     background-color: color('gray-md');
-    padding-top: 60px;
 
     &__container {
         @extend %outer-container;
     }
 
     &__title {
+        margin: 0;
         color: #ddd;
-        margin: 40px 0;
         font-weight: 700;
         text-align: center;
         letter-spacing: 5px;
