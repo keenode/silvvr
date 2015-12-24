@@ -3,15 +3,6 @@
  * Button (primary) component styles.
 */
 
-%btn--primary,
-%btn--primary--blue {
+%btn--primary {
     @include btn(color('blue-dk'));
-}
-
-%btn--primary--green {
-    @include btn(color('green-md'));
-}
-
-%btn--primary--magenta {
-    @include btn(color('magenta-md'));
 }

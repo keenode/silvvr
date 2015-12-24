@@ -1,6 +1,6 @@
 /**
  * _helpers
- * Extendable helper placeholders.
+ * Extendable helper placeholders & mixins.
 */
 
 /**
@@ -28,6 +28,10 @@
     padding: 0;
 }
 
+
+/**
+    Apply font antialiasing.
+*/
 @mixin font-aa {
     -webkit-font-smoothing: antialiased;
 }

@@ -4,5 +4,5 @@
 */
 
 %btn--secondary {
-    @include btn(none);
+    @include btn(none, #ccc, black);
 }

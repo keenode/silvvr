@@ -4,8 +4,8 @@
 */
 
 @mixin btn(
-    $bgColor:        color('gray-md'),
-    $bgColor--hover: white,
+    $bgColor:        color('gray-lt'),
+    $bgColor--hover: #ccc,
     $color:          white,
     $color--hover:   black
 ) {
