@@ -123,8 +123,8 @@ export default {
     // Application directory structure (app folder)
     appDir: {
         root:     appRoot,
-        css:      appRoot + '/css',
-        scripts:  appRoot + '/js',
+        css:      appRoot + '/scss',
+        js:       appRoot + '/js',
         views:    appRoot + '/views',
         favicon:  appRoot + '/assets/favicon.png', // Image file used to generate favicons
         favicons: appRoot + '/assets/favicons',

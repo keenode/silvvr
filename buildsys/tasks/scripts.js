@@ -28,7 +28,7 @@ gulp.task('scripts', function () {
     /**
         Actually perform various transformations on the file(s).
     */
-    return gulp.src(`${config.appDir.scripts}/**/*.js`)
+    return gulp.src(`${config.appDir.js}/**/*.js`)
         .pipe(plumber({
             errorHandler: function (err) {
                 gutil.beep();
@@ -37,7 +37,7 @@ gulp.task('scripts', function () {
             }
         }))
         .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
-        .pipe(useES6 ? babel({ ignore: config.appDir.scripts + '/vendor/*' }) : gutil.noop())
+        .pipe(useES6 ? babel({ ignore: config.appDir.js + '/vendor/*' }) : gutil.noop())
         .pipe(canStripDebug ? stripDebug() : gutil.noop())
         .pipe(canUglify ? uglify() : gutil.noop())
         .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
