@@ -5,14 +5,8 @@
  * 'gulp styles'
 */
 
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import mqpacker from 'css-mqpacker';
-import csswring from 'csswring';
-import preCss from 'precss';
-import cssnext from 'cssnext';
-import neat from 'postcss-neat';
-import normalize from 'postcss-normalize';
+import sass from 'gulp-sass';
+import autoprefixer from 'gulp-autoprefixer'
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
 import gutil from 'gulp-util';
@@ -28,30 +22,8 @@ gulp.task('styles', function () {
     var optimizeCSS   = config.env[env].css.optimize,
         useSourcemaps = config.env[env].css.sourcemaps;
 
-    // Set up PostCSS processors
-    var processors = [
-        preCss,
-        autoprefixer({ browsers: ['last 2 versions'] }),
-        cssnext(),
-        neat({
-            neatGridColumns: 12,
-            neatMaxWidth: '1200px',
-            neatGutterWidth: '1.618em'
-        }),
-        normalize
-    ];
-
-    /**
-        Add CSS minifications and media query packing
-        if environment allows for it.
-    */
-    if(optimizeCSS) {
-        processors.push(mqpacker);
-        processors.push(csswring);
-    }
-
     // Copy and process css files to build dir
-    return gulp.src(`${config.appDir.css}/**/*.css`)
+    return gulp.src(`${config.appDir.css}/**/*.{scss,sass}`)
         .pipe(plumber({
             errorHandler: function (err) {
                 gutil.beep();
@@ -60,7 +32,11 @@ gulp.task('styles', function () {
             }
         }))
         .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
-        .pipe(postcss(processors))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: [ 'last 2 versions' ],
+            cascade: false
+        }))
         .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
         .pipe(gulp.dest(config.buildDir.css))
         .pipe(config.browserSync.injectCSS ? browserSync.stream() : gutil.noop());
