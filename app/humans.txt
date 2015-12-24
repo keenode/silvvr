@@ -8,4 +8,4 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, PostCSS, JavaScript (ES6), Gulp
+    HTML5, SASS, JavaScript (ES6), Gulp
