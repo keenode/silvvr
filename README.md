@@ -1,6 +1,6 @@
 # silvvr
 
-**v0.2.1**
+**v0.3.0**
 
 #### Front-End Gulp build system and boilerplate.
 
