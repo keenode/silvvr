@@ -82,7 +82,6 @@ gulp.task('watch', function () {
             name: 'Post-Build Watcher',
             verbose: config.verbose
         }).on('change', function () {
-            logger.log('config.browserSync.allowReload: ' + config.browserSync.allowReload);
             if(config.browserSync.allowReload) {
                 browserSync.reload();
             }
