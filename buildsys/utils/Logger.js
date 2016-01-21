@@ -16,9 +16,15 @@ class Logger {
     static task(logString) {
         if(config.verbose) {
             gutil.log(
-                gutil.colors.inverse(
-                    ' --- ' + logString + ' --- '
-                )
+                gutil.colors.inverse(` --- ${logString} --- `)
+            );
+        }
+    }
+
+    static taskComplete(logString) {
+        if(config.verbose) {
+            gutil.log(
+                gutil.colors.black.bgGreen(` --- ${logString} --- `)
             );
         }
     }
@@ -48,7 +54,9 @@ class Logger {
     }
 
     static warn(logString) {
-        gutil.log(gutil.colors.yellow(logString));
+        if(config.verbose) {
+            gutil.log(gutil.colors.yellow(logString));
+        }
     }
 
     static error(logString) {

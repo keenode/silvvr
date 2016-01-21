@@ -13,7 +13,7 @@ import imagemin from 'gulp-imagemin';
 
 gulp.task('images', function () {
 
-    Logger.log('RUNNING TASK : images', 'runTask');
+    Logger.task('RUNNING TASK : images');
 
     // Get build environment settings
     var pngOptimization = config.env[env].images.pngOptimization,
@@ -26,5 +26,6 @@ gulp.task('images', function () {
             optimizationLevel: pngOptimization,
             multipass: svgMultipass
         })))
-        .pipe(gulp.dest(config.buildDir.images));
+        .pipe(gulp.dest(config.buildDir.images))
+        .on('end', function () { return Logger.taskComplete('FINISHED TASK : images'); });
 });

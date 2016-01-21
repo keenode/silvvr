@@ -14,16 +14,16 @@ import pkg from '../../package.json';
     $ gulp generate-favicons
     > Generate supported favicon images for varying devices.
 */
-gulp.task(
-    'generate-favicons',
-    function (cb) {
-        Logger.task('RUNNING TASK : generate-favicons');
-        runSequence(
-            'favicons:reset-template',
-            'favicons:make',
-        cb);
-    }
-);
+gulp.task('generate-favicons', function (cb) {
+    Logger.task('RUNNING TASK : generate-favicons');
+    runSequence(
+        'favicons:reset-template',
+        'favicons:make',
+    function () {
+        Logger.taskComplete('FINISHED TASK : generate-favicons');
+        cb();
+    });
+});
 
 
 /* $ gulp favicons:reset-template */

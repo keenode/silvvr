@@ -15,7 +15,13 @@ import runSequence from 'run-sequence';
 */
 gulp.task('clean', function (cb) {
     Logger.task('RUNNING TASK : clean');
-    runSequence(['clean:clear-cache', 'clean:delete-dist'], cb);
+    runSequence([
+        'clean:clear-cache',
+        'clean:delete-dist'],
+    function () {
+        Logger.taskComplete('FINISHED TASK : clean');
+        cb();
+    });
 });
 
 

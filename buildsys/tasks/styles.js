@@ -42,5 +42,6 @@ gulp.task('styles', function () {
         }))
         .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
         .pipe(gulp.dest(config.buildDir.css))
-        .pipe(config.browserSync.injectCSS ? browserSync.stream() : gutil.noop());
+        .pipe(config.browserSync.injectCSS ? browserSync.stream() : gutil.noop())
+        .on('end', function () { return Logger.taskComplete('FINISHED TASK : styles'); });
 });

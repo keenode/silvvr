@@ -13,68 +13,57 @@
 
 import runSequence from 'run-sequence';
 
-/* --- $ gulp favicons --- */
-
-gulp.task(
-    'favicons',
-    function (cb) {
-        Logger.notice('Running FAVICONS tasks...');
-        runSequence(
-            'generate-favicons',
-        cb);
-    }
-);
-
-
 /* --- $ gulp --- */
 
-gulp.task(
-    'default',
-    function (cb) {
+gulp.task('default', function (cb) {
 
-        // Log build mode setting
-        var buildModeText = 'DEVELOPMENT';
-        if      (env === 'stage') { buildModeText = 'STAGING';    }
-        else if (env === 'prod')  { buildModeText = 'PRODUCTION'; }
+    // Log build mode setting
+    var buildModeText = 'DEVELOPMENT';
+    if      (env === 'stage') { buildModeText = 'STAGING';    }
+    else if (env === 'prod')  { buildModeText = 'PRODUCTION'; }
 
-        Logger.notice(`Running tasks in ${buildModeText} mode...`);
+    Logger.notice(`Running tasks in ${buildModeText} mode...`);
+
+    /**
+        > If the '--build' flag is passed, all files will output to a '.tmp' dir.
+        > The original 'dist' dir will not be deleted until all files are processed.
+        > After all tasks finish, contents of the '.tmp' dir will be copied over to the 'dist' dir.
+    */
+    if(buildOnlyMode) {
+        Logger.notice('Build-only mode. File watching is disabled.');
 
         /**
-            > If the '--build' flag is passed, all files will output to a '.tmp' dir.
-            > The original 'dist' dir will not be deleted until all files are processed.
-            > After all tasks finish, contents of the '.tmp' dir will be copied over to the 'dist' dir.
+            Override 'dist' dir build folder to '.tmp' for build process compilation.
         */
-        if(buildOnlyMode) {
-            Logger.notice('Build-only mode. File watching is disabled.');
-
-            /**
-                Override 'dist' dir build folder to '.tmp' for build process compilation.
-            */
-            var rootReplace = config.buildDir.root;
-            config.oldBuildDir = {};
-            for(let folder in config.buildDir) {
-                // Copy over original build dir properties
-                config.oldBuildDir[folder] = config.buildDir[folder];
-                // Assign new build dir properties with tmp folder replacing original properties
-                config.buildDir[folder] = config.buildDir[folder].replace(rootReplace, './.tmp');
-            }
+        var rootReplace = config.buildDir.root;
+        config.oldBuildDir = {};
+        for(let folder in config.buildDir) {
+            // Copy over original build dir properties
+            config.oldBuildDir[folder] = config.buildDir[folder];
+            // Assign new build dir properties with tmp folder replacing original properties
+            config.buildDir[folder] = config.buildDir[folder].replace(rootReplace, './.tmp');
         }
-
-        runSequence(
-            'clean',
-            [ // Run these tasks in parallel...
-                'styles',
-                'scripts',
-                'images',
-                'favicons:copy',
-                'fonts',
-                'videos',
-                'rootfiles'
-            ],
-            'templating',
-            'serve',
-            'watch',
-            'build-complete',
-        cb);
     }
-);
+
+    runSequence(
+        'clean',
+        [ // Run these tasks in parallel...
+            'styles',
+            'scripts',
+            'images',
+            'favicons:copy',
+            'fonts',
+            'videos',
+            'rootfiles'
+        ],
+        'templating',
+        'serve',
+        'watch',
+        'build-complete',
+    function () {
+        if( ! buildOnlyMode) {
+            Logger.notice('Watching files for changes...');
+        }
+        cb();
+    });
+});

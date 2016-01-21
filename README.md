@@ -39,7 +39,7 @@ To install **silvvr**, simply clone this repo and create your own repo instance.
 
         npm install
 
-4. Run `gulp favicons` to generate favicons from `app/assets/favicon.png`.
+4. Run `gulp generate-favicons` to generate favicons from `app/assets/favicon.png`.
 
 5. Now run `gulp` --this will start **silvvr** in development mode.
 

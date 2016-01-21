@@ -41,5 +41,5 @@ gulp.task('scripts', function () {
         .pipe(canStripDebug ? stripDebug() : gutil.noop())
         .pipe(canUglify ? uglify() : gutil.noop())
         .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
-        .pipe(gulp.dest(config.buildDir.js));
+        .on('end', function () { return Logger.taskComplete('FINISHED TASK : scripts'); });
 });

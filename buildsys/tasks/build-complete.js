@@ -14,7 +14,13 @@ import runSequence from 'run-sequence';
 */
 gulp.task('build-complete', function (cb) {
     Logger.task('RUNNING TASK : build-complete');
-    runSequence('build-complete:copy-tmp', 'build-complete:delete-tmp', cb);
+    runSequence(
+        'build-complete:copy-tmp',
+        'build-complete:delete-tmp',
+    function () {
+        Logger.taskComplete('FINISHED TASK : build-complete');
+        cb();
+    });
 });
 
 
