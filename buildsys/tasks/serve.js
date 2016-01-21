@@ -14,7 +14,7 @@ gulp.task('serve', function () {
     // Only serve files if build-only mode is off
     if( ! buildOnlyMode) {
 
-        logger.task('RUNNING TASK : serve');
+        Logger.task('RUNNING TASK : serve');
 
         return browserSync.init({
             server: {

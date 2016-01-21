@@ -19,7 +19,7 @@ gulp.task('watch', function () {
     // Only watch files if build-only mode is off
     if( ! buildOnlyMode) {
 
-        logger.task('RUNNING TASK : watch');
+        Logger.task('RUNNING TASK : watch');
 
         watch(`${config.appDir.root}/*`, {
             name: 'Rootfiles Watcher',

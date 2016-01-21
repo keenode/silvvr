@@ -9,7 +9,7 @@
 
 gulp.task('videos', function () {
     // Copy videos to build dir
-    logger.task('RUNNING TASK : videos');
+    Logger.task('RUNNING TASK : videos');
     return gulp.src(`${config.appDir.videos}/**/*`)
         .pipe(gulp.dest(config.buildDir.videos));
 });
