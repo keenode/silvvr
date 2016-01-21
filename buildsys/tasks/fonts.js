@@ -9,7 +9,7 @@
 
 gulp.task('fonts', function () {
     // Copy fonts to build dir
-    logger.task('RUNNING TASK : fonts');
+    Logger.task('RUNNING TASK : fonts');
     return gulp.src(`${config.appDir.fonts}/**/*`)
         .pipe(gulp.dest(config.buildDir.fonts));
 });

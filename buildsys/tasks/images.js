@@ -13,7 +13,7 @@ import imagemin from 'gulp-imagemin';
 
 gulp.task('images', function () {
 
-    logger.log('RUNNING TASK : images', 'runTask');
+    Logger.log('RUNNING TASK : images', 'runTask');
 
     // Get build environment settings
     var pngOptimization = config.env[env].images.pngOptimization,

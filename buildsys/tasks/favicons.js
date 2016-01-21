@@ -17,9 +17,7 @@ import pkg from '../../package.json';
 gulp.task(
     'generate-favicons',
     function (cb) {
-
-        logger.task('RUNNING TASK : generate-favicons');
-
+        Logger.task('RUNNING TASK : generate-favicons');
         runSequence(
             'favicons:reset-template',
             'favicons:make',
@@ -60,7 +58,7 @@ gulp.task('favicons:make', function () {
 
 gulp.task('favicons:copy', function () {
 
-    logger.task('RUNNING TASK : favicons:copy');
+    Logger.task('RUNNING TASK : favicons:copy');
 
     // Copy favicon images to favicons build dir
     return gulp.src(`${config.appDir.favicons}/**/*.*`)

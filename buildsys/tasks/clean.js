@@ -14,7 +14,7 @@ import runSequence from 'run-sequence';
     > Clear gulp cache and delete original 'dist' folder.
 */
 gulp.task('clean', function (cb) {
-    logger.task('RUNNING TASK : clean');
+    Logger.task('RUNNING TASK : clean');
     runSequence(['clean:clear-cache', 'clean:delete-dist'], cb);
 });
 

@@ -18,7 +18,7 @@ import runSequence from 'run-sequence';
 gulp.task(
     'favicons',
     function (cb) {
-        logger.command('Running FAVICONS tasks...');
+        Logger.notice('Running FAVICONS tasks...');
         runSequence(
             'generate-favicons',
         cb);
@@ -37,7 +37,7 @@ gulp.task(
         if      (env === 'stage') { buildModeText = 'STAGING';    }
         else if (env === 'prod')  { buildModeText = 'PRODUCTION'; }
 
-        logger.command(`Running tasks in ${buildModeText} mode...`);
+        Logger.notice(`Running tasks in ${buildModeText} mode...`);
 
         /**
             > If the '--build' flag is passed, all files will output to a '.tmp' dir.
@@ -45,7 +45,7 @@ gulp.task(
             > After all tasks finish, contents of the '.tmp' dir will be copied over to the 'dist' dir.
         */
         if(buildOnlyMode) {
-            logger.command('Build-only mode. File watching is disabled.');
+            Logger.notice('Build-only mode. File watching is disabled.');
 
             /**
                 Override 'dist' dir build folder to '.tmp' for build process compilation.

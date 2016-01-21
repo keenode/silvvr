@@ -13,7 +13,7 @@ import runSequence from 'run-sequence';
     > Copies files from '.tmp' into 'dist'.
 */
 gulp.task('build-complete', function (cb) {
-    logger.task('RUNNING TASK : build-complete');
+    Logger.task('RUNNING TASK : build-complete');
     runSequence('build-complete:copy-tmp', 'build-complete:delete-tmp', cb);
 });
 

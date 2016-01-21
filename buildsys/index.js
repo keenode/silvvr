@@ -5,7 +5,7 @@
 
 import fs from 'fs';
 import gulp from 'gulp';
-import logger from './utils/logger';
+import Logger from './utils/Logger';
 import config from './config';
 import pkg from '../package.json';
 
@@ -38,8 +38,8 @@ global.env = env;
 // Make gulp globally accessible
 global.gulp = gulp;
 
-// Make logger globally accessible
-global.logger = logger;
+// Make Logger globally accessible
+global.Logger = Logger;
 
 // Make config globally accessible
 global.config = config;
@@ -51,9 +51,9 @@ global.buildOnlyMode = buildOnlyMode;
 /**
     Startup Banner log
 */
-logger.banner('S I L V V R  Started');
-logger.header(`${pkg.name} @version ${pkg.version}`);
-logger.header(`By ${pkg.author}`);
+Logger.banner('S I L V V R  Started');
+Logger.header(`${pkg.name} @version ${pkg.version}`);
+Logger.header(`By ${pkg.author}`);
 
 
 /**
@@ -62,7 +62,7 @@ logger.header(`By ${pkg.author}`);
 var tasks = fs.readdirSync('./buildsys/tasks/');
 tasks.forEach(function (task) {
     if(/\.js/.test(task)) {
-        logger.info('Requiring task ' + task + '...');
+        Logger.info('Requiring task ' + task + '...');
         require(`./tasks/${task}`);
     }
 });

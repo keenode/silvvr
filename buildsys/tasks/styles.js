@@ -16,7 +16,7 @@ import plumber from 'gulp-plumber';
 
 gulp.task('styles', function () {
 
-    logger.task('RUNNING TASK : styles');
+    Logger.task('RUNNING TASK : styles');
 
     // Get build environment settings
     var optimizeCSS   = config.env[env].css.optimize,
@@ -30,7 +30,7 @@ gulp.task('styles', function () {
         .pipe(plumber({
             errorHandler: function (err) {
                 gutil.beep();
-                logger.error(`CSS ERROR >> ${err.name} :\n ${err.message}`);
+                Logger.error(`CSS ERROR >> ${err.name} :\n ${err.message}`);
                 this.emit('end');
             }
         }))

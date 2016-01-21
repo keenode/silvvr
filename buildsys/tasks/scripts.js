@@ -17,7 +17,7 @@ import plumber from 'gulp-plumber';
 
 gulp.task('scripts', function () {
 
-    logger.task('RUNNING TASK : scripts');
+    Logger.task('RUNNING TASK : scripts');
 
     // Get build environment settings
     var useES6        = config.useES6,
@@ -32,7 +32,7 @@ gulp.task('scripts', function () {
         .pipe(plumber({
             errorHandler: function (err) {
                 gutil.beep();
-                logger.log(`JavaScript ERROR >> ${err.name} :\n ${err.message}`);
+                Logger.log(`JavaScript ERROR >> ${err.name} :\n ${err.message}`);
                 this.emit('end');
             }
         }))

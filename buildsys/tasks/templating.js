@@ -20,16 +20,19 @@ import runSequence from 'run-sequence';
     > Process .html files with Swig templating system.
     > Set up JavaScript bundles and minify .html files.
 */
-gulp.task('templating', function (cb) {
-    logger.task('RUNNING TASK : templating');
-    runSequence(
-        'templating:process',
-        [
-            'templating:vendor-scripts',
-            'templating:minify-html'
-        ],
-    cb);
-});
+gulp.task(
+    'templating',
+    function (cb) {
+        Logger.task('RUNNING TASK : templating');
+        runSequence(
+            'templating:process',
+            [
+                'templating:vendor-scripts',
+                'templating:minify-html'
+            ],
+        cb);
+    }
+);
 
 
 /* $ gulp templating:process */
