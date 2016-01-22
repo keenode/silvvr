@@ -44,6 +44,7 @@ export default {
                 js.sourcemaps:  (true) Generate JS sourcemaps for easier debugging.
                 images.pngOptimization: PNG Optimization level from 0 (least, fast) to 7 (most, slow) optimized.
                 images.svgMultipass: Optimize svg multiple times until it's fully optimized.
+                cachebustAssets: Append hash to asset urls for cache busting.
             }
         */
 
@@ -68,7 +69,8 @@ export default {
             images: {
                 pngOptimization: 3,
                 svgMultipass: false
-            }
+            },
+            cachebustAssets: false,
         },
 
         /**
@@ -92,7 +94,8 @@ export default {
             images: {
                 pngOptimization: 6,
                 svgMultipass: true
-            }
+            },
+            cachebustAssets: true,
         },
 
         /**
@@ -116,7 +119,8 @@ export default {
             images: {
                 pngOptimization: 6,
                 svgMultipass: true
-            }
+            },
+            cachebustAssets: true,
         }
     },
 

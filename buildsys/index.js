@@ -3,8 +3,9 @@
  * Index of buildsys. Handles autoloading of all tasks and setting up environment from flags.
 */
 
-import fs from 'fs';
 import gulp from 'gulp';
+import fs from 'fs';
+import crypto from 'crypto';
 import config from './config/config';
 import Logger from './utils/Logger';
 import pkg from '../package.json';
@@ -54,6 +55,18 @@ global.buildOnlyMode = buildOnlyMode;
 Logger.banner('S I L V V R  Started');
 Logger.header(`${pkg.name} @version ${pkg.version}`);
 Logger.header(`By ${pkg.author}`);
+
+
+/**
+    Set cachebusting unique hash value if enabled
+    for current build environment
+*/
+global.CACHEBUST_HASH = false;
+if(config.env[env].cachebustAssets) {
+    let currentDate = (new Date()).valueOf().toString();
+    let random = Math.random().toString();
+    global.CACHEBUST_HASH = crypto.createHash('md5').update(currentDate + random).digest('hex');;
+}
 
 
 /**

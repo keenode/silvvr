@@ -61,6 +61,7 @@ gulp.task('default', function (cb) {
             'videos',
             'rootfiles'
         ],
+        'cachebust-css-urls',
         'templating',
         'serve',
         'watch',
