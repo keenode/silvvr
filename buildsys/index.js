@@ -5,7 +5,7 @@
 
 import fs from 'fs';
 import gulp from 'gulp';
-import config from './config';
+import config from './config/config';
 import Logger from './utils/Logger';
 import pkg from '../package.json';
 

@@ -1,5 +1,5 @@
 /**
- * config.js
+ * config/config.js
  * Build configuration settings.
 */
 

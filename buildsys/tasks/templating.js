@@ -14,6 +14,7 @@ import gutil from 'gulp-util';
 import useref from 'gulp-useref';
 import uglify from 'gulp-uglify';
 import runSequence from 'run-sequence';
+import apiUrls from '../config/api-urls';
 
 /**
     $ gulp templating
@@ -53,6 +54,7 @@ gulp.task('templating:process', function () {
                 });
             }
         }))
+        .pipe(replace('<%= API_URL =%>', apiUrls[env]))
         .pipe(canBundle ? useref({ searchPath: buildOnlyMode ? './.tmp' : './dist' }) : gutil.noop())
         .pipe(filter(['*.html', '**/*.js']))
         .pipe(gulp.dest(config.buildDir.root));
