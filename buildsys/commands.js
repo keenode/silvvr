@@ -2,19 +2,24 @@
  * commands.js
  * Silvvr gulp task series commands are defined here.
  * ------------------------------------------------------------------------------------------------
- * 'gulp init'    - Runs a series of tasks for app initialization.
  * 'gulp'         - Runs a series of tasks for building the app. The following flags can be passed:
  * 'gulp --stage' - Builds the app with 'staging' settings.
  * 'gulp --prod'  - Builds the app with 'production' settings.
  * 'gulp --build' - Only build the app, do not watch files or serve.
+ * Scaffolding / Generation tasks:
+ * 'gulp generate-favicons' - Generate a series of favicon images and write to a template.
  * ------------------------------------------------------------------------------------------------
  * Note: You can combine flags i.e. 'gulp --prod --build'
 */
 
 import runSequence from 'run-sequence';
 
+
 /* --- $ gulp --- */
 
+/**
+ * Default task
+*/
 gulp.task('default', function (cb) {
 
     // Log build mode setting
@@ -51,7 +56,7 @@ gulp.task('default', function (cb) {
             'styles',
             'scripts',
             'images',
-            'favicons:copy',
+            'favicons',
             'fonts',
             'videos',
             'rootfiles'

@@ -1,12 +1,12 @@
 /**
  * index.js
- * Index of buildsys. Handles loading of all tasks and setting up environment from flags.
+ * Index of buildsys. Handles autoloading of all tasks and setting up environment from flags.
 */
 
 import fs from 'fs';
 import gulp from 'gulp';
-import Logger from './utils/Logger';
 import config from './config';
+import Logger from './utils/Logger';
 import pkg from '../package.json';
 
 // Grab command line arguments
@@ -59,10 +59,11 @@ Logger.header(`By ${pkg.author}`);
 /**
     Require all gulp tasks
 */
+Logger.notice('Autoloading tasks...');
 var tasks = fs.readdirSync('./buildsys/tasks/');
 tasks.forEach(function (task) {
     if(/\.js/.test(task)) {
-        Logger.info('Requiring task ' + task + '...');
+        Logger.info(`Requiring task ${task}...`);
         require(`./tasks/${task}`);
     }
 });
