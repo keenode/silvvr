@@ -52,7 +52,10 @@ gulp.task('templating:process', function () {
                     cache: false,
                     loader: swig.loaders.fs(`${config.appDir.views}/`)
                 });
-            }
+                swig.setFilter('cachebust', function (input) {
+                    return CACHEBUST_HASH ? input + '?v=' + CACHEBUST_HASH : input;
+                });
+            },
         }))
         .pipe(replace('<%= API_URL =%>', apiUrls[env]))
         .pipe(canBundle ? useref({ searchPath: buildOnlyMode ? './.tmp' : './dist' }) : gutil.noop())
