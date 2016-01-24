@@ -20,13 +20,6 @@
         margin-bottom: 30px;
     }
 
-    &__logo-bg {
-        margin: 0 auto 30px auto;
-        @include size(128px);
-        background: url('../assets/images/logo-silvvr.png') no-repeat;
-        background-size: 100%;
-    }
-
     &__btn-github {
         @extend %btn--primary;
     }
