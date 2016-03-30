@@ -18,7 +18,7 @@ $max-width: 1200px;
 @import '../../node_modules/prismjs/themes/prism-okaidia';
 
 /* --- helpers --- */
-@import 'helpers';
+@import 'util/helpers';
 
 // Import styleguide theme
 @import 'styleguide/_base';

@@ -13,15 +13,15 @@
 
 
 /* --- normalize --- */
-@import 'normalize';
+@import '../../node_modules/normalize.css/normalize';
 
 
 /* --- theme settings --- */
-@import 'theme-settings/_base';
+@import 'variables/_base';
 
 
 /* --- helpers --- */
-@import 'helpers';
+@import 'util/helpers';
 
 
 /* --- generic styles --- */
@@ -34,21 +34,21 @@ body {
 
 
 /* --- typography --- */
-@import 'typography/_base';
+@import 'base-styles/typography/_base';
 
 
 /* --- code --- */
-@import 'code/_base';
+@import 'base-styles/code/_base';
 
 
 /* --- tables --- */
-@import 'tables/_base';
+@import 'base-styles/tables/_base';
 
 
 /* --- components --- */
-@import 'components/buttons/_base',
-        'components/header/_base',
-        'components/footer/_base';
+@import 'base-styles/buttons/_base',
+        'partials/header/_base',
+        'partials/footer/_base';
 
 
 /* --- pages styles --- */

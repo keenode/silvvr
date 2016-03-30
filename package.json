@@ -63,6 +63,7 @@
     "bourbon-neat": "1.7.4",
     "clipboard": "1.5.9",
     "jquery": "2.2.2",
+    "normalize.css": "^4.0.0",
     "prismjs": "1.4.1"
   }
 }
