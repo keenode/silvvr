@@ -1,5 +1,5 @@
 /**
- * pages/_index
+ * pages/index
  * Index page specific styles.
 */
 
@@ -23,4 +23,8 @@
     &__btn-github {
         @extend %btn--primary;
     }
+}
+
+.styleguide-wrap {
+    padding: 30px;
 }

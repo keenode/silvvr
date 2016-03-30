@@ -1,0 +1,45 @@
+/**
+ * typography/lists
+ * List styles.
+*/
+
+/*
+    Placeholder list styles
+*/
+
+%unordered-list {
+    margin: 0;
+}
+
+%ordered-list {
+    margin: 0;
+}
+
+%unstyled-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+%inline-list {
+    @extend %unstyled-list;
+
+    li {
+        display: inline-block;
+        padding: 0 10px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+}
+
+
+/*
+    Generic list element extends
+*/
+
+ul               { @extend %unordered-list; }
+ul.list-unstyled { @extend %unstyled-list; }
+ul.list-inline   { @extend %inline-list; }
+ol               { @extend %ordered-list; }

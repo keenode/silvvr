@@ -1,0 +1,22 @@
+/**
+ * tables/striped
+ * Striped table styles.
+*/
+
+/*
+    Placeholder styles
+*/
+
+%table-striped {
+    tr:nth-of-type(even) {
+        background-color: tint(color('mist'), 50%);
+    }
+}
+
+
+/*
+    Generic extends
+*/
+
+table.table-striped { @extend %table-striped; }
+

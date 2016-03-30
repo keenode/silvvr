@@ -1,0 +1,40 @@
+/**
+ * tables/basic
+ * Basic table styles.
+*/
+
+/*
+    Placeholder styles
+*/
+
+%table {
+    width: 100%;
+
+    caption {
+        margin-bottom: 5px;
+        color: color('concrete');
+        text-align: left;
+    }
+
+    thead {
+        border-bottom: 2px solid color('mist');
+    }
+
+    tr {
+        border-bottom: 1px solid color('mist');
+    }
+
+    th,
+    td {
+        padding: 7px 10px 5px 10px;
+        text-align: left;
+    }
+}
+
+
+/*
+    Generic extends
+*/
+
+table { @extend %table; }
+

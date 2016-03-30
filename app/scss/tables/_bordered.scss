@@ -1,0 +1,22 @@
+/**
+ * tables/bordered
+ * Bordered table styles.
+*/
+
+/*
+    Placeholder styles
+*/
+
+%table-bordered {
+    td,
+    th {
+        border: 1px solid color('mist');
+    }
+}
+
+
+/*
+    Generic extends
+*/
+
+table.table-bordered { @extend %table-bordered; }

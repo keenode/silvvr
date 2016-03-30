@@ -1,0 +1,28 @@
+/**
+ * code/inline
+ * Inline code styles.
+*/
+
+/*
+    Placeholder styles
+*/
+
+%code-inline {
+    padding: 3px 6px 1px 6px;
+    background-color: color('mist');
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+}
+
+%code-nostyle {
+    padding: 0;
+    background-color: transparent;
+}
+
+
+/*
+    Generic extends
+*/
+
+code          { @extend %code-inline; }
+code.no-style { @extend %code-nostyle; }

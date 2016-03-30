@@ -4,11 +4,11 @@
 */
 
 a {
-    color: color('blue-md');
+    color: color('blue');
     text-decoration: none;
     transition: color 100ms ease-out;
 
     &:hover {
-        color: color('blue-lt');
+        color: color('slate');
     }
 }

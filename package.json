@@ -61,6 +61,8 @@
   "dependencies": {
     "bourbon": "4.2.6",
     "bourbon-neat": "1.7.2",
-    "jquery": "2.2.0"
+    "clipboard": "1.5.9",
+    "jquery": "2.2.0",
+    "prismjs": "1.4.1"
   }
 }

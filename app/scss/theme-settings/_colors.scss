@@ -6,16 +6,12 @@
 /* --- colors map --- */
 
 $colors: (
-
-    /* Gray */
-    'gray-dk': #202026,
-    'gray-md': #414146,
-    'gray-lt': #616166,
-
-    /* Blue */
-    'blue-dk': #26A4BF,
-    'blue-md': #4DC3D5,
-    'blue-lt': #73E1EA,
+    'blue':     #0f73ef,
+    'mist':     #d6d7db,
+    'slate':    #6b7889,
+    'concrete': #8d8d8d,
+    'space':    #202020,
+    'magenta':  #ff3366,
 );
 
 
@@ -33,8 +29,8 @@ $colors: (
 
 
 /* --- background colors --- */
-$bgColor: #f6f6f6;
+$bgColor: color('blue');
 
 
 /* --- font colors --- */
-$fontColor--base: color('gray-dk');
+$fontColor--base: color('space');

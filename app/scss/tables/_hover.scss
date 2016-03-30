@@ -1,0 +1,22 @@
+/**
+ * tables/hover
+ * Hover table styles.
+*/
+
+/*
+    Placeholder styles
+*/
+
+%table-hover {
+    tr:hover {
+        background-color: tint(color('mist'), 75%);
+    }
+}
+
+
+/*
+    Generic extends
+*/
+
+table.table-hover { @extend %table-hover; }
+

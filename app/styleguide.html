@@ -1,0 +1,1160 @@
+{% extends 'layouts/layout-styleguide.html' %}
+
+{% block content %}
+
+    <div class="sg-container">
+
+        {#
+            1. Colors
+        #}
+
+        <h2 class="heading-section">Colors</h2>
+
+        <div class="sg-colors-container">
+
+            <div class="sg-color-box">
+                <div class="sg-color-box__color" style="background-color: #0f73ef;">
+                    <code class="sg-color-box__hex no-style">#0f73ef</code>
+                </div>
+                <code class="sg-color-box__name no-style">
+                    color('blue')
+                </code>
+            </div>
+
+            <div class="sg-color-box">
+                <div class="sg-color-box__color" style="background-color: #d6d7db;">
+                    <code class="sg-color-box__hex no-style" style="color: #666;">#d6d7db</code>
+                </div>
+                <code class="sg-color-box__name no-style">
+                    color('mist')
+                </code>
+            </div>
+
+            <div class="sg-color-box">
+                <div class="sg-color-box__color" style="background-color: #6b7889;">
+                    <code class="sg-color-box__hex no-style">#6b7889</code>
+                </div>
+                <code class="sg-color-box__name no-style">
+                    color('slate')
+                </code>
+            </div>
+
+            <div class="sg-color-box">
+                <div class="sg-color-box__color" style="background-color: #8d8d8d;">
+                    <code class="sg-color-box__hex no-style">#8d8d8d</code>
+                </div>
+                <code class="sg-color-box__name no-style">
+                    color('concrete')
+                </code>
+            </div>
+
+            <div class="sg-color-box">
+                <div class="sg-color-box__color" style="background-color: #202020;">
+                    <code class="sg-color-box__hex no-style">#202020</code>
+                </div>
+                <code class="sg-color-box__name no-style">
+                    color('space')
+                </code>
+            </div>
+
+            <div class="sg-color-box">
+                <div class="sg-color-box__color" style="background-color: #ff3366;">
+                    <code class="sg-color-box__hex no-style">#ff3366</code>
+                </div>
+                <code class="sg-color-box__name no-style">
+                    color('magenta')
+                </code>
+            </div>
+
+        </div>
+
+        {#
+            1. Fonts
+        #}
+
+        <h2 class="heading-section">Fonts</h2>
+
+        <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p class="lead" style="font-weight: 300;">Hind Light 300</p>
+                    <p class="lead" style="font-weight: 400;">Hind Regular 400</p>
+                    <p class="lead" style="font-weight: 500;">Hind Medium 500</p>
+                    <p class="lead" style="font-weight: 700;">Hind Bold 700</p>
+                </div>
+            </div>
+
+        {#
+            1. Grid
+        #}
+
+        <h2 class="heading-section">Grid</h2>
+
+        <h3>Grid Settings</h3>
+        <p><code>$max-width: 1200px;</code></p>
+
+        {#
+            2. Typography
+        #}
+
+        <section class="sg-section">
+
+            <h2 class="heading-section">Typography</h2>
+            {# <a href="#">Preview all Typography</a> #}
+
+            <h3>Headings</h3>
+            <p>All heading styles, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
+
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6></script></code></pre>
+                </div>
+            </div>
+
+            <h3>Body Copy</h3>
+            <p>Default body copy <code>font-size</code> is <code>16px</code> and is applied to the <code>&lt;body&gt;</code> and all <code>&lt;p&gt;</code> elements.</p>
+
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p>This is a single line of body copy.</p>
+                    <p>This body copy spans multiple lines. Est delectus minima cupiditate explicabo molestiae alias culpa dolores, nisi quasi a quam minus. Error perspiciatis, dolor rem harum excepturi natus facere reprehenderit deserunt. Quas architecto magni eius voluptatum quos, aperiam modi accusantium quaerat illo repellendus expedita, rem voluptas at assumenda natus quo nisi repellat asperiores porro recusandae doloribus quae.</p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p>This is a single line of body copy.</p>
+<p>This body copy spans multiple lines. Est delectus minima cupiditate explicabo molestiae alias culpa dolores, nisi quasi a quam minus. Error perspiciatis, dolor rem harum excepturi natus facere reprehenderit deserunt. Quas architecto magni eius voluptatum quos, aperiam modi accusantium quaerat illo repellendus expedita, rem voluptas at assumenda natus quo nisi repellat asperiores porro recusandae doloribus quae.</p></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Lead Body Copy</h4>
+            <p>Make a paragraph stand out from the rest.</p>
+
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p class="lead">This is a single line of lead body copy.</p>
+                    <p class="lead">This body lead copy spans multiple lines. Est delectus minima cupiditate explicabo molestiae alias culpa dolores, nisi quasi a quam minus. Error perspiciatis, dolor rem harum excepturi natus facere reprehenderit deserunt.</p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p class="lead">This is a single line of lead body copy.</p>
+<p class="lead">This body lead copy spans multiple lines. Est delectus minima cupiditate explicabo molestiae alias culpa dolores, nisi quasi a quam minus. Error perspiciatis, dolor rem harum excepturi natus facere reprehenderit deserunt.</p></script></code></pre>
+                </div>
+            </div>
+
+            <h3>Inline Text Elements</h3>
+
+            <h4>Marked Text</h4>
+            <p>For highlighting a run of text due to its relevance in another context, use the <code>&lt;mark&gt;</code> tag.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p>You can use the mark tag to <mark>highlight</mark> text.</p></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Deleted Text</h4>
+            <p>For indicating blocks of text that have been deleted use the <code>&lt;del&gt;</code> tag.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p><del>This line of text is meant to be treated as deleted text.</del></p></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Strikethrough Text</h4>
+            <p>For indicating blocks of text that are no longer relevant use the <code>&lt;s&gt;</code> tag.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p><s>This line of text is meant to be treated as no longer accurate.</s></p></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Inserted Text</h4>
+            <p>For indicating additions to the document use the <code>&lt;ins&gt;</code> tag.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p><ins>This line of text is meant to be treated as an addition to the document.</ins></p></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Underlined Text</h4>
+            <p>To underline text use the <code>&lt;u&gt;</code> tag.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p><u>This line of text will render as underlined</u></p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p><u>This line of text will render as underlined</u></p></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Small Text</h4>
+            <p>For de-emphasizing inline or blocks of text, use the <code>&lt;small&gt;</code> tag</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p><small>This line of text is meant to be treated as fine print.</small></p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p><small>This line of text is meant to be treated as fine print.</small></p></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Bold Text</h4>
+            <p>For emphasizing a snippet of text with a heavier font-weight.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p><strong>rendered as bold text</strong></p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p><strong>rendered as bold text</strong></p></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Italic Text</h4>
+            <p>For emphasizing a snippet of text with italics.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p><em>rendered as italicized text</em></p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p><em>rendered as italicized text</em></p></script></code></pre>
+                </div>
+            </div>
+
+            <p><small>Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</small></p>
+
+            <h4>Abbreviated Text</h4>
+            <p>Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a title attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover and to users of assistive technologies.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p><abbr title="Compact Disk">CD</abbr></p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p><abbr title="Compact Disk">CD</abbr></p></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Cited Text</h4>
+            <p>Use the <code>&lt;cite&gt;</code> to attribute a source.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <p><cite title="Source Title">Source Title</cite></p>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p><cite title="Source Title">Source Title</cite></p></script></code></pre>
+                </div>
+            </div>
+
+            <h3>Address</h3>
+            <p>Present contact information for the nearest ancestor or the entire body of work.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <address>
+                        <strong>Mr. Example</strong><br>
+                        555 Orange Road<br>
+                        San Diego, CA 55555<br>
+                        <abbr title="Phone">P:</abbr> (555) 555-5555
+                    </address>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><address>
+    <strong>Mr. Example</strong><br>
+    555 Orange Road<br>
+    San Diego, CA 55555<br>
+    <abbr title="Phone">P:</abbr> (555) 555-5555
+</address></script></code></pre>
+                </div>
+            </div>
+
+            <h3>Blockquotes</h3>
+            <p>For quoting blocks of content from another source within your document.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    </blockquote>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Naming a source</h4>
+            <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                    </blockquote>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote></script></code></pre>
+                </div>
+            </div>
+
+            <h3>Lists</h3>
+
+            <h4>Unordered</h4>
+            <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <ul>
+                        <li>
+                            Lorem ipsum dolor sit amet.
+                            <ul>
+                                <li>Subitem</li>
+                            </ul>
+                        </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                        <li>Lorem ipsum dolor.</li>
+                    </ul>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><ul>
+    <li>
+        Lorem ipsum dolor sit amet.
+        <ul>
+            <li>Subitem</li>
+        </ul>
+    </li>
+    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+    <li>Lorem ipsum dolor.</li>
+</ul></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Ordered</h4>
+            <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <ol>
+                        <li>
+                            Lorem ipsum dolor sit amet.
+                            <ol>
+                                <li>Subitem</li>
+                            </ol>
+                        </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                        <li>Lorem ipsum dolor.</li>
+                    </ol>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><ol>
+    <li>
+        Lorem ipsum dolor sit amet.
+        <ol>
+            <li>Subitem</li>
+        </ol>
+    </li>
+    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+    <li>Lorem ipsum dolor.</li>
+</ol></script></code></pre>
+                </div>
+            </div>
+
+            <h4 class="list-unstyled">Unstyled</h4>
+            <p>Remove default list styling.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            Lorem ipsum dolor sit amet.
+                            <ul>
+                                <li>Subitem</li>
+                            </ul>
+                        </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                        <li>Lorem ipsum dolor.</li>
+                    </ul>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><ul class="list-unstyled">
+    <li>
+        Lorem ipsum dolor sit amet.
+        <ul>
+            <li>Subitem</li>
+        </ul>
+    </li>
+    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+    <li>Lorem ipsum dolor.</li>
+</ul></script></code></pre>
+                </div>
+            </div>
+
+            {# Modifiers... #}
+
+            <h4 class="list-inline">Inline</h4>
+            <p>Place all list items on a single line.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <ul class="list-inline">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><ul class="list-inline">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul></script></code></pre>
+                </div>
+            </div>
+
+            <h3>Description</h3>
+            <p>A list of terms with their associated descriptions.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <dl>
+                        <dt>Term 1</dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, qui.</dd>
+                        <dt>Term 2</dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing.</dd>
+                        <dt>Term 3</dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus architecto expedita, rerum.</dd>
+                    </dl>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><dl>
+    <dt>Term 1</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, qui.</dd>
+    <dt>Term 2</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing.</dd>
+    <dt>Term 3</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus architecto expedita, rerum.</dd>
+</dl></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Horizontal Description</h4>
+            <p>Make terms and descriptions line up side-by-side.</p>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <dl class="dl-horizontal">
+                        <dt>Term 1</dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, qui.</dd>
+                        <dt>Term 2</dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing.</dd>
+                        <dt>Really, really long overflowing Item</dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus architecto expedita, rerum.</dd>
+                    </dl>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><dl class="dl-horizontal">
+    <dt>Term 1</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, qui.</dd>
+    <dt>Term 2</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing.</dd>
+    <dt>Term 3</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus architecto expedita, rerum.</dd>
+</dl></script></code></pre>
+                </div>
+            </div>
+
+        </section>
+
+        {#
+            3. Code
+        #}
+
+        <h2 class="heading-section">Code</h2>
+
+        <h2>Inline</h2>
+        <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p></script></code></pre>
+            </div>
+        </div>
+
+        <h2>User Input</h2>
+        <p>Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.</p>
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+                To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd></script></code></pre>
+            </div>
+        </div>
+
+        <h2>Block</h2>
+        <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre></script></code></pre>
+            </div>
+        </div>
+
+        <h2>Variables</h2>
+        <p>For indicating variables use the <code>&lt;var&gt;</code> tag.</p>
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><var>y</var> = <var>m</var><var>x</var> + <var>b</var></script></code></pre>
+            </div>
+        </div>
+
+        <h2>Sample Output</h2>
+        <p>For indicating blocks sample output from a program use the <code>&lt;samp&gt;</code> tag.</p>
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                <samp>This text is meant to be treated as sample output from a computer program.</samp>
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><samp>This text is meant to be treated as sample output from a computer program.</samp></script></code></pre>
+            </div>
+        </div>
+
+
+        {#
+            4. Tables
+        #}
+
+        <h2 class="heading-section">Tables</h2>
+
+        <h2>Basic</h2>
+        <p>Basic table.</p>
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                <table class="table">
+                    <caption>Optional table caption.</caption>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><table class="table">
+    <caption>Optional table caption.</caption>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+</table></script></code></pre>
+            </div>
+        </div>
+
+        <h2>Striped Rows</h2>
+        <p>Striped table.</p>
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                <table class="table table-striped">
+                    <caption>Optional table caption.</caption>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><table class="table table-striped">
+    <caption>Optional table caption.</caption>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+</table></script></code></pre>
+            </div>
+        </div>
+
+        <h2>Bordered Table</h2>
+        <p>Bordered table.</p>
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                <table class="table table-bordered">
+                    <caption>Optional table caption.</caption>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><table class="table table-bordered">
+    <caption>Optional table caption.</caption>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+</table></script></code></pre>
+            </div>
+        </div>
+
+        <h2>Hover Rows</h2>
+        <p>Hover table.</p>
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                <table class="table table-hover">
+                    <caption>Optional table caption.</caption>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><table class="table table-hover">
+    <caption>Optional table caption.</caption>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+</table></script></code></pre>
+            </div>
+        </div>
+
+        <h2>Condensed</h2>
+        <p>Condensed table.</p>
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                <table class="table table-condensed">
+                    <caption>Optional table caption.</caption>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><table class="table table-condensed">
+    <caption>Optional table caption.</caption>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+</table></script></code></pre>
+            </div>
+        </div>
+
+
+        {#
+            5. Forms
+        #}
+
+        <h2 class="heading-section">Forms</h2>
+
+        <h2>Basic</h2>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+        <h2>Inline</h2>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+            </div>
+            <button type="submit" class="btn btn-default">Send invitation</button>
+        </form>
+
+        <h2>Horizontal</h2>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                        <input type="checkbox"> Remember me
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+            </div>
+        </form>
+
+        <h2>Controls</h2>
+
+        <h3>Inputs</h3>
+        <input type="text" class="form-control" placeholder="Text input">
+
+        <h3>Textarea</h3>
+        <textarea rows="10"></textarea>
+
+        <h3>Checkboxes</h3>
+
+        <h4>Default (Stacked)</h4>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="checkbox disabled">
+            <label>
+                <input type="checkbox" value="" disabled>
+                Option two is disabled
+            </label>
+        </div>
+
+        <h4>Inline</h4>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+        </label>
+
+        <h3>Radios</h3>
+
+        <h4>Default (Stacked)</h4>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can be something else and selecting it will deselect option one
+            </label>
+        </div>
+        <div class="radio disabled">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                Option three is disabled
+            </label>
+        </div>
+
+        <h4>Inline</h4>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+        </label>
+
+        <h3>Selects</h3>
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+
+        <h4>Multiple</h4>
+        <select multiple class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+
+        <h3>Static Control</h3>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static">email@example.com</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+        </form>
+
+        <h3>Focus State</h3>
+        <input type="text">
+
+        <h3>Disabled State</h3>
+        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+
+        <h3>Disabled Fieldsets</h3>
+        <form>
+            <fieldset disabled>
+                <div class="form-group">
+                    <label for="disabledTextInput">Disabled input</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                </div>
+                <div class="form-group">
+                    <label for="disabledSelect">Disabled select menu</label>
+                    <select id="disabledSelect" class="form-control">
+                        <option>Disabled select</option>
+                    </select>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Can't check this
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+        </form>
+
+        <h3>Readonly State</h3>
+        <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+
+        <h3>Help Text</h3>
+        <label class="sr-only" for="inputHelpBlock">Input with help text</label>
+        <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+        <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+
+        <h3>Validation States</h3>
+        ...
+
+        <h3>Control Sizing</h3>
+        ...
+
+    </div> {# .sg-wrap #}
+
+{% endblock %}

@@ -1,0 +1,43 @@
+/**
+ * typography/descriptions
+ * Description styles.
+*/
+
+/*
+    Placeholder description styles
+*/
+
+%description-list {
+    dt {
+        font-weight: 700;
+    }
+
+    dd {
+        margin: 0 0 10px 0;
+    }
+}
+
+%description-list-horizontal {
+    dt {
+        float: left;
+        clear: left;
+        width: 180px;
+        font-weight: 700;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;;
+        overflow: hidden;
+    }
+
+    dd {
+        margin-left: 200px;
+    }
+}
+
+
+/*
+    Generic list element extends
+*/
+
+dl               { @extend %description-list; }
+dl.dl-horizontal { @extend %description-list-horizontal; }

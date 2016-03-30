@@ -5,7 +5,7 @@
 
 .header {
     padding: 40px 0;
-    background-color: color('gray-md');
+    background-color: color('blue');
 
     &__container {
         @extend %outer-container;
@@ -13,7 +13,7 @@
 
     &__title {
         margin: 0;
-        color: #ddd;
+        color: white;
         font-weight: 700;
         text-align: center;
         letter-spacing: 5px;

@@ -1,0 +1,23 @@
+/**
+ * code/sample-output
+ * Sample Output styles.
+*/
+
+/*
+    Placeholder styles
+*/
+
+%sample-output {
+    padding: 8px 10px 6px 10px;
+    background-color: color('slate');
+    color: white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+}
+
+
+/*
+    Generic extends
+*/
+
+samp { @extend %sample-output; }

@@ -28,13 +28,21 @@
 
 body {
     color: $fontColor--base;
-    font-family: $font-family--base;
+    font-family: $fontFamily--base;
     background-color: $bgColor;
 }
 
 
 /* --- typography --- */
 @import 'typography/_base';
+
+
+/* --- code --- */
+@import 'code/_base';
+
+
+/* --- tables --- */
+@import 'tables/_base';
 
 
 /* --- components --- */

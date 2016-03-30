@@ -1,29 +1,102 @@
 /**
- * typography/_headings
+ * typography/headings
  * Headings styles.
 */
 
-h1, h2 {
-    font-family: $font-family--base;
-    font-weight: 400;
-    text-rendering: optimizeLegibility;
+/*
+    Placeholder element heading styles
+*/
+
+// --- Styles shared by all headings
+%heading-1,
+%heading-2,
+%heading-3,
+%heading-4,
+%heading-5,
+%heading-6 {
+    @include font($fontFamily--base, 300);
 }
 
-h1 {
-    margin: 0 0 40px;
-    font-size: em(60px);
+// --- Styles shared by headings 2-3
+%heading-2,
+%heading-3 {
+    margin: 10px 0 20px;
+}
+
+// --- Styles shared by headings 4-6
+%heading-4,
+%heading-5,
+%heading-6 {
+    margin: 5px 0 20px;
+}
+
+
+/*
+    Specific placeholder element heading styles
+*/
+
+%heading-1 {
+    margin: 10px 0 40px;
+    font-size: 70px;
+    line-height: 70px;
+    letter-spacing: -2px;
+}
+
+%heading-2 {
+    font-size: 50px;
     line-height: 50px;
 }
 
-h2 {
-    font-size: em(40px);
-    line-height: 50px;
+%heading-3 {
+    font-size: 40px;
+    line-height: 40px;
 }
 
-h3 {
-    font-size: em(24px);
+%heading-4 {
+    font-size: 30px;
     line-height: 30px;
-    font-weight: 400;
-    margin: 0 0 20px;
-    letter-spacing: 1px;
 }
+
+%heading-5 {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+%heading-6 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+
+/*
+    Modifier heading element extends
+*/
+
+%heading-1-section {
+    @extend %heading-1;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid color('mist');
+}
+
+%heading-2-section {
+    @extend %heading-2;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid color('mist');
+}
+
+
+/*
+    Generic heading element extends
+*/
+
+h1                 { @extend %heading-1; }
+h1.heading-section { @extend %heading-1-section; }
+h2                 { @extend %heading-2; }
+h2.heading-section { @extend %heading-2-section; }
+h3                 { @extend %heading-3; }
+h4                 { @extend %heading-4; }
+h5                 { @extend %heading-5; }
+h6                 { @extend %heading-6; }

@@ -1,0 +1,23 @@
+/**
+ * tables/condensed
+ * Condensed table styles.
+*/
+
+/*
+    Placeholder styles
+*/
+
+%table-condensed {
+    th,
+    td {
+        padding: 3px 5px 1px 5px;
+    }
+}
+
+
+/*
+    Generic extends
+*/
+
+table.table-condensed { @extend %table-condensed; }
+

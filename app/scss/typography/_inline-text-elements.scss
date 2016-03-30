@@ -1,0 +1,69 @@
+/**
+ * typography/inline-text-elements
+ * Inline text element styles.
+*/
+
+/*
+    Placeholder element paragraph styles
+*/
+
+%marked-text {
+    padding: 3px 8px 1px 8px;
+    color: white;
+    background-color: color('magenta');
+}
+
+%deleted-text {
+    padding: 3px 8px 1px 8px;
+    background-color: color('mist');
+}
+
+%strikethrough-text {
+
+}
+
+%inserted-text {
+    padding: 3px 8px 1px 8px;
+    background-color: lightGreen;
+}
+
+%underlined-text {
+
+}
+
+%small-text {
+    font-size: 75%;
+}
+
+%bold-text {
+
+}
+
+%italic-text {
+
+}
+
+%abbreviated-text {
+    border-bottom: 2px solid color('blue');
+    cursor: help;
+}
+
+%cited-text {
+
+}
+
+
+/*
+    Generic paragraphy element extends
+*/
+
+mark        { @extend %marked-text; }
+del         { @extend %deleted-text; }
+s           { @extend %strikethrough-text; }
+ins         { @extend %inserted-text; }
+u           { @extend %underlined-text; }
+small       { @extend %small-text; }
+b, strong   { @extend %bold-text; }
+i, em       { @extend %italic-text; }
+abbr[title] { @extend %abbreviated-text; }
+cite        { @extend %cited-text; }

@@ -1,0 +1,24 @@
+/**
+ * styleguide.css
+ * All styleguide styles.
+*/
+
+/* --- Bourbon & Neat --- */
+
+// Bourbon
+@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+
+// Neat
+@import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+// Grid settings
+$max-width: 1200px;
+
+// Prism Theme
+@import '../../node_modules/prismjs/themes/prism-okaidia';
+
+/* --- helpers --- */
+@import 'helpers';
+
+// Import styleguide theme
+@import 'styleguide/_base';

@@ -35,3 +35,10 @@
 @mixin font-aa {
     -webkit-font-smoothing: antialiased;
 }
+
+/**
+    Apply font optimize legibility.
+*/
+@mixin optimizeLegibility {
+    text-rendering: optimizeLegibility;
+}

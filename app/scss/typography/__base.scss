@@ -1,8 +1,13 @@
 /**
- * typography/__base
+ * typography/_base
  * Typography includes.
 */
 
 @import 'headings';
-@import 'paragraphs';
+@import 'body-copy';
+@import 'inline-text-elements';
+@import 'addresses';
+@import 'blockquotes';
+@import 'lists';
+@import 'descriptions';
 @import 'anchors';

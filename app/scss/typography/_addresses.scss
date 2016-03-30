@@ -1,0 +1,20 @@
+/**
+ * typography/addresses
+ * Address styles.
+*/
+
+/*
+    Placeholder address styles
+*/
+
+%address {
+    margin-bottom: 20px;
+    font-style: normal;
+}
+
+
+/*
+    Generic address element extends
+*/
+
+address { @extend %address; }

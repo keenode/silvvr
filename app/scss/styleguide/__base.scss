@@ -1,0 +1,128 @@
+/**
+ * styleguide/_base
+ * Styleguide page specific styles.
+*/
+
+body {
+    background-color: #f6f6f6;
+}
+
+.sg-container {
+    @extend %outer-container;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #eee;
+}
+
+.sg-header {
+    padding: 50px 0;
+
+    &__title {
+        margin: 0;
+        color: #666;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 3px;
+        cursor: default;
+    }
+}
+
+.sg-section {
+    margin: 50px 0;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sg-example {
+    margin-bottom: 50px;
+    // background-color: #fafafa;
+    // border: 1px solid #ddd;
+    // border-radius: 6px;
+}
+
+.sg-example-heading {
+    color: #999;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.sg-example-inner {
+    // padding: 15px;
+}
+
+.sg-colors-container {
+    @extend %clearfix;
+}
+
+.sg-color-box {
+    @include size(120px);
+    float: left;
+    margin: 10px;
+
+    &__color {
+        @include size(100% 70px);
+        background-color: #666;
+        border-radius: 3px;
+    }
+
+    &__hex {
+        @extend %code-nostyle;
+        display: block;
+        position: relative;
+        top: 28px;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    &__name {
+        display: block;
+        margin-top: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.sg-footer {
+    padding: 50px 0;
+
+    &__copyright {
+        display: block;
+        color: white;
+        text-align: center;
+    }
+}
+
+/* Prism theme overrides */
+pre[class*="language-"] {
+    margin-top: 20px;
+    font-size: 16px;
+    // border-radius: 0;
+    // border-bottom-left-radius: 6px;
+    // border-bottom-right-radius: 6px;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+    font-size: 16px;
+}
+
+/* Copy to Clipboard button */
+.copytoclipboard.btn {
+    padding: 5px 10px;
+    color: #ddd;
+    font-size: 14px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 3px;
+    outline: none;
+    transition: background-color 150ms ease-out,
+                border-color 150ms ease-out;
+
+    &:hover {
+        background-color: #333;
+        border-color: #666;
+    }
+}

@@ -4,7 +4,13 @@
 */
 
 /* --- fonts --- */
-$font-family--base: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
+$fontFamily--base: 'Hind', 'Helvetica Neue', Helvetica, sans-serif;
+
+
+@mixin font($font-family, $weight: 400) {
+    font-family: $font-family;
+    font-weight: $weight;
+}
 
 
 /**
