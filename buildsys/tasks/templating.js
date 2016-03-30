@@ -8,7 +8,6 @@
 import swig from 'gulp-swig';
 import htmlmin from 'gulp-htmlmin';
 import browserSync from 'browser-sync';
-import filter from 'gulp-filter';
 import replace from 'gulp-replace';
 import gutil from 'gulp-util';
 import useref from 'gulp-useref';
@@ -59,7 +58,6 @@ gulp.task('templating:process', function () {
         }))
         .pipe(replace('<%= API_URL =%>', apiUrls[env]))
         .pipe(canBundle ? useref({ searchPath: buildOnlyMode ? './.tmp' : './dist' }) : gutil.noop())
-        .pipe(filter(['*.html', '**/*.js']))
         .pipe(gulp.dest(config.buildDir.root));
 });
 
