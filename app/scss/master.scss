@@ -21,7 +21,7 @@
 
 
 /* --- utilities --- */
-@import 'util/helpers';
+@import 'util/_base';
 
 
 /* --- generic styles --- */
@@ -29,7 +29,7 @@
 body {
     color: $fontColor--base;
     font-family: $fontFamily--base;
-    background-color: $bgColor;
+    background-color: $pageBgColor;
 }
 
 

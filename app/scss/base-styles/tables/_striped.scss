@@ -9,7 +9,7 @@
 
 %table-striped {
     tr:nth-of-type(even) {
-        background-color: tint(color('mist'), 50%);
+        background-color: tint(color('gray-lightest'), 50%);
     }
 }
 

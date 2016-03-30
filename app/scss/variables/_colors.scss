@@ -6,31 +6,59 @@
 /* --- colors map --- */
 
 $colors: (
-    'blue':     #0f73ef,
-    'mist':     #d6d7db,
-    'slate':    #6b7889,
-    'concrete': #8d8d8d,
-    'space':    #202020,
-    'magenta':  #ff3366,
+
+    /*
+        --- Primary ---
+    */
+
+    // Blue
+    'blue':         #3ba6ef,
+    'blue-light':   #7fc6f5,
+    'blue-lighter': #cde9fa,
+
+    // Green
+    'green':          #3d9458,
+    'green-light':    #58b074,
+    'green-lighter':  #94cda6,
+    'green-lightest': #d5ebdc,
+
+    // Dark Gray
+    'gray-dk':         #33353a,
+    'gray-dk-light':   #4a4e59,
+    'gray-dk-lighter': #7c808c,
+
+    // Gray
+    'gray':          #95989f,
+    'gray-light':    #e0e3ea,
+    'gray-lighter':  #eef1f7,
+    'gray-lightest': #f6f8fb,
+
+
+    /*
+        --- Secondary ---
+    */
+
+    // Orange
+    'orange':         #f9c367,
+    'orange-light':   #fcd99c,
+    'orange-lighter': #fdf08d,
+
+    // Rose
+    'rose':         #ec525d,
+    'rose-light':   #f49aa2,
+    'rose-lighter': #fad7da,
+
+    // Aqua
+    'aqua':         #4ad4d6,
+    'aqua-light':   #bcf0f7,
+    'aqua-lighter': #ecfafc,
+
 );
 
 
-/* --- colors helper function --- */
-
-@function color($color) {
-
-    @if map-has-key($colors, $color) {
-        @return map-get($colors, $color)
-    }
-
-    @warn "Color '#{$color}' not found in 'colors' map.";
-    @return null;
-}
-
-
-/* --- background colors --- */
-$bgColor: color('blue');
+/* --- background color --- */
+$pageBgColor: white;
 
 
 /* --- font colors --- */
-$fontColor--base: color('space');
+$fontColor--base: #3a3a3a;

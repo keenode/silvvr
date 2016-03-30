@@ -12,16 +12,16 @@
 
     caption {
         margin-bottom: 5px;
-        color: color('concrete');
+        color: color('gray');
         text-align: left;
     }
 
     thead {
-        border-bottom: 2px solid color('mist');
+        border-bottom: 2px solid color('gray-lightest');
     }
 
     tr {
-        border-bottom: 1px solid color('mist');
+        border-bottom: 1px solid color('gray-lightest');
     }
 
     th,
