@@ -1,5 +1,5 @@
 /**
- * master.css
+ * master
  * All application styles are imported here.
 */
 
@@ -16,11 +16,11 @@
 @import '../../node_modules/normalize.css/normalize';
 
 
-/* --- theme settings --- */
+/* --- variables --- */
 @import 'variables/_base';
 
 
-/* --- helpers --- */
+/* --- utilities --- */
 @import 'util/helpers';
 
 
@@ -45,12 +45,15 @@ body {
 @import 'base-styles/tables/_base';
 
 
+/* --- buttons --- */
+@import 'base-styles/buttons/_base';
+
+
 /* --- components --- */
-@import 'base-styles/buttons/_base',
-        'partials/header/_base',
+@import 'partials/header/_base',
         'partials/footer/_base';
 
 
-/* --- pages styles --- */
+/* --- page-specific styles --- */
 @import 'pages/404',
         'pages/index';
