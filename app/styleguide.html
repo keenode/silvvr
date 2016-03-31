@@ -4,69 +4,8 @@
 
     <div class="sg-container">
 
-        {#
-            1. Colors
-        #}
-
-        <h2 class="heading-section">Colors</h2>
-
-        <div class="sg-colors-container">
-
-            <div class="sg-color-box">
-                <div class="sg-color-box__color" style="background-color: #0f73ef;">
-                    <code class="sg-color-box__hex no-style">#0f73ef</code>
-                </div>
-                <code class="sg-color-box__name no-style">
-                    color('blue')
-                </code>
-            </div>
-
-            <div class="sg-color-box">
-                <div class="sg-color-box__color" style="background-color: #d6d7db;">
-                    <code class="sg-color-box__hex no-style" style="color: #666;">#d6d7db</code>
-                </div>
-                <code class="sg-color-box__name no-style">
-                    color('mist')
-                </code>
-            </div>
-
-            <div class="sg-color-box">
-                <div class="sg-color-box__color" style="background-color: #6b7889;">
-                    <code class="sg-color-box__hex no-style">#6b7889</code>
-                </div>
-                <code class="sg-color-box__name no-style">
-                    color('slate')
-                </code>
-            </div>
-
-            <div class="sg-color-box">
-                <div class="sg-color-box__color" style="background-color: #8d8d8d;">
-                    <code class="sg-color-box__hex no-style">#8d8d8d</code>
-                </div>
-                <code class="sg-color-box__name no-style">
-                    color('concrete')
-                </code>
-            </div>
-
-            <div class="sg-color-box">
-                <div class="sg-color-box__color" style="background-color: #202020;">
-                    <code class="sg-color-box__hex no-style">#202020</code>
-                </div>
-                <code class="sg-color-box__name no-style">
-                    color('space')
-                </code>
-            </div>
-
-            <div class="sg-color-box">
-                <div class="sg-color-box__color" style="background-color: #ff3366;">
-                    <code class="sg-color-box__hex no-style">#ff3366</code>
-                </div>
-                <code class="sg-color-box__name no-style">
-                    color('magenta')
-                </code>
-            </div>
-
-        </div>
+        {# 1. Colors #}
+        {% include 'styleguide/colors.html' %}
 
         {#
             1. Fonts
@@ -77,10 +16,10 @@
         <div class="sg-example">
                 <div class="sg-example-inner">
                     <h5 class="sg-example-heading">Example</h5>
-                    <p class="lead" style="font-weight: 300;">Hind Light 300</p>
-                    <p class="lead" style="font-weight: 400;">Hind Regular 400</p>
-                    <p class="lead" style="font-weight: 500;">Hind Medium 500</p>
-                    <p class="lead" style="font-weight: 700;">Hind Bold 700</p>
+                    <p class="lead">Avenir Next Regular</p>
+                    <p class="lead">Avenir Next Medium</p>
+                    <p class="lead">Avenir Next Bold</p>
+                    <p class="lead">Avenir Next Heavy</p>
                 </div>
             </div>
 

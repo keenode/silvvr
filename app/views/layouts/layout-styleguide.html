@@ -7,12 +7,12 @@
             meta_description: 'Silvvr styleguide.'
         } only %}
 
-        {% include 'partials/styleguide/stylesheets.html' %}
+        {% include 'styleguide/partials/stylesheets.html' %}
     </head>
     <body>
 
         {# Header #}
-        {% include 'partials/styleguide/header.html' with {
+        {% include 'styleguide/partials/header.html' with {
             title: 'Silvvr'
         } only %}
 
@@ -20,10 +20,10 @@
         {% block content %}{% endblock %}
 
         {# Footer #}
-        {% include 'partials/styleguide/footer.html' %}
+        {% include 'styleguide/partials/footer.html' %}
 
         {# Scripts #}
-        {% include 'partials/styleguide/scripts.html' %}
+        {% include 'styleguide/partials/scripts.html' %}
 
     </body>
 </html>

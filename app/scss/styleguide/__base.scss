@@ -57,6 +57,12 @@ body {
     @extend %clearfix;
 }
 
+.sg-color-section-heading {
+    float: left;
+    width: 100%;
+    padding-left: 10px;
+}
+
 .sg-color-box {
     @include size(120px);
     float: left;

@@ -1,0 +1,71 @@
+{% set colors = [
+
+        { heading: 'Primary' },
+
+        { subheading: 'Blue' },
+        { name: 'blue',            hex: '3ba6ef' },
+        { name: 'blue-light',      hex: '7fc6f5' },
+        { name: 'blue-lighter',    hex: 'cde9fa' },
+
+        { subheading: 'Green' },
+        { name: 'green',           hex: '3d9458' },
+        { name: 'green-light',     hex: '58b074' },
+        { name: 'green-lighter',   hex: '94cda6' },
+        { name: 'green-lightest',  hex: 'd5ebdc' },
+
+        { subheading: 'Dark Gray' },
+        { name: 'gray-dk',         hex: '33353a' },
+        { name: 'gray-dk-light',   hex: '4a4e59' },
+        { name: 'gray-dk-lighter', hex: '7c808c' },
+
+        { subheading: 'Gray' },
+        { name: 'gray',            hex: '95989f' },
+        { name: 'gray-light',      hex: 'e0e3ea' },
+        { name: 'gray-lighter',    hex: 'eef1f7' },
+        { name: 'gray-lightest',   hex: 'f6f8fb' },
+
+        { heading: 'Secondary' },
+
+        { subheading: 'Orange' },
+        { name: 'orange',          hex: 'f9c367' },
+        { name: 'orange-light',    hex: 'fcd99c' },
+        { name: 'orange-lighter',  hex: 'fdf08d' },
+
+        { subheading: 'Rose' },
+        { name: 'rose',            hex: 'ec525d' },
+        { name: 'rose-light',      hex: 'f49aa2' },
+        { name: 'rose-lighter',    hex: 'fad7da' },
+        { subheading: 'Aqua' },
+
+        { name: 'aqua',            hex: '4ad4d6' },
+        { name: 'aqua-light',      hex: 'bcf0f7' },
+        { name: 'aqua-lighter',    hex: 'ecfafc' },
+    ]
+%}
+
+<h2 class="heading-section">Color Palette</h2>
+
+<div class="sg-colors-container">
+
+    {% for color in colors %}
+
+        {% if color.heading %}
+            <h3 class="sg-color-section-heading">{{ color.heading }}</h3>
+        {% elseif color.subheading %}
+            <h5 class="sg-color-section-heading">{{ color.subheading }}</h5>
+        {% else %}
+
+            <div class="sg-color-box">
+                <div class="sg-color-box__color" style="background-color: #{{ color.hex }};">
+                    <code class="sg-color-box__hex no-style">#{{ color.hex }}</code>
+                </div>
+                <code class="sg-color-box__name no-style">
+                    color('{{ color.name }}')
+                </code>
+            </div>
+
+        {% endif %}
+
+    {% endfor %}
+
+</div>
