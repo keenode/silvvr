@@ -35,9 +35,6 @@ body {
 
 .sg-example {
     margin-bottom: 50px;
-    // background-color: #fafafa;
-    // border: 1px solid #ddd;
-    // border-radius: 6px;
 }
 
 .sg-example-heading {
@@ -49,10 +46,6 @@ body {
     cursor: default;
 }
 
-.sg-example-inner {
-    // padding: 15px;
-}
-
 .sg-colors-container {
     @extend %clearfix;
 }
@@ -60,17 +53,16 @@ body {
 .sg-color-section-heading {
     float: left;
     width: 100%;
-    padding-left: 10px;
 }
 
 .sg-color-box {
-    @include size(120px);
+    @include size(160px 130px);
     float: left;
     margin: 10px;
 
     &__color {
-        @include size(100% 70px);
-        background-color: #666;
+        @include size(100% 80px);
+        background-color: #666; // default
         border-radius: 3px;
     }
 
@@ -78,7 +70,7 @@ body {
         @extend %code-nostyle;
         display: block;
         position: relative;
-        top: 28px;
+        top: 34px;
         color: white;
         font-size: 12px;
         text-align: center;
@@ -87,7 +79,7 @@ body {
     &__name {
         display: block;
         margin-top: 10px;
-        font-size: 12px;
+        font-size: 11px;
         text-align: center;
     }
 }
@@ -106,9 +98,6 @@ body {
 pre[class*="language-"] {
     margin-top: 20px;
     font-size: 16px;
-    // border-radius: 0;
-    // border-bottom-left-radius: 6px;
-    // border-bottom-right-radius: 6px;
 }
 
 code[class*="language-"], pre[class*="language-"] {
