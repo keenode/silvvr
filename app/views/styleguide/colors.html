@@ -57,7 +57,7 @@
 
             <div class="sg-color-box">
                 <div class="sg-color-box__color" style="background-color: #{{ color.hex }};">
-                    <code class="sg-color-box__hex no-style">#{{ color.hex }}</code>
+                    <code class="sg-color-box__hex no-style" style="color: {{ color.hex | makeTextReadable }};">#{{ color.hex }}</code>
                 </div>
                 <code class="sg-color-box__name no-style">
                     color('{{ color.name }}')

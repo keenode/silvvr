@@ -54,6 +54,22 @@ gulp.task('templating:process', function () {
                 swig.setFilter('cachebust', function (input) {
                     return CACHEBUST_HASH ? input + '?v=' + CACHEBUST_HASH : input;
                 });
+                swig.setFilter('makeTextReadable', function (input) {
+                    var rgb = parseInt(input, 16);   // convert rrggbb to decimal
+                    var r = (rgb >> 16) & 0xff;  // extract red
+                    var g = (rgb >>  8) & 0xff;  // extract green
+                    var b = (rgb >>  0) & 0xff;  // extract blue
+
+                    var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709
+
+                    if (luma > 240)      { return '#888'; }
+                    else if (luma > 230) { return '#777'; }
+                    else if (luma > 220) { return '#666'; }
+                    else if (luma > 210) { return '#555'; }
+                    else if (luma > 200) { return '#444'; }
+
+                    return '#fff';
+                });
             },
         }))
         .pipe(replace('<%= API_URL =%>', apiUrls[env]))
