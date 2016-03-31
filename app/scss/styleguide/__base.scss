@@ -140,26 +140,26 @@ body {
 pre[class*="language-"] {
     margin-top: 20px;
     font-size: 16px;
+    border-radius: 0;
 }
 
-code[class*="language-"], pre[class*="language-"] {
+code[class*="language-"],
+pre[class*="language-"] {
     font-size: 16px;
+    background-color: #555;
 }
 
 /* Copy to Clipboard button */
 .copytoclipboard.btn {
     padding: 5px 10px;
     color: #ddd;
-    font-size: 14px;
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 3px;
+    font-size: 12px;
+    background-color: #333;
+    border: none;
     outline: none;
-    transition: background-color 150ms ease-out,
-                border-color 150ms ease-out;
+    transition: background-color 150ms ease-out;
 
     &:hover {
-        background-color: #333;
-        border-color: #666;
+        background-color: black;
     }
 }
