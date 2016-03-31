@@ -1,14 +1,26 @@
 /**
- * typography/_anchors
+ * typography/anchors
  * Anchor styles.
 */
 
-a {
+/*
+    Placeholder styles
+*/
+
+%inline-anchor {
     color: color('blue');
+    font-weight: 700;
     text-decoration: none;
     transition: color 100ms ease-out;
 
     &:hover {
-        color: color('blue-lighter');
+        color: color('blue-light');
     }
 }
+
+
+/*
+    Generic extends
+*/
+
+a { @extend %inline-anchor; }

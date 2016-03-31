@@ -7,30 +7,61 @@
     Placeholder list styles
 */
 
-%unordered-list {
+%default-list {
     margin: 0;
+    padding: 0 0 0 30px;
+
+    li {
+        position: relative;
+        margin: 20px 0;
+        color: color('gray-dk-lighter');
+    }
 }
 
-%ordered-list {
-    margin: 0;
+%list-unordered {
+    @extend %default-list;
+    padding-left: 60px;
+    list-style: none;
+
+    li:before {
+        position: absolute;
+        left: -50px;
+        top: 10px;
+        content: '';
+        width: 26px;
+        border-bottom: 1px solid color('gray-dk-lighter');
+    }
 }
 
-%unstyled-list {
-    margin: 0;
+%list-ordered {
+    @extend %default-list;
+}
+
+%list-unstyled {
+    @extend %default-list;
     padding: 0;
     list-style: none;
+
+    li:before { display: none; }
 }
 
-%inline-list {
-    @extend %unstyled-list;
+%list-inline {
+    @extend %list-unstyled;
 
     li {
         display: inline-block;
-        padding: 0 10px;
+        padding: 0 15px;
+    }
 
-        &:first-child {
-            padding-left: 0;
-        }
+    li:first-child {
+        padding-left: 0;
+    }
+}
+
+%list--condensed {
+    li {
+        margin: 10px 0;
+        font-size: 14px;
     }
 }
 
@@ -39,7 +70,13 @@
     Generic list element extends
 */
 
-ul               { @extend %unordered-list; }
-ul.list-unstyled { @extend %unstyled-list; }
-ul.list-inline   { @extend %inline-list; }
-ol               { @extend %ordered-list; }
+ul               { @extend %list-unordered; }
+ul.list-unstyled { @extend %list-unstyled; }
+ul.list-inline   { @extend %list-inline; }
+ol               { @extend %list-ordered; }
+
+// Modifiers
+ul.list--condensed,
+ol.list--condensed {
+    @extend %list--condensed;
+}
