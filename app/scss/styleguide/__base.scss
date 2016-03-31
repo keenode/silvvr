@@ -4,33 +4,68 @@
 */
 
 body {
-    background-color: #f6f6f6;
+    // background-color: #f6f6f6;
+    background-color: white;
+}
+
+.sg-page-wrap {
+    margin-top: 100px;
 }
 
 .sg-container {
     @extend %outer-container;
     padding: 30px;
-    background-color: white;
-    border: 2px solid #eee;
 }
 
 .sg-header {
-    padding: 50px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    @include size(100% 60px);
+    background-color: #33353a;
+    z-index: 1000;
+}
 
-    &__title {
-        margin: 0;
-        color: #666;
+.sg-topnav {
+
+    &__list {
+        @extend %clear-list;
+    }
+
+    &__list-item {
+        display: inline-block;
+
+        &:before { display: none; }
+    }
+
+    &__list-link {
+        padding: 0 20px;
+        color: white;
         font-weight: 500;
-        text-align: center;
-        letter-spacing: 3px;
-        cursor: default;
+        @include font-aa;
     }
 }
 
+// .sg-header {
+//     padding: 50px 0;
+
+//     &__title {
+//         margin: 0;
+//         color: #666;
+//         font-weight: 500;
+//         text-align: center;
+//         letter-spacing: 3px;
+//         cursor: default;
+//     }
+// }
+
 .sg-section {
-    margin: 50px 0;
     padding-bottom: 50px;
-    border-bottom: 1px solid #ccc;
+
+    &:nth-of-type(even) {
+        border-top: 1px solid white;
+        background-color: #f8f8f8;
+    }
 }
 
 .sg-example {

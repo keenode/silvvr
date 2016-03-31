@@ -10,6 +10,7 @@
 %default-list {
     margin: 0;
     padding: 0 0 0 30px;
+    @include font-aa;
 
     li {
         position: relative;

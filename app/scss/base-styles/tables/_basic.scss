@@ -9,6 +9,7 @@
 
 %table {
     width: 100%;
+    @include font-aa;
 
     caption {
         margin-bottom: 5px;

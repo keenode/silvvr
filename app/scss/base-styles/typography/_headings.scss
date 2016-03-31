@@ -7,6 +7,16 @@
     Placeholder element heading styles
 */
 
+// --- Styles shared by headings 1-6
+%heading-1,
+%heading-2,
+%heading-3,
+%heading-4,
+%heading-5,
+%heading-6 {
+    @include font-aa;
+}
+
 // --- Styles shared by headings 1, 3-6
 %heading-1,
 %heading-3,
