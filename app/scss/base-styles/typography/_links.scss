@@ -1,13 +1,13 @@
 /**
- * typography/anchors
- * Anchor styles.
+ * typography/links
+ * Link styles.
 */
 
 /*
     Placeholder styles
 */
 
-%inline-anchor {
+%inline-link {
     color: color('blue');
     font-weight: 700;
     text-decoration: none;
@@ -23,4 +23,4 @@
     Generic extends
 */
 
-a { @extend %inline-anchor; }
+a { @extend %inline-link; }
