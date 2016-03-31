@@ -80,18 +80,21 @@
     Modifier heading element extends
 */
 
+%heading-1-section,
+%heading-2-section {
+    cursor: default;
+}
+
 %heading-1-section {
     @extend %heading-1;
     margin-bottom: 50px;
     padding-bottom: 10px;
-    border-bottom: 1px solid color('gray-lightest');
 }
 
 %heading-2-section {
     @extend %heading-2;
     margin-bottom: 30px;
     padding-bottom: 10px;
-    border-bottom: 1px solid color('gray-lightest');
 }
 
 
