@@ -76,7 +76,7 @@ body {
 }
 
 .sg-example {
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
 }
 
 .sg-example-heading {
@@ -93,9 +93,19 @@ body {
     @extend %clearfix;
 }
 
-.sg-color-section-heading {
+.sg-color-row,
+.sg-color-subheading,
+.sg-color-divider {
     float: left;
     width: 100%;
+}
+
+.sg-color-row {
+    margin-top: 100px;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .sg-color-box {

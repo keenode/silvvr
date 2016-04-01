@@ -1,6 +1,9 @@
 {% set colors = [
 
-        { heading: 'Primary' },
+        {
+            heading: 'Primary',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, adipisci.'
+        },
 
         { subheading: 'Blue' },
         { name: 'blue',            hex: '3ba6ef' },
@@ -24,7 +27,10 @@
         { name: 'gray-lighter',    hex: 'eef1f7' },
         { name: 'gray-lightest',   hex: 'f6f8fb' },
 
-        { heading: 'Secondary' },
+        {
+            heading: 'Secondary',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, adipisci.'
+        },
 
         { subheading: 'Orange' },
         { name: 'orange',          hex: 'f9c367' },
@@ -56,9 +62,18 @@
                 {% for color in colors %}
 
                     {% if color.heading %}
-                        <h3 class="sg-color-section-heading">{{ color.heading }}</h3>
+
+                        <div class="sg-color-row">
+                            <h3>{{ color.heading }}</h3>
+                            {% if color.description %}
+                                <p>{{ color.description }}</p>
+                            {% endif %}
+                        </div>
+
+                        <hr class="sg-color-divider">
+
                     {% elseif color.subheading %}
-                        <h5 class="sg-color-section-heading">{{ color.subheading }}</h5>
+                        <h5 class="sg-color-subheading">{{ color.subheading }}</h5>
                     {% else %}
 
                         <div class="sg-color-box">
