@@ -28,19 +28,29 @@ body {
 }
 
 .sg-topnav {
+    height: 100%;
+    padding: 0 30px;
 
     &__list {
         @extend %clear-list;
+        height: 100%;
     }
 
     &__list-item {
         display: inline-block;
+        height: 100%;
+        margin: 0;
 
         &:before { display: none; }
     }
 
+    &__list-item--right {
+        float: right;
+    }
+
     &__list-link {
-        padding: 0 20px;
+        display: inline-block;
+        padding: 19px 20px;
         color: white;
         font-weight: 500;
         @include font-aa;
@@ -76,7 +86,11 @@ body {
 }
 
 .sg-example {
-    // margin-bottom: 50px;
+    margin-bottom: 100px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .sg-example-heading {
@@ -172,5 +186,24 @@ pre[class*="language-"] {
 
     &:hover {
         background-color: black;
+    }
+}
+
+.mode-switcher {
+    margin-top: 9px;
+    background-color: black;
+
+    &__option {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &__option--active {
+        color: white;
+        background-color: #4ad4d6;
     }
 }

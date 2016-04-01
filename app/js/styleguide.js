@@ -3,6 +3,26 @@
  * Styleguide main script.
 */
 
+/**
+    Mode Switcher
+*/
+class ModeSwitcher {
+    constructor(selectorQuery) {
+        this.$selector = $(selectorQuery);
+        this.$option = this.$selector.find('.mode-switcher__option');
+        this.initEvents();
+    }
+
+    initEvents() {
+        this.$option.on('click', () => {
+            alert('oook');
+        });
+    }
+}
+
+var modeSwitcher = new ModeSwitcher('#mode-switcher');
+
+
 /* Prism copy to clipbaord for all pre with copytoclipboard class */
 $('pre.copytoclipboard').each(function () {
     var $this = $(this);
