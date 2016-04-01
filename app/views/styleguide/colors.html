@@ -47,30 +47,34 @@
 
     <div class="sg-container">
 
-        <h2 class="heading-section">Color Palette</h2>
+        <h2 class="heading-section">1. Color Palette</h2>
 
-        <div class="sg-colors-container">
+        <div class="sg-element-section">
 
-            {% for color in colors %}
+            <div class="sg-colors-container">
 
-                {% if color.heading %}
-                    <h3 class="sg-color-section-heading">{{ color.heading }}</h3>
-                {% elseif color.subheading %}
-                    <h5 class="sg-color-section-heading">{{ color.subheading }}</h5>
-                {% else %}
+                {% for color in colors %}
 
-                    <div class="sg-color-box">
-                        <div class="sg-color-box__color" style="background-color: #{{ color.hex }};">
-                            <code class="sg-color-box__hex no-style" style="color: {{ color.hex | makeTextReadable }};">#{{ color.hex }}</code>
+                    {% if color.heading %}
+                        <h3 class="sg-color-section-heading">{{ color.heading }}</h3>
+                    {% elseif color.subheading %}
+                        <h5 class="sg-color-section-heading">{{ color.subheading }}</h5>
+                    {% else %}
+
+                        <div class="sg-color-box">
+                            <div class="sg-color-box__color" style="background-color: #{{ color.hex }};">
+                                <code class="sg-color-box__hex no-style" style="color: {{ color.hex | makeTextReadable }};">#{{ color.hex }}</code>
+                            </div>
+                            <code class="sg-color-box__name no-style">
+                                color('{{ color.name }}')
+                            </code>
                         </div>
-                        <code class="sg-color-box__name no-style">
-                            color('{{ color.name }}')
-                        </code>
-                    </div>
 
-                {% endif %}
+                    {% endif %}
 
-            {% endfor %}
+                {% endfor %}
+
+            </div>
 
         </div>
 

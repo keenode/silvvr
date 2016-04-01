@@ -5,7 +5,8 @@
 
 body {
     // background-color: #f6f6f6;
-    background-color: white;
+    // background-color: white;
+    background-color: #f8f8f8;
 }
 
 .sg-page-wrap {
@@ -62,10 +63,10 @@ body {
 .sg-section {
     padding-bottom: 50px;
 
-    &:nth-of-type(even) {
-        border-top: 1px solid white;
-        background-color: #f8f8f8;
-    }
+    // &:nth-of-type(even) {
+    //     border-top: 1px solid white;
+        // background-color: #f8f8f8;
+    // }
 }
 
 .sg-element-section {
