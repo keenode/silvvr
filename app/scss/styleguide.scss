@@ -22,3 +22,7 @@ $max-width: 1200px;
 
 // Import styleguide theme
 @import 'styleguide/_base';
+
+/* --- partials --- */
+@import 'styleguide/partials/header/_include',
+        'styleguide/partials/footer/_include';

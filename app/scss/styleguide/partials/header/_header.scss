@@ -1,0 +1,13 @@
+/**
+ * styleguide/partials/header/header
+ * Header styles.
+*/
+
+.sg-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    @include size(100% 60px);
+    background-color: #33353a;
+    z-index: 1000;
+}

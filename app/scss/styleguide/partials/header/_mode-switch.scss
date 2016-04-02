@@ -1,0 +1,23 @@
+/**
+ * styleguide/partials/header/mode-switch
+ * Mode Switch styles.
+*/
+
+.sg-mode-switch {
+    margin-top: 9px;
+    background-color: black;
+
+    &__option {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &__option--active {
+        color: white;
+        background-color: #4ad4d6;
+    }
+}

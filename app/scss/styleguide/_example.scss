@@ -1,0 +1,22 @@
+/**
+ * styleguide/example
+ * Example styles.
+*/
+
+.sg-example {
+    margin-bottom: 100px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sg-example-heading {
+    color: #999;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: default;
+}

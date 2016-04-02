@@ -1,0 +1,14 @@
+/**
+ * styleguide/partials/footer/footer
+ * Footer base styles.
+*/
+
+.sg-footer {
+    padding: 50px 0;
+
+    &__copyright {
+        display: block;
+        color: #888;
+        text-align: center;
+    }
+}

@@ -4,10 +4,13 @@
 */
 
 body {
-    // background-color: #f6f6f6;
-    // background-color: white;
     background-color: #f8f8f8;
 }
+
+@import 'example';
+@import 'color-section';
+@import 'prism-overrides';
+
 
 .sg-page-wrap {
     margin-top: 100px;
@@ -18,65 +21,8 @@ body {
     padding: 30px;
 }
 
-.sg-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    @include size(100% 60px);
-    background-color: #33353a;
-    z-index: 1000;
-}
-
-.sg-topnav {
-    height: 100%;
-    padding: 0 30px;
-
-    &__list {
-        @extend %clear-list;
-        height: 100%;
-    }
-
-    &__item {
-        display: inline-block;
-        height: 100%;
-        margin: 0;
-
-        &:before { display: none; }
-    }
-
-    &__item--right {
-        float: right;
-    }
-
-    &__link {
-        display: inline-block;
-        padding: 19px 20px;
-        color: white;
-        font-weight: 500;
-        @include font-aa;
-    }
-}
-
-// .sg-header {
-//     padding: 50px 0;
-
-//     &__title {
-//         margin: 0;
-//         color: #666;
-//         font-weight: 500;
-//         text-align: center;
-//         letter-spacing: 3px;
-//         cursor: default;
-//     }
-// }
-
 .sg-section {
     padding-bottom: 50px;
-
-    // &:nth-of-type(even) {
-    //     border-top: 1px solid white;
-        // background-color: #f8f8f8;
-    // }
 }
 
 .sg-element-section {
@@ -85,125 +31,6 @@ body {
     background-color: white;
 }
 
-.sg-example {
-    margin-bottom: 100px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
-.sg-example-heading {
-    color: #999;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: default;
-}
-
 .sg-colors-container {
     @extend %clearfix;
-}
-
-.sg-color-row,
-.sg-color-subheading,
-.sg-color-divider {
-    float: left;
-    width: 100%;
-}
-
-.sg-color-row {
-    margin-top: 100px;
-
-    &:first-child {
-        margin-top: 0;
-    }
-}
-
-.sg-color-box {
-    @include size(160px 130px);
-    float: left;
-    margin: 10px;
-
-    &__color {
-        @include size(100% 80px);
-        background-color: #666; // default
-        border-radius: 4px;
-    }
-
-    &__hex {
-        @extend %code-nostyle;
-        display: block;
-        position: relative;
-        top: 34px;
-        color: white;
-        font-size: 12px;
-        text-align: center;
-    }
-
-    &__name {
-        display: block;
-        margin-top: 10px;
-        font-size: 11px;
-        text-align: center;
-    }
-}
-
-.sg-footer {
-    padding: 50px 0;
-
-    &__copyright {
-        display: block;
-        color: #888;
-        text-align: center;
-    }
-}
-
-/* Prism theme overrides */
-pre[class*="language-"] {
-    margin-top: 20px;
-    font-size: 16px;
-    border-radius: 0;
-}
-
-code[class*="language-"],
-pre[class*="language-"] {
-    font-size: 16px;
-    background-color: #555;
-}
-
-/* Copy to Clipboard button */
-.copytoclipboard.btn {
-    padding: 5px 10px;
-    color: #ddd;
-    font-size: 12px;
-    background-color: #333;
-    border: none;
-    outline: none;
-    transition: background-color 150ms ease-out;
-
-    &:hover {
-        background-color: black;
-    }
-}
-
-.mode-switcher {
-    margin-top: 9px;
-    background-color: black;
-
-    &__option {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 12px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        cursor: pointer;
-    }
-
-    &__option--active {
-        color: white;
-        background-color: #4ad4d6;
-    }
 }
