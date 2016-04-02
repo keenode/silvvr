@@ -4,16 +4,29 @@
 */
 
 .sg-mode-switch {
+    @extend %clearfix;
     margin-top: 9px;
     background-color: black;
 
     &__option {
-        display: inline-block;
+        float: left;
+        margin: 2px;
         padding: 10px 20px;
         font-size: 12px;
         letter-spacing: 1px;
         text-transform: uppercase;
         cursor: pointer;
+        user-select: none;
+        transition: color 200ms ease-out,
+                    background-color 100ms ease-out;
+
+        &:last-child {
+            margin-left: 0;
+        }
+
+        &:hover {
+            color: white;
+        }
     }
 
     &__option--active {

@@ -6,21 +6,24 @@
 /**
     Mode Switcher
 */
-class ModeSwitcher {
+class ModeSwitch {
     constructor(selectorQuery) {
-        this.$selector = $(selectorQuery);
-        this.$option = this.$selector.find('.mode-switcher__option');
+        this.baseClass         = 'sg-mode-switch';
+        this.$selector         = $(selectorQuery);
+        this.optionActiveClass = `${this.baseClass}__option--active`;
+        this.$option           = this.$selector.find(`.${this.baseClass}__option`);
         this.initEvents();
     }
 
     initEvents() {
-        this.$option.on('click', () => {
-            alert('oook');
+        this.$option.on('click', (e) => {
+            this.$option.removeClass(this.optionActiveClass);
+            $(e.target).addClass(this.optionActiveClass);
         });
     }
 }
 
-var modeSwitcher = new ModeSwitcher('#mode-switcher');
+var modeSwitch = new ModeSwitch('#sg-mode-switch');
 
 
 /* Prism copy to clipbaord for all pre with copytoclipboard class */
