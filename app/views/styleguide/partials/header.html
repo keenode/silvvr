@@ -1,4 +1,38 @@
-{# Main Header #}
+{% set categories = [
+        'Color Palette',
+        'Fonts',
+        'Grid',
+        'Typography',
+        'Code',
+        'Tables',
+        'Forms',
+        'Buttons',
+    ]
+%}
+
 <header class="sg-header">
-    <h1 class="sg-header__title">{{ title }}</h1>
-</header> {# .sg-header #}
+    <nav class="sg-topnav">
+        <ul class="sg-topnav__list">
+            <li class="sg-topnav__item">
+                <a class="sg-topnav__link" href="http://www.weareenvoy.com"><strong>ENVOY</strong></a>
+            </li>
+
+            {% for cat in categories %}
+                <li class="sg-topnav__item">
+                    <a class="sg-topnav__link" href="javascript:void(0)">{{ cat }}</a>
+                </li>
+            {% endfor %}
+
+            <li class="sg-topnav__item sg-topnav__item--right">
+                <div id="mode-switcher" class="mode-switcher">
+                    <div class="mode-switcher__option mode-switcher__option--active">
+                        Developer
+                    </div>
+                    <div class="mode-switcher__option">
+                        Designer
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>

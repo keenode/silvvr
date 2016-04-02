@@ -36,7 +36,7 @@ body {
         height: 100%;
     }
 
-    &__list-item {
+    &__item {
         display: inline-block;
         height: 100%;
         margin: 0;
@@ -44,11 +44,11 @@ body {
         &:before { display: none; }
     }
 
-    &__list-item--right {
+    &__item--right {
         float: right;
     }
 
-    &__list-link {
+    &__link {
         display: inline-block;
         padding: 19px 20px;
         color: white;
@@ -130,7 +130,7 @@ body {
     &__color {
         @include size(100% 80px);
         background-color: #666; // default
-        border-radius: 3px;
+        border-radius: 4px;
     }
 
     &__hex {
@@ -156,7 +156,7 @@ body {
 
     &__copyright {
         display: block;
-        color: white;
+        color: #888;
         text-align: center;
     }
 }
