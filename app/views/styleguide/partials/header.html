@@ -1,17 +1,41 @@
 {% set categories = [
-        'Color Palette',
-        'Fonts',
-        'Grid',
-        'Typography',
-        'Code',
-        'Tables',
-        'Forms',
-        'Buttons',
+        {
+            ref: 'color-palette',
+            name: 'Color Palette',
+        },
+        {
+            ref: 'fonts',
+            name: 'Fonts',
+        },
+        {
+            ref: 'grid',
+            name: 'Grid',
+        },
+        {
+            ref: 'typography',
+            name: 'Typography',
+        },
+        {
+            ref: 'buttons',
+            name: 'Buttons',
+        },
+        {
+            ref: 'code',
+            name: 'Code',
+        },
+        {
+            ref: 'tables',
+            name: 'Tables',
+        },
+        {
+            ref: 'forms',
+            name: 'Forms',
+        },
     ]
 %}
 
 <header class="sg-header">
-    <nav class="sg-topnav">
+    <nav id="sg-topnav" class="sg-topnav">
         <ul class="sg-topnav__list">
             <li class="sg-topnav__item">
                 <a class="sg-topnav__link" href="http://www.weareenvoy.com"><strong>ENVOY</strong></a>
@@ -19,7 +43,7 @@
 
             {% for cat in categories %}
                 <li class="sg-topnav__item">
-                    <a class="sg-topnav__link" href="javascript:void(0)">{{ cat }}</a>
+                    <a class="sg-topnav__link" href="javascript:void(0)" data-scroll-to="section-{{ cat.ref }}">{{ cat.name }}</a>
                 </li>
             {% endfor %}
 

@@ -1,13 +1,11 @@
 /**
- * styleguide.js
- * Styleguide main script.
+ * components/ModeSwitch
 */
 
-/**
-    Mode Switcher
-*/
-class ModeSwitch {
+class ModeSwitch extends Component {
+
     constructor(selectorQuery) {
+        super(selectorQuery);
         this.baseClass         = 'sg-mode-switch';
         this.$selector         = $(selectorQuery);
         this.optionActiveClass = `${this.baseClass}__option--active`;

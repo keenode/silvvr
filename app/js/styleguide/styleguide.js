@@ -5,8 +5,13 @@
 
 $(document).ready(function () {
 
+    // Init top navigation
+    var topNav = new TopNav('#sg-topnav');
+
     // Init mode switch for Developer / Designer
     var modeSwitch = new ModeSwitch('#sg-mode-switch');
+
+    // TODO: Add back to top component
 
     /* Prism copy to clipbaord for all pre with copytoclipboard class */
     $('pre.copytoclipboard').each(function () {
