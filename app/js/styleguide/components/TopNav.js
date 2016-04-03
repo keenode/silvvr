@@ -6,12 +6,12 @@ class TopNav extends Component {
 
     constructor(selectorQuery) {
         super(selectorQuery);
-        this.baseClass = 'sg-topnav';
-        this.scrollToThreshold = 50;
-        this.isAutoScrolling = false;
+        this.baseClass          = 'sg-topnav';
+        this.scrollToThreshold  = 50;
+        this.isAutoScrolling    = false;
         this.navLinkActiveClass = `${this.baseClass}__link--active`;
-        this.$navLink = this.$selector.find(`.${this.baseClass}__link`);
-        this.sections = [];
+        this.$navLink           = this.$selector.find(`.${this.baseClass}__link`);
+        this.sections           = [];
         this.gatherSections();
         this.initEvents();
         this.determineCurrentSection();

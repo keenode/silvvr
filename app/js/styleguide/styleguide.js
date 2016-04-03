@@ -11,7 +11,8 @@ $(document).ready(function () {
     // Init mode switch for Developer / Designer
     var modeSwitch = new ModeSwitch('#sg-mode-switch');
 
-    // TODO: Add back to top component
+    // Init back to top component
+    var backToTop = new BackToTop('#sg-backtotop');
 
     /* Prism copy to clipbaord for all pre with copytoclipboard class */
     $('pre.copytoclipboard').each(function () {
