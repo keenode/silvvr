@@ -27,14 +27,18 @@ $ns: '.sg-mode-switch';
         user-select: none;
         transition: color 200ms ease-out,
                     background-color 100ms ease-out;
+    }
 
-        &:last-child {
-            margin-left: 0;
-        }
+    &__option:last-child {
+        margin-left: 0;
+    }
 
-        &:hover {
-            color: white;
-        }
+    &__option:hover {
+        color: white;
+    }
+
+    &__option--active {
+        color: white;
     }
 
     &__option:nth-child(1)#{$ns}__option--active {
@@ -43,9 +47,5 @@ $ns: '.sg-mode-switch';
 
     &__option:nth-child(2)#{$ns}__option--active {
         background-color: #f9c367;
-    }
-
-    &__option--active {
-        color: white;
     }
 }

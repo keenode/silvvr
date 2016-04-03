@@ -1,9 +1,17 @@
 /**
  * styleguide/partials/footer/footer
  * Footer base styles.
+ * @author Keenan Staffieri
 */
 
-.sg-footer {
+/* --- variables ------------------------------------------ */
+
+$ns: '.sg-footer';
+
+
+/* --- styles --------------------------------------------- */
+
+#{$ns} {
     padding: 50px 0;
 
     &__copyright {
