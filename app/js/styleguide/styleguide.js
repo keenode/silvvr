@@ -1,6 +1,7 @@
 /**
- * styleguide.js
+ * styleguide
  * Styleguide main script.
+ * @author Keenan Staffieri
 */
 
 $(document).ready(function () {

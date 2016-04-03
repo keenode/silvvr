@@ -1,9 +1,17 @@
 /**
  * styleguide/partials/header/mode-switch
  * Mode Switch styles.
+ * @author Keenan Staffieri
 */
 
-.sg-mode-switch {
+/* --- variables ------------------------------------------ */
+
+$ns: '.sg-mode-switch';
+
+
+/* --- styles --------------------------------------------- */
+
+#{$ns} {
     @extend %clearfix;
     margin-top: 9px;
     background-color: #33353a;
@@ -29,8 +37,15 @@
         }
     }
 
+    &__option:nth-child(1)#{$ns}__option--active {
+        background-color: #4ad4d6;
+    }
+
+    &__option:nth-child(2)#{$ns}__option--active {
+        background-color: #f9c367;
+    }
+
     &__option--active {
         color: white;
-        background-color: #4ad4d6;
     }
 }

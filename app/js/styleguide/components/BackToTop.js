@@ -1,5 +1,6 @@
 /**
  * components/BackToTop
+ * @author Keenan Staffieri
 */
 
 class BackToTop extends Component {
@@ -13,7 +14,7 @@ class BackToTop extends Component {
     }
 
     initEvents() {
-        this.$selector.on('click', (e) => {
+        this.$self.on('click', (e) => {
             e.preventDefault();
             $('html, body').animate({ scrollTop: 0 });
         });
@@ -21,10 +22,10 @@ class BackToTop extends Component {
         this.$window.on('scroll.backToTop', () => {
             var scrollTop = this.$window.scrollTop();
             if (scrollTop > this.scrollThreshold) {
-                this.$selector.addClass(this.showClass);
+                this.$self.addClass(this.showClass);
             }
             else {
-                this.$selector.removeClass(this.showClass);
+                this.$self.removeClass(this.showClass);
             }
         });
     }

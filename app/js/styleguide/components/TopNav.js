@@ -1,5 +1,6 @@
 /**
  * components/TopNav
+ * @author Keenan Staffieri
 */
 
 class TopNav extends Component {
@@ -10,7 +11,7 @@ class TopNav extends Component {
         this.scrollToThreshold  = 50;
         this.isAutoScrolling    = false;
         this.navLinkActiveClass = `${this.baseClass}__link--active`;
-        this.$navLink           = this.$selector.find(`.${this.baseClass}__link`);
+        this.$navLink           = this.$self.find(`.${this.baseClass}__link`);
         this.sections           = [];
         this.gatherSections();
         this.initEvents();
@@ -60,7 +61,7 @@ class TopNav extends Component {
 
     setActiveItem(sectionId) {
         this.$navLink.removeClass(this.navLinkActiveClass);
-        this.$selector.find(`.${this.baseClass}__link[data-scroll-to='${sectionId}']`).addClass(this.navLinkActiveClass);
+        this.$self.find(`.${this.baseClass}__link[data-scroll-to='${sectionId}']`).addClass(this.navLinkActiveClass);
     }
 
     scrollToSection(sectionId) {

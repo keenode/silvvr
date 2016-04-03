@@ -1,5 +1,6 @@
 /**
  * components/ModeSwitch
+ * @author Keenan Staffieri
 */
 
 class ModeSwitch extends Component {
@@ -7,9 +8,8 @@ class ModeSwitch extends Component {
     constructor(selectorQuery) {
         super(selectorQuery);
         this.baseClass         = 'sg-mode-switch';
-        this.$selector         = $(selectorQuery);
         this.optionActiveClass = `${this.baseClass}__option--active`;
-        this.$option           = this.$selector.find(`.${this.baseClass}__option`);
+        this.$option           = this.$self.find(`.${this.baseClass}__option`);
         this.setInitalMode();
         this.initEvents();
     }
@@ -18,7 +18,7 @@ class ModeSwitch extends Component {
         var mode = localStorage.getItem('styleguide_mode');
         if (mode) {
             // Set option based on local storage value
-            this.$selector.find(`.${this.baseClass}__option[data-value='${mode}']`).addClass(this.optionActiveClass);
+            this.$self.find(`.${this.baseClass}__option[data-value='${mode}']`).addClass(this.optionActiveClass);
             this.selectOption(mode);
         }
         else {

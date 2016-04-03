@@ -1,13 +1,14 @@
 /**
  * components/Component
  * Component base class.
+ * @author Keenan Staffieri
 */
 
 class Component {
 
     constructor(selectorQuery) {
         this.baseClass = 'sg-component';
-        this.$selector = $(selectorQuery);
+        this.$self     = $(selectorQuery);
         this.$window   = $(window);
     }
 }

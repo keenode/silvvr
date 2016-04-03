@@ -1,9 +1,17 @@
 /**
  * styleguide/backtotop
  * Back To Top styles.
+ * @author Keenan Staffieri
 */
 
-.sg-backtotop {
+/* --- variables ------------------------------------------ */
+
+$ns: '.sg-backtotop';
+
+
+/* --- styles --------------------------------------------- */
+
+#{$ns} {
     position: fixed;
     right: -999px;
     bottom: 25px;

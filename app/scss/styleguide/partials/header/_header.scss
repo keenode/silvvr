@@ -1,9 +1,17 @@
 /**
  * styleguide/partials/header/header
  * Header styles.
+ * @author Keenan Staffieri
 */
 
-.sg-header {
+/* --- variables ------------------------------------------ */
+
+$ns: '.sg-header';
+
+
+/* --- styles --------------------------------------------- */
+
+#{$ns} {
     position: fixed;
     left: 0;
     top: 0;
