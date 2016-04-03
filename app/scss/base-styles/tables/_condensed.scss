@@ -11,6 +11,7 @@
     th,
     td {
         padding: 3px 5px 1px 5px;
+        font-size: 75%;
     }
 }
 
@@ -19,5 +20,5 @@
     Generic extends
 */
 
-table.table-condensed { @extend %table-condensed; }
+table.table--condensed { @extend %table-condensed; }
 

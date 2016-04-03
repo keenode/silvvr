@@ -15,7 +15,7 @@
 
 %deleted-text {
     padding: 3px 8px 1px 8px;
-    background-color: color('gray-lightest');
+    background-color: color('rose-lighter');
 }
 
 %strikethrough-text {
@@ -24,7 +24,7 @@
 
 %inserted-text {
     padding: 3px 8px 1px 8px;
-    background-color: lightGreen;
+    background-color: color('green-lightest');
 }
 
 %underlined-text {
@@ -45,7 +45,7 @@
 
 %abbreviated-text {
     text-decoration: none;
-    border-bottom: 2px solid color('blue');
+    border-bottom: 2px solid color('blue-light');
     cursor: help;
 }
 

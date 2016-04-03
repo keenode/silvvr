@@ -9,7 +9,7 @@
 
 %table-striped {
     tr:nth-of-type(even) {
-        background-color: tint(color('gray-lightest'), 50%);
+        background-color: tint(color('gray-lighter'), 50%);
     }
 }
 
@@ -18,5 +18,5 @@
     Generic extends
 */
 
-table.table-striped { @extend %table-striped; }
+table.table--striped { @extend %table-striped; }
 

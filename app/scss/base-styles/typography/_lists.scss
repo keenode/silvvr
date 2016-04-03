@@ -8,9 +8,14 @@
 */
 
 %default-list {
-    margin: 0;
+    margin: 10px 0 50px 0;
     padding: 0 0 0 30px;
     @include font-aa;
+
+    ul,
+    ol {
+        margin: 0;
+    }
 
     li {
         position: relative;
@@ -40,6 +45,7 @@
 
 %list-unstyled {
     @extend %default-list;
+    margin: 0;
     padding: 0;
     list-style: none;
 

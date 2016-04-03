@@ -8,7 +8,9 @@
 */
 
 %table {
+    margin: 10px 0 20px 0;
     width: 100%;
+    border-spacing: 0;
     @include font-aa;
 
     caption {
@@ -17,18 +19,24 @@
         text-align: left;
     }
 
-    thead {
-        border-bottom: 2px solid color('gray-lightest');
-    }
-
-    tr {
-        border-bottom: 1px solid color('gray-lightest');
-    }
-
     th,
     td {
-        padding: 7px 10px 5px 10px;
+        padding: 9px 12px 7px 12px;
         text-align: left;
+    }
+
+    thead tr th {
+        border-bottom: 2px solid color('gray-lighter');
+    }
+
+    tbody tr td,
+    tbody tr th {
+        border-bottom: 1px solid color('gray-lighter');
+    }
+
+    tbody tr:last-child td,
+    tbody tr:last-child th {
+        border-bottom: none;
     }
 }
 
@@ -37,5 +45,5 @@
     Generic extends
 */
 
-table { @extend %table; }
+table.table { @extend %table; }
 

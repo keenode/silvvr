@@ -9,7 +9,7 @@
 
 %table-hover {
     tr:hover {
-        background-color: tint(color('gray-lightest'), 75%);
+        background-color: color('gray-lightest');
     }
 }
 
@@ -18,5 +18,4 @@
     Generic extends
 */
 
-table.table-hover { @extend %table-hover; }
-
+table.table--hover { @extend %table-hover; }
