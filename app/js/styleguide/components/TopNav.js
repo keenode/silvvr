@@ -14,6 +14,7 @@ class TopNav extends Component {
         this.sections = [];
         this.gatherSections();
         this.initEvents();
+        this.determineCurrentSection();
     }
 
     gatherSections() {
@@ -23,7 +24,6 @@ class TopNav extends Component {
                 this.sections.push(sectionRef);
             }
         });
-        console.log(this.sections);
     }
 
     initEvents() {
@@ -36,19 +36,26 @@ class TopNav extends Component {
         });
 
         this.$window.on('scroll.topNav', () => {
-            var scrollTop = this.$window.scrollTop();
-            // console.log('scrollTop: ' + scrollTop);
-
             if (this.isAutoScrolling) return false;
-
-            for (let i = 0; i < this.sections.length; i++) {
-                var sectionId  = this.sections[i],
-                    sectionPos = $('#' + sectionId).offset().top - this.scrollToThreshold;
-                if (scrollTop >= sectionPos) {
-                    this.setActiveItem(sectionId);
-                }
-            }
+            this.determineCurrentSection();
         });
+    }
+
+    determineCurrentSection() {
+        var scrollTop   = this.$window.scrollTop(),
+            activeFound = false;
+        for (let i = 0; i < this.sections.length; i++) {
+            var sectionId  = this.sections[i],
+                sectionPos = $('#' + sectionId).offset().top - this.scrollToThreshold;
+            if (scrollTop >= sectionPos) {
+                this.setActiveItem(sectionId);
+                activeFound = true;
+            }
+        }
+
+        if ( ! activeFound) {
+            this.setActiveItem(this.sections[0]);
+        }
     }
 
     setActiveItem(sectionId) {
