@@ -1,0 +1,277 @@
+<section id="section-controls" class="sg-section">
+
+    <div class="sg-container">
+
+        <h2 class="heading-section">8. Controls</h2>
+
+        <div class="sg-element-section">
+
+            <h3>Input</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa ratione iusto blanditiis minus fugiat.</p>
+            <hr>
+
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <input type="text" class="form-control" placeholder="Text input">
+                </div>
+
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><input type="text" class="form-control" placeholder="Text input"></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Disabled State</h4>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+                </div>
+
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Readonly State</h4>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+                </div>
+
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><input class="form-control" type="text" placeholder="Readonly input here…" readonly></script></code></pre>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sg-element-section">
+
+            <h3>Textarea</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa ratione iusto blanditiis minus fugiat.</p>
+            <hr>
+
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <textarea rows="10"></textarea>
+                </div>
+
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><textarea rows="10"></textarea></script></code></pre>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sg-element-section">
+
+            <h3>Checkboxes</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa ratione iusto blanditiis minus fugiat.</p>
+            <hr>
+
+            <h4>Default (Stacked)</h4>
+
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">
+                            Option one is this and that&mdash;be sure to include why it's great
+                        </label>
+                    </div>
+                    <div class="checkbox disabled">
+                        <label>
+                            <input type="checkbox" value="" disabled>
+                            Option two is disabled
+                        </label>
+                    </div>
+                </div>
+
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><div class="checkbox">
+    <label>
+        <input type="checkbox" value="">
+        Option one is this and that&mdash;be sure to include why it's great
+    </label>
+</div>
+<div class="checkbox disabled">
+    <label>
+        <input type="checkbox" value="" disabled>
+        Option two is disabled
+    </label>
+</div></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Inline</h4>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <label class="checkbox checkbox--inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                    </label>
+                    <label class="checkbox checkbox--inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                    </label>
+                    <label class="checkbox checkbox--inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                    </label>
+                </div>
+
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><label class="checkbox-inline">
+    <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+</label>
+<label class="checkbox-inline">
+    <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+</label>
+<label class="checkbox-inline">
+    <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+</label></script></code></pre>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sg-element-section">
+
+            <h3>Radios</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa ratione iusto blanditiis minus fugiat.</p>
+            <hr>
+
+            <h4>Default (Stacked)</h4>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            Option one is this and that&mdash;be sure to include why it's great
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Option two can be something else and selecting it will deselect option one
+                        </label>
+                    </div>
+                    <div class="radio disabled">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                            Option three is disabled
+                        </label>
+                    </div>
+                </div>
+
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><div class="radio">
+    <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Option one is this and that&mdash;be sure to include why it's great
+    </label>
+</div>
+<div class="radio">
+    <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        Option two can be something else and selecting it will deselect option one
+    </label>
+</div>
+<div class="radio disabled">
+    <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+        Option three is disabled
+    </label>
+</div></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Inline</h4>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <label class="radio radio--inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <label class="radio radio--inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <label class="radio radio--inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                </div>
+
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><label class="radio--inline">
+    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+</label>
+<label class="radio--inline">
+    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+</label>
+<label class="radio--inline">
+    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+</label></script></code></pre>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sg-element-section">
+
+            <h3>Selects</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sed?</p>
+            <hr>
+
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <select class="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><select class="select">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Multiple</h4>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <select multiple class="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><select multiple class="select">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select></script></code></pre>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
