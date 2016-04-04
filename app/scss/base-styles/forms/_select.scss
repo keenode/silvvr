@@ -1,0 +1,26 @@
+/**
+ * base-styles/forms/select
+ * Form select styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%select {
+    margin: 5px 0;
+    @include size(100% 35px);
+    max-width: 300px;
+    border: 1px solid color('gray');
+    border-radius: 0;
+}
+
+%select-multiple {
+    height: auto;
+    overflow: scroll;
+}
+
+
+/* --- generic extends ------------------------------------ */
+
+.select { @extend %select; }
+select[multiple].select { @extend %select-multiple; }

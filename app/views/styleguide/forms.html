@@ -196,6 +196,30 @@
                 </div>
             </div>
 
+            <h4>Disabled State</h4>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+                </div>
+
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled></script></code></pre>
+                </div>
+            </div>
+
+            <h4>Readonly State</h4>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+                </div>
+
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><input class="form-control" type="text" placeholder="Readonly input here…" readonly></script></code></pre>
+                </div>
+            </div>
+
         </div>
 
         <div class="sg-element-section">
@@ -370,82 +394,58 @@
 
         </div>
 
+        <div class="sg-element-section">
 
-        <h3>Selects</h3>
-        <select class="form-control">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
+            <h3>Selects</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sed?</p>
+            <hr>
 
-        <h4>Multiple</h4>
-        <select multiple class="form-control">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
-
-        <h3>Static Control</h3>
-        <form class="form-horizontal">
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                    <p class="form-control-static">email@example.com</p>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputPassword" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                </div>
-            </div>
-        </form>
-
-        <h3>Focus State</h3>
-        <input type="text">
-
-        <h3>Disabled State</h3>
-        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
-
-        <h3>Disabled Fieldsets</h3>
-        <form>
-            <fieldset disabled>
-                <div class="form-group">
-                    <label for="disabledTextInput">Disabled input</label>
-                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-                </div>
-                <div class="form-group">
-                    <label for="disabledSelect">Disabled select menu</label>
-                    <select id="disabledSelect" class="form-control">
-                        <option>Disabled select</option>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <select class="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
                     </select>
                 </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Can't check this
-                    </label>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><select class="select">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select></script></code></pre>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </fieldset>
-        </form>
+            </div>
 
-        <h3>Readonly State</h3>
-        <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+            <h4>Multiple</h4>
+            <div class="sg-example">
+                <div class="sg-example-inner">
+                    <h5 class="sg-example-heading">Example</h5>
+                    <select multiple class="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="sg-example-code">
+                    <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup"><select multiple class="select">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select></script></code></pre>
+                </div>
+            </div>
 
-        <h3>Help Text</h3>
-        <label class="sr-only" for="inputHelpBlock">Input with help text</label>
-        <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
-        <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-
-        <h3>Validation States</h3>
-        ...
-
-        <h3>Control Sizing</h3>
-        ...
+        </div>
 
     </div>
 

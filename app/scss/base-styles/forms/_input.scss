@@ -14,6 +14,15 @@
     font-size: 13px;
     border: 1px solid #dedede;
     @include font-aa;
+
+    &[disabled] {
+        background-color: #eee;
+        cursor: not-allowed;
+    }
+
+    &[readonly] {
+        cursor: not-allowed;
+    }
 }
 
 
