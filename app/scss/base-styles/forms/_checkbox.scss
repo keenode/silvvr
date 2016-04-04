@@ -1,0 +1,20 @@
+/**
+ * base-styles/forms/checkbox
+ * Form checkbox styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%checkbox {
+    margin: 5px 0;
+
+    input {
+        margin: 0 5px 0 0;
+    }
+}
+
+
+/* --- generic extends ------------------------------------ */
+
+.checkbox { @extend %checkbox; }

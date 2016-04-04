@@ -1,0 +1,17 @@
+/**
+ * base-styles/forms/help
+ * Form help styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%help-block {
+    color: color('gray');
+    font-size: 13px;
+}
+
+
+/* --- generic extends ------------------------------------ */
+
+.help-block { @extend %help-block; }

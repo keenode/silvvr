@@ -1,0 +1,16 @@
+/**
+ * base-styles/forms/label
+ * Form label styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%label {
+    font-size: 13px;
+}
+
+
+/* --- generic extends ------------------------------------ */
+
+label { @extend %label; }

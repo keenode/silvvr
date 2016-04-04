@@ -1,0 +1,21 @@
+/**
+ * base-styles/forms/input
+ * Form input styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%input {
+    margin: 5px 0;
+    padding: 13px;
+    color: #3a3a3a;
+    font-size: 13px;
+    border: 1px solid #dedede;
+    @include font-aa;
+}
+
+
+/* --- generic extends ------------------------------------ */
+
+input { @extend %input; }

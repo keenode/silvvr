@@ -1,0 +1,24 @@
+/**
+ * base-styles/forms/layout
+ * Form layout styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%form-group {
+    @include row();
+    margin-bottom: 30px;
+
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    input[type='file'] {
+        width: 100%;
+    }
+}
+
+
+/* --- generic extends ------------------------------------ */
+
+.form-group { @extend %form-group; }
