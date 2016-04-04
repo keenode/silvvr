@@ -1,8 +1,21 @@
 /**
- * components/buttons/_secondary
- * Button (secondary) component styles.
+ * base-styles/buttons/secondary
+ * Button (secondary) styles.
+ * @author Keenan Staffieri
 */
 
-%btn--secondary {
-    @include btn(none, #ccc, black);
+/* --- placeholder selectors ------------------------------ */
+
+%btn-secondary {
+    @extend %btn;
+    background-color: color('gray');
+
+    &:hover {
+        background-color: color('gray-dk-lighter');
+    }
 }
+
+
+/* --- generic extends ------------------------------------ */
+
+.btn--secondary { @extend %btn-secondary; }

@@ -1,8 +1,0 @@
-/**
- * components/buttons/_primary
- * Button (primary) component styles.
-*/
-
-%btn--primary {
-    @include btn(color('blue'));
-}
