@@ -1,0 +1,17 @@
+/**
+ * base-styles/forms/textarea
+ * Form textarea styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%textarea {
+    @extend %input;
+    min-width: 600px;
+}
+
+
+/* --- generic extends ------------------------------------ */
+
+textarea { @extend %textarea; }
