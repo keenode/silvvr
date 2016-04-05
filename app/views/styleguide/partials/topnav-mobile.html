@@ -1,0 +1,26 @@
+{% set ns = 'sg-topnav-mobile' %}
+
+<nav {% if id %}id="{{ id }}" {% endif %}class="{{ns}}">
+    <ul class="{{ns}}__list">
+        <li class="{{ns}}__item">
+            <a class="{{ns}}__link" href="http://www.weareenvoy.com"><strong>ENVOY</strong></a>
+        </li>
+
+        {% for section in sections %}
+            <li class="{{ns}}__item">
+                <a class="{{ns}}__link" href="javascript:void(0)" data-scroll-to="section-{{ section.ref }}">{{ section.name }}</a>
+            </li>
+        {% endfor %}
+
+        <li class="{{ns}}__item {{ns}}__item--right">
+            <div id="sg-mode-switch" class="sg-mode-switch">
+                <div class="sg-mode-switch__option" data-value="developer">
+                    Developer
+                </div>
+                <div class="sg-mode-switch__option" data-value="designer">
+                    Designer
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>

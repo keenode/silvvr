@@ -8,6 +8,7 @@ class TopNav extends Component {
     constructor(selectorQuery) {
         super(selectorQuery);
         this.baseClass          = 'sg-topnav';
+        this.baseClassMobile    = this.baseClass + '-mobile';
         this.scrollToThreshold  = 50;
         this.isAutoScrolling    = false;
         this.navLinkActiveClass = `${this.baseClass}__link--active`;
@@ -21,13 +22,14 @@ class TopNav extends Component {
 
     generateMobileMarkup() {
 
-        var markup = `<nav class="${this.baseClass}-mobile">`;
+        var markup = `<nav class="${this.baseClassMobile}">`;
 
         this.$navLink.each( (index, target) => {
             var sectionRef  = $(target).data('scroll-to'),
                 navItemText = $(target).text();
-            console.log('sectionRef: ' + sectionRef);
-            console.log('navItemText: ' + navItemText);
+            markup += `
+
+            `;
         });
 
         markup += '</nav>';

@@ -47,4 +47,8 @@ $ns: '.sg-topnav-mobile';
     &__link--active {
         color: #7fc6f5;
     }
+
+    @include media($small-up) {
+        display: none;
+    }
 }

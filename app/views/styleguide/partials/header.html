@@ -1,4 +1,4 @@
-{% set categories = [
+{% set sections = [
     {
         ref: 'color-palette',
         name: 'Color Palette',
@@ -38,28 +38,15 @@
 ] %}
 
 <header class="sg-header">
-    <nav id="sg-topnav" class="sg-topnav">
-        <ul class="sg-topnav__list">
-            <li class="sg-topnav__item">
-                <a class="sg-topnav__link" href="http://www.weareenvoy.com"><strong>ENVOY</strong></a>
-            </li>
 
-            {% for cat in categories %}
-                <li class="sg-topnav__item">
-                    <a class="sg-topnav__link" href="javascript:void(0)" data-scroll-to="section-{{ cat.ref }}">{{ cat.name }}</a>
-                </li>
-            {% endfor %}
+    {% include 'styleguide/partials/topnav.html' with {
+        id: 'sg-topnav',
+        sections: sections,
+    } only %}
 
-            <li class="sg-topnav__item sg-topnav__item--right">
-                <div id="sg-mode-switch" class="sg-mode-switch">
-                    <div class="sg-mode-switch__option" data-value="developer">
-                        Developer
-                    </div>
-                    <div class="sg-mode-switch__option" data-value="designer">
-                        Designer
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </nav>
+    {% include 'styleguide/partials/topnav-mobile.html' with {
+        id: 'sg-topnav-mobile',
+        sections: sections,
+    } only %}
+
 </header>
