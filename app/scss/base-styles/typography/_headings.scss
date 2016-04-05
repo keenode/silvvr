@@ -75,35 +75,11 @@
 }
 
 
-/*
-    Modifier heading element extends
-*/
-
-%heading-1-section,
-%heading-2-section {
-    cursor: default;
-}
-
-%heading-1-section {
-    @extend %heading-1;
-    // margin-bottom: 50px;
-    // padding-bottom: 10px;
-}
-
-%heading-2-section {
-    @extend %heading-2;
-    // margin-bottom: 30px;
-    // padding-bottom: 10px;
-}
-
-
 /* --- generic extends ------------------------------------ */
 
-h1                 { @extend %heading-1; }
-h1.heading-section { @extend %heading-1-section; }
-h2                 { @extend %heading-2; }
-h2.heading-section { @extend %heading-2-section; }
-h3                 { @extend %heading-3; }
-h4                 { @extend %heading-4; }
-h5                 { @extend %heading-5; }
-h6                 { @extend %heading-6; }
+h1 { @extend %heading-1; }
+h2 { @extend %heading-2; }
+h3 { @extend %heading-3; }
+h4 { @extend %heading-4; }
+h5 { @extend %heading-5; }
+h6 { @extend %heading-6; }
