@@ -14,6 +14,8 @@ import useref from 'gulp-useref';
 import uglify from 'gulp-uglify';
 import runSequence from 'run-sequence';
 import apiUrls from '../config/api-urls';
+import html from 'html';
+
 
 /**
     $ gulp templating
@@ -69,6 +71,9 @@ gulp.task('templating:process', function () {
                     else if (luma > 200) { return '#444'; }
 
                     return '#fff';
+                });
+                swig.setFilter('respectNewlines', function (input) {
+                    return html.prettyPrint(input, { indent_size: 4 });
                 });
             },
         }))

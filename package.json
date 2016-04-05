@@ -55,6 +55,7 @@
     "gulp-useref": "3.0.8",
     "gulp-util": "3.0.7",
     "gulp-watch": "4.3.5",
+    "html": "0.0.10",
     "run-sequence": "1.1.5",
     "yargs": "4.3.2"
   },

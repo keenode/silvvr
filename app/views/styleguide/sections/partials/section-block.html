@@ -1,0 +1,55 @@
+<div class="sg-element-section">
+
+    {% if heading %}
+        <h3>{{ heading }}</h3>
+    {% endif %}
+
+    {% if description %}
+        <p>{{ description }}</p>
+    {% endif %}
+
+    {% if heading || description %}
+        <hr>
+    {% endif %}
+
+    {%if exampleCode %}
+        <div class="sg-example">
+            <div class="sg-example-inner">
+                <h5 class="sg-example-heading">Example</h5>
+                {{ exampleCode }}
+            </div>
+            <div class="sg-example-code">
+                <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">{{ exampleCode | respectNewlines }}</script></code></pre>
+            </div>
+        </div>
+    {% endif %}
+
+    {% if modifiers %}
+
+        {% for modifier in modifiers %}
+
+            {% if modifier.heading %}
+                <h4>{{ modifier.heading }}</h4>
+            {% endif %}
+
+            {% if modifier.description %}
+                <p>{{ modifier.description }}</p>
+            {% endif %}
+
+            {% if modifier.exampleCode %}
+                <div class="sg-example">
+                    <div class="sg-example-inner">
+                        <h5 class="sg-example-heading">Example</h5>
+                        {{ modifier.exampleCode }}
+                    </div>
+                    <div class="sg-example-code">
+                        <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">{{ modifier.exampleCode | respectNewlines }}</script></code></pre>
+                    </div>
+                </div>
+            {% endif %}
+
+        {% endfor %}
+
+    {% endif %}
+
+</div>
