@@ -35,15 +35,15 @@ body {
 
 
 /* --- typography --- */
-@import 'base-styles/typography/_base';
+@import 'base-styles/typography/_include';
 
 
 /* --- code --- */
-@import 'base-styles/code/_base';
+@import 'base-styles/code/_include';
 
 
 /* --- tables --- */
-@import 'base-styles/tables/_base';
+@import 'base-styles/tables/_include';
 
 
 /* --- buttons --- */
@@ -55,8 +55,8 @@ body {
 
 
 /* --- partials --- */
-@import 'partials/header/_base',
-        'partials/footer/_base';
+@import 'partials/header/_include',
+        'partials/footer/_include';
 
 
 /* --- page-specific styles --- */

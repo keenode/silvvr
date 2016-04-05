@@ -1,11 +1,10 @@
 /**
  * tables/condensed
  * Condensed table styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %table-condensed {
     th,
@@ -16,9 +15,7 @@
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 table.table--condensed { @extend %table-condensed; }
 

@@ -1,11 +1,10 @@
 /**
  * code/block
  * Code block styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %code-block {
     padding: 8px 10px 6px 10px;
@@ -16,8 +15,6 @@
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 pre { @extend %code-block; }

@@ -1,11 +1,10 @@
 /**
  * tables/basic
  * Basic table styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %table {
     margin: 10px 0 20px 0;
@@ -41,9 +40,6 @@
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 table.table { @extend %table; }
-

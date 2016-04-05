@@ -1,11 +1,10 @@
 /**
  * typography/inline-text-elements
  * Inline text element styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder element paragraph styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %marked-text {
     padding: 3px 8px 1px 8px;
@@ -54,9 +53,7 @@
 }
 
 
-/*
-    Generic paragraphy element extends
-*/
+/* --- generic extends ------------------------------------ */
 
 mark        { @extend %marked-text; }
 del         { @extend %deleted-text; }

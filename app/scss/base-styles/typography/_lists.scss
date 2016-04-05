@@ -1,11 +1,10 @@
 /**
  * typography/lists
  * List styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder list styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %default-list {
     margin: 10px 0 50px 0;
@@ -73,9 +72,7 @@
 }
 
 
-/*
-    Generic list element extends
-*/
+/* --- generic extends ------------------------------------ */
 
 ul               { @extend %list-unordered; }
 ul.list-unstyled { @extend %list-unstyled; }

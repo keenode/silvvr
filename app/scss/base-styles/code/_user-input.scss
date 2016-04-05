@@ -1,11 +1,10 @@
 /**
  * code/user-input
  * User input styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %user-input {
     padding: 6px 8px 4px 8px;
@@ -16,8 +15,6 @@
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 kbd { @extend %user-input; }

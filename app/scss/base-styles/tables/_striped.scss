@@ -1,11 +1,10 @@
 /**
  * tables/striped
  * Striped table styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %table-striped {
     tr:nth-of-type(even) {
@@ -14,9 +13,6 @@
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 table.table--striped { @extend %table-striped; }
-

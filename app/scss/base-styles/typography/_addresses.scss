@@ -1,11 +1,10 @@
 /**
  * typography/addresses
  * Address styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder address styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %address {
     margin-bottom: 20px;
@@ -13,8 +12,6 @@
 }
 
 
-/*
-    Generic address element extends
-*/
+/* --- generic extends ------------------------------------ */
 
 address { @extend %address; }

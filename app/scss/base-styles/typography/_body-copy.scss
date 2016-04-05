@@ -1,11 +1,10 @@
 /**
  * typography/body-copy
  * Body copy styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder body copy styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %body-copy {
     margin: 5px 0 20px 0;
@@ -14,11 +13,6 @@
     @include font-aa;
 }
 
-
-/*
-    Modifier body copy extends
-*/
-
 %lead-body-copy {
     @extend %body-copy;
     font-size: 20px;
@@ -26,9 +20,7 @@
 }
 
 
-/*
-    Generic body copy element extends
-*/
+/* --- generic extends ------------------------------------ */
 
 p      { @extend %body-copy; }
 p.lead { @extend %lead-body-copy; }

@@ -1,19 +1,16 @@
 /**
  * code/variables
  * Code variables styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %variable {
     
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 var { @extend %variable; }

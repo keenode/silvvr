@@ -1,11 +1,10 @@
 /**
  * code/sample-output
  * Sample Output styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %sample-output {
     padding: 8px 10px 6px 10px;
@@ -16,8 +15,6 @@
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 samp { @extend %sample-output; }

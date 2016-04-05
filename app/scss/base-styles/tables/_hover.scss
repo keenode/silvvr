@@ -1,11 +1,10 @@
 /**
  * tables/hover
  * Hover table styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %table-hover {
     tr:hover {
@@ -14,8 +13,6 @@
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 table.table--hover { @extend %table-hover; }

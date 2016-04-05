@@ -1,11 +1,10 @@
 /**
  * typography/headings
  * Headings styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder element heading styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 // --- Styles shared by headings 1-6
 %heading-1,
@@ -98,9 +97,7 @@
 }
 
 
-/*
-    Generic heading element extends
-*/
+/* --- generic extends ------------------------------------ */
 
 h1                 { @extend %heading-1; }
 h1.heading-section { @extend %heading-1-section; }

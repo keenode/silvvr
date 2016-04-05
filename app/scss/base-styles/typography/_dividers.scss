@@ -1,11 +1,10 @@
 /**
  * typography/links
  * Link styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %divider {
     margin: 60px 0;
@@ -14,8 +13,6 @@
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 hr { @extend %divider; }

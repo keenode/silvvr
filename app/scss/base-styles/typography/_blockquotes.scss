@@ -1,11 +1,10 @@
 /**
  * typography/blockquotes
  * Blockquote styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder blockquote styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %blockquote {
     margin: 0;
@@ -26,8 +25,6 @@
 }
 
 
-/*
-    Generic blockquote element extends
-*/
+/* --- generic extends ------------------------------------ */
 
 blockquote { @extend %blockquote; }

@@ -1,11 +1,10 @@
 /**
  * code/inline
  * Inline code styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %code-inline {
     padding: 3px 6px 1px 6px;
@@ -20,9 +19,7 @@
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 code          { @extend %code-inline; }
 code.no-style { @extend %code-nostyle; }

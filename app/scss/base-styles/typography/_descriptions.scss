@@ -1,11 +1,10 @@
 /**
  * typography/descriptions
  * Description styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder description styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %description-list {
     @include font-aa;
@@ -37,9 +36,7 @@
 }
 
 
-/*
-    Generic list element extends
-*/
+/* --- generic extends ------------------------------------ */
 
 dl               { @extend %description-list; }
 dl.dl-horizontal { @extend %description-list-horizontal; }

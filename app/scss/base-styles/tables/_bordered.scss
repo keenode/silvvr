@@ -1,11 +1,10 @@
 /**
  * tables/bordered
  * Bordered table styles.
+ * @author Keenan Staffieri
 */
 
-/*
-    Placeholder styles
-*/
+/* --- placeholder selectors ------------------------------ */
 
 %table-bordered {
     td,
@@ -29,8 +28,6 @@
 }
 
 
-/*
-    Generic extends
-*/
+/* --- generic extends ------------------------------------ */
 
 table.table--bordered { @extend %table-bordered; }
