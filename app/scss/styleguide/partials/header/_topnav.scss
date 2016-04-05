@@ -12,39 +12,44 @@ $ns: '.sg-topnav';
 /* --- styles --------------------------------------------- */
 
 #{$ns} {
-    height: 100%;
-    padding: 0 15px;
+    display: none;
 
-    &__list {
-        @extend %clear-list;
+    @include media($small-up) {
+        display: block;
         height: 100%;
-    }
+        padding: 0 15px;
 
-    &__item {
-        display: inline-block;
-        height: 100%;
-        margin: 0;
+        &__list {
+            @extend %clear-list;
+            height: 100%;
+        }
 
-        &:before { display: none; }
-    }
+        &__item {
+            display: inline-block;
+            height: 100%;
+            margin: 0;
 
-    &__item--right {
-        float: right;
-    }
+            &:before { display: none; }
+        }
 
-    &__link {
-        display: inline-block;
-        padding: 19px 15px;
-        color: #e0e3ea;
-        font-weight: 500;
-        @include font-aa;
+        &__item--right {
+            float: right;
+        }
 
-        &:hover {
+        &__link {
+            display: inline-block;
+            padding: 19px 15px;
+            color: #e0e3ea;
+            font-weight: 500;
+            @include font-aa;
+
+            &:hover {
+                color: #7fc6f5;
+            }
+        }
+
+        &__link--active {
             color: #7fc6f5;
         }
-    }
-
-    &__link--active {
-        color: #7fc6f5;
     }
 }

@@ -12,8 +12,8 @@
 // Neat
 @import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
 
-// Grid settings
-$max-width: 1200px;
+/* --- grid --- */
+@import 'styleguide/grid';
 
 // Prism Theme
 @import '../../node_modules/prismjs/themes/prism-okaidia';

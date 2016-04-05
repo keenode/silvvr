@@ -73,7 +73,7 @@ gulp.task('templating:process', function () {
                     return '#fff';
                 });
                 swig.setFilter('respectNewlines', function (input) {
-                    return html.prettyPrint(input, { indent_size: 4 });
+                    return html.prettyPrint(input);
                 });
             },
         }))

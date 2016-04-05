@@ -13,9 +13,26 @@ class TopNav extends Component {
         this.navLinkActiveClass = `${this.baseClass}__link--active`;
         this.$navLink           = this.$self.find(`.${this.baseClass}__link`);
         this.sections           = [];
+        this.generateMobileMarkup();
         this.gatherSections();
         this.initEvents();
         this.determineCurrentSection();
+    }
+
+    generateMobileMarkup() {
+
+        var markup = `<nav class="${this.baseClass}-mobile">`;
+
+        this.$navLink.each( (index, target) => {
+            var sectionRef  = $(target).data('scroll-to'),
+                navItemText = $(target).text();
+            console.log('sectionRef: ' + sectionRef);
+            console.log('navItemText: ' + navItemText);
+        });
+
+        markup += '</nav>';
+
+        this.$self.append(markup);
     }
 
     gatherSections() {

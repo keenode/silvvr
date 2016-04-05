@@ -6,7 +6,7 @@
 
 $(document).ready(function () {
 
-    // Init top navigation
+    // Init top navigation for DESKTOP
     var topNav = new TopNav('#sg-topnav');
 
     // Init mode switch for Developer / Designer
