@@ -24,26 +24,26 @@
         </div>
     {% endif %}
 
-    {% if modifiers %}
+    {% if subsections %}
 
-        {% for modifier in modifiers %}
+        {% for subsection in subsections %}
 
-            {% if modifier.heading %}
-                <h4>{{ modifier.heading }}</h4>
+            {% if subsection.heading %}
+                <h4>{{ subsection.heading }}</h4>
             {% endif %}
 
-            {% if modifier.description %}
-                <p>{{ modifier.description }}</p>
+            {% if subsection.description %}
+                <p>{{ subsection.description }}</p>
             {% endif %}
 
-            {% if modifier.exampleCode %}
+            {% if subsection.exampleCode %}
                 <div class="sg-example">
                     <div class="sg-example-inner">
                         <h5 class="sg-example-heading">Example</h5>
-                        {{ modifier.exampleCode }}
+                        {{ subsection.exampleCode }}
                     </div>
                     <div class="sg-example-code">
-                        <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">{{ modifier.exampleCode | respectNewlines }}</script></code></pre>
+                        <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">{{ subsection.exampleCode | respectNewlines }}</script></code></pre>
                     </div>
                 </div>
             {% endif %}
