@@ -9,6 +9,14 @@
 %radio {
     margin: 5px 0;
 
+    &.disabled {
+        color: color('gray');
+
+        label {
+            cursor: not-allowed;
+        }
+    }
+
     input {
         margin: 0 5px 0 0;
     }
@@ -19,6 +27,14 @@
 
     &:last-child {
         margin-right: 0;
+    }
+
+    &.disabled {
+        color: color('gray');
+
+        label {
+            cursor: not-allowed;
+        }
     }
 }
 
