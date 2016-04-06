@@ -14,9 +14,10 @@ import useref from 'gulp-useref';
 import uglify from 'gulp-uglify';
 import runSequence from 'run-sequence';
 import html from 'html';
-import apiUrls from '../config/api-urls';
+import fs from 'fs';
 import foreach from 'gulp-foreach';
 import PageDependenciesHandler from '../classes/PageDependenciesHandler';
+import apiUrls from '../config/api-urls';
 
 
 /**
@@ -40,7 +41,7 @@ gulp.task('templating', function (cb) {
 
 
 /* $ gulp templating:process */
-import fs from 'fs';
+
 gulp.task('templating:process', function () {
 
     // Get build environment settings

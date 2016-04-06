@@ -8,6 +8,7 @@
         } only %}
 
         {% include 'partials/stylesheets.html' %}
+        {% block stylesheets %}{% endblock %}
     </head>
     <body>
 
@@ -24,6 +25,7 @@
 
         {# Scripts #}
         {% include 'partials/scripts.html' %}
+        {% block scripts %}{% endblock %}
 
     </body>
 </html>

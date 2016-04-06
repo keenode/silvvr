@@ -5,12 +5,10 @@
 #}
 {# Component: Copy-A #}
 {#
-{% include 'copy/copy-a.html' with {
-    eyebrow: '',
-    headline: 'Experience VIZIO SmartCast<sup>&trade;</sup>.',
-    content: 'VIZIO SmartCast<sup>&trade;</sup> brings together all of your favorite entertainment sources into one simple experience. Discover, cast and control TV shows, movies, music and more from your VIZIO SmartCast<sup>&trade;</sup> Tablet Remote to your P-Series Display.',
-    linkText: 'Learn More About VIZIO SmartCast',
-    linkUrl: '#'
+{% include 'component/copy/copy-a.html' with {
+    eyebrow: 'Testing...',
+    headline: 'Component Test.',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
 } only %}
 #}
 
@@ -31,11 +29,6 @@
 {% endif %}
 
 <section {{ refId }} class="component {{ns}}{{ extraClasses }}" data-component-name="Copy-A">
-
-    {% if imagePath %}
-        <img class="{{ns}}__image" src="{{ imagePath }}" alt="{{ imageAlt }}">
-    {% endif %}
-
     <div class="{{ns}}__container">
 
         {% if eyebrow %}
