@@ -40,7 +40,7 @@ gulp.task('templating', function (cb) {
 
 
 /* $ gulp templating:process */
-
+import fs from 'fs';
 gulp.task('templating:process', function () {
 
     // Get build environment settings
@@ -49,7 +49,11 @@ gulp.task('templating:process', function () {
 
     return gulp.src(`${config.appDir.root}/**/*.html`)
         .pipe(foreach(function (stream, file) {
-            return PageDependenciesHandler.computeDependencies(stream, file);
+            var a = fs.realpathSync(process.cwd() + '/app/views/pages'),
+                b = fs.realpathSync(file.path),
+                fileInsideDir = b.indexOf(a) == 0;
+            // Only compute page dependencies for views within 'pages' dir
+            return fileInsideDir ? PageDependenciesHandler.computeDependencies(stream, file) : stream;
         }))
         .pipe(swig({
             setup: function (swig) {
