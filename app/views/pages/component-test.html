@@ -1,0 +1,20 @@
+{#
+    Page: Component Test
+    ---------------------------------------------
+    Reference: component-test
+#}
+
+{% extends 'layouts/layout.html' %}
+
+{% block content %}
+
+<h1>Component Test</h1>
+
+{# Component: Copy-A #}
+{% include 'component/copy/copy-a.html' with {
+    eyebrow: 'eyebrow',
+    headline: 'Heading.',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
+} only %}
+
+{% endblock %}

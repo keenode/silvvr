@@ -1,0 +1,11 @@
+/**
+ * components/<%= COMPONENT_FOLDER =%>/_<%= COMPONENT_REF =%>
+ * <%= COMPONENT_NAME =%> component styles.
+*/
+
+.component-<%= COMPONENT_REF =%> {
+
+    &__container {
+        @extend %component-container;
+    }
+}

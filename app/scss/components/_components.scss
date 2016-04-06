@@ -1,0 +1,13 @@
+/**
+ * components/components
+ * Components base styles and helper classes.
+*/
+
+%component-container {
+    @extend %outer-container;
+    padding: 0 20px;
+
+    @include media($large-up) {
+        padding: 0;
+    }
+}

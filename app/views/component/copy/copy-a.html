@@ -1,0 +1,56 @@
+{#
+    Copy-A
+    ----------------------------------------------------------------------
+    Sample Embed Code:
+#}
+{# Component: Copy-A #}
+{#
+{% include 'copy/copy-a.html' with {
+    eyebrow: '',
+    headline: 'Experience VIZIO SmartCast<sup>&trade;</sup>.',
+    content: 'VIZIO SmartCast<sup>&trade;</sup> brings together all of your favorite entertainment sources into one simple experience. Discover, cast and control TV shows, movies, music and more from your VIZIO SmartCast<sup>&trade;</sup> Tablet Remote to your P-Series Display.',
+    linkText: 'Learn More About VIZIO SmartCast',
+    linkUrl: '#'
+} only %}
+#}
+
+{% set ns = 'component-copy-a' %}
+
+{% set extraClasses = '' %}
+
+{% if theme %}
+    {% set extraClasses += ' ' + ns + '--' + theme %}
+{% endif %}
+
+{% if customClasses %}
+    {% set extraClasses += ' ' + customClasses %}
+{% endif %}
+
+{% if ref %}
+    {% set refId = 'id="' + ref + '" ' %}
+{% endif %}
+
+<section {{ refId }} class="component {{ns}}{{ extraClasses }}" data-component-name="Copy-A">
+
+    {% if imagePath %}
+        <img class="{{ns}}__image" src="{{ imagePath }}" alt="{{ imageAlt }}">
+    {% endif %}
+
+    <div class="{{ns}}__container">
+
+        {% if eyebrow %}
+            <span class="{{ns}}__eyebrow">
+                {{ eyebrow }}
+            </span>
+        {% endif %}
+
+        <h2 class="{{ns}}__headline">
+            {{ headline }}
+        </h2>
+
+        <p class="{{ns}}__content">
+            {{ content }}
+        </p>
+
+    </div> {# __container #}
+</section> {# END #}

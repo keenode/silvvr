@@ -8,13 +8,13 @@ import gutil from 'gulp-util';
 class Logger {
 
     static log(logString) {
-        if(config.verbose) {
+        if (config.verbose) {
             gutil.log(logString);
         }
     }
 
     static task(logString) {
-        if(config.verbose) {
+        if (config.verbose) {
             gutil.log(
                 gutil.colors.inverse(` --- ${logString} --- `)
             );
@@ -22,7 +22,7 @@ class Logger {
     }
 
     static taskComplete(logString) {
-        if(config.verbose) {
+        if (config.verbose) {
             gutil.log(
                 gutil.colors.black.bgGreen(` --- ${logString} --- `)
             );
@@ -42,19 +42,25 @@ class Logger {
     }
 
     static notice(logString) {
-        if(config.verbose) {
+        if (config.verbose) {
             gutil.log(gutil.colors.yellow.bold(logString));
         }
     }
 
+    static detail(logString) {
+        if (config.verbose) {
+            gutil.log(gutil.colors.green(logString));
+        }
+    }
+
     static info(logString) {
-        if(config.verbose) {
+        if (config.verbose) {
             gutil.log(gutil.colors.gray(logString));
         }
     }
 
     static warn(logString) {
-        if(config.verbose) {
+        if (config.verbose) {
             gutil.log(gutil.colors.yellow(logString));
         }
     }

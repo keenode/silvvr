@@ -34,7 +34,7 @@ gulp.task('default', function (cb) {
         > The original 'dist' dir will not be deleted until all files are processed.
         > After all tasks finish, contents of the '.tmp' dir will be copied over to the 'dist' dir.
     */
-    if(buildOnlyMode) {
+    if (buildOnlyMode) {
         Logger.notice('Build-only mode. File watching is disabled.');
 
         /**

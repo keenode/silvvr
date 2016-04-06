@@ -1,0 +1,65 @@
+/**
+ * components/copy/copy-a
+ * Copy-A component styles.
+*/
+
+.component-copy-a {
+    padding-top: 80px;
+    text-align: center;
+
+    &__eyebrow {
+
+    }
+
+    &__container {
+        @extend %component-container;
+    }
+
+    &__content {
+        @extend %body-copy;
+        max-width: 740px;
+        margin: 15px auto 20px auto;
+    }
+
+    &__headline {
+        @extend %headline-3;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        position: relative;
+
+        sup {
+            font-size: 18px;
+            position: absolute;
+            top: 10px;
+
+            @include media($small-up) {
+                top: 10px;
+            }
+
+            @media screen and (max-width: 597px) {
+                top: 50px;
+            }
+
+            @media screen and (max-width: 360px) {
+                top: 90px;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        margin-top: 5px;
+
+        @include media($x-small-down) {
+            display: block;
+        }
+
+        &--two {
+            margin-left: 80px;
+
+            @include media($x-small-down) {
+                margin-left: 0;
+            }
+        }
+    }
+}

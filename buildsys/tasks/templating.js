@@ -13,8 +13,10 @@ import gutil from 'gulp-util';
 import useref from 'gulp-useref';
 import uglify from 'gulp-uglify';
 import runSequence from 'run-sequence';
-import apiUrls from '../config/api-urls';
 import html from 'html';
+import apiUrls from '../config/api-urls';
+import foreach from 'gulp-foreach';
+import PageDependenciesHandler from '../classes/PageDependenciesHandler';
 
 
 /**
@@ -46,6 +48,9 @@ gulp.task('templating:process', function () {
         canBundle     = config.env[env].js.bundle;
 
     return gulp.src(`${config.appDir.root}/**/*.html`)
+        .pipe(foreach(function (stream, file) {
+            return PageDependenciesHandler.computeDependencies(stream, file);
+        }))
         .pipe(swig({
             setup: function (swig) {
                 swig.setDefaults({

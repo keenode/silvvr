@@ -1,0 +1,23 @@
+/**
+ * pages/_page-dependencies/__<%= PAGE_REF =%>
+ * Import page dependant styles for <%= PAGE_NAME =%>.
+*/
+
+// Import SASS libraries
+@import '../../libs';
+
+// Import variables
+@import '../../variables/_base';
+
+// Import helpers
+@import '../../helpers';
+
+// Import base component styles
+@import '../../components/components';
+
+// Import typography styles
+@import '../../typography/_base';
+
+// BEGIN: Import required component styles !! DON'T TOUCH
+@import '../../components/copy/copy-a';
+// END: Import required component styles !! DON'T TOUCH

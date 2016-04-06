@@ -15,6 +15,8 @@ export default {
     // Verbose logging output
     verbose: true,
 
+    pageStylesDependenciesPath: './app/scss/pages/_page-dependencies',
+
     /**
         BrowserSync server settings for development.
     */
