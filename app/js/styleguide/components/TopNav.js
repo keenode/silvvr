@@ -107,7 +107,7 @@ class TopNav extends Component {
         var scrollToPos = $('#' + sectionId).offset().top - this.scrollToThreshold;
         $('html, body').animate({
             scrollTop: scrollToPos,
-        }, 
+        },
         {
             duration: 1000,
             complete: () => {

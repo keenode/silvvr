@@ -9,8 +9,8 @@ $(document).ready(function () {
     // Init top navigation for DESKTOP
     var topNav = new TopNav('#sg-topnav', '#sg-topnav-mobile');
 
-    // Init mode switch for Developer / Designer
-    var modeSwitch = new ModeSwitch('#sg-mode-switch');
+    // Init mode switch for Developer / Designer (Desktop / Mobile)
+    var modeSwitch       = new ModeSwitch('#sg-mode-switch');
 
     // Init back to top component
     var backToTop = new BackToTop('#sg-backtotop');
