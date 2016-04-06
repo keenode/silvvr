@@ -15,13 +15,33 @@ $ns: '.sg-topnav-mobile';
     height: 100%;
     padding: 0 15px;
 
+    &__burger {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+
+        svg {
+            fill: #eef1f7;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        left: 45px;
+        top: 10px;
+        // temp...
+        color: #e0e3ea;
+        letter-spacing: 1px;
+    }
+
     &__list {
         @extend %clear-list;
-        height: 100%;
+        height: 0;
+        overflow: hidden;
     }
 
     &__item {
-        display: inline-block;
+        display: block;
         height: 100%;
         margin: 0;
 

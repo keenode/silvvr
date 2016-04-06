@@ -1,6 +1,13 @@
 {% set ns = 'sg-topnav-mobile' %}
 
 <nav {% if id %}id="{{ id }}" {% endif %}class="{{ns}}">
+
+    <a href="#" class="{{ns}}__burger">
+        {% include 'styleguide/icons/burger.svg' %}
+    </a>
+
+    <div class="{{ns}}__logo">ENVOY</div>
+
     <ul class="{{ns}}__list">
         <li class="{{ns}}__item">
             <a class="{{ns}}__link" href="http://www.weareenvoy.com"><strong>ENVOY</strong></a>
