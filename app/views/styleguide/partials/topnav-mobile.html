@@ -6,6 +6,10 @@
         {% include 'styleguide/icons/burger.svg' %}
     </a>
 
+    <a href="#" class="{{ns}}__close">
+        {% include 'styleguide/icons/burger-close.svg' %}
+    </a>
+
     <div class="{{ns}}__logo">ENVOY</div>
 
     <ul class="{{ns}}__list">
@@ -19,8 +23,8 @@
             </li>
         {% endfor %}
 
-        <li class="{{ns}}__item {{ns}}__item--right">
-            <div id="sg-mode-switch" class="sg-mode-switch">
+        <li class="{{ns}}__item">
+            <div id="sg-mode-switch-mobile" class="sg-mode-switch">
                 <div class="sg-mode-switch__option" data-value="developer">
                     Developer
                 </div>

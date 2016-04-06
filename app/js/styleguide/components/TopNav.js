@@ -5,14 +5,19 @@
 
 class TopNav extends Component {
 
-    constructor(selectorQuery) {
+    constructor(selectorQuery, selectorQueryMobile) {
         super(selectorQuery);
+        this.$mobileSelf        = $(selectorQueryMobile);
         this.baseClass          = 'sg-topnav';
         this.baseClassMobile    = this.baseClass + '-mobile';
         this.scrollToThreshold  = 50;
         this.isAutoScrolling    = false;
         this.navLinkActiveClass = `${this.baseClass}__link--active`;
         this.$navLink           = this.$self.find(`.${this.baseClass}__link`);
+        this.$navLinkMobile     = this.$mobileSelf.find(`.${this.baseClassMobile}__link`);
+        this.$burger            = this.$mobileSelf.find(`.${this.baseClassMobile}__burger`);
+        this.$close             = this.$mobileSelf.find(`.${this.baseClassMobile}__close`);
+        this.$mobileMenu        = this.$mobileSelf.find(`.${this.baseClassMobile}__list`);
         this.sections           = [];
         this.gatherSections();
         this.initEvents();
@@ -32,15 +37,47 @@ class TopNav extends Component {
         // Top nav scroll to click
         this.$navLink.on('click', (e) => {
             e.preventDefault();
-            var sectionId = $(e.target).data('scroll-to');
-            this.setActiveItem(sectionId);
-            this.scrollToSection(sectionId);
+            this.navItemSelected(e.target);
+        });
+
+        this.$navLinkMobile.on('click', (e) => {
+            e.preventDefault();
+            this.collapseMenu();
+            this.navItemSelected(e.target);
         });
 
         this.$window.on('scroll.topNav', () => {
             if (this.isAutoScrolling) return false;
             this.determineCurrentSection();
         });
+
+        this.$burger.on('click', (e) => {
+            e.preventDefault();
+            this.expandMenu();
+        });
+
+        this.$close.on('click', (e) => {
+            e.preventDefault();
+            this.collapseMenu();
+        });
+    }
+
+    navItemSelected(target) {
+        var sectionId = $(target).data('scroll-to');
+        this.setActiveItem(sectionId);
+        this.scrollToSection(sectionId);
+    }
+
+    expandMenu() {
+        this.$burger.css('display', 'none');
+        this.$close.css('display', 'block');
+        this.$mobileMenu.addClass(`${this.baseClassMobile}__list--expanded`);
+    }
+
+    collapseMenu() {
+        this.$close.css('display', 'none');
+        this.$burger.css('display', 'block');
+        this.$mobileMenu.removeClass(`${this.baseClassMobile}__list--expanded`);
     }
 
     determineCurrentSection() {
