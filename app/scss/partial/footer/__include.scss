@@ -1,10 +1,10 @@
 /**
- * components/footer/__base
- * Footer component base styles.
+ * scss/partial/footer/_include
+ * Footer partial styles.
+ * @author Keenan Staffieri
 */
 
 .footer {
-
     &__container {
         @extend %outer-container;
     }
