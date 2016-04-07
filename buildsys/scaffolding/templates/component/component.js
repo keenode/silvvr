@@ -6,8 +6,8 @@
 
 class <%= COMPONENT_SCRIPTNAME =%> extends Component {
     constructor(selectorQuery) {
+        super(selectorQuery);
         console.log('New component: <%= COMPONENT_NAME =%>');
-        this.$self = $(selectorQuery);
     }
 }
 

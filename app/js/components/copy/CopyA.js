@@ -5,7 +5,6 @@
 */
 
 class CopyA extends Component {
-
     constructor(selectorQuery) {
         super(selectorQuery);
         console.log('New component: CopyA');

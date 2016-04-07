@@ -1,5 +1,5 @@
 /**
- * pages/_page-dependencies/__<%= PAGE_REF =%>
+ * scss/pages/_page-dependencies/__<%= PAGE_REF =%>
  * Import page dependant styles for <%= PAGE_NAME =%>.
 */
 
@@ -13,7 +13,7 @@
 @import '../../helpers';
 
 // Import base component styles
-@import '../../components/components';
+@import '../../components/component';
 
 // Import typography styles
 @import '../../typography/_base';
