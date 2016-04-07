@@ -5,7 +5,11 @@
 */
 
 body {
-    background-color: #f8f8f8;
+    background-color: white;
+
+    @include media($small-up) {
+        background-color: #f8f8f8;
+    }
 }
 
 @import 'example';
@@ -20,7 +24,11 @@ body {
 
 .sg-container {
     @extend %outer-container;
-    padding: 30px;
+    padding: 15px;
+
+    @include media($small-up) {
+        padding: 30px;
+    }
 }
 
 .sg-section {
@@ -29,8 +37,12 @@ body {
 
 .sg-element-section {
     margin: 100px 0;
-    padding: 50px;
-    background-color: white;
+    padding: 0;
+
+    @include media($small-up) {
+        background-color: white;
+        padding: 50px;
+    }
 }
 
 .sg-colors-container {
