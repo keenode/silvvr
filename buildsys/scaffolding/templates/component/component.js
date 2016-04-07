@@ -1,5 +1,5 @@
 /**
- * js/components/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_SCRIPTNAME =%>
+ * js/component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_SCRIPTNAME =%>
  * <%= COMPONENT_NAME =%> component script.
  * @author Keenan Staffieri
 */

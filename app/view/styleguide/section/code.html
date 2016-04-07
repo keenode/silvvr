@@ -1,0 +1,66 @@
+<section id="section-code" class="sg-section">
+
+    <div class="sg-container">
+
+        {# -------- STYLEGUIDE SECTION ---------
+            6. Code
+            ------------------------------------- #}
+        {% include 'styleguide/section/partial/section-heading.html' with {
+            title: '6. Code'
+        } only %}
+
+
+        {# -------------------------------------- #}
+
+
+        {# --------------------------------------
+            Inline Code
+            ------------------------------------- #}
+        {% include 'styleguide/section/partial/section-block.html' with {
+            heading: 'Inline Code',
+            description: 'Wrap inline snippets of code with <code>&lt;code&gt;</code>.',
+            exampleCode: '<p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>',
+        } only %}
+
+        {# --------------------------------------
+            User Input
+            ------------------------------------- #}
+        {% include 'styleguide/section/partial/section-block.html' with {
+            heading: 'User Input',
+            description: 'Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.',
+            exampleCode: '<p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+                            To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd></p>',
+        } only %}
+
+        {# --------------------------------------
+            Block
+            ------------------------------------- #}
+        {% include 'styleguide/section/partial/section-block.html' with {
+            heading: 'Block',
+            description: 'Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.',
+            exampleCode: '<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>',
+        } only %}
+
+
+        {# --------------------------------------
+            Variables
+            ------------------------------------- #}
+        {% include 'styleguide/section/partial/section-block.html' with {
+            heading: 'Variables',
+            description: 'For indicating variables use the <code>&lt;var&gt;</code> tag.',
+            exampleCode: '<var>y</var> = <var>m</var><var>x</var> + <var>b</var>',
+        } only %}
+
+
+        {# --------------------------------------
+            Sample Output
+            ------------------------------------- #}
+        {% include 'styleguide/section/partial/section-block.html' with {
+            heading: 'Sample Output',
+            description: 'For indicating blocks sample output from a program use the <code>&lt;samp&gt;</code> tag.',
+            exampleCode: '<samp>This text is meant to be treated as sample output from a computer program.</samp>',
+        } only %}
+
+    </div> {# .sg-container #}
+
+</section> {# .sg-section #}

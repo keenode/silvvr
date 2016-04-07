@@ -1,5 +1,5 @@
 /**
- * tasks/watch.js
+ * buildsys/tasks/watch
  * ------------------------------------
  * TASK: Watch
  * 'gulp watch'
@@ -8,6 +8,7 @@
 import watch from 'gulp-watch';
 import browserSync from 'browser-sync';
 import del from 'del';
+
 
 /**
     $ gulp watch

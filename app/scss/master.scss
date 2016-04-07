@@ -18,11 +18,11 @@
 
 
 /* --- variables --- */
-@import 'variables/_include';
+@import 'variable/_include';
 
 
 /* --- utilities --- */
-@import 'util/_base';
+@import 'util/_include';
 
 
 /* --- generic styles --- */
@@ -36,30 +36,30 @@ body {
 
 
 /* --- typography --- */
-@import 'base-styles/typography/_include';
+@import 'base-style/typography/_include';
 
 
 /* --- code --- */
-@import 'base-styles/code/_include';
+@import 'base-style/code/_include';
 
 
 /* --- tables --- */
-@import 'base-styles/tables/_include';
+@import 'base-style/table/_include';
 
 
 /* --- buttons --- */
-@import 'base-styles/buttons/_include';
+@import 'base-style/button/_include';
 
 
 /* --- forms --- */
-@import 'base-styles/forms/_include';
+@import 'base-style/form/_include';
 
 
 /* --- partials --- */
-@import 'partials/header/_include',
-        'partials/footer/_include';
+@import 'partial/header/_include',
+        'partial/footer/_include';
 
 
 /* --- page-specific styles --- */
-@import 'pages/404',
-        'pages/index';
+@import 'page/404',
+        'page/index';

@@ -6,7 +6,7 @@
 
 class HelloWorld {
     constructor() {
-        console.log('HelloWorld class init.');
+        console.log('HelloWorld class initialized.');
     }
 
     sayHello() {

@@ -30,7 +30,7 @@ gulp.task('generate-favicons', function (cb) {
 
 gulp.task('favicons:reset-template', function (cb) {
     // Reset favicons template so favicons plugin can write new file paths
-    return fs.writeFile(`${config.appDir.views}/partials/favicons.html`, '<link rel="favicons" href="..." />', cb);
+    return fs.writeFile(`${config.appDir.views}/partial/favicons.html`, '<link rel="favicons" href="..." />', cb);
 });
 
 
@@ -38,7 +38,7 @@ gulp.task('favicons:reset-template', function (cb) {
 
 gulp.task('favicons:make', function () {
     // Actually generate the favicon images
-    return gulp.src(`${config.appDir.root}/assets/favicon.png`)
+    return gulp.src(`${config.appDir.root}/asset/favicon.png`)
         .pipe(favicons({
             appName:        pkg.name,
             appDescription: pkg.description,
@@ -48,7 +48,7 @@ gulp.task('favicons:make', function () {
             url:            pkg.homepage,
             logging:        config.verbose,
             path:           config.buildDir.favicons.replace(config.buildDir.root + '/', ''),
-            html:           `${config.appDir.views}/partials/favicons.html`
+            html:           `${config.appDir.views}/partial/favicons.html`
         }))
         .pipe(gulp.dest(config.appDir.favicons));
 });

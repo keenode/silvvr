@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {# Head #}
+        {% include 'partial/head.html' with {
+            title: 'Silvvr',
+            meta_description: 'My website.'
+        } only %}
+
+        {% include 'partial/stylesheets.html' %}
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+
+        {# Header #}
+        {% include 'partial/header.html' with {
+            title: 'Silvvr'
+        } only %}
+
+        {# Content #}
+        {% block content %}{% endblock %}
+
+        {# Footer #}
+        {% include 'partial/footer.html' %}
+
+        {# Scripts #}
+        {% include 'partial/scripts.html' %}
+        {% block scripts %}{% endblock %}
+
+    </body>
+</html>

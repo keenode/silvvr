@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {# Head #}
+        {% include 'partial/head.html' with {
+            title: 'Silvvr - Styleguide',
+            meta_description: 'Silvvr styleguide.'
+        } only %}
+
+        {% include 'styleguide/partial/stylesheets.html' %}
+    </head>
+    <body>
+
+        {# Header #}
+        {% include 'styleguide/partial/header.html' with {
+            title: 'Silvvr'
+        } only %}
+
+        {# Content #}
+        {% block content %}{% endblock %}
+
+        {# Footer #}
+        {% include 'styleguide/partial/footer.html' %}
+
+        {# Scripts #}
+        {% include 'styleguide/partial/scripts.html' %}
+
+    </body>
+</html>

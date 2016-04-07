@@ -50,7 +50,7 @@ gulp.task('templating:process', function () {
 
     return gulp.src(`${config.appDir.root}/**/*.html`)
         .pipe(foreach(function (stream, file) {
-            var a = fs.realpathSync(process.cwd() + '/app/views/pages'),
+            var a = fs.realpathSync(process.cwd() + '/app/view/page'),
                 b = fs.realpathSync(file.path),
                 fileInsideDir = b.indexOf(a) == 0;
             // Only compute page dependencies for views within 'pages' dir

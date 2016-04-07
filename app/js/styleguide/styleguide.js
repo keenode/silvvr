@@ -1,5 +1,5 @@
 /**
- * styleguide
+ * js/styleguide/styleguide
  * Styleguide main script.
  * @author Keenan Staffieri
 */

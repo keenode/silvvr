@@ -15,7 +15,7 @@ export default {
     // Verbose logging output
     verbose: true,
 
-    pageStylesDependenciesPath: './app/scss/pages/_page-dependencies',
+    pageStylesDependenciesPath: './app/scss/page/_page-dependencies',
 
     /**
         BrowserSync server settings for development.
@@ -131,12 +131,12 @@ export default {
         root:     appRoot,
         css:      appRoot + '/scss',
         js:       appRoot + '/js',
-        views:    appRoot + '/views',
-        favicon:  appRoot + '/assets/favicon.png', // Image file used to generate favicons
-        favicons: appRoot + '/assets/favicons',
-        fonts:    appRoot + '/assets/fonts',
-        images:   appRoot + '/assets/images',
-        videos:   appRoot + '/assets/videos'
+        views:    appRoot + '/view',
+        favicon:  appRoot + '/asset/favicon.png', // Image file used to generate favicons
+        favicons: appRoot + '/asset/favicon',
+        fonts:    appRoot + '/asset/font',
+        images:   appRoot + '/asset/image',
+        videos:   appRoot + '/asset/video'
     },
 
     // Build directory structure (dist folder)
@@ -144,9 +144,9 @@ export default {
         root:     buildRoot,
         css:      buildRoot + '/css',
         js:       buildRoot + '/js',
-        favicons: buildRoot + '/assets/favicons',
-        fonts:    buildRoot + '/assets/fonts',
-        images:   buildRoot + '/assets/images',
-        videos:   buildRoot + '/assets/videos'
+        favicons: buildRoot + '/asset/favicon',
+        fonts:    buildRoot + '/asset/font',
+        images:   buildRoot + '/asset/image',
+        videos:   buildRoot + '/asset/video'
     }
 };
