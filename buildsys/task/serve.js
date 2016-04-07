@@ -1,11 +1,13 @@
 /**
- * tasks/serve.js
+ * buildsys/task/serve
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Serve
  * 'gulp serve'
 */
 
 import browserSync from 'browser-sync';
+
 
 /* $ gulp serve */
 

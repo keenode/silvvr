@@ -1,6 +1,7 @@
 /**
  * buildsys/classes/ScriptWriter
  * Write scripts and bundles.
+ * @author Keenan Staffieri
 */
 
 import babel from 'gulp-babel';

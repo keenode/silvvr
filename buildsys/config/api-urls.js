@@ -1,6 +1,7 @@
 /**
- * config/api-urls.js
+ * buildsys/config/api-urls
  * API URLs for all build environments.
+ * @author Keenan Staffieri
 */
 
 export default {

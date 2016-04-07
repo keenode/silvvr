@@ -1,5 +1,6 @@
 /**
- * tasks/scripts.js
+ * buildsys/task/scripts
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Scripts
  * 'gulp scripts'
@@ -12,6 +13,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
 import gutil from 'gulp-util';
 import plumber from 'gulp-plumber';
+
 
 /* $ gulp scripts */
 

@@ -1,5 +1,6 @@
 /**
- * tasks/styles.js
+ * buildsys/task/styles
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Styles
  * 'gulp styles'
@@ -11,6 +12,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
 import gutil from 'gulp-util';
 import plumber from 'gulp-plumber';
+
 
 /* $ gulp styles */
 

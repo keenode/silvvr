@@ -1,5 +1,6 @@
 /**
- * tasks/fonts.js
+ * buildsys/task/fonts
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Fonts
  * 'gulp fonts'

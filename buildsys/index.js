@@ -1,6 +1,7 @@
 /**
- * index.js
+ * buildsys/index
  * Index of buildsys. Handles autoloading of all tasks and setting up environment from flags.
+ * @author Keenan Staffieri
 */
 
 import gulp from 'gulp';
@@ -9,6 +10,7 @@ import crypto from 'crypto';
 import config from './config/config';
 import Logger from './utils/Logger';
 import pkg from '../package.json';
+
 
 // Grab command line arguments
 var argv = require('yargs').argv;
@@ -73,11 +75,11 @@ if(config.env[env].cachebustAssets) {
     Require all gulp tasks
 */
 Logger.notice('Autoloading tasks...');
-var tasks = fs.readdirSync('./buildsys/tasks/');
+var tasks = fs.readdirSync('./buildsys/task/');
 tasks.forEach(function (task) {
     if(/\.js/.test(task)) {
         Logger.info(`Requiring task ${task}...`);
-        require(`./tasks/${task}`);
+        require(`./task/${task}`);
     }
 });
 

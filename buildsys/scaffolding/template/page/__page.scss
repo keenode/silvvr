@@ -1,23 +1,24 @@
 /**
- * scss/pages/_page-dependencies/_<%= PAGE_REF =%>
+ * scss/page/_page-dependencies/_<%= PAGE_REF =%>
  * Import page dependant styles for <%= PAGE_NAME =%>.
+ * @author Keenan Staffieri
 */
 
 // Import SASS libraries
 @import '../../libs';
 
 // Import variables
-@import '../../variables/_base';
+@import '../../variable/_include';
 
 // Import helpers
 @import '../../helpers';
 
 // Import base component styles
-@import '../../components/component';
+@import '../../component/component';
 
-// Import typography styles
-@import '../../typography/_base';
+// Import base styles
+@import '../../base-style/_include';
 
 // BEGIN: Import required component styles !! DON'T TOUCH
-@import '../../components/copy/copy-a';
+@import '../../component/copy/copy-a';
 // END: Import required component styles !! DON'T TOUCH

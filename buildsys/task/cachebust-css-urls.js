@@ -1,5 +1,6 @@
 /**
- * tasks/cachebust-css-urls.js
+ * buildsys/task/cachebust-css-urls
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Generate Favicons
  * 'gulp cachebust-css-urls'
@@ -8,6 +9,7 @@
 import gutil from 'gulp-util';
 import cssnano from 'gulp-cssnano';
 import modifyCssUrls from 'gulp-modify-css-urls';
+
 
 /* $ gulp cachebust-css-urls */
 

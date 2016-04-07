@@ -1,5 +1,6 @@
 /**
- * tasks/templating.js
+ * buildsys/task/templating
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Templating
  * 'gulp templating'

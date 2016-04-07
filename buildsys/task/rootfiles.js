@@ -1,5 +1,6 @@
 /**
- * tasks/rootfiles.js
+ * buildsys/task/rootfiles
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Rootfiles
  * 'gulp rootfiles'

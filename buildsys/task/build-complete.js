@@ -1,5 +1,6 @@
 /**
- * tasks/build-complete.js
+ * buildsys/task/build-complete
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Build Complete
  * 'gulp build-complete'
@@ -7,6 +8,7 @@
 
 import del from 'del';
 import runSequence from 'run-sequence';
+
 
 /**
     $ gulp build-complete

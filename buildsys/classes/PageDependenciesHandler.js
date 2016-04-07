@@ -1,6 +1,7 @@
 /**
  * buildsys/classes/PageDependenciesHandler
  * Write scripts and bundles.
+ * @author Keenan Staffieri
 */
 
 import fs from 'fs';

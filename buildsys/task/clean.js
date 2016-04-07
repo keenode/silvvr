@@ -1,5 +1,6 @@
 /**
- * tasks/clean.js
+ * buildsys/task/clean
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Clean
  * 'gulp clean'
@@ -8,6 +9,7 @@
 import del from 'del';
 import cache from 'gulp-cache';
 import runSequence from 'run-sequence';
+
 
 /**
     $ gulp clean

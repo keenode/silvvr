@@ -1,6 +1,7 @@
 /**
- * utils/Helpers.js
+ * buildsys/utils/Helpers
  * Helper utility functions.
+ * @author Keenan Staffieri
 */
 
 class Helpers {

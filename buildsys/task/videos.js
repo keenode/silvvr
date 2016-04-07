@@ -1,5 +1,6 @@
 /**
- * tasks/videos.js
+ * buildsys/task/videos
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Videos
  * 'gulp videos'

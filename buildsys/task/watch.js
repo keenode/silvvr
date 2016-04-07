@@ -1,5 +1,6 @@
 /**
- * buildsys/tasks/watch
+ * buildsys/task/watch
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Watch
  * 'gulp watch'

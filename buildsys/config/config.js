@@ -1,11 +1,13 @@
 /**
- * config/config.js
+ * buildsys/config/config
  * Build configuration settings.
+ * @author Keenan Staffieri
 */
 
 // It is recommended that you leave these as-is :)
 const appRoot   = './app',
       buildRoot = './dist';
+
 
 export default {
 

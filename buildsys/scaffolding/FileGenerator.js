@@ -21,7 +21,7 @@ class FileGenerator {
             if ( ! exists) {
                 Logger.info(`Generating file: ${writeFilePath}...`);
 
-                return gulp.src('./buildsys/scaffolding/templates/' + templatePath)
+                return gulp.src('./buildsys/scaffolding/template/' + templatePath)
                     .pipe(batchReplace(replaceProps))
                     .pipe(rename({ basename: filenamePrefix + filename }))
                     .pipe(gulp.dest(destPath));

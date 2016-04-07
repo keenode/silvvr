@@ -8,12 +8,10 @@
 <div class="v-page v-page-<%= PAGE_REF =%>" data-page-ref="<%= PAGE_REF =%>" data-page-name="<%= PAGE_NAME =%>">
 
     {# Component: Copy-A #}
-    {% include 'copy/copy-a.html' with {
-        eyebrow: 'Welcome',
-        headline: '<%= PAGE_NAME =%>',
-        content: 'Great! Welcome to your new page!',
-        linkText: 'Learn More',
-        linkUrl: '#'
+    {% include 'component/copy/copy-a.html' with {
+        eyebrow: 'Testing...',
+        headline: 'Component Test.',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
     } only %}
 
 </div> {# .v-page-<%= PAGE_REF =%> #}

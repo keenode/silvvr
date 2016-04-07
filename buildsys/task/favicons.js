@@ -1,5 +1,6 @@
 /**
- * tasks/favicons.js
+ * buildsys/task/favicons
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Favicons
  * 'gulp favicons'
@@ -7,6 +8,7 @@
 
 import fs from 'fs';
 import runSequence from 'run-sequence';
+
 
 /**
     $ gulp favicons

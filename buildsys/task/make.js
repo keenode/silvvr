@@ -1,5 +1,6 @@
 /**
- * tasks/make.js
+ * buildsys/task/make
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Make
  * 'gulp make --page [page-name]'
@@ -7,6 +8,7 @@
 
 import PageGenerator from '../scaffolding/PageGenerator';
 import ComponentGenerator from '../scaffolding/ComponentGenerator';
+
 
 // Grab command line arguments
 var argv = require('yargs').argv;

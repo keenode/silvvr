@@ -1,5 +1,6 @@
 /**
- * tasks/images.js
+ * buildsys/task/images
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Images
  * 'gulp images'

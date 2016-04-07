@@ -1,9 +1,11 @@
 /**
- * utils/Logger.js
+ * buildsys/utils/Logger
  * Logger utility for build system.
+ * @author Keenan Staffieri
 */
 
 import gutil from 'gulp-util';
+
 
 class Logger {
 

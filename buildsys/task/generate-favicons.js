@@ -1,5 +1,6 @@
 /**
- * tasks/generate-favicons.js
+ * buildsys/task/generate-favicons
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Generate Favicons
  * 'gulp generate-favicons'
@@ -9,6 +10,7 @@ import fs from 'fs';
 import runSequence from 'run-sequence';
 import favicons from 'gulp-favicons';
 import pkg from '../../package.json';
+
 
 /**
     $ gulp generate-favicons
