@@ -1,10 +1,18 @@
 /**
- * components/<%= COMPONENT_FOLDER =%>/_<%= COMPONENT_REF =%>
+ * scss/components/<%= COMPONENT_FOLDER =%>/_<%= COMPONENT_REF =%>
  * <%= COMPONENT_NAME =%> component styles.
+ * @author Keenan Staffieri
 */
 
-.component-<%= COMPONENT_REF =%> {
+/* --- variables ------------------------------------------ */
 
+// Namespace
+$ns: '.component-<%= COMPONENT_REF =%>';
+
+
+/* --- styles --------------------------------------------- */
+
+#{$ns} {
     &__container {
         @extend %component-container;
     }

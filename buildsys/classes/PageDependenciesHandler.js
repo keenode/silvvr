@@ -1,5 +1,5 @@
 /**
- * classes/PageDependenciesHandler.js
+ * buildsys/classes/PageDependenciesHandler
  * Write scripts and bundles.
 */
 

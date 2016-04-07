@@ -20,9 +20,9 @@ gulp.task('make', function (cb) {
     /**
         Find out of --page flag was issued
     */
-    if(argv.page) {
-        if(typeof argv.page === 'string') {
-            if(typeof argv.name === 'string') {
+    if (argv.page) {
+        if (typeof argv.page === 'string') {
+            if (typeof argv.name === 'string') {
                 // Pass user-specified name to Page scaffolder
                 return PageGenerator.scaffold(argv.page, argv.name);
             }
@@ -38,10 +38,10 @@ gulp.task('make', function (cb) {
     /**
         Find out if --component flag was issued
     */
-    else if(argv.component) {
-        if(typeof argv.component === 'string') {
-            if(typeof argv.folder === 'string') {
-                if(typeof argv.name === 'string') {
+    else if (argv.component) {
+        if (typeof argv.component === 'string') {
+            if (typeof argv.folder === 'string') {
+                if (typeof argv.name === 'string') {
                     // Pass user-specified name to Component scaffolder
                     return ComponentGenerator.scaffold(argv.component, argv.folder, argv.name);
                 }

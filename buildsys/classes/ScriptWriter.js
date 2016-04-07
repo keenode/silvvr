@@ -1,5 +1,5 @@
 /**
- * classes/ScriptWriter.js
+ * buildsys/classes/ScriptWriter
  * Write scripts and bundles.
 */
 
@@ -54,7 +54,7 @@ class ScriptWriter {
             useSourcemaps = config.env[env].js.sourcemaps;
 
         var srcSettings = {};
-        if(portGlobs) {
+        if (portGlobs) {
             srcSettings = { base: config.srcDir.jsLegacy };
         }
 

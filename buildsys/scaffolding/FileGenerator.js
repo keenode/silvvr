@@ -1,12 +1,13 @@
 /**
- * scaffolding/FileGenerator.js
+ * buildsys/scaffolding/FileGenerator
  * Scaffold a file.
+ * @author Keenan Staffieri
 */
 
+import fs from 'fs';
 import rename from 'gulp-rename';
 import replace from 'gulp-replace';
 import batchReplace from 'gulp-batch-replace';
-import fs from 'fs';
 
 
 class FileGenerator {
@@ -17,7 +18,7 @@ class FileGenerator {
 
         return fs.exists(writeFilePath, function (exists) {
             // Only generate the file if it doesn't already exists
-            if( ! exists) {
+            if ( ! exists) {
                 Logger.info(`Generating file: ${writeFilePath}...`);
 
                 return gulp.src('./buildsys/scaffolding/templates/' + templatePath)

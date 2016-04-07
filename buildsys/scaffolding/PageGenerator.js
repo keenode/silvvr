@@ -1,6 +1,7 @@
 /**
- * scaffolding/PageGenerator.js
+ * buildsys/scaffolding/PageGenerator
  * Scaffold files for new pages.
+ * @author Keenan Staffieri
 */
 
 import Helpers from '../utils/Helpers';
@@ -31,7 +32,7 @@ class PageGenerator extends FileGenerator {
         this.generateFile(pageRef, 'page/__page.scss', './scss/pages/_page-dependencies', replaceProps, '__');
 
         // Generate TypeScript file
-        this.generateFile(pageRef, 'page/page.ts', './js/pages', replaceProps);
+        this.generateFile(pageRef, 'page/page.js', './js/pages', replaceProps);
     }
 }
 

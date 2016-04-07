@@ -1,6 +1,7 @@
 /**
- * app.js
+ * js/app
  * Application main script.
+ * @author Keenan Staffieri
 */
 
 class HelloWorld {

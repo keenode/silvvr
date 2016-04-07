@@ -2,10 +2,13 @@
     Page: Component Test
     ---------------------------------------------
     Reference: component-test
+    @author Keenan Staffieri
 #}
 
 {% extends 'layouts/layout.html' %}
 
+
+{# --- additional stylesheets ----------------------------- #}
 
 {% block stylesheets %}
 
@@ -14,9 +17,11 @@
 {% endblock %}
 
 
+{# --- content -------------------------------------------- #}
+
 {% block content %}
 
-<h1>Component Test</h1>
+<h2>Component Test Page</h2>
 
 {# Component: Copy-A #}
 {% include 'component/copy/copy-a.html' with {
@@ -27,6 +32,8 @@
 
 {% endblock %}
 
+
+{# --- additional scripts --------------------------------- #}
 
 {% block scripts %}
 

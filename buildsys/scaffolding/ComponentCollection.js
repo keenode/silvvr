@@ -5,6 +5,7 @@
 
 import components from '../components';
 
+
 class ComponentCollection {
 
     constructor(components) {
