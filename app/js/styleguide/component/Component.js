@@ -5,7 +5,6 @@
 */
 
 class Component {
-
     constructor(selectorQuery) {
         this.baseClass = 'sg-component';
         this.$self     = $(selectorQuery);
