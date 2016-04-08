@@ -5,9 +5,9 @@
 */
 
 import fs from 'fs';
-import replace from 'gulp-replace';
 import FileGenerator from './FileGenerator';
 import Helpers from '../utils/Helpers';
+import pkg from '../../package.json';
 
 
 class ComponentGenerator extends FileGenerator {
@@ -25,6 +25,7 @@ class ComponentGenerator extends FileGenerator {
             ['<%= COMPONENT_SCRIPTNAME =%>', scriptFilename],
             ['<%= COMPONENT_NAME =%>',       componentName],
             ['<%= COMPONENT_FOLDER =%>',     folderName],
+            ['<%= AUTHOR =%>',               pkg.author.name],
         ];
 
         // Generate view file

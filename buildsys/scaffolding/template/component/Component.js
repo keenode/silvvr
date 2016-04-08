@@ -1,7 +1,7 @@
 /**
  * js/component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_SCRIPTNAME =%>
  * <%= COMPONENT_NAME =%> component script.
- * @author Keenan Staffieri
+ * @author <%= AUTHOR =%>
 */
 
 class <%= COMPONENT_SCRIPTNAME =%> extends Component {

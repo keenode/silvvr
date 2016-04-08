@@ -2,10 +2,11 @@
     Page: <%= PAGE_NAME =%>
     ---------------------------------------------
     Reference: <%= PAGE_REF =%>
-    @author Keenan Staffieri
+    view/page/<%= PAGE_REF =%>
+    @author <%= AUTHOR =%>
 #}
 
-<div class="v-page v-page-<%= PAGE_REF =%>" data-page-ref="<%= PAGE_REF =%>" data-page-name="<%= PAGE_NAME =%>">
+<div class="page-wrap page-wrap--<%= PAGE_REF =%>" data-page-ref="<%= PAGE_REF =%>" data-page-name="<%= PAGE_NAME =%>">
 
     {# Component: Copy-A #}
     {% include 'component/copy/copy-a.html' with {
@@ -14,4 +15,4 @@
         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
     } only %}
 
-</div> {# .v-page-<%= PAGE_REF =%> #}
+</div> {# .page-wrap--<%= PAGE_REF =%> #}

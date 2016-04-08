@@ -56,7 +56,7 @@ global.buildOnlyMode = buildOnlyMode;
 */
 Logger.banner('S I L V V R  Started');
 Logger.header(`${pkg.name} @version ${pkg.version}`);
-Logger.header(`By ${pkg.author}`);
+Logger.header(`By ${pkg.author.name}`);
 
 
 /**

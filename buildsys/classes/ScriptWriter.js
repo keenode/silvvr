@@ -20,8 +20,6 @@ class ScriptWriter {
         var canUglify     = config.env[env].js.uglify,
             useSourcemaps = config.env[env].js.sourcemaps;
 
-        // scriptPaths.push(`!${config.buildDir.js}/*`);
-
         /**
             Actually perform various transformations on the file(s).
         */
@@ -45,38 +43,6 @@ class ScriptWriter {
                     `FINISHED TASK : scripts${bundleScriptName ?  " for bundle '" + bundleScriptName + "'": ''}`
                 );
             });
-    }
-
-    static compileLegacyScript(bundleScriptName, scriptPaths, destPath, portGlobs=false) {
-
-        // Get build environment settings
-        var canUglify     = config.env[env].js.uglify,
-            // canStripDebug = config.env[env].js.stripDebug,
-            useSourcemaps = config.env[env].js.sourcemaps;
-
-        var srcSettings = {};
-        if (portGlobs) {
-            srcSettings = { base: config.srcDir.jsLegacy };
-        }
-
-        /**
-            Actually perform various transformations on the file(s).
-        */
-        return gulp.src(scriptPaths, srcSettings)
-            .pipe(plumber({
-                errorHandler: function (err) {
-                    gutil.beep();
-                    Logger.log(`JavaScript ERROR >> ${err.name} :\n ${err.message}`);
-                    this.emit('end');
-                }
-            }))
-            .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
-            // .pipe(canStripDebug ? stripDebug() : gutil.noop())
-            .pipe(bundleScriptName ? concat(bundleScriptName) : gutil.noop())
-            .pipe(canUglify ? uglify() : gutil.noop())
-            .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
-            .pipe(gulp.dest(destPath))
-            .on('end', function () { return Logger.taskComplete('FINISHED TASK : scripts-legacy'); });
     }
 }
 

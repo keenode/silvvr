@@ -1,7 +1,7 @@
 /**
  * js/page/<%= PAGE_REF =%>
  * <%= PAGE_NAME =%> page script.
- * @author Keenan Staffieri
+ * @author <%= AUTHOR =%>
 */
 
 console.log('Welcome to the <%= PAGE_NAME =%> page!');

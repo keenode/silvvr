@@ -6,6 +6,7 @@
 
 import Helpers from '../utils/Helpers';
 import FileGenerator from './FileGenerator';
+import pkg from '../../package.json';
 
 
 class PageGenerator extends FileGenerator {
@@ -20,6 +21,7 @@ class PageGenerator extends FileGenerator {
         var replaceProps = [
             ['<%= PAGE_REF =%>',  pageRef],
             ['<%= PAGE_NAME =%>', pageName],
+            ['<%= AUTHOR =%>',    pkg.author.name],
         ];
 
         // Generate view file

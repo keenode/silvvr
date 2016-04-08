@@ -2,7 +2,10 @@
   "name": "silvvr",
   "version": "0.3.3",
   "description": "Front-End Gulp build system and boilerplate.",
-  "author": "Keenan Staffieri <http://keenanstaffieri.com>",
+  "author": {
+    "name": "Keenan Staffieri",
+    "url": "http://keenanstaffieri.com"
+  },
   "homepage": "https://github.com/keezoid/silvvr",
   "main": "gulpfile.babel.js",
   "scripts": {

@@ -6,7 +6,6 @@
 
 import fs from 'fs';
 import rename from 'gulp-rename';
-import replace from 'gulp-replace';
 import batchReplace from 'gulp-batch-replace';
 
 
