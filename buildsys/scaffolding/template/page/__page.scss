@@ -21,14 +21,9 @@
 @import '../../util/_include';
 
 
-// Import variables
-@import '../../variable/_include';
-
-// Import helpers
-@import '../../util/helpers';
-
-// Import base component styles
+/* --- base component styles --- */
 @import '../../component/component';
+
 
 // BEGIN: Import required component styles !! DON'T TOUCH
 @import '../../component/copy/copy-a';
