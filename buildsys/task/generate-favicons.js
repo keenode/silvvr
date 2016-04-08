@@ -32,7 +32,7 @@ gulp.task('generate-favicons', function (cb) {
 
 gulp.task('favicons:reset-template', function (cb) {
     // Reset favicons template so favicons plugin can write new file paths
-    return fs.writeFile(`${config.appDir.views}/partial/favicons.html`, '<link rel="favicons" href="..." />', cb);
+    return fs.writeFileSync(`${config.appDir.views}/partial/favicons.html`, '<link rel="favicons" href="..." />', cb);
 });
 
 

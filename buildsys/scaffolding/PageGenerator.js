@@ -26,13 +26,13 @@ class PageGenerator extends FileGenerator {
         this.generateFile(pageRef, 'page/page.html', './view/page', replaceProps);
 
         // Generate SCSS file
-        this.generateFile(pageRef, 'page/page.scss', './scss/pages', replaceProps);
+        this.generateFile(pageRef, 'page/page.scss', './scss/page', replaceProps);
 
         // Generate SCSS dependency file
-        this.generateFile(pageRef, 'page/__page.scss', './scss/pages/_page-dependencies', replaceProps, '__');
+        this.generateFile(pageRef, 'page/__page.scss', './scss/page/_page-dependencies', replaceProps, '__');
 
         // Generate TypeScript file
-        this.generateFile(pageRef, 'page/page.js', './js/pages', replaceProps);
+        this.generateFile(pageRef, 'page/page.js', './js/page', replaceProps);
     }
 }
 

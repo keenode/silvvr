@@ -83,7 +83,7 @@ class PageDependenciesHandler {
         for (let i = 0; i < componentNames.length; i++) {
             var foundComponent = ComponentCollection.getComponentByName(componentNames[i]);
             if (foundComponent !== null) {
-                importString += `@import '../../components/${foundComponent.scssPath}';\n`;
+                importString += `@import '../../component/${foundComponent.scssPath}';\n`;
             }
         }
         importString += "// END: Import required component styles !! DON'T TOUCH";
@@ -115,13 +115,13 @@ class PageDependenciesHandler {
         for (let i = 0; i < componentNames.length; i++) {
             var foundComponent = ComponentCollection.getComponentByName(componentNames[i]);
             if (foundComponent !== null) {
-                scriptPaths.push(`${config.buildDir.js}/components/${foundComponent.scriptPath}.js`);
+                scriptPaths.push(`${config.buildDir.js}/component/${foundComponent.scriptPath}.js`);
             }
         }
 
-        scriptPaths.push(`${config.buildDir.js}/pages/${pageRef}.js`);
+        scriptPaths.push(`${config.buildDir.js}/page/${pageRef}.js`);
 
-        ScriptWriter.compileScript(pageRef + '.js', scriptPaths, config.buildDir.js + '/pages');
+        ScriptWriter.compileScript(pageRef + '.js', scriptPaths, config.buildDir.js + '/page');
     }
 }
 

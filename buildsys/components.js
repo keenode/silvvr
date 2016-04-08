@@ -8,7 +8,8 @@ export default [
     {
         ref: 'copy-a',
         name: 'Copy-A',
-        scssPath: 'copy/copy-a'
+        scssPath: 'copy/copy-a',
+        scriptPath: 'copy/CopyA',
     },
     // COMPONENT AUTOMATION !! DON'T TOUCH
 ];

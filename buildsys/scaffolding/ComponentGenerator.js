@@ -31,10 +31,10 @@ class ComponentGenerator extends FileGenerator {
         this.generateFile(componentRef, 'component/component.html', `./view/component/${folderName}`, replaceProps);
 
         // Generate SCSS file
-        this.generateFile(componentRef, 'component/component.scss', `./scss/components/${folderName}`, replaceProps, '_');
+        this.generateFile(componentRef, 'component/component.scss', `./scss/component/${folderName}`, replaceProps, '_');
 
         // Generate TypeScript file
-        this.generateFile(scriptFilename, 'component/Component.js', `./js/components/${folderName}`, replaceProps);
+        this.generateFile(scriptFilename, 'component/Component.js', `./js/component/${folderName}`, replaceProps);
 
         // Add entry object to components collection
         this.addCollectionEntry(componentRef, componentName, folderName, scriptFilename);
@@ -42,7 +42,7 @@ class ComponentGenerator extends FileGenerator {
 
     static addCollectionEntry(ref, name, folderName, scriptFilename) {
 
-        Logger.detail('Adding component entry to collection within ./buildsys/scaffolding/Components.js...');
+        Logger.detail('Adding component entry to collection within ./buildsys/components.js...');
 
         var componentCollectionFile = './buildsys/components.js';
 
@@ -60,7 +60,7 @@ class ComponentGenerator extends FileGenerator {
 
             var result = data.replace(/\/\/ COMPONENT AUTOMATION !! DON'T TOUCH/i, entryString);
 
-            fs.writeFile(componentCollectionFile, result, 'utf8', function (err) {
+            fs.writeFileSync(componentCollectionFile, result, 'utf8', function (err) {
                 if (err) { return Logger.error(err); }
                 Logger.info(`Finished writing component entry for '${ref}'.`);
             });

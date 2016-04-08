@@ -20,7 +20,7 @@ class ScriptWriter {
         var canUglify     = config.env[env].js.uglify,
             useSourcemaps = config.env[env].js.sourcemaps;
 
-        scriptPaths.push(`!${config.buildDir.js}/*`);
+        // scriptPaths.push(`!${config.buildDir.js}/*`);
 
         /**
             Actually perform various transformations on the file(s).
