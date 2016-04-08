@@ -28,14 +28,14 @@ class ComponentGenerator extends FileGenerator {
             ['<%= AUTHOR =%>',               pkg.author.name],
         ];
 
-        // Generate view file
-        this.generateFile(componentRef, 'component/component.html', `./view/component/${folderName}`, replaceProps);
+        // Generate View file
+        this.generateFile(componentRef, 'component/component.html', `${config.appDir.views}/component/${folderName}`, replaceProps);
 
         // Generate SCSS file
-        this.generateFile(componentRef, 'component/component.scss', `./scss/component/${folderName}`, replaceProps, '_');
+        this.generateFile(componentRef, 'component/component.scss', `${config.appDir.css}/component/${folderName}`, replaceProps, '_');
 
-        // Generate TypeScript file
-        this.generateFile(scriptFilename, 'component/Component.js', `./js/component/${folderName}`, replaceProps);
+        // Generate JavaScript file
+        this.generateFile(scriptFilename, 'component/Component.js', `${config.appDir.js}/component/${folderName}`, replaceProps);
 
         // Add entry object to components collection
         this.addCollectionEntry(componentRef, componentName, folderName, scriptFilename);

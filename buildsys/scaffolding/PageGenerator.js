@@ -24,17 +24,17 @@ class PageGenerator extends FileGenerator {
             ['<%= AUTHOR =%>',    pkg.author.name],
         ];
 
-        // Generate view file
-        this.generateFile(pageRef, 'page/page.html', './view/page', replaceProps);
+        // Generate View file
+        this.generateFile(pageRef, 'page/page.html', `${config.appDir.views}/page`, replaceProps);
 
         // Generate SCSS file
-        this.generateFile(pageRef, 'page/page.scss', './scss/page', replaceProps);
+        this.generateFile(pageRef, 'page/page.scss', `${config.appDir.css}/page`, replaceProps);
 
         // Generate SCSS dependency file
-        this.generateFile(pageRef, 'page/__page.scss', './scss/page/_page-dependencies', replaceProps, '__');
+        this.generateFile(pageRef, 'page/__page.scss', `${config.appDir.css}/page/_page-dependencies`, replaceProps, '__');
 
-        // Generate TypeScript file
-        this.generateFile(pageRef, 'page/page.js', './js/page', replaceProps);
+        // Generate JavaScript file
+        this.generateFile(pageRef, 'page/page.js', `${config.appDir.js}/page`, replaceProps);
     }
 }
 

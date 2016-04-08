@@ -1,9 +1,9 @@
 {#
-    Page: <%= PAGE_NAME =%>
+    Page: Test Me
     ---------------------------------------------
-    Reference: <%= PAGE_REF =%>
-    view/page/<%= PAGE_REF =%>
-    @author <%= AUTHOR =%>
+    Reference: test-me
+    view/page/test-me
+    @author Keenan Staffieri
 #}
 
 {% extends 'layout/layout.html' %}
@@ -12,7 +12,7 @@
 
 {% block stylesheets %}
 
-<link rel="stylesheet" href="{{ '/css/page/<%= PAGE_REF =%>.css' | cachebust }}">
+<link rel="stylesheet" href="{{ '/css/page/test-me.css' | cachebust }}">
 
 {% endblock %}
 
@@ -21,7 +21,7 @@
 
 {% block content %}
 
-<div class="page-wrap page-wrap--<%= PAGE_REF =%>" data-page-ref="<%= PAGE_REF =%>" data-page-name="<%= PAGE_NAME =%>">
+<div class="page-wrap page-wrap--test-me" data-page-ref="test-me" data-page-name="Test Me">
 
     {# Component: Copy-A #}
     {% include 'component/copy/copy-a.html' with {
@@ -30,7 +30,7 @@
         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
     } only %}
 
-</div> {# .page-wrap--<%= PAGE_REF =%> #}
+</div> {# .page-wrap--test-me #}
 
 {% endblock %}
 
@@ -39,9 +39,9 @@
 
 {% block scripts %}
 
-<!-- build:js /js/page/<%= PAGE_REF =%>.js -->
+<!-- build:js /js/page/test-me.js -->
 <script type="text/javascript" src="/js/component/Component.js"></script>
-<script type="text/javascript" src="/js/page/<%= PAGE_REF =%>.js"></script>
+<script type="text/javascript" src="/js/page/test-me.js"></script>
 <!-- endbuild -->
 
 {% endblock %}
