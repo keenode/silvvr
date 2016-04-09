@@ -11,8 +11,3 @@
         background-color: color('gray-lightest');
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-table.table--hover { @extend %table-hover; }

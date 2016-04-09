@@ -17,8 +17,3 @@
         width: 100%;
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-.form-group { @extend %form-group; }

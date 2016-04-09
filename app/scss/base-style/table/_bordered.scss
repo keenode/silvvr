@@ -26,8 +26,3 @@
         border-bottom: 1px solid color('gray-lighter');
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-table.table--bordered { @extend %table-bordered; }

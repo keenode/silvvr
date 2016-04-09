@@ -24,8 +24,3 @@
         background-color: color('blue-light');
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-.btn { @extend %btn; }

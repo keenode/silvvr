@@ -37,9 +37,3 @@
         }
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-.radio { @extend %radio; }
-.radio--inline { @extend %radio-inline; }

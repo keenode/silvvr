@@ -22,9 +22,3 @@
     font-size: 20px;
     line-height: 32px;
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-p      { @extend %body-copy; }
-p.lead { @extend %lead-body-copy; }

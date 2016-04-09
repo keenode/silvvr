@@ -51,17 +51,3 @@
 %cited-text {
 
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-mark        { @extend %marked-text; }
-del         { @extend %deleted-text; }
-s           { @extend %strikethrough-text; }
-ins         { @extend %inserted-text; }
-u           { @extend %underlined-text; }
-small       { @extend %small-text; }
-b, strong   { @extend %bold-text; }
-i, em       { @extend %italic-text; }
-abbr[title] { @extend %abbreviated-text; }
-cite        { @extend %cited-text; }

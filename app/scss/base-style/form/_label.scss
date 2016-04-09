@@ -9,8 +9,3 @@
 %label {
     font-size: 13px;
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-label { @extend %label; }

@@ -25,7 +25,11 @@
     {% set extraClasses += ' ' + customClasses %}
 {% endif %}
 
-<section class="component {{ns}}{{ extraClasses }}" data-component-name="<%= COMPONENT_NAME =%>">
+{% if ref %}
+    {% set refId = 'id="' + ref + '" ' %}
+{% endif %}
+
+<section {{ refId }}class="component {{ns}}{{ extraClasses }}" data-component-name="<%= COMPONENT_NAME =%>">
     <div class="{{ns}}__container">
 
         <h2 class="{{ns}}__headline">

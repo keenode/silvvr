@@ -14,8 +14,3 @@
         background-color: color('gray-dk-lighter');
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-.btn--secondary { @extend %btn-secondary; }

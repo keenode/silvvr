@@ -10,8 +10,3 @@
     @extend %btn;
     min-width: 170px;
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-.btn--fixed-width { @extend %btn-fixed-width; }

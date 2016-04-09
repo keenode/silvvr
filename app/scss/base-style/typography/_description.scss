@@ -34,9 +34,3 @@
         margin-left: 200px;
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-dl               { @extend %description-list; }
-dl.dl-horizontal { @extend %description-list-horizontal; }

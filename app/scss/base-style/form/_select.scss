@@ -18,9 +18,3 @@
     height: auto;
     overflow: scroll;
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-.select { @extend %select; }
-select[multiple].select { @extend %select-multiple; }

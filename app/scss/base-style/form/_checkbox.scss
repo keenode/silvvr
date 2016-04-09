@@ -37,9 +37,3 @@
         }
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-.checkbox { @extend %checkbox; }
-.checkbox--inline { @extend %checkbox-inline; }

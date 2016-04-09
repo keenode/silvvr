@@ -11,8 +11,3 @@
         background-color: tint(color('gray-lighter'), 50%);
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-table.table--striped { @extend %table-striped; }

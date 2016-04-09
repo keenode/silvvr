@@ -10,8 +10,3 @@
     color: color('gray');
     font-size: 13px;
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-.help-block { @extend %help-block; }

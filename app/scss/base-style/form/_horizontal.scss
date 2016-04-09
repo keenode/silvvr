@@ -21,8 +21,3 @@
         @include shift(2);
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-.form--horizontal { @extend %form-horizontal; }

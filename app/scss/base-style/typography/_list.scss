@@ -70,17 +70,3 @@
         font-size: 14px;
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-ul               { @extend %list-unordered; }
-ul.list-unstyled { @extend %list-unstyled; }
-ul.list-inline   { @extend %list-inline; }
-ol               { @extend %list-ordered; }
-
-// Modifiers
-ul.list--condensed,
-ol.list--condensed {
-    @extend %list--condensed;
-}

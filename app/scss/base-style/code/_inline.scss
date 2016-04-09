@@ -17,9 +17,3 @@
     padding: 0;
     background-color: transparent;
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-code          { @extend %code-inline; }
-code.no-style { @extend %code-nostyle; }

@@ -35,24 +35,12 @@ body {
 }
 
 
-/* --- typography --- */
-@import 'base-style/typography/_include';
+/* --- base styles --- */
+@import 'base-style/_include';
 
 
-/* --- code --- */
-@import 'base-style/code/_include';
-
-
-/* --- tables --- */
-@import 'base-style/table/_include';
-
-
-/* --- buttons --- */
-@import 'base-style/button/_include';
-
-
-/* --- forms --- */
-@import 'base-style/form/_include';
+/* --- base extended elements --- */
+@import 'base-style/base-extends';
 
 
 /* --- partials --- */

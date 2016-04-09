@@ -98,13 +98,3 @@
         line-height: 36px;
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-h1 { @extend %heading-1; }
-h2 { @extend %heading-2; }
-h3 { @extend %heading-3; }
-h4 { @extend %heading-4; }
-h5 { @extend %heading-5; }
-h6 { @extend %heading-6; }

@@ -38,8 +38,3 @@
         border-bottom: none;
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-table.table { @extend %table; }

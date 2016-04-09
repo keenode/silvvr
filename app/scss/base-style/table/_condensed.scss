@@ -13,9 +13,3 @@
         font-size: 75%;
     }
 }
-
-
-/* --- generic extends ------------------------------------ */
-
-table.table--condensed { @extend %table-condensed; }
-
