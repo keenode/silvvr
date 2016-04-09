@@ -12,17 +12,21 @@
 // Neat
 @import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
 
-/* --- grid --- */
-@import 'styleguide/grid';
-
 // Prism Theme
 @import '../../node_modules/prismjs/themes/prism-okaidia';
 
-/* --- helpers --- */
-@import 'util/helpers';
 
-// Import styleguide theme
+/* --- grid --- */
+@import 'styleguide/grid';
+
+
+/* --- utilities --- */
+@import 'util/_include';
+
+
+/* --- styleguide base styles --- */
 @import 'styleguide/_base';
+
 
 /* --- partials --- */
 @import 'styleguide/partial/header/_include',

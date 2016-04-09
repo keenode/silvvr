@@ -1,6 +1,6 @@
 /**
- * scss/page/_page-dependencies/_test-me
- * Import page dependant styles for Test Me.
+ * scss/page/_page-dependencies/_hello-world
+ * Import page dependant styles for Hello World.
  * @author Keenan Staffieri
 */
 
@@ -25,8 +25,9 @@
 @import '../../base-style/_include';
 
 
-// Import base component styles
+/* --- base component styles --- */
 @import '../../component/component';
+
 
 // BEGIN: Import required component styles !! DON'T TOUCH
 @import '../../component/copy/copy-a';

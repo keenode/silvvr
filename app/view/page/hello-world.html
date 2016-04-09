@@ -1,18 +1,19 @@
 {#
-    Page: Test Me
+    Page: Hello World
     ---------------------------------------------
-    Reference: test-me
-    view/page/test-me
+    Reference: hello-world
+    view/page/hello-world
     @author Keenan Staffieri
 #}
 
 {% extends 'layout/layout.html' %}
 
+
 {# --- additional stylesheets ----------------------------- #}
 
 {% block stylesheets %}
 
-<link rel="stylesheet" href="{{ '/css/page/test-me.css' | cachebust }}">
+<link rel="stylesheet" href="{{ '/css/page/hello-world.css' | cachebust }}">
 
 {% endblock %}
 
@@ -21,7 +22,7 @@
 
 {% block content %}
 
-<div class="page-wrap page-wrap--test-me" data-page-ref="test-me" data-page-name="Test Me">
+<div class="page-wrap page-wrap--hello-world" data-page-ref="hello-world" data-page-name="Hello World">
 
     {# Component: Copy-A #}
     {% include 'component/copy/copy-a.html' with {
@@ -30,7 +31,7 @@
         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
     } only %}
 
-</div> {# .page-wrap--test-me #}
+</div> {# .page-wrap--hello-world #}
 
 {% endblock %}
 
@@ -39,9 +40,9 @@
 
 {% block scripts %}
 
-<!-- build:js /js/page/test-me.js -->
+<!-- build:js /js/page/hello-world.js -->
 <script type="text/javascript" src="/js/component/Component.js"></script>
-<script type="text/javascript" src="/js/page/test-me.js"></script>
+<script type="text/javascript" src="/js/page/hello-world.js"></script>
 <!-- endbuild -->
 
 {% endblock %}
