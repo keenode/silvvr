@@ -1,0 +1,19 @@
+/**
+ * scss/component/copy/_copy-b
+ * Copy-B component styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- variables ------------------------------------------ */
+
+// Namespace
+$ns: '.component-copy-b';
+
+
+/* --- styles --------------------------------------------- */
+
+#{$ns} {
+    &__container {
+        @extend %component-container;
+    }
+}

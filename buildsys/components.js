@@ -11,5 +11,11 @@ export default [
         scssPath: 'copy/copy-a',
         scriptPath: 'copy/CopyA',
     },
+    {
+        ref: 'copy-b',
+        name: 'Copy-B',
+        scssPath: 'copy/copy-b',
+        scriptPath: 'copy/CopyB'
+    },
     // COMPONENT AUTOMATION !! DON'T TOUCH
 ];

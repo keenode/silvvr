@@ -1,19 +1,19 @@
 {#
-    <%= COMPONENT_NAME =%>
+    Copy-B
     ----------------------------------------------------------------------
-    view/component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_REF =%>
-    @author <%= AUTHOR =%>
+    view/component/copy/copy-b
+    @author Keenan Staffieri
     Sample Embed Code:
 #}
-{# Component: <%= COMPONENT_NAME =%> #}
+{# Component: Copy-B #}
 {#
-{% include 'component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_REF =%>.html' with {
+{% include 'component/copy/copy-b.html' with {
     headline: 'New Component',
     description: 'Welcome to your new component!',
 } only %}
 #}
 
-{% set ns = 'component-<%= COMPONENT_REF =%>' %}
+{% set ns = 'component-copy-b' %}
 
 {% set extraClasses = '' %}
 
@@ -29,7 +29,7 @@
     {% set refId = 'id="' + ref + '" ' %}
 {% endif %}
 
-<section {{ refId }}class="component {{ns}}{{ extraClasses }}" data-component-name="<%= COMPONENT_NAME =%>">
+<section {{ refId }}class="component {{ns}}{{ extraClasses }}" data-component-name="Copy-B">
     <div class="{{ns}}__container">
 
         <h2 class="{{ns}}__headline">
