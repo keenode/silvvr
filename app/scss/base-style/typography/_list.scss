@@ -19,23 +19,12 @@
     li {
         position: relative;
         margin: 20px 0;
-        color: color('gray-dk-lighter');
+        color: color('gray');
     }
 }
 
 %list-unordered {
     @extend %default-list;
-    padding-left: 60px;
-    list-style: none;
-
-    li:before {
-        position: absolute;
-        left: -50px;
-        top: 10px;
-        content: '';
-        width: 26px;
-        border-bottom: 1px solid color('gray-dk-lighter');
-    }
 }
 
 %list-ordered {
@@ -47,8 +36,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
-    li:before { display: none; }
 }
 
 %list-inline {

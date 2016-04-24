@@ -8,6 +8,6 @@
 
 %table-striped {
     tr:nth-of-type(even) {
-        background-color: tint(color('gray-lighter'), 50%);
+        background-color: tint(color('gray-light'), 50%);
     }
 }

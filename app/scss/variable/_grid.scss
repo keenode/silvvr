@@ -7,8 +7,6 @@
 // Breakpoints
 
 // Screens
-$screen-xxl: 1800px;
-$screen-xl: 1500px;
 $screen-lg: 1200px;
 $screen-md: 1024px;
 $screen-sm: 768px;
@@ -18,16 +16,12 @@ $screen-xs: 480px;
 /** Breakpoints **/
 
 // UP (min-width queries)
-$xx-large-up: new-breakpoint(min-width em($screen-xxl + 1px) 12);
-$x-large-up:  new-breakpoint(min-width em($screen-xl + 1px) 12);
 $large-up:    new-breakpoint(min-width em($screen-lg + 1px) 12);
 $medium-up:   new-breakpoint(min-width em($screen-md + 1px) 12);
 $small-up:    new-breakpoint(min-width em($screen-sm + 1px) 12);
 $x-small-up:  new-breakpoint(min-width em($screen-xs + 1px) 12);
 
 // DOWN (max-width queries)
-$xx-large-down: new-breakpoint(max-width em($screen-xxl) 12);
-$x-large-down:  new-breakpoint(max-width em($screen-xl) 12);
 $large-down:    new-breakpoint(max-width em($screen-lg) 12);
 $medium-down:   new-breakpoint(max-width em($screen-md) 12);
 $small-down:    new-breakpoint(max-width em($screen-sm) 12);
