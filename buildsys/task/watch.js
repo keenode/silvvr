@@ -6,9 +6,9 @@
  * 'gulp watch'
 */
 
+import runSequence from 'run-sequence';
 import watch from 'gulp-watch';
 import browserSync from 'browser-sync';
-import del from 'del';
 
 
 /**
@@ -41,14 +41,14 @@ gulp.task('watch', function () {
             name: 'Scripts Watcher',
             verbose: config.verbose
         }, function () {
-            gulp.start('scripts');
+            gulp.start('page-scripts-changed');
         });
 
         watch(`${config.appDir.root}/**/*.html`, {
             name: 'HTML Watcher',
             verbose: config.verbose
         }, function () {
-            gulp.start('templating');
+            gulp.start('template-change');
         });
 
         watch(`${config.appDir.images}/**/*.{png,jpg,jpeg,gif,svg}`, {
@@ -89,4 +89,18 @@ gulp.task('watch', function () {
             }
         });
     }
+});
+
+gulp.task('page-scripts-changed', function (cb) {
+    return runSequence(
+        'scripts',
+        'page-scripts-bundle'
+    , cb);
+});
+
+gulp.task('template-change', function (cb) {
+    return runSequence(
+        'scripts',
+        'templating'
+    , cb);
 });
