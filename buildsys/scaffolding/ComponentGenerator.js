@@ -5,6 +5,7 @@
 */
 
 import fs from 'fs';
+import del from 'del';
 import FileGenerator from './FileGenerator';
 import Helpers from '../utils/Helpers';
 import pkg from '../../package.json';
@@ -12,13 +13,17 @@ import pkg from '../../package.json';
 
 class ComponentGenerator extends FileGenerator {
 
-    static scaffold(componentRef, folderName, componentName=null) {
+    static scaffold(componentRef, folderName, noScript, componentName=null) {
 
         Logger.detail(`Scaffolding files for '${componentRef}' component...`);
 
         // Format the page name: Uppercase letters between spaces and dashes '-'
         var componentName  = componentName ? componentName : Helpers.ucBetweenDashSpace(componentRef),
+            scriptFilename = null;
+
+        if ( ! noScript) {
             scriptFilename = Helpers.makeScriptName(componentRef);
+        }
 
         var replaceProps = [
             ['<%= COMPONENT_REF =%>',        componentRef],
@@ -29,13 +34,15 @@ class ComponentGenerator extends FileGenerator {
         ];
 
         // Generate View file
-        this.generateFile(componentRef, 'component/component.html', `${config.appDir.views}/component/${folderName}`, replaceProps);
+        this.generateFile(componentRef, 'component/component.html', `${config.appDir.components}/${folderName}`, replaceProps);
 
         // Generate SCSS file
         this.generateFile(componentRef, 'component/component.scss', `${config.appDir.css}/component/${folderName}`, replaceProps, '_');
 
         // Generate JavaScript file
-        this.generateFile(scriptFilename, 'component/Component.js', `${config.appDir.js}/component/${folderName}`, replaceProps);
+        if (scriptFilename !== null) {
+            this.generateFile(scriptFilename, 'component/Component.js', `${config.appDir.js}/component/${folderName}`, replaceProps);
+        }
 
         // Add entry object to components collection
         this.addCollectionEntry(componentRef, componentName, folderName, scriptFilename);
@@ -45,7 +52,13 @@ class ComponentGenerator extends FileGenerator {
 
         Logger.detail('Adding component entry to collection within ./buildsys/components.js...');
 
-        var componentCollectionFile = './buildsys/components.js';
+        var componentCollectionFile = './buildsys/components.js',
+            scriptPathString = '';
+
+        if (scriptFilename !== null) {
+            scriptPathString = `
+        scriptPath: '${folderName}/${scriptFilename}',`;
+        }
 
         fs.readFile(componentCollectionFile, 'utf8', function (err, data) {
 
@@ -54,8 +67,7 @@ class ComponentGenerator extends FileGenerator {
             var entryString = `{
         ref: '${ref}',
         name: '${name}',
-        scssPath: '${folderName}/${ref}',
-        scriptPath: '${folderName}/${scriptFilename}'
+        scssPath: '${folderName}/${ref}',${scriptPathString}
     },
     // COMPONENT AUTOMATION !! DON'T TOUCH`;
 
@@ -65,6 +77,16 @@ class ComponentGenerator extends FileGenerator {
                 if (err) { return Logger.error(err); }
                 Logger.info(`Finished writing component entry for '${ref}'.`);
             });
+        });
+    }
+
+    static delete(componentRef, folderName) {
+        var scriptFilename = Helpers.makeScriptName(componentRef);
+        return del([ `${config.appDir.components}/${folderName}/${componentRef}.html`,
+                     `${config.appDir.css}/component/${folderName}/_${componentRef}.scss`,
+                     `${config.appDir.js}/component/${folderName}/${scriptFilename}.js`,
+        ], { force: true }).then(paths => {
+            return Logger.info(`Deleted all files for ${componentRef} component.`);
         });
     }
 }

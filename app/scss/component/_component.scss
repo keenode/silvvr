@@ -7,8 +7,4 @@
 %component-container {
     @extend %outer-container;
     padding: 0 15px;
-
-    @include media($large-up) {
-        padding: 0;
-    }
 }

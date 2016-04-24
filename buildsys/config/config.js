@@ -17,8 +17,6 @@ export default {
     // Verbose logging output
     verbose: true,
 
-    pageStylesDependenciesPath: './app/scss/page/_page-dependencies',
-
     /**
         BrowserSync server settings for development.
     */
@@ -130,15 +128,18 @@ export default {
 
     // Application directory structure (app folder)
     appDir: {
-        root:     appRoot,
-        css:      appRoot + '/scss',
-        js:       appRoot + '/js',
-        views:    appRoot + '/view',
-        favicon:  appRoot + '/asset/favicon.png', // Image file used to generate favicons
-        favicons: appRoot + '/asset/favicon',
-        fonts:    appRoot + '/asset/font',
-        images:   appRoot + '/asset/image',
-        videos:   appRoot + '/asset/video'
+        root:                  appRoot,
+        css:                   appRoot + '/scss',
+        pageStyleDependencies: appRoot + '/scss/page/_page-dependencies',
+        js:                    appRoot + '/js',
+        views:                 appRoot + '/view',
+        components:            appRoot + '/view/component',
+        pages:                 appRoot + '/view/page',
+        favicon:               appRoot + '/asset/favicon.png', // Image file used to generate favicons
+        favicons:              appRoot + '/asset/favicon',
+        fonts:                 appRoot + '/asset/font',
+        images:                appRoot + '/asset/image',
+        videos:                appRoot + '/asset/video'
     },
 
     // Build directory structure (dist folder)

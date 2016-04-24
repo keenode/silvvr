@@ -88,7 +88,7 @@ class PageDependenciesHandler {
         }
         importString += "// END: Import required component styles !! DON'T TOUCH";
 
-        var pageDependsFilePath = `${config.pageStylesDependenciesPath}/__${pageRef}.scss`;
+        var pageDependsFilePath = `${config.appDir.pageStyleDependencies}/__${pageRef}.scss`;
 
         /**
             Now read / write required component SASS imports

@@ -1,0 +1,54 @@
+{#
+    Page: Test
+    ---------------------------------------------
+    Reference: test
+    view/page/test
+    @author Keenan Staffieri
+#}
+
+{% extends 'layout/layout.html' %}
+
+
+{# --- additional stylesheets ----------------------------- #}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ '/css/page/test.css' | cachebust }}">
+
+{% endblock %}
+
+
+{# --- content -------------------------------------------- #}
+
+{% block content %}
+
+<div class="page-wrap page-wrap--test" data-page-ref="test" data-page-name="Test">
+
+    {# Component: Copy-A #}
+    {% include 'component/copy/copy-a.html' with {
+        eyebrow: 'Testing...',
+        headline: 'Component Test.',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
+    } only %}
+
+    {# Component: Copy-B #}
+    {% include 'component/copy/copy-b.html' with {
+        headline: 'New Component',
+        description: 'Welcome to your new component!',
+    } only %}
+
+</div> {# .page-wrap--test #}
+
+{% endblock %}
+
+
+{# --- additional scripts --------------------------------- #}
+
+{% block scripts %}
+
+<!-- build:js /js/page/test.js -->
+<script type="text/javascript" src="/js/component/Component.js"></script>
+<script type="text/javascript" src="/js/page/test.js"></script>
+<!-- endbuild -->
+
+{% endblock %}

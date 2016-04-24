@@ -45,10 +45,10 @@ gulp.task('make', function (cb) {
             if (typeof argv.folder === 'string') {
                 if (typeof argv.name === 'string') {
                     // Pass user-specified name to Component scaffolder
-                    return ComponentGenerator.scaffold(argv.component, argv.folder, argv.name);
+                    return ComponentGenerator.scaffold(argv.component, argv.folder, argv.noscript, argv.name);
                 }
                 else {
-                    return ComponentGenerator.scaffold(argv.component, argv.folder);
+                    return ComponentGenerator.scaffold(argv.component, argv.folder, argv.noscript);
                 }
             }
             else {
