@@ -1,6 +1,6 @@
 # silvvr
 
-**v0.3.3**
+**v0.4.0**
 
 #### Front-End Gulp build system and boilerplate.
 
@@ -21,7 +21,7 @@ Automate your web development process with ease! When changes are made to your c
 * Includes **Bourbon and Neat** -- http://bourbon.io/
 
 ## Requirements
-**NodeJS 5.5 or greater is recommended** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
+**NodeJS 5.10 or greater is recommended** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
 
 ## Install
 To install **silvvr**, simply clone this repo and create your own repo instance. 
@@ -58,6 +58,18 @@ To install **silvvr**, simply clone this repo and create your own repo instance.
 
 * `gulp <--env> --build`
     Start **silvvr** in build-only mode. Files are only generated. No file watching or server is initiated.
+
+* `gulp make --page <page-name> <--name> <Page Name>`
+    Scaffold files to generate a new page.
+
+* `gulp make --component <component-name> --folder <folder> <--name> <Component Name> <--noscript>`
+    Scaffold files to generate a new component.
+
+* `gulp delete --page <page-name>`
+    Delete scaffolded files for a given page.
+
+* `gulp delete --component <component-name> --folder <folder>`
+    Delete scaffolded files for a given component.
 
 ## Recommendations
 * It is recommended that you update properties on the `package.json` file to reflect your current project.
