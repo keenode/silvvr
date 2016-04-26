@@ -1,6 +1,6 @@
 # silvvr
 
-**v0.4.0**
+**v0.4.1**
 
 #### Front-End Gulp build system and boilerplate.
 
@@ -21,7 +21,7 @@ Automate your web development process with ease! When changes are made to your c
 * Includes **Bourbon and Neat** -- http://bourbon.io/
 
 ## Requirements
-**NodeJS 5.10 or greater is recommended** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
+**NodeJS 5.11 or greater is recommended** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
 
 ## Install
 To install **silvvr**, simply clone this repo and create your own repo instance. 
