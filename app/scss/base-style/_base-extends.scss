@@ -23,14 +23,14 @@ p.lead { @extend %lead-body-copy; }
 // --- Inline Text Elements
 mark        { @extend %marked-text; }
 del         { @extend %deleted-text; }
-s           { @extend %strikethrough-text; }
+s           { @extend %strikethrough-text !optional; }
 ins         { @extend %inserted-text; }
-u           { @extend %underlined-text; }
+u           { @extend %underlined-text !optional; }
 small       { @extend %small-text; }
-b, strong   { @extend %bold-text; }
-i, em       { @extend %italic-text; }
+b, strong   { @extend %bold-text !optional; }
+i, em       { @extend %italic-text !optional; }
 abbr[title] { @extend %abbreviated-text; }
-cite        { @extend %cited-text; }
+cite        { @extend %cited-text !optional; }
 
 
 // --- Address
@@ -89,7 +89,7 @@ hr { @extend %divider; }
 
 // --- Inline
 code          { @extend %code-inline; }
-code.no-style { @extend %code-nostyle; }
+code.no-style { @extend %code-nostyle !optional; }
 
 
 // --- User Input
@@ -101,7 +101,7 @@ pre { @extend %code-block; }
 
 
 // --- Variable
-var { @extend %variable; }
+var { @extend %variable !optional; }
 
 
 // --- Sample Output

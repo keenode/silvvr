@@ -20,7 +20,7 @@ $ns: '.sg-topnav';
         padding: 0 15px;
 
         &__list {
-            @extend %clear-list;
+            @include clear-list;
             height: 100%;
         }
 

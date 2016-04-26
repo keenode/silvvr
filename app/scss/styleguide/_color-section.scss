@@ -30,7 +30,7 @@
     }
 
     &__hex {
-        @extend %code-nostyle;
+        @extend %code-nostyle !optional;
         display: block;
         position: relative;
         top: 34px;
