@@ -4,7 +4,7 @@
  * @author Keenan Staffieri
 */
 
-import gutil from 'gulp-util';
+var gutil = require('gulp-util');
 
 
 class Logger {
@@ -72,4 +72,4 @@ class Logger {
     }
 }
 
-export default Logger;
+module.exports = Logger;

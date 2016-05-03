@@ -6,8 +6,8 @@
  * 'gulp favicons'
 */
 
-import fs from 'fs';
-import runSequence from 'run-sequence';
+var fs = require('fs');
+var runSequence = require('run-sequence');
 
 
 /**

@@ -6,8 +6,8 @@
  * 'gulp build-complete'
 */
 
-import del from 'del';
-import runSequence from 'run-sequence';
+var del = require('del');
+var runSequence = require('run-sequence');
 
 
 /**

@@ -5,8 +5,8 @@
  * 'gulp page-scripts-bundle'
 */
 
-import foreach from 'gulp-foreach';
-import PageDependenciesHandler from '../classes/PageDependenciesHandler';
+var foreach = require('gulp-foreach');
+var PageDependenciesHandler = require('../classes/PageDependenciesHandler');
 
 
 /**

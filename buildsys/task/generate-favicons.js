@@ -6,10 +6,10 @@
  * 'gulp generate-favicons'
 */
 
-import fs from 'fs';
-import runSequence from 'run-sequence';
-import favicons from 'gulp-favicons';
-import pkg from '../../package.json';
+var fs = require('fs');
+var runSequence = require('run-sequence');
+var favicons = require('gulp-favicons');
+var pkg = require('../../package.json');
 
 
 /**

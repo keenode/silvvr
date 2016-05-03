@@ -4,9 +4,9 @@
  * @author Keenan Staffieri
 */
 
-import fs from 'fs';
-import rename from 'gulp-rename';
-import batchReplace from 'gulp-batch-replace';
+var fs = require('fs');
+var rename = require('gulp-rename');
+var batchReplace = require('gulp-batch-replace');
 
 
 class FileGenerator {
@@ -32,4 +32,4 @@ class FileGenerator {
     }
 }
 
-export default FileGenerator;
+module.exports = FileGenerator;

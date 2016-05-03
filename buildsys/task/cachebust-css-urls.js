@@ -6,9 +6,9 @@
  * 'gulp cachebust-css-urls'
 */
 
-import gutil from 'gulp-util';
-import cssnano from 'gulp-cssnano';
-import modifyCssUrls from 'gulp-modify-css-urls';
+var gutil = require('gulp-util');
+var cssnano = require('gulp-cssnano');
+var modifyCssUrls = require('gulp-modify-css-urls');
 
 
 /* $ gulp cachebust-css-urls */

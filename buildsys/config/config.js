@@ -9,7 +9,7 @@ const appRoot   = './app',
       buildRoot = './dist';
 
 
-export default {
+module.exports = {
 
     // Enable JavaScript ES6? (Babel)
     useES6: true,

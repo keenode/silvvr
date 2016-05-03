@@ -6,9 +6,9 @@
  * 'gulp clean'
 */
 
-import del from 'del';
-import cache from 'gulp-cache';
-import runSequence from 'run-sequence';
+var del = require('del');
+var cache = require('gulp-cache');
+var runSequence = require('run-sequence');
 
 
 /**

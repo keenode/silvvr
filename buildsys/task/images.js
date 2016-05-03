@@ -6,9 +6,9 @@
  * 'gulp images'
 */
 
-import newer from 'gulp-newer';
-import cache from 'gulp-cache';
-import imagemin from 'gulp-imagemin';
+var newer = require('gulp-newer');
+var cache = require('gulp-cache');
+var imagemin = require('gulp-imagemin');
 
 /* $ gulp images */
 

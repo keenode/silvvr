@@ -4,10 +4,10 @@
  * @author Keenan Staffieri
 */
 
-import fs from 'fs';
-import Helpers from '../utils/Helpers';
-import ComponentCollection from '../scaffolding/ComponentCollection';
-import ScriptWriter from './ScriptWriter';
+var fs = require('fs');
+var Helpers = require('../utils/Helpers');
+var ComponentCollection = require('../scaffolding/ComponentCollection');
+var ScriptWriter = require('./ScriptWriter');
 
 
 class PageDependenciesHandler {
@@ -125,4 +125,4 @@ class PageDependenciesHandler {
     }
 }
 
-export default PageDependenciesHandler;
+module.exports = PageDependenciesHandler;

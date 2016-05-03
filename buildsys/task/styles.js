@@ -6,12 +6,12 @@
  * 'gulp styles'
 */
 
-import sass from 'gulp-sass';
-import autoprefixer from 'gulp-autoprefixer'
-import sourcemaps from 'gulp-sourcemaps';
-import browserSync from 'browser-sync';
-import gutil from 'gulp-util';
-import plumber from 'gulp-plumber';
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
+var browserSync = require('browser-sync');
+var gutil = require('gulp-util');
+var plumber = require('gulp-plumber');
 
 
 /* $ gulp styles */

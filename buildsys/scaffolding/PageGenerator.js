@@ -4,10 +4,10 @@
  * @author Keenan Staffieri
 */
 
-import del from 'del';
-import Helpers from '../utils/Helpers';
-import FileGenerator from './FileGenerator';
-import pkg from '../../package.json';
+var del = require('del');
+var Helpers = require('../utils/Helpers');
+var FileGenerator = require('./FileGenerator');
+var pkg = require('../../package.json');
 
 
 class PageGenerator extends FileGenerator {
@@ -49,4 +49,4 @@ class PageGenerator extends FileGenerator {
     }
 }
 
-export default PageGenerator;
+module.exports = PageGenerator;

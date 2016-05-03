@@ -4,12 +4,12 @@
  * @author Keenan Staffieri
 */
 
-import babel from 'gulp-babel';
-import concat from 'gulp-concat';
-import uglify from 'gulp-uglify';
-import sourcemaps from 'gulp-sourcemaps';
-import gutil from 'gulp-util';
-import plumber from 'gulp-plumber';
+var babel = require('gulp-babel');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
+var gutil = require('gulp-util');
+var plumber = require('gulp-plumber');
 
 
 class ScriptWriter {
@@ -46,4 +46,4 @@ class ScriptWriter {
     }
 }
 
-export default ScriptWriter;
+module.exports = ScriptWriter;

@@ -12,7 +12,7 @@
  * Note: You can combine flags i.e. 'gulp --prod --build'
 */
 
-import runSequence from 'run-sequence';
+var runSequence = require('run-sequence');
 
 
 /* --- $ gulp --- */

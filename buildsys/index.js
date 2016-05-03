@@ -4,12 +4,12 @@
  * @author Keenan Staffieri
 */
 
-import gulp from 'gulp';
-import fs from 'fs';
-import crypto from 'crypto';
-import config from './config/config';
-import Logger from './utils/Logger';
-import pkg from '../package.json';
+var gulp = require('gulp');
+var fs = require('fs');
+var crypto = require('crypto');
+var config = require('./config/config');
+var Logger = require('./utils/Logger');
+var pkg = require('../package.json');
 
 
 // Grab command line arguments

@@ -6,8 +6,8 @@
  * 'gulp make --page [page-name]'
 */
 
-import PageGenerator from '../scaffolding/PageGenerator';
-import ComponentGenerator from '../scaffolding/ComponentGenerator';
+var PageGenerator = require('../scaffolding/PageGenerator');
+var ComponentGenerator = require('../scaffolding/ComponentGenerator');
 
 
 // Grab command line arguments

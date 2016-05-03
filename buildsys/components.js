@@ -4,6 +4,6 @@
  * @author Keenan Staffieri
 */
 
-export default [
+module.exports = [
     // COMPONENT AUTOMATION !! DON'T TOUCH
 ];

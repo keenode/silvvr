@@ -6,19 +6,19 @@
  * 'gulp templating'
 */
 
-import swig from 'gulp-swig';
-import htmlmin from 'gulp-htmlmin';
-import browserSync from 'browser-sync';
-import replace from 'gulp-replace';
-import gutil from 'gulp-util';
-import useref from 'gulp-useref';
-import uglify from 'gulp-uglify';
-import runSequence from 'run-sequence';
-import html from 'html';
-import fs from 'fs';
-import foreach from 'gulp-foreach';
-import PageDependenciesHandler from '../classes/PageDependenciesHandler';
-import apiUrls from '../config/api-urls';
+var swig = require('gulp-swig');
+var htmlmin = require('gulp-htmlmin');
+var browserSync = require('browser-sync');
+var replace = require('gulp-replace');
+var gutil = require('gulp-util');
+var useref = require('gulp-useref');
+var uglify = require('gulp-uglify');
+var runSequence = require('run-sequence');
+var html = require('html');
+var fs = require('fs');
+var foreach = require('gulp-foreach');
+var PageDependenciesHandler = require('../classes/PageDependenciesHandler');
+var apiUrls = require('../config/api-urls');
 
 
 /**

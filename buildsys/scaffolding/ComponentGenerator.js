@@ -4,11 +4,11 @@
  * @author Keenan Staffieri
 */
 
-import fs from 'fs';
-import del from 'del';
-import FileGenerator from './FileGenerator';
-import Helpers from '../utils/Helpers';
-import pkg from '../../package.json';
+var fs = require('fs');
+var del = require('del');
+var FileGenerator = require('./FileGenerator');
+var Helpers = require('../utils/Helpers');
+var pkg = require('../../package.json');
 
 
 class ComponentGenerator extends FileGenerator {
@@ -91,4 +91,4 @@ class ComponentGenerator extends FileGenerator {
     }
 }
 
-export default ComponentGenerator;
+module.exports = ComponentGenerator;

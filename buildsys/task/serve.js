@@ -6,7 +6,7 @@
  * 'gulp serve'
 */
 
-import browserSync from 'browser-sync';
+var browserSync = require('browser-sync');
 
 
 /* $ gulp serve */

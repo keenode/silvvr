@@ -6,13 +6,13 @@
  * 'gulp scripts'
 */
 
-import babel from 'gulp-babel';
-import uglify from 'gulp-uglify';
-import stripDebug from 'gulp-strip-debug';
-import sourcemaps from 'gulp-sourcemaps';
-import browserSync from 'browser-sync';
-import gutil from 'gulp-util';
-import plumber from 'gulp-plumber';
+var babel = require('gulp-babel');
+var uglify = require('gulp-uglify');
+var stripDebug = require('gulp-strip-debug');
+var sourcemaps = require('gulp-sourcemaps');
+var browserSync = require('browser-sync');
+var gutil = require('gulp-util');
+var plumber = require('gulp-plumber');
 
 
 /* $ gulp scripts */

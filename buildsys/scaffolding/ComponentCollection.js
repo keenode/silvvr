@@ -4,7 +4,7 @@
  * @author Keenan Staffieri
 */
 
-import components from '../components';
+var components = require('../components');
 
 
 class ComponentCollection {
@@ -34,4 +34,4 @@ class ComponentCollection {
     }
 }
 
-export default new ComponentCollection(components);
+module.exports = new ComponentCollection(components);
