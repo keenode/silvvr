@@ -1,6 +1,6 @@
 {
   "name": "silvvr",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "main": "silvvr.js",
   "description": "Front-End Gulp build system and boilerplate.",
   "author": {
