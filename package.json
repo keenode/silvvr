@@ -1,6 +1,7 @@
 {
   "name": "silvvr",
   "version": "0.4.3",
+  "main": "silvvr.js",
   "description": "Front-End Gulp build system and boilerplate.",
   "author": {
     "name": "Keenan Staffieri",
