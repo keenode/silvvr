@@ -23,3 +23,5 @@ npm-debug.log
 # Silvvr Files
 dist
 app/assets/favicons
+coverage
+.nyc_output
