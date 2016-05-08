@@ -7,7 +7,7 @@ const Layout = (props) => (
 )
 
 Layout.propTypes = {
-  children: React.PropTypes.object
+  children: React.PropTypes.element
 }
 
 module.exports = Layout

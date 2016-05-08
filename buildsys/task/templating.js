@@ -49,6 +49,9 @@ gulp.task('templating:process', function () {
     var canMinifyHTML = config.env[env].html.minify,
         canBundle     = config.env[env].js.bundle;
 
+    // TEMP: Override canBundle
+    canBundle = true;
+
     return gulp.src(`${config.appDir.root}/**/*.html`)
         .pipe(foreach(function (stream, file) {
             var a = fs.realpathSync(process.cwd() + '/app/view/page'),
