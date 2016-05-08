@@ -79,10 +79,12 @@
     "gulp-watch": "4.3.5",
     "html": "0.0.10",
     "jquery": "2.2.3",
+    "json-loader": "^0.5.4",
     "normalize.css": "4.1.1",
     "prismjs": "1.4.1",
     "react": "15.0.2",
     "react-dom": "15.0.2",
+    "react-router": "^2.4.0",
     "run-sequence": "1.1.5",
     "webpack": "1.13.0",
     "yargs": "4.6.0"
