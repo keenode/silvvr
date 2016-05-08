@@ -51,7 +51,7 @@ gulp.task('default', function (cb) {
     }
 
     runSequence(
-        'clean',
+        // 'clean',
         [ // Run these tasks in parallel...
             'styles',
             'scripts',
