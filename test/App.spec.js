@@ -2,14 +2,14 @@
 const React = require('react')
 const chai = require('chai')
 const { expect } = chai
-const Search = require('../js/Search')
+const Search = require('../app/js/Search')
 const enzyme = require('enzyme')
 const { render } = enzyme
 const data = require('../app/js/data')
 const ReactRedux = require('react-redux')
 const { Provider } = ReactRedux
-const Header = require('../js/Header')
-const Store = require('../js/Store')
+const Header = require('../app/js/Header')
+const Store = require('../app/js/Store')
 const { store, reducer } = Store
 
 describe('<Header />', () => {
