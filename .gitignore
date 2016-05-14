@@ -5,9 +5,8 @@
 .AppleDouble
 .LSOverride
 
-# Bower & Node Modules
+# Node
 node_modules
-bower_components
 npm-debug.log
 
 # General Files
