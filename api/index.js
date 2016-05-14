@@ -2,7 +2,6 @@ const Koa = require('koa')
 const app = new Koa()
 const router = require('koa-router')()
 const views = require('koa-views');
-const koaNunjucks = require('koa-nunjucks-2');
 const path = require('path');
 
 const API_PORT = 9000;
@@ -11,7 +10,7 @@ app.name = 'Silvvr Application'
 app.env = 'dev'
 
 // Must be used before any router is used
-app.use(views(APP_ROOT + '/admin/views', {
+app.use(views(APP_ROOT + '/admin/view', {
   extension: 'njk',
   map: {
     njk: 'nunjucks'
@@ -36,8 +35,8 @@ app.use(async (ctx, next) => {
 
 // Routes
 
-router.get('/', async (ctx, next) => {
-  await ctx.render('dashboard')
+router.get('/admin', async (ctx, next) => {
+  await ctx.render('index')
 })
 
 router.get('/test', (ctx, next) => {
