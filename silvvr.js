@@ -13,7 +13,7 @@ require('babel-core/register')()
 require('babel-polyfill')
 
 // Require API server
-require('./api/index.js')
+const api = require('./api')
 
 // var gulp = require('gulp');
 
