@@ -13,7 +13,7 @@
     "silvvr": "silvvr.js"
   },
   "scripts": {
-    "dev": "nodemon silvvr.js",
+    "dev": "./node_modules/.bin/nodemon silvvr.js",
     "prod": "node silvvr.js",
     "test": "mocha --require test/helpers/setup.js",
     "cover": "nyc --reporter=lcov --reporter=text --reporter=html --require babel-register --extension .jsx npm test"
@@ -94,6 +94,7 @@
     "lodash": "4.12.0",
     "mocha": "2.4.5",
     "node-ensure": "0.0.0",
+    "nodemon": "1.9.2",
     "normalize.css": "4.1.1",
     "nyc": "6.4.4",
     "prismjs": "1.4.1",
