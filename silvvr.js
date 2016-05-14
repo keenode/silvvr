@@ -9,9 +9,15 @@
     Twitter: @keenode
 */
 
-var gulp = require('gulp');
+require('babel-core/register')()
+require('babel-polyfill')
+
+// Require API server
+require('./api/index.js')
+
+// var gulp = require('gulp');
 
 // Import build system ( ./buildsys/index.js ) is automatically loaded first.
-require('./buildsys');
+// require('./buildsys');
 
-gulp.start('default');
+// gulp.start('default');
