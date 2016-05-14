@@ -12,6 +12,8 @@
 require('babel-core/register')()
 require('babel-polyfill')
 
+global.APP_ROOT = __dirname
+
 // Require API server
 const api = require('./api')
 
