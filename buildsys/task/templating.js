@@ -44,48 +44,48 @@ gulp.task('templating:process', function () {
 
   // Get build environment settings
   var canMinifyHTML = config.env[env].html.minify
-  var canBundle = config.env[env].js.bundle
+  var canBundle = config.env[env].scripts.bundle
 
   // TEMP: Override canBundle
   canBundle = true
 
   return gulp.src(`${config.appDir.root}/**/*.html`)
     .pipe(foreach(function (stream, file) {
-        let a = fs.realpathSync(process.cwd() + '/app/view/page')
-        let b = fs.realpathSync(file.path)
-        let fileInsideDir = b.indexOf(a) == 0
-        // Only compute page dependencies for views within 'pages' dir
-        return fileInsideDir ? PageDependenciesHandler.computeDependencies(stream, file) : stream
+      let a = fs.realpathSync(process.cwd() + '/app/view/page')
+      let b = fs.realpathSync(file.path)
+      let fileInsideDir = b.indexOf(a) == 0
+      // Only compute page dependencies for views within 'pages' dir
+      return fileInsideDir ? PageDependenciesHandler.computeDependencies(stream, file) : stream
     }))
     .pipe(swig({
-        setup: function (swig) {
-          swig.setDefaults({
-            autoescape: false,
-            cache: false,
-            loader: swig.loaders.fs(`${config.appDir.views}/`)
-          })
-          swig.setFilter('cachebust', function (input) {
-            return CACHEBUST_HASH ? input + '?v=' + CACHEBUST_HASH : input
-          })
-          swig.setFilter('makeTextReadable', function (input) {
-            var rgb = parseInt(input, 16)   // convert rrggbb to decimal
-            var r = (rgb >> 16) & 0xff  // extract red
-            var g = (rgb >>  8) & 0xff  // extract green
-            var b = (rgb >>  0) & 0xff  // extract blue
+      setup: function (swig) {
+        swig.setDefaults({
+          autoescape: false,
+          cache: false,
+          loader: swig.loaders.fs(`${config.appDir.views}/`)
+        })
+        swig.setFilter('cachebust', function (input) {
+          return CACHEBUST_HASH ? input + '?v=' + CACHEBUST_HASH : input
+        })
+        swig.setFilter('makeTextReadable', function (input) {
+          var rgb = parseInt(input, 16)   // convert rrggbb to decimal
+          var r = (rgb >> 16) & 0xff  // extract red
+          var g = (rgb >>  8) & 0xff  // extract green
+          var b = (rgb >>  0) & 0xff  // extract blue
 
-            var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b // per ITU-R BT.709
+          var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b // per ITU-R BT.709
 
-            if (luma > 240)      { return '#888' }
-            else if (luma > 230) { return '#777' }
-            else if (luma > 220) { return '#666' }
-            else if (luma > 210) { return '#555' }
-            else if (luma > 200) { return '#444' }
+          if (luma > 240)      { return '#888' }
+          else if (luma > 230) { return '#777' }
+          else if (luma > 220) { return '#666' }
+          else if (luma > 210) { return '#555' }
+          else if (luma > 200) { return '#444' }
 
-            return '#fff'
-          })
-          swig.setFilter('respectNewlines', function (input) {
-            return html.prettyPrint(input)
-          })
+          return '#fff'
+        })
+        swig.setFilter('respectNewlines', function (input) {
+          return html.prettyPrint(input)
+        })
       },
     }))
     .pipe(replace('<%= API_URL =%>', apiUrls[env]))
@@ -96,7 +96,7 @@ gulp.task('templating:process', function () {
 
 /* $ gulp templating:vendor-scripts */
 gulp.task('templating:vendor-scripts', function () {
-  var canUglify = config.env[env].js.uglify
+  var canUglify = config.env[env].scripts.uglify
   return gulp.src(`${config.buildDir.scripts}/vendor.js`)
     .pipe(canUglify ? uglify() : gutil.noop())
     .pipe(gulp.dest(config.buildDir.scripts))

@@ -20,10 +20,10 @@ gulp.task('scripts', function () {
   Logger.task('RUNNING TASK : scripts')
 
   // Get build environment settings
-  var useES6        = config.useES6;
-  var canUglify     = config.env[env].js.uglify;
-  var canStripDebug = config.env[env].js.stripDebug;
-  var useSourcemaps = config.env[env].js.sourcemaps;
+  var useES6        = config.useES6
+  var canUglify     = config.env[env].scripts.uglify
+  var canStripDebug = config.env[env].scripts.stripDebug
+  var useSourcemaps = config.env[env].scripts.sourcemaps
 
   /**
     Actually perform various transformations on the file(s).

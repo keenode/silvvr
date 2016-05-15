@@ -20,14 +20,14 @@ gulp.task('styles', function () {
   Logger.task('RUNNING TASK : styles')
 
   // Get build environment settings
-  var optimizeCSS   = config.env[env].css.optimize
-  var useSourcemaps = config.env[env].css.sourcemaps
+  var optimizeCSS   = config.env[env].styles.optimize
+  var useSourcemaps = config.env[env].styles.sourcemaps
 
   var sassOutputStyle = 'expanded'
   if (optimizeCSS) { sassOutputStyle = 'compressed' }
 
   // Copy and process css files to build dir
-  return gulp.src(`${config.appDir.css}/**/*.{scss,sass}`)
+  return gulp.src(`${config.appDir.styles}/**/*.{scss,sass}`)
     .pipe(plumber({
       errorHandler: function (err) {
         gutil.beep()
@@ -42,7 +42,7 @@ gulp.task('styles', function () {
       cascade: false,
     }))
     .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
-    .pipe(gulp.dest(config.buildDir.css))
+    .pipe(gulp.dest(config.buildDir.styles))
     .pipe(config.browserSync.injectCSS ? browserSync.stream() : gutil.noop())
     .on('end', function () { return Logger.taskComplete('FINISHED TASK : styles') })
 })

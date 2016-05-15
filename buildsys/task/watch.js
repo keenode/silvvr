@@ -36,7 +36,7 @@ gulp.task('watch', function () {
     gulp.start('styles')
   })
 
-  watch(`${config.appDir.js}/**/*.js`, {
+  watch(`${config.appDir.scripts}/**/*.js`, {
     name: 'Scripts Watcher',
     verbose: config.verbose
   }, function () {
