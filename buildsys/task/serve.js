@@ -18,7 +18,7 @@ gulp.task('serve', function () {
 
     return browserSync.init({
       server: {
-        baseDir: [config.buildDir.root, './node_modules']
+        baseDir: [config.buildDir.app.root, './node_modules']
       },
       ui: {
         port: config.browserSync.uiPort
@@ -29,7 +29,7 @@ gulp.task('serve', function () {
       logFileChanges: config.verbose,
       logConnections: config.verbose,
       notify: false,
-      injectChanges: true
+      injectChanges: true,
     })
   }
 })

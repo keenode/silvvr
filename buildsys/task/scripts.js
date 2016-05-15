@@ -28,10 +28,18 @@ gulp.task('scripts', (cb) => {
 
 /* $ gulp scripts:app */
 gulp.task('scripts:app', function () {
-  return ScriptCompiler.compileGlob(`${config.appDir.scripts}/**/*.js`)
+  return ScriptCompiler.compileGlob(
+    `${config.srcDir.app.scripts}/**/*.js`,
+    config.buildDir.app.scripts,
+    'app'
+  )
 })
 
 /* $ gulp scripts:admin */
 gulp.task('scripts:admin', function () {
-  return ScriptCompiler.compileGlob(`${config.adminDir.scripts}/**/*.js`)
+  return ScriptCompiler.compileGlob(
+    `${config.srcDir.admin.scripts}/**/*.js`,
+    config.buildDir.admin.scripts,
+    'admin'
+  )
 })

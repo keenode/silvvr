@@ -39,7 +39,7 @@ gulp.task('default', (cb) => {
     /**
         Override 'public' dir build folder to '.tmp' for build process compilation.
     */
-    var rootReplace = config.buildDir.root
+    var rootReplace = config.buildDir.app.root
     config.oldBuildDir = {}
     for (var folder in config.buildDir) {
       // Copy over original build dir properties

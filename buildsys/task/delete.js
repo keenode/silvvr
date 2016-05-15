@@ -16,7 +16,6 @@ const argv = require('yargs').argv
   $ gulp delete
   > Delete scaffolded files command handler.
 */
-
 gulp.task('delete', (cb) => {
 
   /**

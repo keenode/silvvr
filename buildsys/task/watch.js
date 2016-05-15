@@ -21,56 +21,63 @@ gulp.task('watch', function () {
 
   Logger.task('RUNNING TASK : watch')
 
-  watch(`${config.appDir.root}/*`, {
+  watch(`${config.srcDir.app.root}/*`, {
     name: 'Rootfiles Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('rootfiles')
   })
 
-  watch(`${config.appDir.styles}/**/*.{scss,sass}`, {
-    name: 'SASS Watcher',
+  watch(`${config.srcDir.app.styles}/**/*.{scss,sass}`, {
+    name: 'App Styles Watcher',
     verbose: config.verbose
   }, function () {
-    gulp.start('styles')
+    gulp.start('styles:app')
   })
 
-  watch(`${config.appDir.scripts}/**/*.js`, {
+  watch(`${config.srcDir.admin.styles}/**/*.{scss,sass}`, {
+    name: 'Admin Styles Watcher',
+    verbose: config.verbose
+  }, function () {
+    gulp.start('styles:admin')
+  })
+
+  watch(`${config.srcDir.app.scripts}/**/*.js`, {
     name: 'App Scripts Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('page-scripts-changed')
   })
 
-  watch(`${config.adminDir.scripts}/**/*.js`, {
+  watch(`${config.srcDir.admin.scripts}/**/*.js`, {
     name: 'Admin Scripts Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('scripts:admin')
   })
 
-  watch(`${config.appDir.root}/**/*.html`, {
+  watch(`${config.srcDir.app.root}/**/*.html`, {
     name: 'HTML Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('template-change')
   })
 
-  watch(`${config.appDir.images}/**/*.{png,jpg,jpeg,gif,svg}`, {
+  watch(`${config.srcDir.app.images}/**/*.{png,jpg,jpeg,gif,svg}`, {
     name: 'Images Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('images')
   })
 
-  watch(`${config.appDir.fonts}/**/*`, {
+  watch(`${config.srcDir.app.fonts}/**/*`, {
     name: 'Fonts Watcher',
     verbose: config.verbose
   }, function (vinyl) {
     gulp.start('fonts')
   })
 
-  watch(`${config.appDir.videos}/**/*`, {
+  watch(`${config.srcDir.app.videos}/**/*`, {
     name: 'Videos Watcher',
     verbose: config.verbose
   }, function () {
@@ -78,13 +85,8 @@ gulp.task('watch', function () {
   })
 
   watch([
-    `${config.buildDir.root}/*`,
-    `${config.buildDir.scripts}/**/*.js`,
-    `${config.buildDir.root}/**/*.html`,
-    `${config.buildDir.images}/**/*.{png,jpg,jpeg,gif,svg}`,
-    `${config.buildDir.favicons}/*`,
-    `${config.buildDir.fonts}/**/*`,
-    `${config.buildDir.videos}/**/*`,
+    `${config.buildDir.app.root}/**/*`,
+    `${config.buildDir.admin.root}/**/*`,
   ], {
     name: 'Post-Build Watcher',
     verbose: config.verbose

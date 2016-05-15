@@ -6,43 +6,40 @@
  * 'gulp styles'
 */
 
-const sass = require('gulp-sass')
-const autoprefixer = require('gulp-autoprefixer')
-const sourcemaps = require('gulp-sourcemaps')
-const browserSync = require('browser-sync')
-const gutil = require('gulp-util')
-const plumber = require('gulp-plumber')
+const runSequence = require('run-sequence')
+const StyleCompiler = require('../compiler/StyleCompiler')
 
-
-/* $ gulp styles */
-gulp.task('styles', function () {
-
+/**
+  $ gulp styles
+  > Preprocess styles for application and admin.
+*/
+gulp.task('styles', (cb) => {
   Logger.task('RUNNING TASK : styles')
+  runSequence(
+    [
+      'styles:app',
+      'styles:admin',
+    ],
+  function () {
+    Logger.taskComplete('FINISHED TASK : styles')
+    cb()
+  })
+})
 
-  // Get build environment settings
-  var optimizeCSS   = config.env[env].styles.optimize
-  var useSourcemaps = config.env[env].styles.sourcemaps
+/* $ gulp styles:app */
+gulp.task('styles:app', function () {
+  return StyleCompiler.compileGlob(
+    `${config.srcDir.app.styles}/**/*.{scss,sass}`,
+    config.buildDir.app.styles,
+    'app'
+  )
+})
 
-  var sassOutputStyle = 'expanded'
-  if (optimizeCSS) { sassOutputStyle = 'compressed' }
-
-  // Copy and process css files to build dir
-  return gulp.src(`${config.appDir.styles}/**/*.{scss,sass}`)
-    .pipe(plumber({
-      errorHandler: function (err) {
-        gutil.beep()
-        Logger.error(`CSS ERROR >> ${err.name} :\n ${err.message}`)
-        this.emit('end')
-      }
-    }))
-    .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
-    .pipe(sass({ outputStyle: sassOutputStyle }).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: [ 'last 2 versions' ],
-      cascade: false,
-    }))
-    .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
-    .pipe(gulp.dest(config.buildDir.styles))
-    .pipe(config.browserSync.injectCSS ? browserSync.stream() : gutil.noop())
-    .on('end', function () { return Logger.taskComplete('FINISHED TASK : styles') })
+/* $ gulp styles:admin */
+gulp.task('styles:admin', function () {
+  return StyleCompiler.compileGlob(
+    `${config.srcDir.admin.styles}/**/*.{scss,sass}`,
+    config.buildDir.admin.styles,
+    'admin'
+  )
 })

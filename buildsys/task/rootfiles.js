@@ -10,7 +10,7 @@
 gulp.task('rootfiles', function () {
   // Copy rootfiles to build dir
   Logger.task('RUNNING TASK : rootfiles')
-  return gulp.src([`${config.appDir.root}/*.*`, `!${config.appDir.root}/*.html`])
-    .pipe(gulp.dest(config.buildDir.root))
+  return gulp.src([`${config.srcDir.app.root}/*.*`, `!${config.srcDir.app.root}/*.html`])
+    .pipe(gulp.dest(config.buildDir.app.root))
     .on('end', function () { return Logger.taskComplete('FINISHED TASK : rootfiles') })
 })

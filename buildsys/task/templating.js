@@ -49,7 +49,7 @@ gulp.task('templating:process', function () {
   // TEMP: Override canBundle
   canBundle = true
 
-  return gulp.src(`${config.appDir.root}/**/*.html`)
+  return gulp.src(`${config.srcDir.app.root}/**/*.html`)
     .pipe(foreach(function (stream, file) {
       let a = fs.realpathSync(process.cwd() + '/app/view/page')
       let b = fs.realpathSync(file.path)
@@ -62,7 +62,7 @@ gulp.task('templating:process', function () {
         swig.setDefaults({
           autoescape: false,
           cache: false,
-          loader: swig.loaders.fs(`${config.appDir.views}/`)
+          loader: swig.loaders.fs(`${config.srcDir.app.views}/`)
         })
         swig.setFilter('cachebust', function (input) {
           return CACHEBUST_HASH ? input + '?v=' + CACHEBUST_HASH : input
@@ -90,23 +90,23 @@ gulp.task('templating:process', function () {
     }))
     .pipe(replace('<%= API_URL =%>', apiUrls[env]))
     .pipe(canBundle ? useref({ searchPath: buildOnlyMode ? './.tmp' : './public' }) : gutil.noop())
-    .pipe(gulp.dest(config.buildDir.root))
+    .pipe(gulp.dest(config.buildDir.app.root))
 })
 
 
 /* $ gulp templating:vendor-scripts */
 gulp.task('templating:vendor-scripts', function () {
   var canUglify = config.env[env].scripts.uglify
-  return gulp.src(`${config.buildDir.scripts}/vendor.js`)
+  return gulp.src(`${config.buildDir.app.scripts}/vendor.js`)
     .pipe(canUglify ? uglify() : gutil.noop())
-    .pipe(gulp.dest(config.buildDir.scripts))
+    .pipe(gulp.dest(config.buildDir.app.scripts))
 })
 
 
 /* $ gulp templating:minify-html */
 gulp.task('templating:minify-html', function () {
   var canMinifyHTML = config.env[env].html.minify
-  return gulp.src(`${config.buildDir.root}/index.html`)
+  return gulp.src(`${config.buildDir.app.root}/index.html`)
     .pipe(canMinifyHTML ? htmlmin({ collapseWhitespace: true }) : gutil.noop())
-    .pipe(gulp.dest(config.buildDir.root))
+    .pipe(gulp.dest(config.buildDir.app.root))
 })

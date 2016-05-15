@@ -29,13 +29,13 @@ gulp.task('generate-favicons', (cb) => {
 /* $ gulp favicons:reset-template */
 gulp.task('favicons:reset-template', (cb) => {
   // Reset favicons template so favicons plugin can write new file paths
-  return fs.writeFileSync(`${config.appDir.views}/partial/favicons.html`, '<link rel="favicons" href="..." />', cb)
+  return fs.writeFileSync(`${config.srcDir.app.views}/partial/favicons.html`, '<link rel="favicons" href="..." />', cb)
 })
 
 /* $ gulp favicons:make */
 gulp.task('favicons:make', function () {
   // Actually generate the favicon images
-  return gulp.src(`${config.appDir.root}/asset/favicon.png`)
+  return gulp.src(`${config.srcDir.app.root}/asset/favicon.png`)
     .pipe(favicons({
       appName:        pkg.name,
       appDescription: pkg.description,
@@ -44,8 +44,8 @@ gulp.task('favicons:make', function () {
       background:     'transparent',
       url:            pkg.homepage,
       logging:        config.verbose,
-      path:           config.buildDir.favicons.replace(config.buildDir.root + '/', ''),
-      html:           `${config.appDir.views}/partial/favicons.html`,
+      path:           config.buildDir.app.favicons.replace(config.buildDir.app.root + '/', ''),
+      html:           `${config.srcDir.app.views}/partial/favicons.html`,
     }))
-    .pipe(gulp.dest(config.appDir.favicons))
+    .pipe(gulp.dest(config.srcDir.app.favicons))
 })

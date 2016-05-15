@@ -25,23 +25,23 @@ class PageGenerator extends FileGenerator {
     ]
 
     // Generate View file
-    this.generateFile(pageRef, 'page/page.html', config.appDir.pages, replaceProps)
+    this.generateFile(pageRef, 'page/page.html', config.srcDir.app.pages, replaceProps)
 
     // Generate SCSS file
-    this.generateFile(pageRef, 'page/page.scss', `${config.appDir.styles}/page`, replaceProps)
+    this.generateFile(pageRef, 'page/page.scss', `${config.srcDir.app.styles}/page`, replaceProps)
 
     // Generate SCSS dependency file
-    this.generateFile(pageRef, 'page/__page.scss', config.appDir.pageStyleDependencies, replaceProps, '__')
+    this.generateFile(pageRef, 'page/__page.scss', config.srcDir.app.pageStyleDependencies, replaceProps, '__')
 
     // Generate JavaScript file
-    this.generateFile(pageRef, 'page/page.js', `${config.appDir.scripts}/page`, replaceProps)
+    this.generateFile(pageRef, 'page/page.js', `${config.srcDir.app.scripts}/page`, replaceProps)
   }
 
   static delete (pageRef) {
-    return del([ `${config.appDir.pages}/${pageRef}.html`,
-                 `${config.appDir.styles}/page/${pageRef}.scss`,
-                 `${config.appDir.pageStyleDependencies}/__${pageRef}.scss`,
-                 `${config.appDir.scripts}/page/${pageRef}.js`,
+    return del([ `${config.srcDir.app.pages}/${pageRef}.html`,
+                 `${config.srcDir.app.styles}/page/${pageRef}.scss`,
+                 `${config.srcDir.app.pageStyleDependencies}/__${pageRef}.scss`,
+                 `${config.srcDir.app.scripts}/page/${pageRef}.js`,
     ], { force: true }).then(paths => {
       return Logger.info(`Deleted all files for ${pageRef} page.`)
     })

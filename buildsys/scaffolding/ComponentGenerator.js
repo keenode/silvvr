@@ -34,14 +34,14 @@ class ComponentGenerator extends FileGenerator {
     ]
 
     // Generate View file
-    this.generateFile(componentRef, 'component/component.html', `${config.appDir.components}/${folderName}`, replaceProps)
+    this.generateFile(componentRef, 'component/component.html', `${config.srcDir.app.components}/${folderName}`, replaceProps)
 
     // Generate SCSS file
-    this.generateFile(componentRef, 'component/component.scss', `${config.appDir.syles}/component/${folderName}`, replaceProps, '_')
+    this.generateFile(componentRef, 'component/component.scss', `${config.srcDir.app.syles}/component/${folderName}`, replaceProps, '_')
 
     // Generate JavaScript file
     if (scriptFilename !== null) {
-      this.generateFile(scriptFilename, 'component/Component.js', `${config.appDir.scripts}/component/${folderName}`, replaceProps)
+      this.generateFile(scriptFilename, 'component/Component.js', `${config.srcDir.app.scripts}/component/${folderName}`, replaceProps)
     }
 
     // Add entry object to components collection
@@ -82,9 +82,9 @@ class ComponentGenerator extends FileGenerator {
 
   static delete (componentRef, folderName) {
     var scriptFilename = Helpers.makeScriptName(componentRef)
-    return del([ `${config.appDir.components}/${folderName}/${componentRef}.html`,
-                 `${config.appDir.syles}/component/${folderName}/_${componentRef}.scss`,
-                 `${config.appDir.scripts}/component/${folderName}/${scriptFilename}.js`,
+    return del([ `${config.srcDir.app.components}/${folderName}/${componentRef}.html`,
+                 `${config.srcDir.app.syles}/component/${folderName}/_${componentRef}.scss`,
+                 `${config.srcDir.app.scripts}/component/${folderName}/${scriptFilename}.js`,
     ], { force: true }).then(paths => {
       return Logger.info(`Deleted all files for ${componentRef} component.`)
     })

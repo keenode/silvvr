@@ -1,6 +1,6 @@
 /**
- * buildsys/compiler/Logger
- * Transpiling scripts with Babel.
+ * buildsys/compiler/ScriptCompiler
+ * Transpiling scripts with Babel and distribute.
  * @author Keenan Staffieri
 */
 
@@ -14,7 +14,9 @@ const plumber = require('gulp-plumber')
 
 class ScriptCompiler {
 
-  static compileGlob (globList) {
+  static compileGlob (globList, destPath, taskName='') {
+
+    if (taskName !== '') taskName = ':' + taskName
 
     // Get build environment settings
     var canUglify     = config.env[env].scripts.uglify
@@ -33,12 +35,12 @@ class ScriptCompiler {
         }
       }))
       .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
-      .pipe(babel({ ignore: config.appDir.scripts + '/vendor/*' }))
+      .pipe(babel({ ignore: config.srcDir.app.scripts + '/vendor/*' }))
       .pipe(canStripDebug ? stripDebug() : gutil.noop())
       .pipe(canUglify ? uglify() : gutil.noop())
       .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
-      .pipe(gulp.dest(config.buildDir.scripts))
-      .on('end', function () { return Logger.taskComplete('FINISHED TASK : scripts') })
+      .pipe(gulp.dest(destPath))
+      .on('end', function () { return Logger.taskComplete('FINISHED TASK : scripts' + taskName) })
   }
 }
 

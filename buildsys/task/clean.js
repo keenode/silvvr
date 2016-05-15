@@ -14,5 +14,5 @@ const del = require('del')
 */
 
 gulp.task('clean', function () {
-  return del(config.buildDir.root)
+  return del(config.buildDir.app.root)
 })

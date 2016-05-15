@@ -32,7 +32,7 @@ class ScriptWriter {
       }))
       .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
       // Do not run Babel on bundles
-      .pipe( ! bundleScriptName ? babel({ ignore: config.appDir.scripts + '/vendor/*' }) : gutil.noop())
+      .pipe( ! bundleScriptName ? babel({ ignore: config.srcDir.app.scripts + '/vendor/*' }) : gutil.noop())
       .pipe(bundleScriptName ? concat(bundleScriptName) : gutil.noop())
       .pipe(canUglify ? uglify({ compress: { drop_console: true } }) : gutil.noop())
       .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())

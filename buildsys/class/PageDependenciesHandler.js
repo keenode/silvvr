@@ -87,7 +87,7 @@ class PageDependenciesHandler {
     }
     importString += "// END: Import required component styles !! DON'T TOUCH"
 
-    var pageDependsFilePath = `${config.appDir.pageStyleDependencies}/__${pageRef}.scss`
+    var pageDependsFilePath = `${config.srcDir.app.pageStyleDependencies}/__${pageRef}.scss`
 
     /**
       Now read / write required component SASS imports
@@ -114,12 +114,12 @@ class PageDependenciesHandler {
     for (var i = 0; i < componentNames.length; i++) {
       var foundComponent = ComponentCollection.getComponentByName(componentNames[i])
       if (foundComponent !== null) {
-        scriptPaths.push(`${config.buildDir.scripts}/component/${foundComponent.scriptPath}.js`)
+        scriptPaths.push(`${config.buildDir.app.scripts}/component/${foundComponent.scriptPath}.js`)
       }
     }
 
-    scriptPaths.push(`${config.buildDir.scripts}/page/${pageRef}.js`)
-    ScriptWriter.compileScript(pageRef + '.js', scriptPaths, config.buildDir.scripts + '/page')
+    scriptPaths.push(`${config.buildDir.app.scripts}/page/${pageRef}.js`)
+    ScriptWriter.compileScript(pageRef + '.js', scriptPaths, config.buildDir.app.scripts + '/page')
   }
 }
 
