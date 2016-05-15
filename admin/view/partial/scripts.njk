@@ -1,16 +1,11 @@
 {# Scripts #}
 <script>
-  var apiUrl = '<%= API_URL =%>';
+  var apiUrl = 'http://localhost:9000/';
 </script>
 
-<!-- build:js(./node_modules) /js/vendor.js -->
-<script type="text/javascript" src="/jquery/dist/jquery.js"></script>
-<script type="text/javascript" src="/react/dist/react.js"></script>
-<script type="text/javascript" src="/react-dom/dist/react-dom.js"></script>
-<!-- endbuild -->
+<script type="text/javascript" src="jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="react/dist/react.js"></script>
+<script type="text/javascript" src="react-dom/dist/react-dom.js"></script>
 
-<!-- build:js js/app.js -->
-<script type="text/javascript" src="/js/app.js"></script>
-<!-- endbuild -->
-
-<script type="text/javascript" src="/js/bundle.js"></script>
+<script type="text/javascript" src="admin/js/admin.js"></script>
+{# <script type="text/javascript" src="admin/js/bundle.js"></script> #}

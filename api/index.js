@@ -2,12 +2,19 @@ const Koa = require('koa')
 const app = new Koa()
 const router = require('koa-router')()
 const views = require('koa-views')
+const serve = require('koa-static')
 const path = require('path')
 
 const API_PORT = 9000
 
 app.name = 'Silvvr Application'
 app.env = 'dev'
+
+// Serve static 'public' directory
+app.use(serve(APP_ROOT + '/public'))
+
+// Servce static 'node_modules' directory (development mode only)
+app.use(serve(APP_ROOT + '/node_modules'))
 
 // Must be used before any router is used
 app.use(views(APP_ROOT + '/admin/view', {
