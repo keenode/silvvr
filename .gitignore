@@ -20,7 +20,7 @@ npm-debug.log
 .scssc
 
 # Silvvr Files
-dist
+public
 app/assets/favicons
 coverage
 .nyc_output

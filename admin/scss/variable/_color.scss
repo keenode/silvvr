@@ -1,0 +1,24 @@
+/**
+ * scss/variable/color
+ * Theme colors.
+ * @author Keenan Staffieri
+*/
+
+/* --- colors map --- */
+
+$colors: (
+
+    // Blue
+    'blue':       #2E6AD4,
+    'gray':       #3f3f3f,
+    'gray-light': #6c6c6c,
+
+);
+
+
+/* --- background color --- */
+$pageBgColor: white;
+
+
+/* --- font colors --- */
+$fontColor--base: #3a3a3a;

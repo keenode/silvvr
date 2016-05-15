@@ -6,51 +6,46 @@
  * 'gulp generate-favicons'
 */
 
-var fs = require('fs');
-var runSequence = require('run-sequence');
-var favicons = require('gulp-favicons');
-var pkg = require('../../package.json');
-
+const fs = require('fs')
+const runSequence = require('run-sequence')
+const favicons = require('gulp-favicons')
+const pkg = require('../../package.json')
 
 /**
-    $ gulp generate-favicons
-    > Generate supported favicon images for varying devices.
+  $ gulp generate-favicons
+  > Generate supported favicon images for varying devices.
 */
-gulp.task('generate-favicons', function (cb) {
-    Logger.task('RUNNING TASK : generate-favicons');
-    runSequence(
-        'favicons:reset-template',
-        'favicons:make',
-    function () {
-        Logger.taskComplete('FINISHED TASK : generate-favicons');
-        cb();
-    });
-});
-
+gulp.task('generate-favicons', (cb) => {
+  Logger.task('RUNNING TASK : generate-favicons')
+  runSequence(
+    'favicons:reset-template',
+    'favicons:make',
+  function () {
+    Logger.taskComplete('FINISHED TASK : generate-favicons')
+    cb()
+  })
+})
 
 /* $ gulp favicons:reset-template */
-
-gulp.task('favicons:reset-template', function (cb) {
-    // Reset favicons template so favicons plugin can write new file paths
-    return fs.writeFileSync(`${config.appDir.views}/partial/favicons.html`, '<link rel="favicons" href="..." />', cb);
-});
-
+gulp.task('favicons:reset-template', (cb) => {
+  // Reset favicons template so favicons plugin can write new file paths
+  return fs.writeFileSync(`${config.appDir.views}/partial/favicons.html`, '<link rel="favicons" href="..." />', cb)
+})
 
 /* $ gulp favicons:make */
-
 gulp.task('favicons:make', function () {
-    // Actually generate the favicon images
-    return gulp.src(`${config.appDir.root}/asset/favicon.png`)
-        .pipe(favicons({
-            appName:        pkg.name,
-            appDescription: pkg.description,
-            developer:      pkg.author,
-            version:        pkg.version,
-            background:     'transparent',
-            url:            pkg.homepage,
-            logging:        config.verbose,
-            path:           config.buildDir.favicons.replace(config.buildDir.root + '/', ''),
-            html:           `${config.appDir.views}/partial/favicons.html`
-        }))
-        .pipe(gulp.dest(config.appDir.favicons));
-});
+  // Actually generate the favicon images
+  return gulp.src(`${config.appDir.root}/asset/favicon.png`)
+    .pipe(favicons({
+      appName:        pkg.name,
+      appDescription: pkg.description,
+      developer:      pkg.author,
+      version:        pkg.version,
+      background:     'transparent',
+      url:            pkg.homepage,
+      logging:        config.verbose,
+      path:           config.buildDir.favicons.replace(config.buildDir.root + '/', ''),
+      html:           `${config.appDir.views}/partial/favicons.html`,
+    }))
+    .pipe(gulp.dest(config.appDir.favicons))
+})

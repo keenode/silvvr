@@ -1,0 +1,53 @@
+/**
+ * scss/base-style/typography/inline-text-element
+ * Inline text element styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%marked-text {
+    padding: 3px 8px 1px 8px;
+    color: white;
+    background-color: yellow;
+}
+
+%deleted-text {
+    padding: 3px 8px 1px 8px;
+    background-color: pink;
+}
+
+%strikethrough-text {
+
+}
+
+%inserted-text {
+    padding: 3px 8px 1px 8px;
+    background-color: lightGreen;
+}
+
+%underlined-text {
+
+}
+
+%small-text {
+    font-size: 75%;
+}
+
+%bold-text {
+
+}
+
+%italic-text {
+
+}
+
+%abbreviated-text {
+    text-decoration: none;
+    border-bottom: 2px solid color('gray-light');
+    cursor: help;
+}
+
+%cited-text {
+
+}

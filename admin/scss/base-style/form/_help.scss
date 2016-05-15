@@ -1,0 +1,12 @@
+/**
+ * scss/base-style/form/help
+ * Form help styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%help-block {
+    color: color('gray');
+    font-size: 13px;
+}

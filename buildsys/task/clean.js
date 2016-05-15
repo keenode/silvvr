@@ -6,13 +6,13 @@
  * 'gulp clean'
 */
 
-var del = require('del');
+const del = require('del')
 
 /**
-    $ gulp clean
-    > Delete 'dist' folder.
+  $ gulp clean
+  > Delete 'public' folder.
 */
 
 gulp.task('clean', function () {
-    return del(config.buildDir.root);
-});
+  return del(config.buildDir.root)
+})

@@ -1,0 +1,18 @@
+/**
+ * scss/partial/footer/_include
+ * Footer partial styles.
+ * @author Keenan Staffieri
+*/
+
+.footer {
+    &__container {
+        @extend %outer-container;
+    }
+
+    &__copyright {
+        display: block;
+        color: #333;
+        font-size: 12px;
+        text-align: center;
+    }
+}

@@ -5,5 +5,5 @@
 */
 
 module.exports = [
-    // COMPONENT AUTOMATION !! DON'T TOUCH
-];
+  // COMPONENT AUTOMATION !! DON'T TOUCH
+]

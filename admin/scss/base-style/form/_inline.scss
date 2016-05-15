@@ -1,0 +1,32 @@
+/**
+ * scss/base-style/form/inline
+ * Inline form styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%form-inline {
+    .form-group {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    label {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    input[type='file'] {
+        display: inline-block;
+        width: auto;
+    }
+
+    .btn {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+}
