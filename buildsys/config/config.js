@@ -11,9 +11,6 @@ const buildRoot = './public'
 
 module.exports = {
 
-  // Enable JavaScript ES6? (Babel)
-  useES6: true,
-
   // Verbose logging output
   verbose: true,
 
@@ -126,6 +123,16 @@ module.exports = {
     fonts:                 appRoot + '/asset/font',
     images:                appRoot + '/asset/image',
     videos:                appRoot + '/asset/video'
+  },
+
+  // Admin directory structure (admin folder)
+  adminDir: {
+    root:                  adminRoot,
+    styles:                adminRoot + '/scss',
+    scripts:               adminRoot + '/script',
+    fonts:                 adminRoot + '/asset/font',
+    images:                adminRoot + '/asset/image',
+    videos:                adminRoot + '/asset/video'
   },
 
   // Build directory structure (public folder)

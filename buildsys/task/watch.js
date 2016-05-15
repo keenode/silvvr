@@ -14,7 +14,6 @@ const browserSync = require('browser-sync')
   $ gulp watch
   > Watch files for changes and run associated build tasks.
 */
-
 gulp.task('watch', function () {
 
   // Only watch files if build-only mode is off
@@ -37,10 +36,17 @@ gulp.task('watch', function () {
   })
 
   watch(`${config.appDir.scripts}/**/*.js`, {
-    name: 'Scripts Watcher',
+    name: 'App Scripts Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('page-scripts-changed')
+  })
+
+  watch(`${config.adminDir.scripts}/**/*.js`, {
+    name: 'Admin Scripts Watcher',
+    verbose: config.verbose
+  }, function () {
+    gulp.start('scripts:admin')
   })
 
   watch(`${config.appDir.root}/**/*.html`, {
@@ -91,14 +97,14 @@ gulp.task('watch', function () {
 
 gulp.task('page-scripts-changed', (cb) => {
   return runSequence(
-    'scripts',
+    'scripts:app',
     'page-scripts-bundle'
   , cb)
 })
 
 gulp.task('template-change', (cb) => {
   return runSequence(
-    'scripts',
+    'scripts:app',
     'templating'
   , cb)
 })

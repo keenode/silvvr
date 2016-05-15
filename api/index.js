@@ -1,10 +1,10 @@
 const Koa = require('koa')
 const app = new Koa()
 const router = require('koa-router')()
-const views = require('koa-views');
-const path = require('path');
+const views = require('koa-views')
+const path = require('path')
 
-const API_PORT = 9000;
+const API_PORT = 9000
 
 app.name = 'Silvvr Application'
 app.env = 'dev'
