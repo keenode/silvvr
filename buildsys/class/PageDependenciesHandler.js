@@ -5,7 +5,7 @@
 */
 
 const fs = require('fs')
-const Helpers = require('../utils/Helpers')
+const Helpers = require('../util/Helpers')
 const ComponentCollection = require('../scaffolding/ComponentCollection')
 const ScriptWriter = require('./ScriptWriter')
 

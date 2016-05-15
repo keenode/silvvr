@@ -17,7 +17,7 @@ const runSequence = require('run-sequence')
 const html = require('html')
 const fs = require('fs')
 const foreach = require('gulp-foreach')
-const PageDependenciesHandler = require('../classes/PageDependenciesHandler')
+const PageDependenciesHandler = require('../class/PageDependenciesHandler')
 const apiUrls = require('../config/api-urls')
 
 /**

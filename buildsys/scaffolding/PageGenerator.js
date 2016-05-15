@@ -5,7 +5,7 @@
 */
 
 const del = require('del')
-const Helpers = require('../utils/Helpers')
+const Helpers = require('../util/Helpers')
 const FileGenerator = require('./FileGenerator')
 const pkg = require('../../package.json')
 
@@ -16,11 +16,11 @@ class PageGenerator extends FileGenerator {
     Logger.detail(`Scaffolding files for '${pageRef}' page...`)
 
     // Format the page name: Uppercase letters between spaces and dashes '-'
-    var pageName = pageName ? pageName : Helpers.ucBetweenDashSpace(pageRef)
+    var pageNameFormatted = pageName ? pageName : Helpers.ucBetweenDashSpace(pageRef)
 
     var replaceProps = [
       ['<%= PAGE_REF =%>',  pageRef],
-      ['<%= PAGE_NAME =%>', pageName],
+      ['<%= PAGE_NAME =%>', pageNameFormatted],
       ['<%= AUTHOR =%>',    pkg.author.name],
     ]
 

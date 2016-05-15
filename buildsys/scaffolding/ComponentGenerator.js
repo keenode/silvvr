@@ -7,7 +7,7 @@
 const fs = require('fs')
 const del = require('del')
 const FileGenerator = require('./FileGenerator')
-const Helpers = require('../utils/Helpers')
+const Helpers = require('../util/Helpers')
 const pkg = require('../../package.json')
 
 
@@ -18,7 +18,7 @@ class ComponentGenerator extends FileGenerator {
     Logger.detail(`Scaffolding files for '${componentRef}' component...`)
 
     // Format the page name: Uppercase letters between spaces and dashes '-'
-    var componentName = componentName ? componentName : Helpers.ucBetweenDashSpace(componentRef)
+    var componentNameFormatted = componentName ? componentName : Helpers.ucBetweenDashSpace(componentRef)
     var scriptFilename = null
 
     if ( ! noScript) {
@@ -28,7 +28,7 @@ class ComponentGenerator extends FileGenerator {
     var replaceProps = [
       ['<%= COMPONENT_REF =%>',        componentRef],
       ['<%= COMPONENT_SCRIPTNAME =%>', scriptFilename],
-      ['<%= COMPONENT_NAME =%>',       componentName],
+      ['<%= COMPONENT_NAME =%>',       componentNameFormatted],
       ['<%= COMPONENT_FOLDER =%>',     folderName],
       ['<%= AUTHOR =%>',               pkg.author.name],
     ]
@@ -45,7 +45,7 @@ class ComponentGenerator extends FileGenerator {
     }
 
     // Add entry object to components collection
-    this.addCollectionEntry(componentRef, componentName, folderName, scriptFilename)
+    this.addCollectionEntry(componentRef, componentNameFormatted, folderName, scriptFilename)
   }
 
   static addCollectionEntry (ref, name, folderName, scriptFilename) {
