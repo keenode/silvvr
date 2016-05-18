@@ -17,7 +17,7 @@ gulp.task('webpack', (cb) => {
   webpack(webpackConfig, function (err, stats) {
     if (err) throw new gutil.PluginError('webpack', err)
     gutil.log('[webpack]', stats.toString({
-      // output options
+      colors: true
     }))
     cb()
   })
