@@ -52,18 +52,21 @@ gulp.task('default', (cb) => {
   runSequence(
     'clean',
     [ // Run these tasks in parallel...
-        'styles',
-        'scripts',
-        'images',
-        'favicons',
-        'fonts',
-        'videos',
-        'rootfiles'
+      'styles',
+      'scripts',
+      'images',
+      'favicons',
+      'fonts',
+      'videos',
+      'rootfiles'
     ],
     'cachebust-css-urls',
     'templating',
-    'serve',
+    // 'webpack',
+    // 'serve',
     'watch',
+    'webpack',
+    'webpack-dev-server',
     'build-complete',
   function () {
     if( ! buildOnlyMode) {
