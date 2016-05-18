@@ -2,9 +2,9 @@ const path = require('path')
 
 module.exports = {
   context: __dirname,
-  entry: './app/js/BrowserEntry.jsx',
+  entry: './admin/script/Dashboard.jsx',
   output: {
-    path: path.join(__dirname, '/public/js'),
+    path: path.join(__dirname, '/public/admin/js'),
     filename: 'bundle.js',
     publicPath: '/js/'
   },
@@ -27,7 +27,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        include: path.join(__dirname, '/app/js')
+        include: path.join(__dirname, '/admin/script')
       },
       {
         test: /\.json$/,
