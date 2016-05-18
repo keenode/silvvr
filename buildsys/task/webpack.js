@@ -17,7 +17,8 @@ gulp.task('webpack', (cb) => {
   webpack(webpackConfig, function (err, stats) {
     if (err) throw new gutil.PluginError('webpack', err)
     gutil.log('[webpack]', stats.toString({
-      colors: true
+      colors: true,
+      chunks: false
     }))
     cb()
   })
@@ -34,7 +35,8 @@ gulp.task('webpack-dev-server', (cb) => {
     inline: true,
     hot: true,
     stats: {
-      colors: true
+      colors: true,
+      chunks: false
     },
   }).listen(8000, 'localhost', function (err) {
     if (err) throw new gutil.PluginError('webpack-dev-server', err)
