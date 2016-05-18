@@ -2,11 +2,11 @@ const path = require('path')
 
 module.exports = {
   context: __dirname,
-  entry: './admin/script/Dashboard.jsx',
+  entry: './admin/script/AdminApp.jsx',
   output: {
     path: path.join(__dirname, '/public/admin/js'),
     filename: 'bundle.js',
-    publicPath: '/js/'
+    publicPath: '/admin/js/'
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.json']
