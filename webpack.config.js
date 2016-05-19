@@ -1,12 +1,17 @@
+const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
   context: __dirname,
-  entry: './admin/script/AdminApp.jsx',
+  entry: [
+    'webpack-dev-server/client?http://localhost:8000',
+    'webpack/hot/only-dev-server',
+    './admin/script/AdminApp.jsx',
+  ],
   output: {
     path: path.join(__dirname, '/public/admin/js'),
     filename: 'bundle.js',
-    publicPath: '/admin/js/'
+    publicPath: 'http://localhost:8000/'
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.json']
@@ -26,7 +31,7 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
+        loaders: ['react-hot', 'babel'],
         include: path.join(__dirname, '/admin/script')
       },
       {
@@ -34,5 +39,10 @@ module.exports = {
         loader: 'json-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
 }

@@ -10,7 +10,7 @@ class HelloWorld {
   }
 
   sayHello () {
-    console.log('Hello!')
+    console.log('Hello Admin!')
   }
 }
 
