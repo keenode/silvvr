@@ -15,4 +15,4 @@ Layout.propTypes = {
   children: React.PropTypes.element
 }
 
-module.exports = Layout
+export default Layout

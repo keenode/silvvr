@@ -13,4 +13,4 @@ class Dashboard extends React.Component {
   }
 }
 
-module.exports = connector(Dashboard)
+export default connector(Dashboard)

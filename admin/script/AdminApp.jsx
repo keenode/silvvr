@@ -30,5 +30,4 @@ App.History = browserHistory
 
 ReactDOM.render(<App />, document.getElementById('app'))
 
-module.exports = App
-
+export default App
