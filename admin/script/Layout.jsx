@@ -1,10 +1,11 @@
 const React = require('react')
-const Navigation = require('./Component/Navigation/Navigation')
+import Navigation from './Component/Navigation/Navigation'
+import styles from './Layout.scss'
 
 const Layout = (props) => (
-  <div className='admin-container'>
+  <div className={styles.AppContainer}>
     <Navigation />
-    <section className='admin-page-content'>
+    <section className={styles.AppContent}>
       {props.children}
     </section>
   </div>

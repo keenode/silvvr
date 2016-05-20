@@ -31,8 +31,18 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
+        exclude: /node_modules/,
         loaders: ['react-hot', 'babel'],
         include: path.join(__dirname, '/admin/script')
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        loaders: [
+          'style-loader',
+          'css-loader?camelCase&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          'sass-loader'
+        ]
       },
       {
         test: /\.json$/,
