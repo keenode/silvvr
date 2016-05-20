@@ -1,4 +1,4 @@
-const React = require('react')
+import React from 'react'
 import Navigation from './Component/Navigation/Navigation'
 import styles from './Layout.scss'
 

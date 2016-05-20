@@ -1,14 +1,11 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const Layout = require('./Layout')
-const Dashboard = require('./Dashboard')
-const Components = require('./Components')
-const ReactRouter = require('react-router')
-const { Router, Route, browserHistory, IndexRoute } = ReactRouter
-const Store = require('./Store')
-const { store } = Store
-const reactRedux = require('react-redux')
-const { Provider } = reactRedux
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Layout from './Layout'
+import Dashboard from './Dashboard'
+import Components from './Components'
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+import { store } from './Store'
+import { Provider } from 'react-redux'
 
 const myRoutes = (props) => (
   <Route path='/admin' component={Layout}>

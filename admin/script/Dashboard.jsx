@@ -1,8 +1,7 @@
-const React = require('react')
-// const ReactRouter = require('react-router')
-// const { Link, browserHistory } = ReactRouter
-const Store = require('./Store')
-const { connector } = Store
+import React from 'react'
+// import ReactRouter from 'react-router'
+// import { Link, browserHistory } from ReactRouter
+import { connector } from './Store'
 
 class Dashboard extends React.Component {
   render () {
