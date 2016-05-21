@@ -1,5 +1,10 @@
 @import '../../../scss/component/component';
 
 .Container {
-  background-color: color('blue');
+  position: relative;
+  top: 40px;
+  width: 200px;
+  height: calc(100vh - 40px);
+  padding: 10px;
+  background-color: color('gray');
 }

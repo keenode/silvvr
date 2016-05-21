@@ -1,7 +1,17 @@
+@import '../scss/component/component';
+
 .AppContainer {
-  background-color: red;
+  display: flex;
 }
 
 .AppContent {
-  background-color: green;
+  position: relative;
+  top: 40px;
+  width: calc(100% - 200px);
+  height: calc(100vh - 40px);
+  overflow-y: scroll;
+}
+
+.AppContentInner {
+  padding: 30px;
 }

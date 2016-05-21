@@ -7,13 +7,14 @@ const navItems = [
   { text: 'Content', url: '/content' },
   { text: 'Components', url: '/components' },
   { text: 'Modules', url: '/modules' },
-  { text: 'Theme', url: '/theme' }
+  { text: 'Styleguide', url: '/styleguide' }
 ]
 
 class Navigation extends Component {
   render () {
     return (
       <nav className={styles.Container}>
+        <h4>Silvvr</h4>
         <NavigationList items={navItems} />
       </nav>
     )
