@@ -1,10 +1,25 @@
 /**
  * scss/component/component
- * Component base styles and helper classes.
+ * Component includes.
  * @author Keenan Staffieri
 */
 
-%component-container {
-    @extend %outer-container;
-    padding: 0 15px;
-}
+/* --- Bourbon & Neat --- */
+
+// Bourbon
+@import '../../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+
+// Neat
+@import '../../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+/* --- variables --- */
+@import '../variable/_include';
+
+/* --- utilities --- */
+@import '../util/_include';
+
+/* --- base styles --- */
+@import '../base-style/_include';
+
+/* --- base extended elements --- */
+@import '../base-style/base-extends';
