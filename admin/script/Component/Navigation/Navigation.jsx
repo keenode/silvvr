@@ -1,7 +1,6 @@
 import { Component } from 'react'
-import NavigationItem from './NavigationItem/NavigationItem'
+import NavigationList from './NavigationList/NavigationList'
 import styles from './Navigation.scss'
-import _ from 'lodash'
 
 const navItems = [
   { text: 'Dashboard', url: '/dashboard' },
@@ -15,13 +14,7 @@ class Navigation extends Component {
   render () {
     return (
       <nav className={styles.Container}>
-        <ul>
-          {_.map(navItems, (item, index) => {
-            return (
-              <NavigationItem key={index} text={item.text} url={item.url} />
-            )
-          })}
-        </ul>
+        <NavigationList items={navItems} />
       </nav>
     )
   }
