@@ -1,26 +1,25 @@
+{% import 'view/macro/render.njk' as render %}
 <!DOCTYPE html>
 <html>
-    <head>
-        {# Head #}
-        {% include 'view/partial/head.njk' %}
+  <head>
+    {{ render.partial('head') }}
+    {{ render.partial('stylesheets') }}
+    {% block stylesheets %}{% endblock %}
+  </head>
+  <body>
 
-        {% include 'view/partial/stylesheets.njk' %}
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
+    {# Header #}
+    {{ render.partial('header') }}
 
-        {# Header #}
-        {% include 'view/partial/header.njk' %}
+    {# Content #}
+    {% block content %}{% endblock %}
 
-        {# Content #}
-        {% block content %}{% endblock %}
+    {# Footer #}
+    {{ render.partial('footer') }}
 
-        {# Footer #}
-        {% include 'view/partial/footer.njk' %}
+    {# Scripts #}
+    {{ render.partial('scripts') }}
+    {% block scripts %}{% endblock %}
 
-        {# Scripts #}
-        {% include 'view/partial/scripts.njk' %}
-        {% block scripts %}{% endblock %}
-
-    </body>
+  </body>
 </html>
