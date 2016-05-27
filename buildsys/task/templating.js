@@ -17,11 +17,11 @@ const TemplateCompiler = require('../compiler/TemplateCompiler')
 gulp.task('templating', (cb) => {
   Logger.task('RUNNING TASK : templating')
   runSequence(
-    [
+    // [
       'templating:app',
       // 'templating:styleguide',
-      // 'templating:admin',
-    ],
+      'templating:admin',
+    // ],
   function () {
     Logger.taskComplete('FINISHED TASK : templating')
     cb()
@@ -49,7 +49,7 @@ gulp.task('templating:styleguide', function () {
 /* $ gulp templating:admin */
 gulp.task('templating:admin', function () {
   return TemplateCompiler.compileGlob(
-    `${config.srcDir.admin.root}/**/*.njk`,
+    `${config.srcDir.admin.root}/index.njk`,
     config.buildDir.admin.root,
     'admin'
   )
