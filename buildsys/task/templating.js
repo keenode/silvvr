@@ -19,6 +19,7 @@ gulp.task('templating', (cb) => {
   runSequence(
     [
       'templating:app',
+      // 'templating:styleguide',
       // 'templating:admin',
     ],
   function () {
@@ -33,6 +34,15 @@ gulp.task('templating:app', function () {
     `${config.srcDir.app.root}/index.njk`,
     config.buildDir.app.root,
     'app'
+  )
+})
+
+/* $ gulp templating:styleguide */
+gulp.task('templating:styleguide', function () {
+  return TemplateCompiler.compileGlob(
+    `${config.srcDir.app.root}/styleguide.njk`,
+    config.buildDir.app.root,
+    'styleguide'
   )
 })
 
