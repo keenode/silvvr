@@ -133,6 +133,7 @@ module.exports = {
       root:    ADMIN_ROOT,
       styles:  ADMIN_ROOT + '/scss',
       scripts: ADMIN_ROOT + '/script',
+      views:   ADMIN_ROOT + '/view',
       fonts:   ADMIN_ROOT + '/asset/font',
       images:  ADMIN_ROOT + '/asset/image',
       videos:  ADMIN_ROOT + '/asset/video',
