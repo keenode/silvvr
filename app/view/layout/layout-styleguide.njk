@@ -2,28 +2,23 @@
 <html>
     <head>
         {# Head #}
-        {% include 'partial/head.html' with {
-            title: 'Silvvr - Styleguide',
-            meta_description: 'Silvvr styleguide.'
-        } only %}
+        {% include 'partial/head.njk' %}
 
-        {% include 'styleguide/partial/stylesheets.html' %}
+        {% include 'styleguide/partial/stylesheets.njk' %}
     </head>
     <body>
 
         {# Header #}
-        {% include 'styleguide/partial/header.html' with {
-            title: 'Silvvr'
-        } only %}
+        {% include 'styleguide/partial/header.njk' %}
 
         {# Content #}
         {% block content %}{% endblock %}
 
         {# Footer #}
-        {% include 'styleguide/partial/footer.html' %}
+        {% include 'styleguide/partial/footer.njk' %}
 
         {# Scripts #}
-        {% include 'styleguide/partial/scripts.html' %}
+        {% include 'styleguide/partial/scripts.njk' %}
 
     </body>
 </html>

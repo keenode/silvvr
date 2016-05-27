@@ -2,29 +2,24 @@
 <html>
     <head>
         {# Head #}
-        {% include 'partial/head.html' with {
-            title: 'Silvvr',
-            meta_description: 'My website.'
-        } only %}
+        {% include 'partial/head.njk' %}
 
-        {% include 'partial/stylesheets.html' %}
+        {% include 'partial/stylesheets.njk' %}
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
 
         {# Header #}
-        {% include 'partial/header.html' with {
-            title: 'Silvvr'
-        } only %}
+        {% include 'partial/header.njk' %}
 
         {# Content #}
         {% block content %}{% endblock %}
 
         {# Footer #}
-        {% include 'partial/footer.html' %}
+        {% include 'partial/footer.njk' %}
 
         {# Scripts #}
-        {% include 'partial/scripts.html' %}
+        {% include 'partial/scripts.njk' %}
         {% block scripts %}{% endblock %}
 
     </body>
