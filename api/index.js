@@ -42,12 +42,17 @@ app.use(async (ctx, next) => {
 
 // Routes
 
-router.get('/admin', async (ctx, next) => {
-  await ctx.render('index')
-})
+// router.get('/admin', async (ctx, next) => {
+//   // await ctx.render('index')
+//   // await ctx.render('./public/admin/index.html')
+// })
 
 router.get('/test', (ctx, next) => {
   ctx.body = 'Test Page'
+})
+
+router.get('/api', (ctx, next) => {
+  ctx.body = 'Welcome to the Silvvr API.'
 })
 
 // Use router middleware
