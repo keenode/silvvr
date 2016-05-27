@@ -30,7 +30,7 @@ gulp.task('templating', (cb) => {
 /* $ gulp templating:app */
 gulp.task('templating:app', function () {
   return TemplateCompiler.compileGlob(
-    `${config.srcDir.app.views}/**/*.njk`,
+    `${config.srcDir.app.root}/index.njk`,
     config.buildDir.app.root,
     'app'
   )
@@ -39,7 +39,7 @@ gulp.task('templating:app', function () {
 /* $ gulp templating:admin */
 gulp.task('templating:admin', function () {
   return TemplateCompiler.compileGlob(
-    `${config.srcDir.admin.views}/**/*.njk`,
+    `${config.srcDir.admin.root}/**/*.njk`,
     config.buildDir.admin.root,
     'admin'
   )

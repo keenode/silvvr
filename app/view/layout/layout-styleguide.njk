@@ -2,23 +2,23 @@
 <html>
     <head>
         {# Head #}
-        {% include 'partial/head.njk' %}
+        {% include 'view/styleguide/partial/head.njk' %}
 
-        {% include 'styleguide/partial/stylesheets.njk' %}
+        {% include 'view/styleguide/partial/stylesheets.njk' %}
     </head>
     <body>
 
         {# Header #}
-        {% include 'styleguide/partial/header.njk' %}
+        {% include 'view/styleguide/partial/header.njk' %}
 
         {# Content #}
         {% block content %}{% endblock %}
 
         {# Footer #}
-        {% include 'styleguide/partial/footer.njk' %}
+        {% include 'view/styleguide/partial/footer.njk' %}
 
         {# Scripts #}
-        {% include 'styleguide/partial/scripts.njk' %}
+        {% include 'view/styleguide/partial/scripts.njk' %}
 
     </body>
 </html>

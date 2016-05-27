@@ -1,40 +1,40 @@
-{% extends 'layout/layout-styleguide.html' %}
+{% extends 'view/layout/layout-styleguide.njk' %}
 
 {% block content %}
 
     <div class="sg-page-wrap">
 
         {# 1. Color Palette #}
-        {% include 'styleguide/section/colors.html' %}
+        {% include 'view/styleguide/section/colors.njk' %}
 
         {# 2. Fonts #}
-        {% include 'styleguide/section/fonts.html' %}
+        {% include 'view/styleguide/section/fonts.njk' %}
 
         {# 3. Grid #}
-        {% include 'styleguide/section/grid.html' %}
+        {% include 'view/styleguide/section/grid.njk' %}
 
         {# 4. Typography #}
-        {% include 'styleguide/section/typography.html' %}
+        {% include 'view/styleguide/section/typography.njk' %}
 
         {# 5. Buttons #}
-        {% include 'styleguide/section/buttons.html' %}
+        {% include 'view/styleguide/section/buttons.njk' %}
 
         {# 6. Code #}
-        {% include 'styleguide/section/code.html' %}
+        {% include 'view/styleguide/section/code.njk' %}
 
         {# 7. Tables #}
-        {% include 'styleguide/section/tables.html' %}
+        {% include 'view/styleguide/section/tables.njk' %}
 
         {# 8. Controls #}
-        {% include 'styleguide/section/controls.html' %}
+        {% include 'view/styleguide/section/controls.njk' %}
 
         {# 9. Forms #}
-        {% include 'styleguide/section/forms.html' %}
+        {% include 'view/styleguide/section/forms.njk' %}
 
     </div> {# .sg-page-wrap #}
 
     <a href="javascript:void(0)" id="sg-backtotop" class="sg-backtotop">
-        {% include 'styleguide/icon/arrow.svg' %}
+        {% include 'view/styleguide/icon/arrow.svg' %}
     </a>
 
 {% endblock %}

@@ -2,24 +2,24 @@
 <html>
     <head>
         {# Head #}
-        {% include 'partial/head.njk' %}
+        {% include 'view/partial/head.njk' %}
 
-        {% include 'partial/stylesheets.njk' %}
+        {% include 'view/partial/stylesheets.njk' %}
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
 
         {# Header #}
-        {% include 'partial/header.njk' %}
+        {% include 'view/partial/header.njk' %}
 
         {# Content #}
         {% block content %}{% endblock %}
 
         {# Footer #}
-        {% include 'partial/footer.njk' %}
+        {% include 'view/partial/footer.njk' %}
 
         {# Scripts #}
-        {% include 'partial/scripts.njk' %}
+        {% include 'view/partial/scripts.njk' %}
         {% block scripts %}{% endblock %}
 
     </body>
