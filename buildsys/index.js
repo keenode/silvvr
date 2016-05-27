@@ -21,7 +21,6 @@ var env = 'dev'
 if      (argv.stage) { env = 'stage' }
 else if (argv.prod)  { env = 'prod'  }
 
-
 /**
   Build-only mode?
 */
@@ -82,3 +81,11 @@ tasks.forEach(function (task) {
   Require gulp commands
 */
 require('./commands')
+
+// Determine if a task was passed
+if (typeof argv.task === 'string') {
+  console.log(argv);
+  console.log('argv.task: ' + argv.task)
+  console.log('argv.page: ' + argv.page)
+  gulp.start(argv.task)
+}

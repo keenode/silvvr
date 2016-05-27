@@ -13,6 +13,24 @@ const ComponentGenerator = require('../scaffolding/ComponentGenerator')
 var argv = require('yargs').argv
 
 /**
+  $ gulp make:page
+  > Make page scaffolding handler.
+*/
+gulp.task('make:page', (cb) => {
+  if (typeof argv.page === 'string') {
+    if (typeof argv.name === 'string') {
+      // Pass user-specified name to Page scaffolder
+      return PageGenerator.scaffold(argv.page, argv.name)
+    }
+    else {
+      return PageGenerator.scaffold(argv.page)
+    }
+  } else {
+    Logger.warn('Please define a name for the page. \nEX: gulp make --page [page-name]')
+  }
+})
+
+/**
   $ gulp make
   > Make scaffolding command handler.
 */
