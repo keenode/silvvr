@@ -13,6 +13,9 @@ const ComponentGenerator = require('../scaffolding/ComponentGenerator')
 // Grab command line arguments
 var argv = require('yargs').argv
 
+// EX: Manual command:
+// $ node silvvr.js --task make:page home --name 'Homepage'
+
 /**
   $ gulp make:page
   > Make page scaffolding handler.
