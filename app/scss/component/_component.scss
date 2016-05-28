@@ -1,10 +1,10 @@
 /**
- * scss/component/component
+ * app/scss/component/component
  * Component base styles and helper classes.
  * @author Keenan Staffieri
 */
 
 %component-container {
-    @extend %outer-container;
-    padding: 0 15px;
+  @extend %outer-container;
+  padding: 0 15px;
 }

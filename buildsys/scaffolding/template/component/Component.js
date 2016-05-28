@@ -5,13 +5,13 @@
 */
 
 class <%= COMPONENT_SCRIPTNAME =%> extends Component {
-  constructor(selectorQuery) {
-    super(selectorQuery);
-    console.log('New component: <%= COMPONENT_NAME =%>');
+  constructor (selectorQuery) {
+    super(selectorQuery)
+    console.log('New component: <%= COMPONENT_NAME =%>')
   }
 }
 
 $(document).ready(function ($) {
   // Init component code
-  var newComponent = new <%= COMPONENT_SCRIPTNAME =%>('.component-<%= COMPONENT_REF =%>');
-});
+  var newComponent = new <%= COMPONENT_SCRIPTNAME =%>('.component-<%= COMPONENT_REF =%>')
+})
