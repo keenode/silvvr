@@ -1,5 +1,5 @@
 /**
- * js/page/<%= PAGE_REF =%>
+ * app/js/page/<%= PAGE_REF =%>
  * <%= PAGE_NAME =%> page script.
  * @author <%= AUTHOR =%>
 */

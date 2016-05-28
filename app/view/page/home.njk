@@ -1,0 +1,48 @@
+{#
+    Page: Home
+    ---------------------------------------------
+    Reference: home
+    view/page/home
+    @author Keenan Staffieri
+#}
+
+{% extends 'layout/layout.html' %}
+
+
+{# --- additional stylesheets ----------------------------- #}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ '/css/page/home.css' | cachebust }}">
+
+{% endblock %}
+
+
+{# --- content -------------------------------------------- #}
+
+{% block content %}
+
+<div class="page-wrap page-wrap--home" data-page-ref="home" data-page-name="Home">
+
+    {# Component: Copy-A #}
+    {% include 'component/copy/copy-a.html' with {
+        eyebrow: 'Testing...',
+        headline: 'Component Test.',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
+    } only %}
+
+</div> {# .page-wrap--home #}
+
+{% endblock %}
+
+
+{# --- additional scripts --------------------------------- #}
+
+{% block scripts %}
+
+<!-- build:js /js/page/home.js -->
+<script type="text/javascript" src="/js/component/Component.js"></script>
+<script type="text/javascript" src="/js/page/home.js"></script>
+<!-- endbuild -->
+
+{% endblock %}

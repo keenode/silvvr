@@ -3,7 +3,8 @@
  * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Make
- * 'gulp make --page [page-name]'
+ * 'silvvr make:page [page-name]'
+ * 'silvvr make:component [component-name]'
 */
 
 const PageGenerator = require('../scaffolding/PageGenerator')
@@ -17,66 +18,42 @@ var argv = require('yargs').argv
   > Make page scaffolding handler.
 */
 gulp.task('make:page', (cb) => {
-  if (typeof argv.page === 'string') {
+
+  var pageRef = argv._[0]
+
+  if (typeof pageRef === 'string') {
     if (typeof argv.name === 'string') {
       // Pass user-specified name to Page scaffolder
-      return PageGenerator.scaffold(argv.page, argv.name)
+      return PageGenerator.scaffold(pageRef, argv.name)
     }
     else {
-      return PageGenerator.scaffold(argv.page)
+      return PageGenerator.scaffold(pageRef)
     }
   } else {
-    Logger.warn('Please define a name for the page. \nEX: gulp make --page [page-name]')
+    Logger.warn('Please define a name for the page. \nEX: silvvr make:page [page-name]')
   }
 })
 
 /**
-  $ gulp make
-  > Make scaffolding command handler.
+  $ gulp make:component
+  > Make component scaffolding handler.
 */
-gulp.task('make', (cb) => {
-
-  /**
-    Find out of --page flag was issued
-  */
-  if (argv.page) {
-    if (typeof argv.page === 'string') {
+gulp.task('make:component', (cb) => {
+  if (typeof argv.component === 'string') {
+    if (typeof argv.folder === 'string') {
       if (typeof argv.name === 'string') {
-        // Pass user-specified name to Page scaffolder
-        return PageGenerator.scaffold(argv.page, argv.name)
+        // Pass user-specified name to Component scaffolder
+        return ComponentGenerator.scaffold(argv.component, argv.folder, argv.noscript, argv.name)
       }
       else {
-        return PageGenerator.scaffold(argv.page)
+        return ComponentGenerator.scaffold(argv.component, argv.folder, argv.noscript)
       }
     }
     else {
-      Logger.warn('Please define a name for the page. \nEX: gulp make --page [page-name]')
-    }
-  }
-
-  /**
-    Find out if --component flag was issued
-  */
-  else if (argv.component) {
-    if (typeof argv.component === 'string') {
-      if (typeof argv.folder === 'string') {
-        if (typeof argv.name === 'string') {
-          // Pass user-specified name to Component scaffolder
-          return ComponentGenerator.scaffold(argv.component, argv.folder, argv.noscript, argv.name)
-        }
-        else {
-          return ComponentGenerator.scaffold(argv.component, argv.folder, argv.noscript)
-        }
-      }
-      else {
-        Logger.warn('Please specify a folder to scaffold the component. \nEX: gulp make --component [component-name] --folder [folder-name]')
-      }
-    }
-    else {
-      Logger.warn('Please define a name for the component. \nEX: gulp make --component [component-name]')
+      Logger.warn('Please specify a folder to scaffold the component. \nEX: gulp make --component [component-name] --folder [folder-name]')
     }
   }
   else {
-    Logger.warn("Please specify what you'd like to make. \nEX: gulp make --page [page-name]")
+    Logger.warn('Please define a name for the component. \nEX: gulp make --component [component-name]')
   }
 })
