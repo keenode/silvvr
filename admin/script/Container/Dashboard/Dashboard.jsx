@@ -1,7 +1,4 @@
 import React from 'react'
-// import ReactRouter from 'react-router'
-// import { Link, browserHistory } from ReactRouter
-import { connector } from './Store'
 
 class Dashboard extends React.Component {
   render () {
@@ -14,4 +11,4 @@ class Dashboard extends React.Component {
   }
 }
 
-export default connector(Dashboard)
+export default Dashboard
