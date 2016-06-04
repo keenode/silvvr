@@ -1,0 +1,157 @@
+<section id="section-controls" class="sg-section">
+
+    <div class="sg-container">
+
+        {# -------- STYLEGUIDE SECTION ---------
+            8. Controls
+            ------------------------------------- #}
+        {# {% include 'styleguide/section/partial/section-heading.html' with {
+            title: '8. Controls'
+        } only %} #}
+
+
+        {# -------------------------------------- #}
+
+
+        {# --------------------------------------
+            Input
+            ------------------------------------- #}
+        {# {% include 'styleguide/section/partial/section-block.html' with {
+            heading: 'Input',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa ratione iusto blanditiis minus fugiat.',
+            exampleCode: '<input type="text" class="form-control" placeholder="Text input">',
+            subsections: [
+                {
+                    heading: 'Disabled State',
+                    exampleCode: '<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>',
+                },
+                {
+                    heading: 'Readonly State',
+                    exampleCode: '<input class="form-control" type="text" placeholder="Readonly input here…" readonly>',
+                },
+            ],
+        } only %} #}
+
+
+        {# --------------------------------------
+            Textarea
+            ------------------------------------- #}
+        {# {% include 'styleguide/section/partial/section-block.html' with {
+            heading: 'Textarea',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa ratione iusto blanditiis minus fugiat.',
+            exampleCode: '<textarea rows="10"></textarea>',
+        } only %} #}
+
+
+        {# --------------------------------------
+            Checkboxes
+            ------------------------------------- #}
+        {# {% include 'styleguide/section/partial/section-block.html' with {
+            heading: 'Checkboxes',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa ratione iusto blanditiis minus fugiat.',
+            subsections: [
+                {
+                    heading: 'Default (Stacked)',
+                    exampleCode: '<div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        Option one is this and that&mdash;be sure to include why it is great
+                                    </label>
+                                </div>
+                                <div class="checkbox disabled">
+                                    <label>
+                                        <input type="checkbox" value="" disabled>
+                                        Option two is disabled
+                                    </label>
+                                </div>',
+                },
+                {
+                    heading: 'Inline',
+                    exampleCode: '<label class="checkbox checkbox--inline">
+                                    <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                                </label>
+                                <label class="checkbox checkbox--inline">
+                                    <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                                </label>
+                                <label class="checkbox checkbox--inline">
+                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                                </label>',
+                },
+            ],
+        } only %} #}
+
+
+        {# --------------------------------------
+            Radios
+            ------------------------------------- #}
+        {# {% include 'styleguide/section/partial/section-block.html' with {
+            heading: 'Radios',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa ratione iusto blanditiis minus fugiat.',
+            subsections: [
+                {
+                    heading: 'Default (Stacked)',
+                    exampleCode: '<div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                            Option one is this and that&mdash;be sure to include why it is great
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            Option two can be something else and selecting it will deselect option one
+                                        </label>
+                                    </div>
+                                    <div class="radio disabled">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                            Option three is disabled
+                                        </label>
+                                    </div>',
+                },
+                {
+                    heading: 'Inline',
+                    exampleCode: '<label class="radio radio--inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                                </label>
+                                <label class="radio radio--inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                                </label>
+                                <label class="radio radio--inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                                </label>',
+                },
+            ],
+        } only %} #}
+
+
+        {# --------------------------------------
+            Selects
+            ------------------------------------- #}
+        {# {% include 'styleguide/section/partial/section-block.html' with {
+            heading: 'Selects',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sed?',
+            exampleCode: '<select class="select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>',
+            subsections: [
+                {
+                    heading: 'Multiple',
+                    exampleCode: '<select multiple class="select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>',
+                },
+            ],
+        } only %} #}
+
+    </div> {# .sg-container #}
+
+</section> {# .sg-section #}

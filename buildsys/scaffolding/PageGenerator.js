@@ -25,7 +25,7 @@ class PageGenerator extends FileGenerator {
     ]
 
     // Generate View file
-    this.generateFile(pageRef, 'page/page.html', config.srcDir.app.pages, replaceProps)
+    this.generateFile(pageRef, 'page/page.njk', config.srcDir.app.pages, replaceProps)
 
     // Generate SCSS file
     this.generateFile(pageRef, 'page/page.scss', `${config.srcDir.app.styles}/page`, replaceProps)
@@ -38,7 +38,7 @@ class PageGenerator extends FileGenerator {
   }
 
   static delete (pageRef) {
-    return del([ `${config.srcDir.app.pages}/${pageRef}.html`,
+    return del([ `${config.srcDir.app.pages}/${pageRef}.njk`,
                  `${config.srcDir.app.styles}/page/${pageRef}.scss`,
                  `${config.srcDir.app.pageStyleDependencies}/__${pageRef}.scss`,
                  `${config.srcDir.app.scripts}/page/${pageRef}.js`,

@@ -34,10 +34,10 @@ class ComponentGenerator extends FileGenerator {
     ]
 
     // Generate View file
-    this.generateFile(componentRef, 'component/component.html', `${config.srcDir.app.components}/${folderName}`, replaceProps)
+    this.generateFile(componentRef, 'component/component.njk', `${config.srcDir.app.components}/${folderName}`, replaceProps)
 
     // Generate SCSS file
-    this.generateFile(componentRef, 'component/component.scss', `${config.srcDir.app.syles}/component/${folderName}`, replaceProps, '_')
+    this.generateFile(componentRef, 'component/component.scss', `${config.srcDir.app.styles}/component/${folderName}`, replaceProps, '_')
 
     // Generate JavaScript file
     if (scriptFilename !== null) {
@@ -82,7 +82,7 @@ class ComponentGenerator extends FileGenerator {
 
   static delete (componentRef, folderName) {
     var scriptFilename = Helpers.makeScriptName(componentRef)
-    return del([ `${config.srcDir.app.components}/${folderName}/${componentRef}.html`,
+    return del([ `${config.srcDir.app.components}/${folderName}/${componentRef}.njk`,
                  `${config.srcDir.app.syles}/component/${folderName}/_${componentRef}.scss`,
                  `${config.srcDir.app.scripts}/component/${folderName}/${scriptFilename}.js`,
     ], { force: true }).then(paths => {

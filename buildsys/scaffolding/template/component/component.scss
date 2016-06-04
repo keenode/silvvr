@@ -1,5 +1,5 @@
 /**
- * scss/component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_REF =%>
+ * app/scss/component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_REF =%>
  * <%= COMPONENT_NAME =%> component styles.
  * @author <%= AUTHOR =%>
 */
@@ -9,11 +9,10 @@
 // Namespace
 $ns: '.component-<%= COMPONENT_REF =%>';
 
-
 /* --- styles --------------------------------------------- */
 
 #{$ns} {
-    &__container {
-        @extend %component-container;
-    }
+  &__container {
+    @extend %component-container;
+  }
 }

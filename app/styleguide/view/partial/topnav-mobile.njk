@@ -1,0 +1,27 @@
+{% set ns = 'sg-topnav-mobile' %}
+
+<nav {% if id %}id="{{ id }}" {% endif %}class="{{ns}}">
+
+    <a href="#" class="{{ns}}__burger">
+        {% include 'view/styleguide/icon/burger.svg' %}
+    </a>
+
+    <a href="#" class="{{ns}}__close">
+        {% include 'view/styleguide/icon/burger-close.svg' %}
+    </a>
+
+    <div class="{{ns}}__logo">Silvvr</div>
+
+    <ul class="{{ns}}__list">
+        <li class="{{ns}}__item">
+            <a class="{{ns}}__link" href="javascript:void(0)"><strong>Silvvr</strong></a>
+        </li>
+
+        {% for section in sections %}
+            <li class="{{ns}}__item">
+                <a class="{{ns}}__link" href="javascript:void(0)" data-scroll-to="section-{{ section.ref }}">{{ section.name }}</a>
+            </li>
+        {% endfor %}
+
+    </ul>
+</nav>

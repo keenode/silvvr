@@ -1,0 +1,44 @@
+{#
+  <%= COMPONENT_NAME =%>
+  ----------------------------------------------------------------------
+  app/view/component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_REF =%>
+  @author <%= AUTHOR =%>
+  Sample Embed Code:
+#}
+{# Component: <%= COMPONENT_NAME =%> #}
+{#
+{% include 'component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_REF =%>.html' with {
+  headline: 'New Component',
+  description: 'Welcome to your new component!',
+} only %}
+#}
+
+{% set ns = 'component-<%= COMPONENT_REF =%>' %}
+
+{% set extraClasses = '' %}
+
+{% if theme %}
+  {% set extraClasses += ' ' + ns + '--' + theme %}
+{% endif %}
+
+{% if customClasses %}
+  {% set extraClasses += ' ' + customClasses %}
+{% endif %}
+
+{% if ref %}
+  {% set refId = 'id="' + ref + '" ' %}
+{% endif %}
+
+<section {{ refId }}class="component {{ns}}{{ extraClasses }}" data-component-name="<%= COMPONENT_NAME =%>">
+  <div class="{{ns}}__container">
+
+    <h2 class="{{ns}}__headline">
+      {{ headline }}
+    </h2>
+
+    <p class="{{ns}}__description">
+      {{ description }}
+    </p>
+
+  </div> {# __container #}
+</section> {# END #}

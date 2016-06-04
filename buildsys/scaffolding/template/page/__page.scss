@@ -1,5 +1,5 @@
 /**
- * scss/page/_page-dependencies/_<%= PAGE_REF =%>
+ * app/scss/page/_page-dependencies/_<%= PAGE_REF =%>
  * Import page dependant styles for <%= PAGE_NAME =%>.
  * @author <%= AUTHOR =%>
 */
@@ -30,5 +30,4 @@
 
 
 // BEGIN: Import required component styles !! DON'T TOUCH
-@import '../../component/copy/copy-a';
 // END: Import required component styles !! DON'T TOUCH

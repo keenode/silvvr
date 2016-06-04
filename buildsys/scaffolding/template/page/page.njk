@@ -1,0 +1,42 @@
+{#
+  Page: <%= PAGE_NAME =%>
+  ---------------------------------------------
+  Reference: <%= PAGE_REF =%>
+  app/view/page/<%= PAGE_REF =%>
+  @author <%= AUTHOR =%>
+#}
+
+{% extends 'view/layout/layout.njk' %}
+
+{# --- additional stylesheets ----------------------------- #}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="css/page/<%= PAGE_REF =%>.css">
+{# <link rel="stylesheet" href="{{ '/css/page/<%= PAGE_REF =%>.css' | cachebust }}"> #}
+{% endblock %}
+
+{# --- content -------------------------------------------- #}
+
+{% block content %}
+
+<div class="page-wrap page-wrap--<%= PAGE_REF =%>" data-page-ref="<%= PAGE_REF =%>" data-page-name="<%= PAGE_NAME =%>">
+
+  {# Component: Copy-A #}
+  {% include 'component/copy/copy-a.html' with {
+    eyebrow: 'Testing...',
+    headline: 'Component Test.',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
+  } only %}
+
+</div> {# .page-wrap--<%= PAGE_REF =%> #}
+
+{% endblock %}
+
+{# --- additional scripts --------------------------------- #}
+
+{% block scripts %}
+<!-- build:js /js/page/<%= PAGE_REF =%>.js -->
+<script type="text/javascript" src="/js/component/Component.js"></script>
+<script type="text/javascript" src="/js/page/<%= PAGE_REF =%>.js"></script>
+<!-- endbuild -->
+{% endblock %}
