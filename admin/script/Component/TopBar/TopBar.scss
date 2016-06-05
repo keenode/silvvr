@@ -13,6 +13,14 @@
   align-items: center;
   height: 100%;
   padding: 0 10px;
+
+  svg path {
+    transition: fill 300ms $ease-out-cubic;
+  }
+
+  &:hover svg path {
+    fill: color('white');
+  }
 }
 
 .List {
@@ -36,5 +44,12 @@
 }
 
 .ModeCycler > a {
-  background-color: tint(color('black'), 10%);
+  background-color: color('black-lt');
+  transition: color 300ms $ease-out-cubic,
+              background-color 300ms $ease-out-cubic;
+
+  &:hover {
+    color: color('white');
+    background-color: color('blue-dk');
+  }
 }

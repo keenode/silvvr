@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import NavigationList from './NavigationList/NavigationList'
+import List from './List/List'
 import styles from './Navigation.scss'
 
 const navItems = [
@@ -14,7 +14,7 @@ class Navigation extends Component {
   render () {
     return (
       <nav className={styles.Container}>
-        <NavigationList items={navItems} />
+        <List items={navItems} />
       </nav>
     )
   }

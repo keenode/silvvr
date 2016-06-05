@@ -2,6 +2,7 @@
 
 .Container {
   flex-basis: 200px;
+  padding-left: 20px;
   height: calc(100vh - 40px);
-  background-color: color('blue-dk');
+  background: linear-gradient(to right, color('blue-dk') 50%, shade(color('blue-dk'), 20%));
 }
