@@ -4,11 +4,11 @@ import Navigation from '../Component/Navigation/Navigation'
 import styles from './Layout.scss'
 
 const Layout = (props) => (
-  <div className={styles.AppContainer}>
+  <div className={styles.Container}>
     <TopBar />
     <Navigation />
-    <section className={styles.AppContent}>
-      <div className={styles.AppContentInner}>
+    <section className={styles.Content}>
+      <div className={styles.ContentInner}>
         {props.children}
       </div>
     </section>

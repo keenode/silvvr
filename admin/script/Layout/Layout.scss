@@ -1,17 +1,18 @@
 @import '../../scss/component/component';
 
-.AppContainer {
+.Container {
   display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
 }
 
-.AppContent {
-  position: relative;
-  top: 40px;
-  width: calc(100% - 200px);
+.Content {
+  flex: 1;
+  max-width: calc(100vw - 200px);
   height: calc(100vh - 40px);
   overflow-y: scroll;
 }
 
-.AppContentInner {
+.ContentInner {
   padding: 30px;
 }
