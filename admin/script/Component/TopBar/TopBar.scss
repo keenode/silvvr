@@ -2,6 +2,7 @@
 
 .TopBar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-basis: 100%;
   height: 40px;
@@ -52,4 +53,26 @@
     color: color('white');
     background-color: color('blue-dk');
   }
+}
+
+.AccountDropdown > a {
+  display: flex;
+  align-items: center;
+  transition: color 300ms $ease-out-cubic,
+              background-color 300ms $ease-out-cubic;
+
+  &:hover {
+    background-color: color('black-lt');
+  }
+
+  &:hover span {
+    color: color('white');
+  }
+
+  span { padding-left: 10px; }
+}
+
+.UserAvatar {
+  width: 32px;
+  border-radius: 100%;
 }
