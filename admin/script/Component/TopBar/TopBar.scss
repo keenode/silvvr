@@ -1,15 +1,40 @@
 @import '../../../scss/component/component';
 
 .TopBar {
+  display: flex;
+  align-items: center;
   flex-basis: 100%;
   height: 40px;
   background-color: color('black');
 }
 
-.List {
-  @extend %clear-list;
+.SilvvrLogo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
 }
 
-.ListItem {
+.List {
+  display: flex;
   margin: 0;
+  padding: 0;
+  height: 100%;
+
+  li {
+    display: flex;
+    margin: 0;
+  }
+
+  li > a {
+    padding: 0 15px;
+    color: color('silver');
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+
+.ModeCycler > a {
+  background-color: tint(color('black'), 10%);
 }
