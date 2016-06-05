@@ -10,7 +10,7 @@ import Components from './Container/Components/Components'
 import Modules from './Container/Modules/Modules'
 import Styleguide from './Container/Styleguide/Styleguide'
 
-const myRoutes = (props) => (
+const routes = (props) => (
   <Route path='/admin' component={Layout}>
     <IndexRoute component={Dashboard} />
     <Route path='/dashboard' component={Dashboard} />
@@ -25,13 +25,13 @@ class App extends React.Component {
   render () {
     return (
       <Provider store={store}>
-        <Router routes={myRoutes()} history={browserHistory} />
+        <Router routes={routes()} history={browserHistory} />
       </Provider>
     )
   }
 }
 
-App.Routes = myRoutes
+App.Routes = routes
 App.History = browserHistory
 
 ReactDOM.render(<App />, document.getElementById('app'))
