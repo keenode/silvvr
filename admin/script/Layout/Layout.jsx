@@ -1,6 +1,6 @@
 import React from 'react'
-import TopBar from './Component/TopBar/TopBar'
-import Navigation from './Component/Navigation/Navigation'
+import TopBar from '../Component/TopBar/TopBar'
+import Navigation from '../Component/Navigation/Navigation'
 import styles from './Layout.scss'
 
 const Layout = (props) => (

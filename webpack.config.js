@@ -6,7 +6,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8000',
     'webpack/hot/only-dev-server',
-    './admin/script/AdminApp.jsx',
+    './admin/script/App.jsx',
   ],
   output: {
     path: path.join(__dirname, '/public/admin/js'),
