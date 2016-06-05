@@ -11,18 +11,18 @@ app.name = 'Silvvr Application'
 app.env = 'dev'
 
 // Serve static 'public' directory
-app.use(serve(APP_ROOT + '/public'))
+// app.use(serve(APP_ROOT + '/public'))
 
 // Servce static 'node_modules' directory (development mode only)
-app.use(serve(APP_ROOT + '/node_modules'))
+// app.use(serve(APP_ROOT + '/node_modules'))
 
 // Must be used before any router is used
-app.use(views(APP_ROOT + '/admin/view', {
-  extension: 'njk',
-  map: {
-    njk: 'nunjucks'
-  }
-}))
+// app.use(views(APP_ROOT + '/admin/view', {
+//   extension: 'njk',
+//   map: {
+//     njk: 'nunjucks'
+//   }
+// }))
 
 // x-response-time
 app.use(async (ctx, next) => {
