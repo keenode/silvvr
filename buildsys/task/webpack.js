@@ -38,6 +38,9 @@ gulp.task('webpack-dev-server', (cb) => {
       colors: true,
       chunks: false
     },
+    historyApiFallback: {
+      index: 'admin/index.html'
+    },
   }).listen(8000, 'localhost', function (err) {
     if (err) throw new gutil.PluginError('webpack-dev-server', err)
     // Server listening
