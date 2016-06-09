@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
   - - - - - -
   S I L V V R

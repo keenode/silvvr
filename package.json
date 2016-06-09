@@ -1,23 +1,16 @@
 {
   "name": "silvvr",
   "version": "0.4.5",
-  "main": "silvvr.js",
+  "main": "gulpfile.babel.js",
   "description": "Frontend Gulp build system and boilerplate.",
   "author": {
     "name": "Keenan Staffieri",
     "url": "http://keenanstaffieri.com"
   },
   "homepage": "https://github.com/keezoid/silvvr",
-  "preferGlobal": true,
-  "bin": {
-    "silvvr": "silvvr.js"
-  },
   "scripts": {
-    "dev": "./node_modules/.bin/nodemon silvvr.js",
-    "prod": "node silvvr.js",
-    "silvvr": "node silvvr.js --task",
-    "test": "mocha --require test/helpers/setup.js",
-    "cover": "nyc --reporter=lcov --reporter=text --reporter=html --require babel-register --extension .jsx npm test"
+    "dev": "gulp",
+    "prod": "gulp --prod --build"
   },
   "repository": {
     "type": "git",
