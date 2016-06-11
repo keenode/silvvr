@@ -4,11 +4,13 @@
  * @author Keenan Staffieri
 */
 
-// It is recommended that you leave these as-is :)
+// Application source directory
 const APP_ROOT = './app'
-const ADMIN_ROOT = './admin'
+const STYLEGUIDE_ROOT = './styleguide'
+
+// Application build directory
 const APP_BUILD_ROOT = './public'
-const ADMIN_BUILD_ROOT = './public/admin'
+const STYLEGUIDE_BUILD_ROOT = './public/styleguide'
 
 export default {
 
@@ -128,15 +130,15 @@ export default {
       videos:                APP_ROOT + '/asset/video',
     },
 
-    // Admin source directory structure (admin folder)
-    admin: {
-      root:    ADMIN_ROOT,
-      styles:  ADMIN_ROOT + '/scss',
-      scripts: ADMIN_ROOT + '/script',
-      views:   ADMIN_ROOT + '/view',
-      fonts:   ADMIN_ROOT + '/asset/font',
-      images:  ADMIN_ROOT + '/asset/image',
-      videos:  ADMIN_ROOT + '/asset/video',
+    // Styleguide source directory structure (styleguide folder)
+    styleguide: {
+      root:    STYLEGUIDE_ROOT,
+      styles:  STYLEGUIDE_ROOT + '/scss',
+      scripts: STYLEGUIDE_ROOT + '/script',
+      views:   STYLEGUIDE_ROOT + '/view',
+      fonts:   STYLEGUIDE_ROOT + '/asset/font',
+      images:  STYLEGUIDE_ROOT + '/asset/image',
+      videos:  STYLEGUIDE_ROOT + '/asset/video',
     },
   },
 
@@ -153,15 +155,15 @@ export default {
       videos:   APP_BUILD_ROOT + '/asset/video',
     },
 
-    // Admin build directory structure (public/admin folder)
-    admin: {
-      root:     ADMIN_BUILD_ROOT,
-      styles:   ADMIN_BUILD_ROOT + '/css',
-      scripts:  ADMIN_BUILD_ROOT + '/js',
-      favicons: ADMIN_BUILD_ROOT + '/asset/favicon',
-      fonts:    ADMIN_BUILD_ROOT + '/asset/font',
-      images:   ADMIN_BUILD_ROOT + '/asset/image',
-      videos:   ADMIN_BUILD_ROOT + '/asset/video',
+    // Styleguide build directory structure (public/styleguide folder)
+    styleguide: {
+      root:     STYLEGUIDE_BUILD_ROOT,
+      styles:   STYLEGUIDE_BUILD_ROOT + '/css',
+      scripts:  STYLEGUIDE_BUILD_ROOT + '/js',
+      favicons: STYLEGUIDE_BUILD_ROOT + '/asset/favicon',
+      fonts:    STYLEGUIDE_BUILD_ROOT + '/asset/font',
+      images:   STYLEGUIDE_BUILD_ROOT + '/asset/image',
+      videos:   STYLEGUIDE_BUILD_ROOT + '/asset/video',
     },
   },
 }

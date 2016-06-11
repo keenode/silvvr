@@ -79,7 +79,7 @@ $ns: '.sg-topnav-mobile';
         color: #7fc6f5;
     }
 
-    @include media($small-up) {
+    @include media ($small-up) {
         display: none;
     }
 }

@@ -11,14 +11,14 @@ import StyleCompiler from '../compiler/StyleCompiler'
 
 /**
   $ gulp styles
-  > Preprocess styles for application and admin.
+  > Preprocess styles for application and styleguide.
 */
 gulp.task('styles', (cb) => {
   Logger.task('RUNNING TASK : styles')
   runSequence(
     [
       'styles:app',
-      'styles:admin',
+      'styles:styleguide',
     ],
   function () {
     Logger.taskComplete('FINISHED TASK : styles')
@@ -35,11 +35,11 @@ gulp.task('styles:app', function () {
   )
 })
 
-/* $ gulp styles:admin */
-gulp.task('styles:admin', function () {
+/* $ gulp styles:styleguide */
+gulp.task('styles:styleguide', function () {
   return StyleCompiler.compileGlob(
-    `${config.srcDir.admin.styles}/**/*.{scss,sass}`,
-    config.buildDir.admin.styles,
-    'admin'
+    `${config.srcDir.styleguide.styles}/**/*.{scss,sass}`,
+    config.buildDir.styleguide.styles,
+    'styleguide'
   )
 })

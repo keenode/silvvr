@@ -37,7 +37,7 @@
   line-height: 56px;
   letter-spacing: -3px;
 
-  @include media($small-up) {
+  @include media ($small-up) {
     font-size: 142px;
     line-height: 120px;
   }
@@ -52,7 +52,7 @@
   line-height: 56px;
   letter-spacing: -2px;
 
-  @include media($small-up) {
+  @include media ($small-up) {
     font-size: 90px;
     line-height: 90px;
   }
@@ -65,7 +65,7 @@
   line-height: 40px;
   letter-spacing: -2px;
 
-  @include media($small-up) {
+  @include media ($small-up) {
     font-size: 80px;
     line-height: 80px;
   }
@@ -78,7 +78,7 @@
   line-height: 40px;
   letter-spacing: -1px;
 
-  @include media($small-up) {
+  @include media ($small-up) {
     font-size: 45px;
     line-height: 48px;
   }
@@ -99,7 +99,7 @@
   line-height: 34px;
   letter-spacing: -1px;
 
-  @include media($small-up) {
+  @include media ($small-up) {
     font-size: 28px;
     line-height: 36px;
   }

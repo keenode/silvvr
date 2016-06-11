@@ -7,7 +7,7 @@
 body {
     background-color: white;
 
-    @include media($small-up) {
+    @include media ($small-up) {
         background-color: #f8f8f8;
     }
 }
@@ -26,7 +26,7 @@ body {
     @extend %outer-container;
     padding: 15px;
 
-    @include media($small-up) {
+    @include media ($small-up) {
         padding: 30px;
     }
 }
@@ -39,7 +39,7 @@ body {
     margin: 100px 0;
     padding: 0;
 
-    @include media($small-up) {
+    @include media ($small-up) {
         background-color: white;
         padding: 50px;
     }

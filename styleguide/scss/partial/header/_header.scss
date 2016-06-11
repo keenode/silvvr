@@ -20,7 +20,7 @@ $ns: '.sg-header';
     background-color: #4a4e59;
     z-index: 1000;
 
-    @include media($small-up) {
+    @include media ($small-up) {
         @include size(100% 60px);
     }
 }

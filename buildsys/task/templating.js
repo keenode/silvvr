@@ -17,11 +17,8 @@ import TemplateCompiler from '../compiler/TemplateCompiler'
 gulp.task('templating', (cb) => {
   Logger.task('RUNNING TASK : templating')
   runSequence(
-    // [
-      'templating:app',
-      // 'templating:styleguide',
-      'templating:admin',
-    // ],
+    'templating:app',
+    'templating:styleguide',
   function () {
     Logger.taskComplete('FINISHED TASK : templating')
     cb()
@@ -46,12 +43,12 @@ gulp.task('templating:styleguide', function () {
   )
 })
 
-/* $ gulp templating:admin */
-gulp.task('templating:admin', function () {
+/* $ gulp templating:styleguide */
+gulp.task('templating:styleguide', function () {
   return TemplateCompiler.compileGlob(
-    `${config.srcDir.admin.root}/index.njk`,
-    config.buildDir.admin.root,
-    'admin'
+    `${config.srcDir.styleguide.root}/index.njk`,
+    config.buildDir.styleguide.root,
+    'styleguide'
   )
 })
 

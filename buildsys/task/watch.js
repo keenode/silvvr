@@ -35,11 +35,11 @@ gulp.task('watch', function () {
     gulp.start('styles:app')
   })
 
-  watch(`${config.srcDir.admin.styles}/**/*.{scss,sass}`, {
-    name: 'Admin Styles Watcher',
+  watch(`${config.srcDir.styleguide.styles}/**/*.{scss,sass}`, {
+    name: 'Styleguide Styles Watcher',
     verbose: config.verbose
   }, function () {
-    gulp.start('styles:admin')
+    gulp.start('styles:styleguide')
   })
 
   watch(`${config.srcDir.app.scripts}/**/*.js`, {
@@ -49,11 +49,11 @@ gulp.task('watch', function () {
     gulp.start('page-scripts-changed')
   })
 
-  watch(`${config.srcDir.admin.scripts}/**/*.js`, {
-    name: 'Admin Scripts Watcher',
+  watch(`${config.srcDir.styleguide.scripts}/**/*.js`, {
+    name: 'Styleguide Scripts Watcher',
     verbose: config.verbose
   }, function () {
-    gulp.start('scripts:admin')
+    gulp.start('scripts:styleguide')
   })
 
   watch(`${config.srcDir.app.root}/**/*.html`, {
@@ -86,7 +86,7 @@ gulp.task('watch', function () {
 
   watch([
     `${config.buildDir.app.root}/**/*`,
-    `${config.buildDir.admin.root}/**/*`,
+    `${config.buildDir.styleguide.root}/**/*`,
   ], {
     name: 'Post-Build Watcher',
     verbose: config.verbose

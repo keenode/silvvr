@@ -14,7 +14,7 @@ $ns: '.sg-topnav';
 #{$ns} {
     display: none;
 
-    @include media($small-up) {
+    @include media ($small-up) {
         display: block;
         height: 100%;
         padding: 0 15px;
