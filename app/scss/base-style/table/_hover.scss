@@ -1,5 +1,5 @@
 /**
- * scss/base-style/table/hover
+ * app/scss/base-style/table/hover
  * Hover table styles.
  * @author Keenan Staffieri
 */
@@ -7,7 +7,7 @@
 /* --- placeholder selectors ------------------------------ */
 
 %table-hover {
-    tr:hover {
-        background-color: #eee;
-    }
+  tr:hover {
+    background-color: #eee;
+  }
 }

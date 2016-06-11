@@ -1,5 +1,5 @@
 /**
- * scss/base-style/table/basic
+ * app/scss/base-style/table/basic
  * Basic table styles.
  * @author Keenan Staffieri
 */
@@ -7,34 +7,34 @@
 /* --- placeholder selectors ------------------------------ */
 
 %table {
-    margin: 10px 0 20px 0;
-    width: 100%;
-    border-spacing: 0;
-    @include font-aa;
+  margin: 10px 0 20px 0;
+  width: 100%;
+  border-spacing: 0;
+  @include font-aa;
 
-    caption {
-        margin-bottom: 5px;
-        color: color('gray');
-        text-align: left;
-    }
+  caption {
+    margin-bottom: 5px;
+    color: color('gray');
+    text-align: left;
+  }
 
-    th,
-    td {
-        padding: 9px 12px 7px 12px;
-        text-align: left;
-    }
+  th,
+  td {
+    padding: 9px 12px 7px 12px;
+    text-align: left;
+  }
 
-    thead tr th {
-        border-bottom: 2px solid color('gray-light');
-    }
+  thead tr th {
+    border-bottom: 2px solid color('gray-light');
+  }
 
-    tbody tr td,
-    tbody tr th {
-        border-bottom: 1px solid color('gray-light');
-    }
+  tbody tr td,
+  tbody tr th {
+    border-bottom: 1px solid color('gray-light');
+  }
 
-    tbody tr:last-child td,
-    tbody tr:last-child th {
-        border-bottom: none;
-    }
+  tbody tr:last-child td,
+  tbody tr:last-child th {
+    border-bottom: none;
+  }
 }
