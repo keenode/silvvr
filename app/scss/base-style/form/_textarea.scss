@@ -1,5 +1,5 @@
 /**
- * scss/base-style/form/textarea
+ * app/scss/base-style/form/textarea
  * Form textarea styles.
  * @author Keenan Staffieri
 */
@@ -7,6 +7,6 @@
 /* --- placeholder selectors ------------------------------ */
 
 %textarea {
-    @extend %input;
-    min-width: 600px;
+  @extend %input;
+  min-width: 600px;
 }

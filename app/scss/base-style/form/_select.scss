@@ -1,5 +1,5 @@
 /**
- * scss/base-style/form/select
+ * app/scss/base-style/form/select
  * Form select styles.
  * @author Keenan Staffieri
 */
@@ -7,14 +7,14 @@
 /* --- placeholder selectors ------------------------------ */
 
 %select {
-    margin: 5px 0;
-    @include size(100% 35px);
-    max-width: 300px;
-    border: 1px solid color('gray');
-    border-radius: 0;
+  margin: 5px 0;
+  @include size(100% 35px);
+  max-width: 300px;
+  border: 1px solid color('gray');
+  border-radius: 0;
 }
 
 %select-multiple {
-    height: auto;
-    overflow: scroll;
+  height: auto;
+  overflow: scroll;
 }

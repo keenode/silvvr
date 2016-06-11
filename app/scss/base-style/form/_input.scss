@@ -1,5 +1,5 @@
 /**
- * scss/base-style/form/input
+ * app/scss/base-style/form/input
  * Form input styles.
  * @author Keenan Staffieri
 */
@@ -7,20 +7,20 @@
 /* --- placeholder selectors ------------------------------ */
 
 %input {
-    min-width: 300px;
-    margin: 5px 0;
-    padding: 15px;
-    color: #3a3a3a;
-    font-size: 13px;
-    border: 1px solid #dedede;
-    @include font-aa;
+  min-width: 300px;
+  margin: 5px 0;
+  padding: 15px;
+  color: #3a3a3a;
+  font-size: 13px;
+  border: 1px solid #dedede;
+  @include font-aa;
 
-    &[disabled] {
-        background-color: #eee;
-        cursor: not-allowed;
-    }
+  &[disabled] {
+    background-color: #eee;
+    cursor: not-allowed;
+  }
 
-    &[readonly] {
-        cursor: not-allowed;
-    }
+  &[readonly] {
+    cursor: not-allowed;
+  }
 }
