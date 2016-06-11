@@ -1,5 +1,5 @@
 /**
- * buildsys/utils/Helpers
+ * buildsys/util/Helpers
  * Helper utility functions.
  * @author Keenan Staffieri
 */
@@ -58,4 +58,4 @@ class Helpers {
   }
 }
 
-module.exports = Helpers
+export default Helpers

@@ -6,8 +6,8 @@
  * 'gulp delete --page [page-name]'
 */
 
-const PageGenerator = require('../scaffolding/PageGenerator')
-const ComponentGenerator = require('../scaffolding/ComponentGenerator')
+import PageGenerator from '../scaffolding/PageGenerator'
+import ComponentGenerator from '../scaffolding/ComponentGenerator'
 
 // Grab command line arguments
 const argv = require('yargs').argv

@@ -6,8 +6,8 @@
  * 'gulp styles'
 */
 
-const runSequence = require('run-sequence')
-const StyleCompiler = require('../compiler/StyleCompiler')
+import runSequence from 'run-sequence'
+import StyleCompiler from '../compiler/StyleCompiler'
 
 /**
   $ gulp styles

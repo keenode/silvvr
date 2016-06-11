@@ -4,10 +4,10 @@
  * @author Keenan Staffieri
 */
 
-const fs = require('fs')
-const Helpers = require('../util/Helpers')
-const ComponentCollection = require('../scaffolding/ComponentCollection')
-const ScriptWriter = require('./ScriptWriter')
+import fs from 'fs'
+import Helpers from '../util/Helpers'
+import ComponentCollection from '../scaffolding/ComponentCollection'
+import ScriptWriter from './ScriptWriter'
 
 class PageDependenciesHandler {
 

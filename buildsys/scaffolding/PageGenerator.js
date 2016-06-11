@@ -4,10 +4,10 @@
  * @author Keenan Staffieri
 */
 
-const del = require('del')
-const Helpers = require('../util/Helpers')
-const FileGenerator = require('./FileGenerator')
-const pkg = require('../../package.json')
+import del from 'del'
+import Helpers from '../util/Helpers'
+import FileGenerator from './FileGenerator'
+import pkg from '../../package.json'
 
 class PageGenerator extends FileGenerator {
 

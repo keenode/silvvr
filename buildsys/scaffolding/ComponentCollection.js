@@ -4,7 +4,7 @@
  * @author Keenan Staffieri
 */
 
-const components = require('../components')
+import components from '../components'
 
 class ComponentCollection {
 

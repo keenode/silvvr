@@ -1,10 +1,10 @@
 /**
- * buildsys/utils/Logger
+ * buildsys/util/Logger
  * Logger utility for build system.
  * @author Keenan Staffieri
 */
 
-const gutil = require('gulp-util')
+import gutil from 'gulp-util'
 
 class Logger {
 
@@ -71,4 +71,4 @@ class Logger {
   }
 }
 
-module.exports = Logger
+export default Logger

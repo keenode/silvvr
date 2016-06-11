@@ -6,8 +6,8 @@
  * 'gulp scripts'
 */
 
-const runSequence = require('run-sequence')
-const ScriptCompiler = require('../compiler/ScriptCompiler')
+import runSequence from 'run-sequence'
+import ScriptCompiler from '../compiler/ScriptCompiler'
 
 /**
   $ gulp scripts

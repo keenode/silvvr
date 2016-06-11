@@ -4,12 +4,12 @@
  * @author Keenan Staffieri
 */
 
-const gulp = require('gulp')
-const fs = require('fs')
-const crypto = require('crypto')
-const config = require('./config/config')
-const Logger = require('./util/Logger')
-const pkg = require('../package.json')
+import gulp from 'gulp'
+import fs from 'fs'
+import crypto from 'crypto'
+import config from './config/config'
+import Logger from './util/Logger'
+import pkg from '../package.json'
 
 // Grab command line arguments
 const argv = require('yargs').argv

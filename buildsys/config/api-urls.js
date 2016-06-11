@@ -4,7 +4,7 @@
  * @author Keenan Staffieri
 */
 
-module.exports = {
+export default {
   dev:   'http://localhost:9000/',
   stage: 'http://api.staging.example.com/',
   prod:  'http://api.example.com/',

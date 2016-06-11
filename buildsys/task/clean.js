@@ -6,7 +6,7 @@
  * 'gulp clean'
 */
 
-const del = require('del')
+import del from 'del'
 
 /**
   $ gulp clean

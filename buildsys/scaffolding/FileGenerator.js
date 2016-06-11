@@ -4,9 +4,9 @@
  * @author Keenan Staffieri
 */
 
-const fs = require('fs')
-const rename = require('gulp-rename')
-const batchReplace = require('gulp-batch-replace')
+import fs from 'fs'
+import rename from 'gulp-rename'
+import batchReplace from 'gulp-batch-replace'
 
 class FileGenerator {
 

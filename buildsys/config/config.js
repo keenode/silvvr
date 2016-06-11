@@ -10,7 +10,7 @@ const ADMIN_ROOT = './admin'
 const APP_BUILD_ROOT = './public'
 const ADMIN_BUILD_ROOT = './public/admin'
 
-module.exports = {
+export default {
 
   // Verbose logging output
   verbose: true,

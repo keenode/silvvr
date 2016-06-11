@@ -7,8 +7,8 @@
  * 'silvvr make:component [component-name]'
 */
 
-const PageGenerator = require('../scaffolding/PageGenerator')
-const ComponentGenerator = require('../scaffolding/ComponentGenerator')
+import PageGenerator from '../scaffolding/PageGenerator'
+import ComponentGenerator from '../scaffolding/ComponentGenerator'
 
 // Grab command line arguments
 var argv = require('yargs').argv

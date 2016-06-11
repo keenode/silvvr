@@ -6,8 +6,8 @@
  * 'gulp templating'
 */
 
-const runSequence = require('run-sequence')
-const TemplateCompiler = require('../compiler/TemplateCompiler')
+import runSequence from 'run-sequence'
+import TemplateCompiler from '../compiler/TemplateCompiler'
 
 /**
   $ gulp templating

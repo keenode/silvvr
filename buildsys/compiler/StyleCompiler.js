@@ -4,12 +4,12 @@
  * @author Keenan Staffieri
 */
 
-const sass = require('gulp-sass')
-const autoprefixer = require('gulp-autoprefixer')
-const sourcemaps = require('gulp-sourcemaps')
-const browserSync = require('browser-sync')
-const gutil = require('gulp-util')
-const plumber = require('gulp-plumber')
+import sass from 'gulp-sass'
+import autoprefixer from 'gulp-autoprefixer'
+import sourcemaps from 'gulp-sourcemaps'
+import browserSync from 'browser-sync'
+import gutil from 'gulp-util'
+import plumber from 'gulp-plumber'
 
 class StyleCompiler {
 

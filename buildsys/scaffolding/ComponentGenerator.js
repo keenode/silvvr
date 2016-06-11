@@ -4,11 +4,11 @@
  * @author Keenan Staffieri
 */
 
-const fs = require('fs')
-const del = require('del')
-const FileGenerator = require('./FileGenerator')
-const Helpers = require('../util/Helpers')
-const pkg = require('../../package.json')
+import fs from 'fs'
+import del from 'del'
+import FileGenerator from './FileGenerator'
+import Helpers from '../util/Helpers'
+import pkg from '../../package.json'
 
 
 class ComponentGenerator extends FileGenerator {

@@ -6,8 +6,8 @@
  * 'gulp build-complete'
 */
 
-const del = require('del')
-const runSequence = require('run-sequence')
+import del from 'del'
+import runSequence from 'run-sequence'
 
 /**
   $ gulp build-complete

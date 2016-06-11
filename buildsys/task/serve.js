@@ -6,7 +6,7 @@
  * 'gulp serve'
 */
 
-const browserSync = require('browser-sync')
+import browserSync from 'browser-sync'
 
 /* $ gulp serve */
 gulp.task('serve', function () {

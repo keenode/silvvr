@@ -4,12 +4,12 @@
  * @author Keenan Staffieri
 */
 
-const babel = require('gulp-babel')
-const concat = require('gulp-concat')
-const uglify = require('gulp-uglify')
-const sourcemaps = require('gulp-sourcemaps')
-const gutil = require('gulp-util')
-const plumber = require('gulp-plumber')
+import babel from 'gulp-babel'
+import concat from 'gulp-concat'
+import uglify from 'gulp-uglify'
+import sourcemaps from 'gulp-sourcemaps'
+import gutil from 'gulp-util'
+import plumber from 'gulp-plumber'
 
 class ScriptWriter {
 

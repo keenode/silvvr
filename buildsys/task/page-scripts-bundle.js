@@ -5,8 +5,8 @@
  * 'gulp page-scripts-bundle'
 */
 
-const foreach = require('gulp-foreach')
-const PageDependenciesHandler = require('../class/PageDependenciesHandler')
+import foreach from 'gulp-foreach'
+import PageDependenciesHandler from '../class/PageDependenciesHandler'
 
 /**
     $ gulp page-scripts-bundle

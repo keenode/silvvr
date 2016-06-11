@@ -6,8 +6,8 @@
  * 'gulp favicons'
 */
 
-const fs = require('fs')
-const runSequence = require('run-sequence')
+import fs from 'fs'
+import runSequence from 'run-sequence'
 
 /* $ gulp favicons */
 gulp.task('favicons', function () {

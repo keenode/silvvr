@@ -4,19 +4,19 @@
  * @author Keenan Staffieri
 */
 
-const nunjucks = require('gulp-nunjucks')
-const htmlmin = require('gulp-htmlmin')
-const browserSync = require('browser-sync')
-const replace = require('gulp-replace')
-const rename = require('gulp-rename')
-const gutil = require('gulp-util')
-const useref = require('gulp-useref')
-const uglify = require('gulp-uglify')
-const html = require('html')
-const fs = require('fs')
-const foreach = require('gulp-foreach')
-const PageDependenciesHandler = require('../class/PageDependenciesHandler')
-const apiUrls = require('../config/api-urls')
+import nunjucks 'gulp-nunjucks'
+import htmlmin 'gulp-htmlmin'
+import browserSync 'browser-sync'
+import replace 'gulp-replace'
+import rename 'gulp-rename'
+import gutil 'gulp-util'
+import useref 'gulp-useref'
+import uglify 'gulp-uglify'
+import html 'html'
+import fs 'fs'
+import foreach 'gulp-foreach'
+import PageDependenciesHandler '../class/PageDependenciesHandler'
+import apiUrls '../config/api-urls'
 
 class TemplateCompiler {
 

@@ -6,9 +6,9 @@
  * 'gulp watch'
 */
 
-const runSequence = require('run-sequence')
-const watch = require('gulp-watch')
-const browserSync = require('browser-sync')
+import runSequence from 'run-sequence'
+import watch from 'gulp-watch'
+import browserSync from 'browser-sync'
 
 /**
   $ gulp watch

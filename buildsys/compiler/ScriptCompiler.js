@@ -4,13 +4,13 @@
  * @author Keenan Staffieri
 */
 
-const babel = require('gulp-babel')
-const uglify = require('gulp-uglify')
-const stripDebug = require('gulp-strip-debug')
-const sourcemaps = require('gulp-sourcemaps')
-const browserSync = require('browser-sync')
-const gutil = require('gulp-util')
-const plumber = require('gulp-plumber')
+import babel from 'gulp-babel'
+import uglify from 'gulp-uglify'
+import stripDebug from 'gulp-strip-debug'
+import sourcemaps from 'gulp-sourcemaps'
+import browserSync from 'browser-sync'
+import gutil from 'gulp-util'
+import plumber from 'gulp-plumber'
 
 class ScriptCompiler {
 
