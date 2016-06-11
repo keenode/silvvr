@@ -1,13 +1,13 @@
 /**
- * scss/base-style/button/large
- * Button (large) styles.
+ * app/scss/base-style/button/large
+ * Button (Large) styles.
  * @author Keenan Staffieri
 */
 
 /* --- placeholder selectors ------------------------------ */
 
 %btn-large {
-    @extend %btn;
-    padding-top: 27px;
-    padding-bottom: 26px;
+  @extend %btn;
+  padding-top: 27px;
+  padding-bottom: 26px;
 }

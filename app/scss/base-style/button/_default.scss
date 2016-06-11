@@ -1,5 +1,5 @@
 /**
- * scss/base-style/button/default
+ * app/scss/base-style/button/default
  * Button (default) styles.
  * @author Keenan Staffieri
 */
@@ -7,20 +7,20 @@
 /* --- placeholder selectors ------------------------------ */
 
 %btn {
-    display: inline-block;
-    margin: 5px 0;
-    padding: 19px 40px;
-    background-color: color('blue');
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border: 0;
-    cursor: pointer;
-    transition: background-color 100ms ease-out;
-    @include font-aa;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 19px 40px;
+  background-color: color('blue');
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 100ms ease-out;
+  @include font-aa;
 
-    &:hover {
-        color: white;
-        background-color: #333;
-    }
+  &:hover {
+    color: white;
+    background-color: #333;
+  }
 }

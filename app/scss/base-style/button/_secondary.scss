@@ -1,16 +1,16 @@
 /**
- * scss/base-style/button/secondary
- * Button (secondary) styles.
+ * app/scss/base-style/button/secondary
+ * Button (Secondary) styles.
  * @author Keenan Staffieri
 */
 
 /* --- placeholder selectors ------------------------------ */
 
 %btn-secondary {
-    @extend %btn;
-    background-color: color('gray');
+  @extend %btn;
+  background-color: color('gray');
 
-    &:hover {
-        background-color: color('gray-light');
-    }
+  &:hover {
+    background-color: color('gray-light');
+  }
 }

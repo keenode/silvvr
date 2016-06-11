@@ -1,12 +1,12 @@
 /**
- * scss/base-style/button/fixed-width
- * Button (Fixed Width) styles.
+ * app/scss/base-style/button/fixed-width
+ * Button (Fixed-Width) styles.
  * @author Keenan Staffieri
 */
 
 /* --- placeholder selectors ------------------------------ */
 
 %btn-fixed-width {
-    @extend %btn;
-    min-width: 170px;
+  @extend %btn;
+  min-width: 170px;
 }
