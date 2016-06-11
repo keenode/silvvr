@@ -9,7 +9,7 @@
 node_modules
 npm-debug.log
 
-# General Files
+# General files
 .sass-cache
 .hg
 .idea
@@ -19,8 +19,5 @@ npm-debug.log
 .tmp
 .scssc
 
-# Silvvr Files
+# Silvvr files
 public
-app/assets/favicons
-coverage
-.nyc_output
