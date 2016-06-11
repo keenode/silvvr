@@ -1,60 +1,50 @@
 {% set colors = [
-
-        {
-            heading: 'Primary Colors',
-            description: 'Primary colors and their shades used throughout the website.'
-        },
-
-        { name: 'blue',       hex: '2E6AD4' },
-        { name: 'gray',       hex: '3f3f3f' },
-        { name: 'gray-light', hex: '6c6c6c' },
-    ]
+    {
+      heading: 'Primary Colors',
+      description: 'Primary colors and their shades used throughout the website.'
+    },
+    { name: 'blue', hex: '2E6AD4' },
+    { name: 'gray', hex: '3f3f3f' },
+    { name: 'gray-light', hex: '6c6c6c' }
+  ]
 %}
 
 <section id="section-color-palette" class="sg-section">
 
-    <div class="sg-container">
+  <div class="sg-container">
 
-        <h2 class="heading-section">1. Color Palette</h2>
+    <h2 class="heading-section">1. Color Palette</h2>
 
-        <div class="sg-element-section">
+    <div class="sg-element-section">
+      <div class="sg-colors-container">
 
-            <div class="sg-colors-container">
-
-                {% for color in colors %}
-
-                    {% if color.heading %}
-
-                        <div class="sg-color-row">
-                            <h3>{{ color.heading }}</h3>
-                            {% if color.description %}
-                                <p>{{ color.description }}</p>
-                            {% endif %}
-                        </div>
-
-                        <hr class="sg-color-divider">
-
-                    {% elseif color.subheading %}
-                        <h5 class="sg-color-subheading">{{ color.subheading }}</h5>
-                    {% else %}
-
-                        <div class="sg-color-box">
-                            <div class="sg-color-box__color" style="background-color: #{{ color.hex }};">
-                                <code class="sg-color-box__hex no-style" style="color: {{ color.hex | makeTextReadable }};">#{{ color.hex }}</code>
-                            </div>
-                            <code class="sg-color-box__name no-style">
-                                color('{{ color.name }}')
-                            </code>
-                        </div>
-
-                    {% endif %}
-
-                {% endfor %}
-
+        {% for color in colors %}
+          {% if color.heading %}
+            <div class="sg-color-row">
+              <h3>{{ color.heading }}</h3>
+              {% if color.description %}
+                <p>{{ color.description }}</p>
+              {% endif %}
             </div>
+            <hr class="sg-color-divider">
+        {% elif color.subheading %}
+            <h5 class="sg-color-subheading">{{ color.subheading }}</h5>
+        {% else %}
+            <div class="sg-color-box">
+              <div class="sg-color-box__color" style="background-color: #{{ color.hex }};">
+                {# <code class="sg-color-box__hex no-style" style="color: {{ color.hex | makeTextReadable }};"> #}
+                <code class="sg-color-box__hex no-style" style="color: {{ color.hex }};">
+                  #{{ color.hex }}
+                </code>
+              </div>
+              <code class="sg-color-box__name no-style">
+                color('{{ color.name }}')
+              </code>
+            </div>
+          {% endif %}
+        {% endfor %}
 
-        </div>
-
-    </div>
-
-</section>
+      </div> {# .sg-colors-container #}
+    </div> {# .sg-element-section #}
+  </div> {# .sg-container #}
+</section> {# .sg-section #}
