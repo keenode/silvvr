@@ -1,15 +1,13 @@
 /**
- * scss/util/color-functions
+ * app/scss/util/color-functions
  * Helper functions for handling colors.
  * @author Keenan Staffieri
 */
 
-@function color($color) {
-
-    @if map-has-key($colors, $color) {
-        @return map-get($colors, $color)
-    }
-
-    @warn "Color '#{$color}' not found in 'colors' map.";
-    @return null;
+@function color ($color) {
+  @if map-has-key ($colors, $color) {
+      @return map-get($colors, $color)
+  }
+  @warn "Color '#{$color}' not found in 'colors' map.";
+  @return null;
 }

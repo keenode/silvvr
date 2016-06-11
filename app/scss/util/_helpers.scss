@@ -1,47 +1,44 @@
 /**
- * scss/util/helpers
+ * app/scss/util/helpers
  * Extendable helper placeholders & mixins.
  * @author Keenan Staffieri
 */
 
 /**
-    Apply clearfixing styles to element.
+  Apply clearfixing styles to element.
 */
 %clearfix {
-    @include clearfix();
+  @include clearfix();
 }
 
-
 /**
-    Add outer container.
+  Add outer container.
 */
 %outer-container {
-    @include outer-container;
+  @include outer-container;
 }
 
-
 /**
-    Clear out list styles, margin, and padding on list items.
+  Clear out list styles, margin, and padding on list items.
 */
 @mixin clear-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 %clear-list { @include clear-list; }
 
-
 /**
-    Apply font antialiasing.
+  Apply font antialiasing.
 */
 @mixin font-aa {
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 /**
-    Apply font optimize legibility.
+  Apply font optimize legibility.
 */
 @mixin optimizeLegibility {
-    text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
 }
