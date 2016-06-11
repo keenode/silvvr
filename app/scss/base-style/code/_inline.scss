@@ -6,6 +6,7 @@
 
 /* --- placeholder selectors ------------------------------ */
 
+// --- Inline Code Block ----------------------------------
 %code-inline {
   padding: 3px 6px 1px 6px;
   color: white;
@@ -14,6 +15,7 @@
   background-color: color('gray-light');
 }
 
+// --- Code (No-Style) ------------------------------------
 %code-nostyle {
   padding: 0;
   background-color: transparent;

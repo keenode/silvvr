@@ -30,6 +30,7 @@
   Specific placeholder element heading styles
 */
 
+// --- Heading 1 ------------------------------------------
 %heading-1 {
   margin: 40px 0 80px;
   font-size: 55px;
@@ -42,6 +43,7 @@
   }
 }
 
+// --- Heading 2 ------------------------------------------
 %heading-2 {
   margin: 30px 0 60px;
   color: color('blue');
@@ -56,6 +58,7 @@
   }
 }
 
+// --- Heading 3 ------------------------------------------
 %heading-3 {
   margin: 20px 0 40px;
   font-size: 38px;
@@ -68,6 +71,7 @@
   }
 }
 
+// --- Heading 4 ------------------------------------------
 %heading-4 {
   margin: 10px 0 30px;
   font-size: 30px;
@@ -80,6 +84,7 @@
   }
 }
 
+// --- Heading 5 ------------------------------------------
 %heading-5 {
   margin: 10px 0 20px;
   font-size: 38px;
@@ -87,6 +92,7 @@
   letter-spacing: -1px;
 }
 
+// --- Heading 6 ------------------------------------------
 %heading-6 {
   margin: 5px 0 10px;
   font-size: 18px;

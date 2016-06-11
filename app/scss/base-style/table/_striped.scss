@@ -6,6 +6,7 @@
 
 /* --- placeholder selectors ------------------------------ */
 
+// --- Striped Table --------------------------------------
 %table-striped {
   tr:nth-of-type(even) {
     background-color: tint(color('gray-light'), 50%);

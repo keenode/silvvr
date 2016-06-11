@@ -6,6 +6,7 @@
 
 /* --- placeholder selectors ------------------------------ */
 
+// --- Default List ---------------------------------------
 %default-list {
   margin: 10px 0 50px 0;
   padding: 0 0 0 30px;
@@ -23,14 +24,17 @@
   }
 }
 
+// --- Unordered List -------------------------------------
 %list-unordered {
   @extend %default-list;
 }
 
+// --- Ordered List ---------------------------------------
 %list-ordered {
   @extend %default-list;
 }
 
+// --- Unstyled List --------------------------------------
 %list-unstyled {
   @extend %default-list;
   margin: 0;
@@ -38,6 +42,7 @@
   list-style: none;
 }
 
+// --- Inline List ------------------------------------------
 %list-inline {
   @extend %list-unstyled;
 
@@ -49,6 +54,7 @@
   li:first-child { padding-left: 0; }
 }
 
+// --- Condensed List -------------------------------------
 %list--condensed {
   li {
     margin: 10px 0;

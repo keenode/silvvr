@@ -6,6 +6,7 @@
 
 /* --- placeholder selectors ------------------------------ */
 
+// --- Select ---------------------------------------------
 %select {
   margin: 5px 0;
   @include size(100% 35px);
@@ -14,6 +15,7 @@
   border-radius: 0;
 }
 
+// --- Multiple Select ------------------------------------
 %select-multiple {
   height: auto;
   overflow: scroll;

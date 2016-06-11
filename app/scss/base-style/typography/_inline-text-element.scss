@@ -6,48 +6,58 @@
 
 /* --- placeholder selectors ------------------------------ */
 
+// --- Marked Text ----------------------------------------
 %marked-text {
   padding: 3px 8px 1px 8px;
   color: white;
   background-color: yellow;
 }
 
+// --- Deleted Text ---------------------------------------
 %deleted-text {
   padding: 3px 8px 1px 8px;
   background-color: pink;
 }
 
+// --- Strikethrough Text ---------------------------------
 %strikethrough-text {
   
 }
 
+// --- Inserted Text --------------------------------------
 %inserted-text {
   padding: 3px 8px 1px 8px;
   background-color: lightGreen;
 }
 
+// --- Underlined Text ------------------------------------
 %underlined-text {
   
 }
 
+// --- Small Text -----------------------------------------
 %small-text {
   font-size: 75%;
 }
 
+// --- Bold Text ------------------------------------------
 %bold-text {
   
 }
 
+// --- Italic Text ----------------------------------------
 %italic-text {
   
 }
 
+// --- Abbreviated Text -----------------------------------
 %abbreviated-text {
   text-decoration: none;
   border-bottom: 2px solid color('gray-light');
   cursor: help;
 }
 
+// --- Cited Text -----------------------------------------
 %cited-text {
   
 }

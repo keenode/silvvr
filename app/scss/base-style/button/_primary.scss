@@ -1,13 +1,13 @@
 /**
- * app/scss/base-style/button/secondary
- * Button (Secondary) styles.
+ * app/scss/base-style/button/primary
+ * Button (Primary) styles.
  * @author Keenan Staffieri
 */
 
 /* --- placeholder selectors ------------------------------ */
 
-// --- Secondary Button -----------------------------------
-%btn-secondary {
+// --- Primary Button -------------------------------------
+%btn-primary {
   @extend %btn;
   background-color: color('gray');
 

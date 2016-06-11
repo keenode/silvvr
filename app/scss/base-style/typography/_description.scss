@@ -6,6 +6,7 @@
 
 /* --- placeholder selectors ------------------------------ */
 
+// --- Description List -----------------------------------
 %description-list {
   @include font-aa;
 
@@ -18,6 +19,7 @@
   }
 }
 
+// --- Horizontal Description List ------------------------
 %description-list-horizontal {
   dt {
     float: left;
