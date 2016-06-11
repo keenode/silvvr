@@ -2,7 +2,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {{ render.partial('head') }}
+    {{ render.partial(
+      'head', {
+        title: 'Silvvr Styleguide',
+        description: 'Silvvr styleguide. Browse base styles and components.'
+      }
+    ) }}
     {{ render.partial('stylesheets') }}
     {% block stylesheets %}{% endblock %}
   </head>
