@@ -1,18 +1,7 @@
 /**
  * app/script/app
- * Main script for Application.
+ * Application main script.
  * @author Keenan Staffieri
 */
 
-class HelloWorld {
-  constructor () {
-    console.log('HelloWorld class initialized.')
-  }
-
-  sayHello () {
-    console.log('Hello!')
-  }
-}
-
-var hello = new HelloWorld()
-hello.sayHello()
+console.log('Main application script loaded.')

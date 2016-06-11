@@ -4,7 +4,7 @@
  * @author Keenan Staffieri
 */
 
-/* --- Typography ----------------------------------------- */
+/* --- TYPOGRAPHY ----------------------------------------- */
 
 // --- Heading
 h1 { @extend %heading-1; }
@@ -14,13 +14,11 @@ h4 { @extend %heading-4; }
 h5 { @extend %heading-5; }
 h6 { @extend %heading-6; }
 
-
-// --- Body Copy
+// --- Body Copy ------------------------------------------
 p      { @extend %body-copy; }
 p.lead { @extend %lead-body-copy; }
 
-
-// --- Inline Text Elements
+// --- Inline Text Elements -------------------------------
 mark        { @extend %marked-text; }
 del         { @extend %deleted-text; }
 s           { @extend %strikethrough-text !optional; }
@@ -32,146 +30,112 @@ i, em       { @extend %italic-text !optional; }
 abbr[title] { @extend %abbreviated-text; }
 cite        { @extend %cited-text !optional; }
 
-
-// --- Address
+// --- Address --------------------------------------------
 address { @extend %address; }
 
-
-// --- Blockquote
+// --- Blockquote -----------------------------------------
 blockquote { @extend %blockquote; }
 
-
-// --- List
+// --- List -----------------------------------------------
 ul               { @extend %list-unordered; }
 ul.list-unstyled { @extend %list-unstyled; }
 ul.list-inline   { @extend %list-inline; }
 ol               { @extend %list-ordered; }
 ul.list--condensed,
 ol.list--condensed {
-    @extend %list--condensed;
+  @extend %list--condensed;
 }
 
-
-// --- Description
+// --- Description ----------------------------------------
 dl               { @extend %description-list; }
 dl.dl-horizontal { @extend %description-list-horizontal; }
 
-
-// --- Link
+// --- Link -----------------------------------------------
 a { @extend %inline-link; }
 
-
-// --- Divider
+// --- Divider --------------------------------------------
 hr { @extend %divider; }
 
+/* --- BUTTONS -------------------------------------------- */
 
-
-/* --- Buttons -------------------------------------------- */
-
-// --- Default
+// --- Default --------------------------------------------
 .btn { @extend %btn; }
 
-
-// --- Secondary
+// --- Secondary ------------------------------------------
 .btn--secondary { @extend %btn-secondary; }
 
-
-// --- Fixed Width
+// --- Fixed Width ----------------------------------------
 .btn--fixed-width { @extend %btn-fixed-width; }
 
-
-// --- Large
+// --- Large ----------------------------------------------
 .btn--large { @extend %btn-large; }
 
+/* --- CODE ----------------------------------------------- */
 
-
-/* --- Code ----------------------------------------------- */
-
-// --- Inline
+// --- Inline ---------------------------------------------
 code          { @extend %code-inline; }
 code.no-style { @extend %code-nostyle !optional; }
 
-
-// --- User Input
+// --- User Input -----------------------------------------
 kbd { @extend %user-input; }
 
-
-// --- Block
+// --- Block ----------------------------------------------
 pre { @extend %code-block; }
 
-
-// --- Variable
+// --- Variable -------------------------------------------
 var { @extend %variable !optional; }
 
-
-// --- Sample Output
+// --- Sample Output --------------------------------------
 samp { @extend %sample-output; }
 
+/* --- TABLE ---------------------------------------------- */
 
-
-/* --- Table ---------------------------------------------- */
-
-// --- Basic
+// --- Basic ----------------------------------------------
 table.table { @extend %table; }
 
-
-// --- Striped
+// --- Striped --------------------------------------------
 table.table--striped { @extend %table-striped; }
 
-
-// --- Bordered
+// --- Bordered -------------------------------------------
 table.table--bordered { @extend %table-bordered; }
 
-
-// --- Hover
+// --- Hover ----------------------------------------------
 table.table--hover { @extend %table-hover; }
 
-
-// --- Condensed
+// --- Condensed ------------------------------------------
 table.table--condensed { @extend %table-condensed; }
 
+/* --- FORM ----------------------------------------------- */
 
-
-/* --- Form ----------------------------------------------- */
-
-// --- Layout
+// --- Layout ---------------------------------------------
 .form-group { @extend %form-group; }
 
-
-// --- Input
+// --- Input ----------------------------------------------
 input { @extend %input; }
 
-
-// --- Textarea
+// --- Textarea -------------------------------------------
 textarea { @extend %textarea; }
 
-
-// --- Label
+// --- Label ----------------------------------------------
 label { @extend %label; }
 
-
-// --- Checkbox
+// --- Checkbox -------------------------------------------
 .checkbox { @extend %checkbox; }
 .checkbox--inline { @extend %checkbox-inline; }
 
-
-// --- Radio
+// --- Radio ----------------------------------------------
 .radio { @extend %radio; }
 .radio--inline { @extend %radio-inline; }
 
-
-// --- Select
+// --- Select ---------------------------------------------
 .select { @extend %select; }
 select[multiple].select { @extend %select-multiple; }
 
-
-// --- Help
+// --- Help -----------------------------------------------
 .help-block { @extend %help-block; }
 
-
-// --- Inline
+// --- Inline ---------------------------------------------
 .form--inline { @extend %form-inline; }
 
-
-// --- Horizontal
+// --- Horizontal -----------------------------------------
 .form--horizontal { @extend %form-horizontal; }

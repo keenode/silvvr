@@ -4,4 +4,4 @@
  * @author <%= AUTHOR =%>
 */
 
-console.log('Welcome to the <%= PAGE_NAME =%> page!')
+console.log('<%= PAGE_NAME =%> script loaded.')
