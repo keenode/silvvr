@@ -10,7 +10,6 @@
 %}
 
 <section id="section-color-palette" class="sg-section">
-
   <div class="sg-container">
 
     <h2 class="heading-section">1. Color Palette</h2>
@@ -19,6 +18,7 @@
       <div class="sg-colors-container">
 
         {% for color in colors %}
+
           {% if color.heading %}
             <div class="sg-color-row">
               <h3>{{ color.heading }}</h3>
@@ -42,6 +42,7 @@
               </code>
             </div>
           {% endif %}
+
         {% endfor %}
 
       </div> {# .sg-colors-container #}
