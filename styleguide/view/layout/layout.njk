@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% include 'view/styleguide/partial/head.njk' %}
-    {% include 'view/styleguide/partial/stylesheets.njk' %}
+    {% include 'view/partial/head.njk' %}
+    {% include 'view/partial/stylesheets.njk' %}
     {% block stylesheets %}{% endblock %}
   </head>
   <body>
 
     {# Header #}
-    {% include 'view/styleguide/partial/header.njk' %}
+    {% include 'view/partial/header.njk' %}
 
     {# Content #}
     {% block content %}{% endblock %}
 
     {# Footer #}
-    {% include 'view/styleguide/partial/footer.njk' %}
+    {% include 'view/partial/footer.njk' %}
 
     {# Scripts #}
-    {% include 'view/styleguide/partial/scripts.njk' %}
+    {% include 'view/partial/scripts.njk' %}
     {% block scripts %}{% endblock %}
 
   </body>
