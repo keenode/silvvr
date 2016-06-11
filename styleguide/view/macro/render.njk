@@ -5,3 +5,7 @@
 {% macro section(templatePath, opts) %}
   {% include 'view/section/' + templatePath + '.njk' %}
 {% endmacro %}
+
+{% macro sectionPartial(templatePath, opts) %}
+  {% include 'view/section/partial/' + templatePath + '.njk' %}
+{% endmacro %}

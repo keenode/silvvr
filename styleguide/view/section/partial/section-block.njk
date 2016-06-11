@@ -1,31 +1,32 @@
 <div class="sg-element-section">
 
-  {% if heading %}
-    <h3>{{ heading }}</h3>
+  {% if opts.heading %}
+    <h3>{{ opts.heading }}</h3>
   {% endif %}
 
-  {% if description %}
-    <p>{{ description }}</p>
+  {% if opts.description %}
+    <p>{{ opts.description }}</p>
   {% endif %}
 
-  {% if heading || description %}
+  {% if opts.heading or opts.description %}
     <hr>
   {% endif %}
 
-  {% if exampleCode %}
+  {% if opts.exampleCode %}
     <div class="sg-example">
       <div class="sg-example-inner">
         <h5 class="sg-example-heading">Example</h5>
-        {{ exampleCode }}
+        {{ opts.exampleCode }}
       </div>
       <div class="sg-example-code">
-        <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">{{ exampleCode | respectNewlines }}</script></code></pre>
+        {# <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">{{ exampleCode | respectNewlines }}</script></code></pre> #}
+        <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">{{ opts.exampleCode }}</script></code></pre>
       </div>
-    </div>
+    </div> {# .sg-example #}
   {% endif %}
 
-  {% if subsections %}
-    {% for subsection in subsections %}
+  {% if opts.subsections %}
+    {% for subsection in opts.subsections %}
       {% if subsection.heading %}
         <h4>{{ subsection.heading }}</h4>
       {% endif %}
@@ -41,11 +42,12 @@
             {{ subsection.exampleCode }}
           </div>
           <div class="sg-example-code">
-            <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">{{ subsection.exampleCode | respectNewlines }}</script></code></pre>
+            {# <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">{{ subsection.exampleCode | respectNewlines }}</script></code></pre> #}
+            <pre class="copytoclipboard"><code class="language-markup"><script type="prism-html-markup">{{ subsection.exampleCode }}</script></code></pre>
           </div>
-        </div>
+        </div> {# .sg-example #}
       {% endif %}
     {% endfor %}
   {% endif %}
 
-</div>
+</div> {# .sg-element-section #}
