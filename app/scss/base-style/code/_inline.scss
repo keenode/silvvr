@@ -1,5 +1,5 @@
 /**
- * scss/base-style/code/inline
+ * app/scss/base-style/code/inline
  * Inline code styles.
  * @author Keenan Staffieri
 */
@@ -7,14 +7,14 @@
 /* --- placeholder selectors ------------------------------ */
 
 %code-inline {
-    padding: 3px 6px 1px 6px;
-    background-color: color('gray-light');
-    color: white;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 14px;
+  padding: 3px 6px 1px 6px;
+  color: white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  background-color: color('gray-light');
 }
 
 %code-nostyle {
-    padding: 0;
-    background-color: transparent;
+  padding: 0;
+  background-color: transparent;
 }

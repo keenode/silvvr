@@ -1,5 +1,5 @@
 /**
- * scss/base-style/code/sample-output
+ * app/scss/base-style/code/sample-output
  * Sample Output styles.
  * @author Keenan Staffieri
 */
@@ -7,9 +7,9 @@
 /* --- placeholder selectors ------------------------------ */
 
 %sample-output {
-    padding: 8px 10px 6px 10px;
-    background-color: color('blue');
-    color: white;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 14px;
+  padding: 8px 10px 6px 10px;
+  color: white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  background-color: color('blue');
 }

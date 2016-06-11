@@ -1,5 +1,5 @@
 /**
- * scss/base-style/code/block
+ * app/scss/base-style/code/block
  * Code block styles.
  * @author Keenan Staffieri
 */
@@ -7,9 +7,9 @@
 /* --- placeholder selectors ------------------------------ */
 
 %code-block {
-    padding: 8px 10px 6px 10px;
-    color: white;
-    background-color: color('gray');
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 14px;
+  padding: 8px 10px 6px 10px;
+  color: white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  background-color: color('gray');
 }
