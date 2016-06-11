@@ -141,9 +141,6 @@ label { @extend %label; }
 .select { @extend %select; }
 select[multiple].select { @extend %select-multiple; }
 
-// --- Help -----------------------------------------------
-.help-block { @extend %help-block; }
-
 // --- Inline ---------------------------------------------
 .form--inline { @extend %form-inline; }
 
