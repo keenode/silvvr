@@ -1,5 +1,5 @@
 /**
- * scss/base-style/typography/list
+ * app/scss/base-style/typography/list
  * List styles.
  * @author Keenan Staffieri
 */
@@ -7,53 +7,51 @@
 /* --- placeholder selectors ------------------------------ */
 
 %default-list {
-    margin: 10px 0 50px 0;
-    padding: 0 0 0 30px;
-    @include font-aa;
+  margin: 10px 0 50px 0;
+  padding: 0 0 0 30px;
+  @include font-aa;
 
-    ul,
-    ol {
-        margin: 0;
-    }
+  ul,
+  ol {
+    margin: 0;
+  }
 
-    li {
-        position: relative;
-        margin: 20px 0;
-        color: color('gray');
-    }
+  li {
+    position: relative;
+    margin: 20px 0;
+    color: color('gray');
+  }
 }
 
 %list-unordered {
-    @extend %default-list;
+  @extend %default-list;
 }
 
 %list-ordered {
-    @extend %default-list;
+  @extend %default-list;
 }
 
 %list-unstyled {
-    @extend %default-list;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  @extend %default-list;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 %list-inline {
-    @extend %list-unstyled;
+  @extend %list-unstyled;
 
-    li {
-        display: inline-block;
-        padding: 0 15px;
-    }
+  li {
+    display: inline-block;
+    padding: 0 15px;
+  }
 
-    li:first-child {
-        padding-left: 0;
-    }
+  li:first-child { padding-left: 0; }
 }
 
 %list--condensed {
-    li {
-        margin: 10px 0;
-        font-size: 14px;
-    }
+  li {
+    margin: 10px 0;
+    font-size: 14px;
+  }
 }

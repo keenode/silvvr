@@ -1,5 +1,5 @@
 /**
- * scss/base-style/typography/description
+ * app/scss/base-style/typography/description
  * Description styles.
  * @author Keenan Staffieri
 */
@@ -7,30 +7,30 @@
 /* --- placeholder selectors ------------------------------ */
 
 %description-list {
-    @include font-aa;
+  @include font-aa;
 
-    dt {
-        font-weight: 700;
-    }
+  dt {
+    font-weight: 700;
+  }
 
-    dd {
-        margin: 0 0 20px 0;
-    }
+  dd {
+    margin: 0 0 20px 0;
+  }
 }
 
 %description-list-horizontal {
-    dt {
-        float: left;
-        clear: left;
-        width: 180px;
-        font-weight: 700;
-        text-align: right;
-        text-overflow: ellipsis;
-        white-space: nowrap;;
-        overflow: hidden;
-    }
+  dt {
+    float: left;
+    clear: left;
+    width: 180px;
+    font-weight: 700;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;;
+    overflow: hidden;
+  }
 
-    dd {
-        margin-left: 200px;
-    }
+  dd {
+    margin-left: 200px;
+  }
 }

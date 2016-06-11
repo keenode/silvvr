@@ -1,5 +1,5 @@
 /**
- * scss/base-style/typography/body-copy
+ * app/scss/base-style/typography/body-copy
  * Body copy styles.
  * @author Keenan Staffieri
 */
@@ -7,18 +7,18 @@
 /* --- placeholder selectors ------------------------------ */
 
 %body-copy {
-    margin: 5px 0 20px 0;
-    font-size: 18px;
-    line-height: 24px;
-    @include font-aa;
+  margin: 5px 0 20px 0;
+  font-size: 18px;
+  line-height: 24px;
+  @include font-aa;
 
-    @include media($small-up) {
-        font-size: 16px;
-    }
+  @include media($small-up) {
+    font-size: 16px;
+  }
 }
 
 %lead-body-copy {
-    @extend %body-copy;
-    font-size: 20px;
-    line-height: 32px;
+  @extend %body-copy;
+  font-size: 20px;
+  line-height: 32px;
 }

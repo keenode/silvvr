@@ -1,5 +1,5 @@
 /**
- * scss/base-style/typography/link
+ * app/scss/base-style/typography/link
  * Link styles.
  * @author Keenan Staffieri
 */
@@ -7,12 +7,12 @@
 /* --- placeholder selectors ------------------------------ */
 
 %inline-link {
-    color: color('blue');
-    font-weight: 700;
-    text-decoration: none;
-    transition: color 100ms ease-out;
+  color: color('blue');
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 100ms ease-out;
 
-    &:hover {
-        color: #333;
-    }
+  &:hover {
+    color: #333;
+  }
 }
