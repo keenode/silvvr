@@ -4,19 +4,18 @@
  * @author Keenan Staffieri
 */
 
-import nunjucks 'gulp-nunjucks'
-import htmlmin 'gulp-htmlmin'
-import browserSync 'browser-sync'
-import replace 'gulp-replace'
-import rename 'gulp-rename'
-import gutil 'gulp-util'
-import useref 'gulp-useref'
-import uglify 'gulp-uglify'
-import html 'html'
-import fs 'fs'
-import foreach 'gulp-foreach'
-import PageDependenciesHandler '../class/PageDependenciesHandler'
-import apiUrls '../config/api-urls'
+import nunjucks from 'gulp-nunjucks'
+import htmlmin from 'gulp-htmlmin'
+import browserSync from 'browser-sync'
+import replace from 'gulp-replace'
+import rename from 'gulp-rename'
+import gutil from 'gulp-util'
+import useref from 'gulp-useref'
+import uglify from 'gulp-uglify'
+import fs from 'fs'
+import foreach from 'gulp-foreach'
+import PageDependenciesHandler from '../class/PageDependenciesHandler'
+import apiUrls from '../config/api-urls'
 
 class TemplateCompiler {
 

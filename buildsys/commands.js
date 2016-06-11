@@ -62,11 +62,8 @@ gulp.task('default', (cb) => {
     ],
     'cachebust-css-urls',
     'templating',
-    // 'webpack',
-    // 'serve',
+    'serve',
     'watch',
-    'webpack',
-    'webpack-dev-server',
     'build-complete',
   function () {
     if( ! buildOnlyMode) {
