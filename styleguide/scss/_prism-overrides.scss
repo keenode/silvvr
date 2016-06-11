@@ -1,32 +1,33 @@
 /**
- * styleguide/prism-overrides
+ * styleguide/scss/prism-overrides
  * Prism override styles.
+ * @author Keenan Staffieri
 */
 
 /* Prism theme overrides */
 pre[class*="language-"] {
-    margin-top: 20px;
-    font-size: 16px;
-    border-radius: 0;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 0;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-    font-size: 16px;
-    background-color: #555;
+  font-size: 16px;
+  background-color: #555;
 }
 
 /* Copy to Clipboard button */
 .copytoclipboard.btn {
-    padding: 5px 10px;
-    color: #ddd;
-    font-size: 12px;
-    background-color: #333;
-    border: none;
-    outline: none;
-    transition: background-color 150ms ease-out;
+  padding: 5px 10px;
+  color: #ddd;
+  font-size: 12px;
+  background-color: #333;
+  border: none;
+  outline: none;
+  transition: background-color 150ms ease-out;
 
-    &:hover {
-        background-color: black;
-    }
+  &:hover {
+    background-color: black;
+  }
 }

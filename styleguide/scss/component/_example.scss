@@ -1,0 +1,31 @@
+/**
+ * styleguide/scss/component/example
+ * Example styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- variables ------------------------------------------ */
+
+// Namespace
+$ns: '.sg-example';
+
+/* --- styles --------------------------------------------- */
+
+// TODO: Refactor
+.sg-example {
+  margin: 50px 0 100px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sg-example-heading {
+  color: #999;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: default;
+}

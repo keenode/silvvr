@@ -1,5 +1,5 @@
 /**
- * styleguide/_base
+ * styleguide/scss/base
  * Styleguide page specific styles.
  * @author Keenan Staffieri
 */
@@ -12,10 +12,10 @@ body {
   }
 }
 
-@import 'example';
-@import 'color-section';
+@import 'component/example';
+@import 'component/color-section';
+@import 'component/backtotop';
 @import 'prism-overrides';
-@import 'backtotop';
 
 .sg-page-wrap {
   margin-top: 100px;

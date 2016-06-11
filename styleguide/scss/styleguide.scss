@@ -15,19 +15,15 @@
 // Prism Theme
 @import '../../node_modules/prismjs/themes/prism-okaidia';
 
-
 /* --- grid --- */
-@import 'styleguide/grid';
+@import 'grid';
 
-
-/* --- utilities --- */
-@import 'util/_include';
-
+/* --- helpers --- */
+@import 'helpers';
 
 /* --- styleguide base styles --- */
-@import 'styleguide/_base';
-
+@import 'base';
 
 /* --- partials --- */
-@import 'styleguide/partial/header/_include',
-        'styleguide/partial/footer/_include';
+@import 'partial/header/_include',
+        'partial/footer/_include';

@@ -1,0 +1,18 @@
+/**
+ * app/scss/component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_REF =%>
+ * <%= COMPONENT_NAME =%> component styles.
+ * @author <%= AUTHOR =%>
+*/
+
+/* --- variables ------------------------------------------ */
+
+// Namespace
+$ns: '.component-<%= COMPONENT_REF =%>';
+
+/* --- styles --------------------------------------------- */
+
+#{$ns} {
+  &__container {
+    @extend %component-container;
+  }
+}

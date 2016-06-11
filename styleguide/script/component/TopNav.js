@@ -84,7 +84,7 @@ class TopNav extends Component {
   determineCurrentSection () {
     const scrollTop = this.$window.scrollTop()
     let activeFound = false
-    for (let i = 0 i < this.sections.length i++) {
+    for (let i = 0; i < this.sections.length; i++) {
       const sectionId  = this.sections[i]
       const sectionPos = $('#' + sectionId).offset().top - this.scrollToThreshold
       if (scrollTop >= sectionPos) {

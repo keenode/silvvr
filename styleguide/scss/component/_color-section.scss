@@ -1,0 +1,56 @@
+/**
+ * styleguide/scss/component/color-section
+ * Color Palette section styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- variables ------------------------------------------ */
+
+// Namespace
+$ns: '.sg-color';
+
+/* --- styles --------------------------------------------- */
+
+// TODO: Refactor
+.sg-color-row,
+.sg-color-subheading,
+.sg-color-divider {
+  float: left;
+  width: 100%;
+}
+
+.sg-color-row {
+  margin-top: 100px;
+
+  &:first-child { margin-top: 0; }
+}
+
+.sg-color-box {
+  @include size(160px 130px);
+  float: left;
+  margin: 10px;
+
+  &__color {
+    @include size(100% 80px);
+    background-color: #666; // default
+    border-radius: 4px;
+  }
+
+  &__hex {
+    @extend %code-nostyle !optional;
+    display: block;
+    position: relative;
+    top: 34px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  &__name {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    font-size: 11px;
+    text-align: center;
+  }
+}
