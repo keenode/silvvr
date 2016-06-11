@@ -44,4 +44,4 @@ class ScriptCompiler {
   }
 }
 
-module.exports = ScriptCompiler
+export default ScriptCompiler

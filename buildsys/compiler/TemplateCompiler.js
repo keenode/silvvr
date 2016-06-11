@@ -50,4 +50,4 @@ class TemplateCompiler {
   }
 }
 
-module.exports = TemplateCompiler
+export default TemplateCompiler

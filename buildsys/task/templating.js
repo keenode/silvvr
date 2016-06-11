@@ -37,15 +37,6 @@ gulp.task('templating:app', function () {
 /* $ gulp templating:styleguide */
 gulp.task('templating:styleguide', function () {
   return TemplateCompiler.compileGlob(
-    `${config.srcDir.app.root}/styleguide.njk`,
-    config.buildDir.app.root,
-    'styleguide'
-  )
-})
-
-/* $ gulp templating:styleguide */
-gulp.task('templating:styleguide', function () {
-  return TemplateCompiler.compileGlob(
     `${config.srcDir.styleguide.root}/index.njk`,
     config.buildDir.styleguide.root,
     'styleguide'

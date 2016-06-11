@@ -46,4 +46,4 @@ class StyleCompiler {
   }
 }
 
-module.exports = StyleCompiler
+export default StyleCompiler
