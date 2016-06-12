@@ -1,55 +1,57 @@
 {% import 'view/macro/render.njk' as render %}
-{# {% set sections = [
+{% set sections = [
   {
     ref: 'color-palette',
-    name: 'Color Palette',
+    name: 'Color Palette'
   },
   {
     ref: 'fonts',
-    name: 'Fonts',
+    name: 'Fonts'
   },
   {
     ref: 'grid',
-    name: 'Grid',
+    name: 'Grid'
   },
   {
     ref: 'typography',
-    name: 'Typography',
+    name: 'Typography'
   },
   {
     ref: 'buttons',
-    name: 'Buttons',
+    name: 'Buttons'
   },
   {
     ref: 'code',
-    name: 'Code',
+    name: 'Code'
   },
   {
     ref: 'tables',
-    name: 'Tables',
+    name: 'Tables'
   },
   {
     ref: 'controls',
-    name: 'Controls',
+    name: 'Controls'
   },
   {
     ref: 'forms',
-    name: 'Forms',
-  },
-] %} #}
+    name: 'Forms'
+  }
+] %}
 
 <header class="sg-header">
-  {{ render.partial('topnav') }}
-  {# {% include 'view/partial/topnav.njk' %} #}
-  {# {% include 'partial/topnav.njk' with {
-      id: 'sg-topnav',
-      sections: sections,
-  } only %} #}
 
-  {{ render.partial('topnav-mobile') }}
-  {# {% include 'view/partial/topnav-mobile.njk' %} #}
-  {# {% include 'partial/topnav-mobile.njk' with {
+  {{ render.partial(
+    'topnav', {
+      id: 'sg-topnav',
+      sections: sections
+    }
+  ) }}
+
+  {{ render.partial(
+    'topnav-mobile', {
       id: 'sg-topnav-mobile',
-      sections: sections,
-  } only %} #}
+      sections: sections
+    }
+  ) }}
+
 </header>

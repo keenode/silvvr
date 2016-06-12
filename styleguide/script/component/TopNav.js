@@ -13,7 +13,7 @@ class TopNav extends Component {
     this.scrollToThreshold = 50
     this.isAutoScrolling = false
     this.navLinkActiveClass = `${this.baseClass}__link--active`
-    this.$navLink = this.$self.find(`.${this.baseClass}__link`)
+    this.$navLink = this.findElement('link')
     this.$navLinkMobile = this.$mobileSelf.find(`.${this.baseClassMobile}__link`)
     this.$burger = this.$mobileSelf.find(`.${this.baseClassMobile}__burger`)
     this.$close = this.$mobileSelf.find(`.${this.baseClassMobile}__close`)
@@ -37,6 +37,7 @@ class TopNav extends Component {
   initEvents () {
     // Top nav scroll to click
     this.$navLink.on('click', (e) => {
+      console.log('item clicked')
       e.preventDefault()
       this.navItemSelected(e.target)
     })
@@ -64,6 +65,7 @@ class TopNav extends Component {
   }
 
   navItemSelected (target) {
+    console.log('target: ', target)
     const sectionId = $(target).data('scroll-to')
     this.setActiveItem(sectionId)
     this.scrollToSection(sectionId)
