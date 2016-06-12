@@ -29,12 +29,12 @@
     {{ render.section('controls') }}
 
     {# 9. Forms #}
-    {# {% include 'view/section/forms.njk' %} #}
+    {{ render.section('forms') }}
 
   </div> {# .sg-page-wrap #}
 
   <a href="javascript:void(0)" id="sg-backtotop" class="sg-backtotop">
-    {# {% include 'view/icon/arrow.svg' %} #}
+    {% include 'view/icon/arrow.svg' %}
   </a>
 
 {% endblock %}
