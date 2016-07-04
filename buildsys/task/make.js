@@ -3,8 +3,8 @@
  * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Make
- * 'silvvr make:page [page-name]'
- * 'silvvr make:component [component-name]'
+ * 'gulp make:page --ref <page-ref> [--name <page-name>]'
+ * 'gulp make:component --ref <component-ref> [--name <component-name>]'
 */
 
 import PageGenerator from '../scaffolding/PageGenerator'
@@ -18,7 +18,20 @@ const argv = require('yargs').argv
   > Make command (no params)
 */
 gulp.task('make', (cb) => {
-  Logger.warn('Please specify what you\'d like to make. \nEX: gulp make:page --ref [page-ref]')
+  if (argv.help) {
+    Logger.help(`
+-- MAKE Command Help --------------------------------------
+You can easily scaffold boilerplate files for 'pages' and 'components' with these simple commands:
+
+-- Scaffold a page:
+    gulp make:page --ref <page-ref> [--name <page-name>]
+
+-- Scaffold a component:
+    gulp make:component --ref <component-ref> [--name <component-name>]
+`)
+  } else {
+    Logger.warn('Please specify what you\'d like to make. \nEX: gulp make:page --ref <page-ref>')
+  }
 })
 
 /**
@@ -29,20 +42,16 @@ gulp.task('make:page', (cb) => {
 
   const pageRef = argv.ref
   const pageName = argv.name
-console.log(argv)
-console.log('pageRef: ' + pageRef)
-console.log('pageName: ' + pageName)
 
   if (typeof pageRef === 'string') {
     if (typeof pageName === 'string') {
       // Pass user-specified name to Page scaffolder
       return PageGenerator.scaffold(pageRef, pageName)
-    }
-    else {
+    } else {
       return PageGenerator.scaffold(pageRef)
     }
   } else {
-    Logger.warn('Please define a reference name for the page. \nEX: gulp make:page --ref [page-ref]')
+    Logger.warn('Please define a reference name for the page. \nEX: gulp make:page --ref <page-ref>')
   }
 })
 

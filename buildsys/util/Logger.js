@@ -60,6 +60,10 @@ class Logger {
     }
   }
 
+  static help (logString) {
+    gutil.log(gutil.colors.yellow.italic(logString))
+  }
+
   static warn (logString) {
     if (config.verbose) {
       gutil.log(gutil.colors.yellow(logString))
