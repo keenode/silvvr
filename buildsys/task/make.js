@@ -11,10 +11,15 @@ import PageGenerator from '../scaffolding/PageGenerator'
 import ComponentGenerator from '../scaffolding/ComponentGenerator'
 
 // Grab command line arguments
-var argv = require('yargs').argv
+const argv = require('yargs').argv
 
-// EX: Manual command:
-// $ node silvvr.js --task make:page home --name 'Homepage'
+/**
+  $ gulp make
+  > Make command (no params)
+*/
+gulp.task('make', (cb) => {
+  Logger.warn('Please specify what you\'d like to make. \nEX: gulp make:page --ref [page-ref]')
+})
 
 /**
   $ gulp make:page
@@ -22,18 +27,22 @@ var argv = require('yargs').argv
 */
 gulp.task('make:page', (cb) => {
 
-  var pageRef = argv._[0]
+  const pageRef = argv.ref
+  const pageName = argv.name
+console.log(argv)
+console.log('pageRef: ' + pageRef)
+console.log('pageName: ' + pageName)
 
   if (typeof pageRef === 'string') {
-    if (typeof argv.name === 'string') {
+    if (typeof pageName === 'string') {
       // Pass user-specified name to Page scaffolder
-      return PageGenerator.scaffold(pageRef, argv.name)
+      return PageGenerator.scaffold(pageRef, pageName)
     }
     else {
       return PageGenerator.scaffold(pageRef)
     }
   } else {
-    Logger.warn('Please define a name for the page. \nEX: silvvr make:page [page-name]')
+    Logger.warn('Please define a reference name for the page. \nEX: gulp make:page --ref [page-ref]')
   }
 })
 
@@ -43,7 +52,7 @@ gulp.task('make:page', (cb) => {
 */
 gulp.task('make:component', (cb) => {
 
-  var componentRef = argv._[0]
+  const componentRef = argv._[0]
 
   if (typeof componentRef === 'string') {
     if (typeof argv.folder === 'string') {
@@ -56,10 +65,10 @@ gulp.task('make:component', (cb) => {
       }
     }
     else {
-      Logger.warn('Please specify a folder to scaffold the component. \nEX: silvvr make:component [component-name] --folder [folder-name]')
+      Logger.warn('Please specify a folder to scaffold the component. \nEX: gulp make:component [component-name] --folder [folder-name]')
     }
   }
   else {
-    Logger.warn('Please define a name for the component. \nEX: silvvr make:component [component-name]')
+    Logger.warn('Please define a name for the component. \nEX: gulp make:component [component-name]')
   }
 })

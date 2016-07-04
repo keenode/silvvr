@@ -12,13 +12,13 @@ class Helpers {
   static ucBetweenDashSpace (text) {
     return text.replace(/\w\S*/g, function (text) {
       if (text.indexOf('-') != -1) {
-        var formattedText = ''
-        var splitText = text.split('-')
-        for (var i = 0; i < splitText.length; i++) {
+        let formattedText = ''
+        const splitText = text.split('-')
+        for (let i = 0; i < splitText.length; i++) {
             if (i === 0) { formattedText += splitText[i].charAt(0).toUpperCase() + splitText[i].substr(1) }
-            else        { formattedText += '-' + splitText[i].charAt(0).toUpperCase() + splitText[i].substr(1) }
+            else         { formattedText += '-' + splitText[i].charAt(0).toUpperCase() + splitText[i].substr(1) }
         }
-        return formattedText
+        return formattedText.replace(/-/g, ' ') // replace dashes with spaces
       }
       else {
         return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase()
