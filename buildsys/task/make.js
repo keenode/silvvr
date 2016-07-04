@@ -30,7 +30,7 @@ You can easily scaffold boilerplate files for 'pages' and 'components' with thes
     gulp make:component --ref <component-ref> [--name <component-name>]
 `)
   } else {
-    Logger.warn('Please specify what you\'d like to make. \nEX: gulp make:page --ref <page-ref>')
+    Logger.warn('Please specify what you\'d like to make. \nEX: gulp make:page --ref <page-ref>\n\ngulp make --help for more info.')
   }
 })
 
@@ -60,12 +60,14 @@ gulp.task('make:page', (cb) => {
   const pageName = argv.name
 
   if (typeof pageRef === 'string') {
+    let options = {}
+
+    // Assign user-specified page name if provided
     if (typeof pageName === 'string') {
-      // Pass user-specified name to Page scaffolder
-      return PageGenerator.scaffold(pageRef, pageName)
-    } else {
-      return PageGenerator.scaffold(pageRef)
+      options.name = pageName
     }
+    // Now generate files for a page with the given params
+    return PageGenerator.scaffold(pageRef, options)
   } else {
     Logger.warn('Please define a reference name for the page. \nEX: gulp make:page --ref <page-ref>')
   }
@@ -77,23 +79,17 @@ gulp.task('make:page', (cb) => {
 */
 gulp.task('make:component', (cb) => {
 
-  const componentRef = argv._[0]
+  const componentRef = argv.ref
+  const componentName = argv.name
 
   if (typeof componentRef === 'string') {
-    if (typeof argv.folder === 'string') {
-      if (typeof argv.name === 'string') {
-        // Pass user-specified name to Component scaffolder
-        return ComponentGenerator.scaffold(componentRef, argv.folder, argv.noscript, argv.name)
-      }
-      else {
-        return ComponentGenerator.scaffold(componentRef, argv.folder, argv.noscript)
-      }
+    if (typeof componentName === 'string') {
+      // Now generate files for a component with the given params
+      return ComponentGenerator.scaffold(componentRef, argv.folder, argv.noscript, componentName)
+    } else {
+      return ComponentGenerator.scaffold(componentRef, argv.folder, argv.noscript)
     }
-    else {
-      Logger.warn('Please specify a folder to scaffold the component. \nEX: gulp make:component [component-name] --folder [folder-name]')
-    }
-  }
-  else {
-    Logger.warn('Please define a name for the component. \nEX: gulp make:component [component-name]')
+  } else {
+    Logger.warn('Please define a reference name for the component. \nEX: gulp make:component --ref <component-name>')
   }
 })

@@ -11,14 +11,14 @@ import pkg from '../../package.json'
 
 class PageGenerator extends FileGenerator {
 
-  static scaffold (pageRef, pageName=null) {
+  static scaffold (pageRef, options=null) {
 
     Logger.detail(`Scaffolding files for '${pageRef}' page...`)
 
     // Format the page name: Uppercase letters between spaces and dashes '-'
-    var pageNameFormatted = pageName ? pageName : Helpers.ucBetweenDashSpace(pageRef)
+    const pageNameFormatted = options.name ? options.name : Helpers.ucBetweenDashSpace(pageRef)
 
-    var replaceProps = [
+    const replaceProps = [
       ['<%= PAGE_REF =%>',  pageRef],
       ['<%= PAGE_NAME =%>', pageNameFormatted],
       ['<%= AUTHOR =%>',    pkg.author.name],
