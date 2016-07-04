@@ -3,8 +3,8 @@
  * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Make
- * 'gulp make:page --ref <page-ref> [--name <Page Name>]'
- * 'gulp make:component --ref <component-ref> [--name <component-name>]'
+ * 'gulp make:page --ref <page-ref> [--name <Page Name> --dir <path/to/page> --author <Author Name> --noscript]'
+ * 'gulp make:component --ref <component-ref> [--name <component Name> --dir <path/to/component> --author <Author Name> --noscript]'
 */
 
 import PageGenerator from '../scaffolding/PageGenerator'
@@ -44,7 +44,7 @@ gulp.task('make:page', (cb) => {
     Logger.help(`
 -- 'make:page' Command Help -------------------------------
 
-  gulp make:page --ref <page-ref> [--name <Page Name> --dir <path/to/page> --author <Author Name>]
+  gulp make:page --ref <page-ref> [--name <Page Name> --dir <path/to/page> --author <Author Name> --noscript]
 
   @params
     ref:
