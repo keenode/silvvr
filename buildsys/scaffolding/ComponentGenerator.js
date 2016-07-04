@@ -18,10 +18,10 @@ class ComponentGenerator extends FileGenerator {
     Logger.detail(`Scaffolding files for '${componentRef}' component...`)
 
     // Format the page name: Uppercase letters between spaces and dashes '-'
-    const componentNameFormatted = options.componentName ? options.componentName : Helpers.ucBetweenDashSpace(componentRef)
+    const componentNameFormatted = options.name ? options.name : Helpers.ucBetweenDashSpace(componentRef)
 
     let scriptFilename = null
-    if ( ! options.noScript) {
+    if ( ! options.noscript) {
       scriptFilename = Helpers.makeScriptName(componentRef)
     }
 

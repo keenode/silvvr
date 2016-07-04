@@ -11,7 +11,7 @@ class Helpers {
   */
   static ucBetweenDashSpace (text) {
     return text.replace(/\w\S*/g, function (text) {
-      if (text.indexOf('-') != -1) {
+      if (text.indexOf('-') !== -1) {
         let formattedText = ''
         const splitText = text.split('-')
         for (let i = 0; i < splitText.length; i++) {
@@ -19,28 +19,27 @@ class Helpers {
             else         { formattedText += '-' + splitText[i].charAt(0).toUpperCase() + splitText[i].substr(1) }
         }
         return formattedText.replace(/-/g, ' ') // replace dashes with spaces
-      }
-      else {
+      } else {
         return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase()
       }
     })
   }
 
   /**
-    Format Filename: Ensure that filenames for TypeScript files obey the format
-    MyComponent.ts instead of my-component.ts
+    Format Filename: Ensure that filenames for JavaScript files obey the format
+    MyComponent.js instead of my-component.js
   */
   static makeScriptName (text) {
-    if (text.indexOf('-') != -1) {
-      var formattedText = ''
-      var splitText = text.split('-')
-      for (var i = 0; i < splitText.length; i++) {
+    if (text.indexOf('-') !== -1) {
+      let formattedText = ''
+      const splitText = text.split('-')
+      for (let i = 0; i < splitText.length; i++) {
         formattedText += splitText[i].charAt(0).toUpperCase() + splitText[i].substr(1)
       }
       return formattedText
     }
     else {
-      return formattedText.charAt(0).toUpperCase() + splitText[i].substr(1)
+      return text.charAt(0).toUpperCase() + text.substr(1)
     }
   }
 
@@ -49,9 +48,9 @@ class Helpers {
     @return Array with duplicate items removed
   */
   static uniqueItemsOnly (array) {
-    var a = []
-    for (var i = 0; i < array.length; i++ ) {
-      var current = array[i]
+    let a = []
+    for (let i = 0; i < array.length; i++ ) {
+      const current = array[i]
       if (a.indexOf(current) < 0) a.push(current)
     }
     return a
