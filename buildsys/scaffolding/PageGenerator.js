@@ -4,6 +4,7 @@
  * @author Keenan Staffieri
 */
 
+import fs from 'fs'
 import del from 'del'
 import Helpers from '../util/Helpers'
 import FileGenerator from './FileGenerator'
@@ -48,6 +49,43 @@ class PageGenerator extends FileGenerator {
     if ( ! options.noscript) {
       this.generateFile(pageRef, 'page/page.js', `${config.srcDir.app.scripts}/page${dirPath}`, replaceProps)
     }
+
+    // Add entry object to pages collection
+    this.addCollectionEntry(pageRef, pageNameFormatted, options.dirPath, options.noscript)
+  }
+
+  static addCollectionEntry (ref, name, dirPath, noScript) {
+
+    Logger.detail('Adding page entry to collection within ./buildsys/data/pages.js...')
+
+    dirPath = dirPath ? dirPath + '/' : ''
+
+    const pageCollectionFile = './buildsys/data/pages.js'
+    let scriptPathString = ''
+
+    if ( ! noScript) {
+        scriptPathString = `
+  scriptPath: '${dirPath}${ref}',`
+    }
+
+    fs.readFile(pageCollectionFile, 'utf8', function (err, data) {
+
+      if (err) { return Logger.error(err) }
+
+      const entryString = `{
+  ref: '${ref}',
+  name: '${name}',
+  scssPath: '${dirPath}${ref}',${scriptPathString}
+},
+// PAGE AUTOMATION !! DON'T TOUCH`
+
+      const result = data.replace(/\/\/ PAGE AUTOMATION !! DON'T TOUCH/i, entryString)
+
+      fs.writeFileSync(pageCollectionFile, result, 'utf8', function (err) {
+          if (err) { return Logger.error(err) }
+          Logger.info(`Finished writing page entry for '${ref}'.`)
+      })
+    })
   }
 
   static delete (pageRef) {

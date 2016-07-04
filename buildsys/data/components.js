@@ -1,6 +1,6 @@
 /**
- * buildsys/components
- * Define build properties for each component.
+ * buildsys/data/components
+ * Build property data for each component.
  * @author Keenan Staffieri
 */
 

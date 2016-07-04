@@ -60,11 +60,11 @@ class ComponentGenerator extends FileGenerator {
 
   static addCollectionEntry (ref, name, dirPath, scriptFilename) {
 
-    Logger.detail('Adding component entry to collection within ./buildsys/components.js...')
+    Logger.detail('Adding component entry to collection within ./buildsys/data/components.js...')
 
     dirPath = dirPath ? dirPath + '/' : ''
 
-    const componentCollectionFile = './buildsys/components.js'
+    const componentCollectionFile = './buildsys/data/components.js'
     let scriptPathString = ''
 
     if (scriptFilename !== null) {

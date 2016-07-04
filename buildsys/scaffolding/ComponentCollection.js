@@ -4,7 +4,7 @@
  * @author Keenan Staffieri
 */
 
-import components from '../components'
+import components from '../data/components'
 
 class ComponentCollection {
 
