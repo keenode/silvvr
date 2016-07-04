@@ -60,14 +60,17 @@ gulp.task('make:page', (cb) => {
   const pageName = argv.name
 
   if (typeof pageRef === 'string') {
+
     let options = {}
 
     // Assign user-specified page name if provided
     if (typeof pageName === 'string') {
       options.name = pageName
     }
+
     // Now generate files for a page with the given params
     return PageGenerator.scaffold(pageRef, options)
+
   } else {
     Logger.warn('Please define a reference name for the page. \nEX: gulp make:page --ref <page-ref>')
   }
@@ -81,15 +84,26 @@ gulp.task('make:component', (cb) => {
 
   const componentRef = argv.ref
   const componentName = argv.name
+  const componentDirPath = argv.dir
 
   if (typeof componentRef === 'string') {
+
+    let options = {}
+
     if (typeof componentName === 'string') {
-      // Now generate files for a component with the given params
-      return ComponentGenerator.scaffold(componentRef, argv.folder, argv.noscript, componentName)
-    } else {
-      return ComponentGenerator.scaffold(componentRef, argv.folder, argv.noscript)
+      options.name = componentName
     }
+
+    if (typeof componentDirPath === 'string') {
+      options.dirPath = componentDirPath
+    }
+
+    options.noscript = argv.noscript
+
+    // Now generate files for a component with the given params
+    return ComponentGenerator.scaffold(componentRef, options)
+
   } else {
-    Logger.warn('Please define a reference name for the component. \nEX: gulp make:component --ref <component-name>')
+    Logger.warn('Please define a reference name for the component. \nEX: gulp make:component --ref <component-ref>')
   }
 })

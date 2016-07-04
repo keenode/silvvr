@@ -1,13 +1,13 @@
 {#
   <%= COMPONENT_NAME =%>
   ----------------------------------------------------------------------
-  app/view/component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_REF =%>
+  app/view/component<%= COMPONENT_DIRPATH =%>/<%= COMPONENT_REF =%>
   @author <%= AUTHOR =%>
   Sample Embed Code:
 #}
 {# Component: <%= COMPONENT_NAME =%> #}
 {#
-{% include 'component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_REF =%>.html' with {
+{% include 'component<%= COMPONENT_DIRPATH =%>/<%= COMPONENT_REF =%>.html' with {
   headline: 'New Component',
   description: 'Welcome to your new component!',
 } only %}

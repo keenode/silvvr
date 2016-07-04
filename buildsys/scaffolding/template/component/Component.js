@@ -1,5 +1,5 @@
 /**
- * app/script/component/<%= COMPONENT_FOLDER =%>/<%= COMPONENT_SCRIPTNAME =%>
+ * app/script/component<%= COMPONENT_DIRPATH =%>/<%= COMPONENT_SCRIPTNAME =%>
  * <%= COMPONENT_NAME =%> component script.
  * @author <%= AUTHOR =%>
 */

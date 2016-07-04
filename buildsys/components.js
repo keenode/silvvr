@@ -5,5 +5,29 @@
 */
 
 export default [
-  // COMPONENT AUTOMATION !! DON'T TOUCH
+{
+  ref: 'my-component',
+  name: 'My Component',
+  scssPath: 'my-component',
+  scriptPath: 'MyComponent',
+},
+{
+  ref: 'my-component',
+  name: 'My Component',
+  scssPath: 'my-component',
+  scriptPath: 'MyComponent',
+},
+{
+  ref: 'my-component',
+  name: 'My Component',
+  scssPath: 'my-component',
+  scriptPath: 'MyComponent',
+},
+{
+  ref: 'my-component',
+  name: 'My Component',
+  scssPath: 'my-component',
+  scriptPath: 'MyComponent',
+},
+// COMPONENT AUTOMATION !! DON'T TOUCH
 ]
