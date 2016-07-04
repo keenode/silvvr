@@ -31,4 +31,4 @@ class FileGenerator {
   }
 }
 
-module.exports = FileGenerator
+export default FileGenerator

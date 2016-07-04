@@ -45,4 +45,4 @@ class ScriptWriter {
   }
 }
 
-module.exports = ScriptWriter
+export default ScriptWriter

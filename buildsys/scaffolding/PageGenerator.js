@@ -48,4 +48,4 @@ class PageGenerator extends FileGenerator {
   }
 }
 
-module.exports = PageGenerator
+export default PageGenerator

@@ -13,7 +13,7 @@ class ComponentCollection {
   }
 
   getComponentByReference (ref) {
-    for (var i = 0; i < this.components.length; i++) {
+    for (let i = 0; i < this.components.length; i++) {
       if (this.components[i].ref === ref) {
         return this.components[i]
       }
@@ -22,7 +22,7 @@ class ComponentCollection {
   }
 
   getComponentByName (name) {
-    for (var i = 0; i < this.components.length; i++) {
+    for (let i = 0; i < this.components.length; i++) {
         if (this.components[i].name === name) {
           return this.components[i]
         }
@@ -31,4 +31,4 @@ class ComponentCollection {
   }
 }
 
-module.exports = new ComponentCollection(components)
+export default new ComponentCollection(components)

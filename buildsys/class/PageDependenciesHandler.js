@@ -123,4 +123,4 @@ class PageDependenciesHandler {
   }
 }
 
-module.exports = PageDependenciesHandler
+export default PageDependenciesHandler

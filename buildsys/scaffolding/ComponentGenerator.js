@@ -91,4 +91,4 @@ class ComponentGenerator extends FileGenerator {
   }
 }
 
-module.exports = ComponentGenerator
+export default ComponentGenerator
