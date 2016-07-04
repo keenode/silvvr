@@ -100,6 +100,8 @@ gulp.task('make:component', (cb) => {
 
     options.noscript = argv.noscript
 
+    options.author = argv.author
+
     // Now generate files for a component with the given params
     return ComponentGenerator.scaffold(componentRef, options)
 

@@ -30,12 +30,17 @@ class ComponentGenerator extends FileGenerator {
       dirPath = '/' + options.dirPath
     }
 
+    let author = pkg.author.name
+    if (options.author) {
+      author = options.author
+    }
+
     const replaceProps = [
       ['<%= COMPONENT_REF =%>',        componentRef],
       ['<%= COMPONENT_SCRIPTNAME =%>', scriptFilename],
       ['<%= COMPONENT_NAME =%>',       componentNameFormatted],
       ['<%= COMPONENT_DIRPATH =%>',    dirPath],
-      ['<%= AUTHOR =%>',               pkg.author.name],
+      ['<%= AUTHOR =%>',               author],
     ]
 
     // Generate View file
