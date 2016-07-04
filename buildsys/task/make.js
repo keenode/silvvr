@@ -44,7 +44,7 @@ gulp.task('make:page', (cb) => {
     Logger.help(`
 -- 'make:page' Command Help -------------------------------
 
-  gulp make:page --ref <page-ref> [--name <Page Name>]
+  gulp make:page --ref <page-ref> [--name <Page Name> --dir <path/to/page> --author <Author Name>]
 
   @params
     ref:
@@ -52,12 +52,22 @@ gulp.task('make:page', (cb) => {
 
     name (optional):
       Formal name for the page. If this parameter is not specified, the system will generate one for you. (i.e. The page reference 'my-homepage', will automatically translate into 'My Homepage'). Dashes are stripped out and the first letter of each word is capitalized.
+
+    dir (optional):
+      You can scaffold page files into any nested subdirectory for better organization. (i.e. --dir about/team).
+
+    author (optional):
+      Override the default author as defined in the package.json.
+
+    noscript (optional):
+      No JavaScript file will be generated if this flag is passed.
 `)
     return false
   }
 
   const pageRef = argv.ref
   const pageName = argv.name
+  const pageDirPath = argv.dir
 
   if (typeof pageRef === 'string') {
 
@@ -67,6 +77,14 @@ gulp.task('make:page', (cb) => {
     if (typeof pageName === 'string') {
       options.name = pageName
     }
+
+    if (typeof pageDirPath === 'string') {
+      options.dirPath = pageDirPath
+    }
+
+    options.author = argv.author
+
+    options.noscript = argv.noscript
 
     // Now generate files for a page with the given params
     return PageGenerator.scaffold(pageRef, options)
@@ -81,6 +99,31 @@ gulp.task('make:page', (cb) => {
   > Make component scaffolding handler.
 */
 gulp.task('make:component', (cb) => {
+
+  if (argv.help) {
+    Logger.help(`
+-- 'make:component' Command Help --------------------------
+
+  gulp make:component --ref <component-ref> [--name <component Name> --dir <path/to/component> --author <Author Name> --noscript]
+
+  @params
+    ref:
+      Stands for component reference. This value is essentially used as an identifier for the component throughout the build system. Please do not use spaces, use dashes instead. (i.e. 'my-component' would be valid, NOT 'my component').
+
+    name (optional):
+      Formal name for the component. If this parameter is not specified, the system will generate one for you. (i.e. The component reference 'my-component', will automatically translate into 'My Component'). Dashes are stripped out and the first letter of each word is capitalized.
+
+    dir (optional):
+      You can scaffold component files into any nested subdirectory for better organization. (i.e. --dir slider/large).
+
+    author (optional):
+      Override the default author as defined in the package.json.
+
+    noscript (optional):
+      No JavaScript file will be generated if this flag is passed.
+`)
+    return false
+  }
 
   const componentRef = argv.ref
   const componentName = argv.name
@@ -98,9 +141,9 @@ gulp.task('make:component', (cb) => {
       options.dirPath = componentDirPath
     }
 
-    options.noscript = argv.noscript
-
     options.author = argv.author
+
+    options.noscript = argv.noscript
 
     // Now generate files for a component with the given params
     return ComponentGenerator.scaffold(componentRef, options)

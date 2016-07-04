@@ -18,23 +18,36 @@ class PageGenerator extends FileGenerator {
     // Format the page name: Uppercase letters between spaces and dashes '-'
     const pageNameFormatted = options.name ? options.name : Helpers.ucBetweenDashSpace(pageRef)
 
+    let dirPath = ''
+    if (options.dirPath) {
+      dirPath = '/' + options.dirPath
+    }
+
+    let author = pkg.author.name
+    if (options.author) {
+      author = options.author
+    }
+
     const replaceProps = [
-      ['<%= PAGE_REF =%>',  pageRef],
-      ['<%= PAGE_NAME =%>', pageNameFormatted],
-      ['<%= AUTHOR =%>',    pkg.author.name],
+      ['<%= PAGE_REF =%>',     pageRef],
+      ['<%= PAGE_NAME =%>',    pageNameFormatted],
+      ['<%= PAGE_DIRPATH =%>', dirPath],
+      ['<%= AUTHOR =%>',       author],
     ]
 
     // Generate View file
-    this.generateFile(pageRef, 'page/page.njk', config.srcDir.app.pages, replaceProps)
+    this.generateFile(pageRef, 'page/page.njk', `${config.srcDir.app.pages}${dirPath}`, replaceProps)
 
     // Generate SCSS file
-    this.generateFile(pageRef, 'page/page.scss', `${config.srcDir.app.styles}/page`, replaceProps)
+    this.generateFile(pageRef, 'page/page.scss', `${config.srcDir.app.styles}/page${dirPath}`, replaceProps)
 
     // Generate SCSS dependency file
-    this.generateFile(pageRef, 'page/__page.scss', config.srcDir.app.pageStyleDependencies, replaceProps, '__')
+    this.generateFile(pageRef, 'page/__page.scss', `${config.srcDir.app.pageStyleDependencies}${dirPath}`, replaceProps, '__')
 
     // Generate JavaScript file
-    this.generateFile(pageRef, 'page/page.js', `${config.srcDir.app.scripts}/page`, replaceProps)
+    if ( ! options.noscript) {
+      this.generateFile(pageRef, 'page/page.js', `${config.srcDir.app.scripts}/page${dirPath}`, replaceProps)
+    }
   }
 
   static delete (pageRef) {
