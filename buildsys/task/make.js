@@ -3,7 +3,7 @@
  * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Make
- * 'gulp make:page --ref <page-ref> [--name <page-name>]'
+ * 'gulp make:page --ref <page-ref> [--name <Page Name>]'
  * 'gulp make:component --ref <component-ref> [--name <component-name>]'
 */
 
@@ -20,11 +20,11 @@ const argv = require('yargs').argv
 gulp.task('make', (cb) => {
   if (argv.help) {
     Logger.help(`
--- MAKE Command Help --------------------------------------
+-- 'make' Command Help ------------------------------------
 You can easily scaffold boilerplate files for 'pages' and 'components' with these simple commands:
 
 -- Scaffold a page:
-    gulp make:page --ref <page-ref> [--name <page-name>]
+    gulp make:page --ref <page-ref> [--name <Page Name>]
 
 -- Scaffold a component:
     gulp make:component --ref <component-ref> [--name <component-name>]
@@ -39,6 +39,22 @@ You can easily scaffold boilerplate files for 'pages' and 'components' with thes
   > Make page scaffolding handler.
 */
 gulp.task('make:page', (cb) => {
+
+  if (argv.help) {
+    Logger.help(`
+-- 'make:page' Command Help -------------------------------
+
+  gulp make:page --ref <page-ref> [--name <Page Name>]
+
+  @params
+    ref:
+      Stands for page reference. This value is essentially used as an identifier for the page throughout the build system. Please do not use spaces, use dashes instead. (i.e. 'my-homepage' would be valid, NOT 'my homepage').
+
+    name (optional):
+      Formal name for the page. If this parameter is not specified, the system will generate one for you. (i.e. The page reference 'my-homepage', will automatically translate into 'My Homepage'). Dashes are stripped out and the first letter of each word is capitalized.
+`)
+    return false
+  }
 
   const pageRef = argv.ref
   const pageName = argv.name
