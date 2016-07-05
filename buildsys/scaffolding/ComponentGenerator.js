@@ -7,6 +7,7 @@
 import fs from 'fs'
 import del from 'del'
 import FileGenerator from './FileGenerator'
+import ComponentCollection from '../scaffolding/ComponentCollection'
 import Helpers from '../util/Helpers'
 import pkg from '../../package.json'
 
@@ -93,12 +94,13 @@ class ComponentGenerator extends FileGenerator {
     })
   }
 
-  static delete (componentRef, dirPath) {
-    dirPath = dirPath ? '/' + dirPath : ''
-    const scriptFilename = Helpers.makeScriptName(componentRef)
-    return del([ `${config.srcDir.app.components}${dirPath}/${componentRef}.njk`,
-                 `${config.srcDir.app.syles}/component${dirPath}/_${componentRef}.scss`,
-                 `${config.srcDir.app.scripts}/component${dirPath}/${scriptFilename}.js`,
+  static delete (componentRef) {
+
+    const component = ComponentCollection.getComponentByReference(componentRef)
+
+    return del([ `${config.srcDir.app.components}/${component.dirPath}${componentRef}.njk`,
+                 `${config.srcDir.app.styles}/component/${component.dirPath}_${componentRef}.scss`,
+                 `${config.srcDir.app.scripts}/component/${component.scriptPath}.js`,
     ], { force: true }).then(paths => {
       return Logger.info(`Deleted all files for ${componentRef} component.`)
     })
