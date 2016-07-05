@@ -23,8 +23,7 @@ class FileGenerator {
             .pipe(batchReplace(replaceProps))
             .pipe(rename({ basename: filenamePrefix + filename }))
             .pipe(gulp.dest(destPath))
-      }
-      else {
+      } else {
         Logger.warn(`File located at ${writeFilePath} already exists. File will not be generated.`)
       }
     })
