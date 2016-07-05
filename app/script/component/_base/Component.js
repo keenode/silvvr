@@ -5,10 +5,12 @@
 */
 
 class Component {
+  baseClass = 'sg-component'
+  $self = null
+  $window = $(window)
+
   constructor (selectorQuery) {
-    this.baseClass = 'sg-component'
     this.$self = $(selectorQuery)
-    this.$window = $(window)
   }
 
   findElement (elementName) {

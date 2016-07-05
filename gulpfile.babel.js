@@ -11,5 +11,5 @@
 // Application root directory
 global.APP_ROOT = __dirname
 
-// Import build system ( ./buildsys/index.js ) is automatically loaded first.
-import buildsys from './buildsys'
+// Require build system ( ./buildsys/index.js ) is automatically loaded first.
+require('./buildsys')
