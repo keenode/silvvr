@@ -10,7 +10,7 @@
   margin: 5px 0;
 
   &.disabled {
-    color: color('gray');
+    color: color('gray-s1');
 
     label {
       cursor: not-allowed;
@@ -30,7 +30,7 @@
   }
 
   &.disabled {
-    color: color('gray');
+    color: color('gray-s1');
 
     label {
       cursor: not-allowed;

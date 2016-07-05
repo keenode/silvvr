@@ -9,9 +9,9 @@
 // --- Secondary Button -----------------------------------
 %btn-secondary {
   @extend %btn;
-  background-color: color('gray');
+  background-color: color('gray-s1');
 
   &:hover {
-    background-color: color('gray-light');
+    background-color: color('gray-s2');
   }
 }

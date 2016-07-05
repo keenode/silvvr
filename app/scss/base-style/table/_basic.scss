@@ -15,7 +15,7 @@
 
   caption {
     margin-bottom: 5px;
-    color: color('gray');
+    color: color('gray-s1');
     text-align: left;
   }
 
@@ -26,12 +26,12 @@
   }
 
   thead tr th {
-    border-bottom: 2px solid color('gray-light');
+    border-bottom: 2px solid color('gray-s2');
   }
 
   tbody tr td,
   tbody tr th {
-    border-bottom: 1px solid color('gray-light');
+    border-bottom: 1px solid color('gray-s2');
   }
 
   tbody tr:last-child td,

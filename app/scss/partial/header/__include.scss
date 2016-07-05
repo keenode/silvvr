@@ -5,19 +5,11 @@
 */
 
 .header {
-  padding: 40px 0;
-  background-color: color('blue');
-
   &__container {
     @extend %outer-container;
   }
 
   &__title {
-    margin: 0;
-    color: white;
-    font-weight: 700;
     text-align: center;
-    letter-spacing: 5px;
-    cursor: default;
   }
 }

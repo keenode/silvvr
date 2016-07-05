@@ -15,18 +15,17 @@
 /* --- normalize --- */
 @import '../../node_modules/normalize.css/normalize';
 
-/* --- variables --- */
-@import 'variable/_include';
-
 /* --- utilities --- */
 @import 'util/_include';
+
+/* --- variables --- */
+@import 'variable/_include';
 
 /* --- generic styles --- */
 
 body {
   color: $fontColor--base;
   font-family: $fontFamily--base;
-  font-weight: 500;
   background-color: $pageBgColor;
 }
 
