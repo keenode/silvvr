@@ -36,6 +36,19 @@ Delete boilerplate files for 'pages' and 'components' with these simple commands
 
 gulp.task('delete:page', (cb) => {
 
+  if (argv.help) {
+    Logger.help(`
+-- 'delete:page' Command Help -----------------------------
+
+  gulp delete:page --ref <page-ref>
+
+  @params
+    ref:
+      Page reference identifier.
+`)
+    return false
+  }
+
   const pageRef = argv.ref
 
   if (typeof pageRef === 'string') {
@@ -46,6 +59,19 @@ gulp.task('delete:page', (cb) => {
 })
 
 gulp.task('delete:component', (cb) => {
+
+  if (argv.help) {
+    Logger.help(`
+-- 'delete:component' Command Help ------------------------
+
+  gulp delete:component --ref <component-ref>
+
+  @params
+    ref:
+      Component reference identifier.
+`)
+    return false
+  }
 
   const componentRef = argv.ref
 
