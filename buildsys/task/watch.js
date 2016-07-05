@@ -84,6 +84,13 @@ gulp.task('watch', function () {
     gulp.start('videos')
   })
 
+  watch(`${config.srcDir.app.patternLibrary}/*`, {
+    name: 'Pattern Library Watcher',
+    verbose: config.verbose
+  }, function () {
+    gulp.start('pattern-library')
+  })
+
   watch([
     `${config.buildDir.app.root}/**/*`,
     `${config.buildDir.styleguide.root}/**/*`,

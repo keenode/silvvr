@@ -128,6 +128,7 @@ export default {
       fonts:                 APP_ROOT + '/asset/font',
       images:                APP_ROOT + '/asset/image',
       videos:                APP_ROOT + '/asset/video',
+      patternLibrary:        APP_ROOT + '/pattern-library',
     },
 
     // Styleguide source directory structure (styleguide folder)
@@ -146,13 +147,14 @@ export default {
 
     // Application build directory structure (public folder)
     app: {
-      root:     APP_BUILD_ROOT,
-      styles:   APP_BUILD_ROOT + '/css',
-      scripts:  APP_BUILD_ROOT + '/js',
-      favicons: APP_BUILD_ROOT + '/asset/favicon',
-      fonts:    APP_BUILD_ROOT + '/asset/font',
-      images:   APP_BUILD_ROOT + '/asset/image',
-      videos:   APP_BUILD_ROOT + '/asset/video',
+      root:           APP_BUILD_ROOT,
+      styles:         APP_BUILD_ROOT + '/css',
+      scripts:        APP_BUILD_ROOT + '/js',
+      favicons:       APP_BUILD_ROOT + '/asset/favicon',
+      fonts:          APP_BUILD_ROOT + '/asset/font',
+      images:         APP_BUILD_ROOT + '/asset/image',
+      videos:         APP_BUILD_ROOT + '/asset/video',
+      patternLibrary: APP_BUILD_ROOT + '/pattern-library',
     },
 
     // Styleguide build directory structure (public/styleguide folder)

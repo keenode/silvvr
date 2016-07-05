@@ -58,7 +58,8 @@ gulp.task('default', (cb) => {
       'favicons',
       'fonts',
       'videos',
-      'rootfiles'
+      'rootfiles',
+      'pattern-library',
     ],
     'cachebust-css-urls',
     'templating',

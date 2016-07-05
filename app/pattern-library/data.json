@@ -1,15 +1,15 @@
 {
-    "project_logo": null,
+    "project_logo": "/asset/image/logo-silvvr.png",
     "project_favicon": "favicon.png",
-    "project_name": null,
-    "project_url": null,
-    "copyright_start_year": null,
-    "client_name": null,
-    "client_url": null,
+    "project_name": "Silvvr",
+    "project_url": "https://github.com/keezoid/silvvr",
+    "copyright_start_year": 2016,
+    "client_name": "Keenan Staffieri",
+    "client_url": "http://keenanstaffieri.com",
     "creators": [
         {
-            "name": null,
-            "url": null
+            "name": "Keenan Staffieri",
+            "url": "http://keenanstaffieri.com"
         }
     ],
     "theme": {
@@ -25,7 +25,7 @@
         "max_width": null
     },
     "assets": {
-        "css": [],
+        "css": ["/css/nvm.css"],
         "js": []
     },
     "font_libraries": {
@@ -44,6 +44,20 @@
             }
         ]
     },
-    "groups": [],
+    "groups": [
+        {
+            "name": "branding",
+            "title": "Branding",
+            "components": [
+                {
+                    "name": "color-palette",
+                    "title": "Color Palette",
+                    "type": "colors",
+                    "colors": ["#000000"],
+                    "group": "branding"
+                }
+            ]
+        }
+    ],
     "version": "1.5.10"
 }
