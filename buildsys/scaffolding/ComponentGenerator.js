@@ -79,6 +79,7 @@ class ComponentGenerator extends FileGenerator {
       const entryString = `{
   ref: '${ref}',
   name: '${name}',
+  dirPath: '${dirPath}',
   scssPath: '${dirPath}${ref}',${scriptPathString}
 },
 // COMPONENT AUTOMATION !! DON'T TOUCH`

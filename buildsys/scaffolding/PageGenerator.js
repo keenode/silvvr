@@ -8,6 +8,7 @@ import fs from 'fs'
 import del from 'del'
 import Helpers from '../util/Helpers'
 import FileGenerator from './FileGenerator'
+import PageCollection from '../scaffolding/PageCollection'
 import pkg from '../../package.json'
 
 class PageGenerator extends FileGenerator {
@@ -75,6 +76,7 @@ class PageGenerator extends FileGenerator {
       const entryString = `{
   ref: '${ref}',
   name: '${name}',
+  dirPath: '${dirPath}',
   scssPath: '${dirPath}${ref}',${scriptPathString}
 },
 // PAGE AUTOMATION !! DON'T TOUCH`
@@ -89,10 +91,13 @@ class PageGenerator extends FileGenerator {
   }
 
   static delete (pageRef) {
-    return del([ `${config.srcDir.app.pages}/${pageRef}.njk`,
-                 `${config.srcDir.app.styles}/page/${pageRef}.scss`,
-                 `${config.srcDir.app.pageStyleDependencies}/__${pageRef}.scss`,
-                 `${config.srcDir.app.scripts}/page/${pageRef}.js`,
+
+    const page = PageCollection.getPageByReference(pageRef)
+
+    return del([ `${config.srcDir.app.pages}/${page.dirPath}${pageRef}.njk`,
+                 `${config.srcDir.app.styles}/page/${page.dirPath}${pageRef}.scss`,
+                 `${config.srcDir.app.pageStyleDependencies}/${page.dirPath}__${pageRef}.scss`,
+                 `${config.srcDir.app.scripts}/page/${page.dirPath}${pageRef}.js`,
     ], { force: true }).then(paths => {
       return Logger.info(`Deleted all files for ${pageRef} page.`)
     })

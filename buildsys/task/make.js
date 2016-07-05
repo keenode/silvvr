@@ -24,10 +24,10 @@ gulp.task('make', (cb) => {
 You can easily scaffold boilerplate files for 'pages' and 'components' with these simple commands:
 
 -- Scaffold a page:
-    gulp make:page --ref <page-ref> [--name <Page Name>]
+    gulp make:page --ref <page-ref>
 
 -- Scaffold a component:
-    gulp make:component --ref <component-ref> [--name <component-name>]
+    gulp make:component --ref <component-ref>
 `)
   } else {
     Logger.warn('Please specify what you\'d like to make. \nEX: gulp make:page --ref <page-ref>\n\ngulp make --help for more info.')
