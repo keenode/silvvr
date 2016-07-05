@@ -63,11 +63,18 @@ gulp.task('watch', function () {
     gulp.start('template-change')
   })
 
-  watch(`${config.srcDir.app.images}/**/*.{png,jpg,jpeg,gif,svg}`, {
+  watch(`${config.srcDir.app.images}/**/*.{png,jpg,jpeg,gif}`, {
     name: 'Images Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('images')
+  })
+
+  watch(`${config.srcDir.app.images}/**/*.svg`, {
+    name: 'SVGs Watcher',
+    verbose: config.verbose
+  }, function () {
+    gulp.start('svgs')
   })
 
   watch(`${config.srcDir.app.fonts}/**/*`, {

@@ -55,6 +55,7 @@ gulp.task('default', (cb) => {
       'styles',
       'scripts',
       'images',
+      'svgs',
       'favicons',
       'fonts',
       'videos',
