@@ -15,7 +15,7 @@
     "theme": {
         "border_color": "#E0E6ED",
         "highlight_color": "#F9FAFC",
-        "brand_color": "#00585C",
+        "brand_color": "#258EA6",
         "background_color": "#FFFFFF",
         "code_highlight_theme": "github",
         "override_code_highlight_bg": "#F9FAFC",
@@ -53,7 +53,13 @@
                     "name": "color-palette",
                     "title": "Color Palette",
                     "type": "colors",
-                    "colors": ["#000000"],
+                    "colors": [
+                        "#2B2B2B,#3F3F3F",
+                        "#6C6C6C,#B2B2B2",
+                        "#2B4C60,#38627C",
+                        "#258EA6,#2BAAC6",
+                        "#DEE0E2,#EFF1F3"
+                    ],
                     "group": "branding"
                 }
             ]
