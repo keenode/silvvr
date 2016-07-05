@@ -25,7 +25,9 @@
         "max_width": null
     },
     "assets": {
-        "css": ["/css/nvm.css"],
+        "css": [
+            "/css/nvm.css"
+        ],
         "js": []
     },
     "font_libraries": {
@@ -61,6 +63,186 @@
                         "#DEE0E2,#EFF1F3"
                     ],
                     "group": "branding"
+                },
+                {
+                    "name": "logo",
+                    "title": "Logo",
+                    "width": "half",
+                    "group": "branding"
+                },
+                {
+                    "group": "branding",
+                    "name": "logo-inverted",
+                    "title": "Inverted Logo",
+                    "width": "half",
+                    "options": {
+                        "sample_dark_background": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "typography",
+            "title": "Typography",
+            "components": [
+                {
+                    "group": "typography",
+                    "name": "fonts",
+                    "title": "Fonts"
+                },
+                {
+                    "group": "typography",
+                    "name": "headings",
+                    "title": "Headings"
+                },
+                {
+                    "group": "typography",
+                    "name": "lead-body-copy",
+                    "title": "Lead Body Copy",
+                    "width": "half"
+                },
+                {
+                    "name": "body-copy",
+                    "title": "Body Copy",
+                    "width": "half",
+                    "group": "typography"
+                },
+                {
+                    "group": "typography",
+                    "name": "links",
+                    "title": "Links",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "marked-text",
+                    "title": "Marked Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "deleted-text",
+                    "title": "Deleted Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "strikethrough-text",
+                    "title": "Strikethrough Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "inserted-text",
+                    "title": "Inserted Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "underline-text",
+                    "title": "Underline Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "small-text",
+                    "title": "Small Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "bold-text",
+                    "title": "Bold Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "itatlic-text",
+                    "title": "Itatlic Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "abbreviated-text",
+                    "title": "Abbreviated Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "cited-text",
+                    "title": "Cited Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "address",
+                    "title": "Address",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "blockquotes",
+                    "title": "Blockquotes",
+                    "width": "half"
+                }
+            ]
+        },
+        {
+            "name": "lists",
+            "title": "Lists",
+            "components": [
+                {
+                    "group": "lists",
+                    "name": "unordered",
+                    "title": "Unordered List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "ordered",
+                    "title": "Ordered List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "unstyled",
+                    "title": "Unstyled List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "inline",
+                    "title": "Inline List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "condensed",
+                    "title": "Condensed List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "description",
+                    "title": "Description List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "description-horizontal",
+                    "title": "Horizontal Description List",
+                    "width": "half"
+                }
+            ]
+        },
+        {
+            "name": "dividers",
+            "title": "Dividers",
+            "components": [
+                {
+                    "group": "dividers",
+                    "name": "default",
+                    "title": "Default Divider"
                 }
             ]
         }
