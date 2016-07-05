@@ -6,8 +6,6 @@
  * 'gulp generate-favicons'
 */
 
-import fs from 'fs'
-import runSequence from 'run-sequence'
 import favicons from 'gulp-favicons'
 import pkg from '../../package.json'
 
@@ -16,25 +14,9 @@ import pkg from '../../package.json'
   > Generate supported favicon images for varying devices.
 */
 gulp.task('generate-favicons', (cb) => {
+
   Logger.task('RUNNING TASK : generate-favicons')
-  runSequence(
-    'favicons:reset-template',
-    'favicons:make',
-  function () {
-    Logger.taskComplete('FINISHED TASK : generate-favicons')
-    cb()
-  })
-})
 
-/* $ gulp favicons:reset-template */
-gulp.task('favicons:reset-template', (cb) => {
-  // Reset favicons template so favicons plugin can write new file paths
-  return fs.writeFileSync(`${config.srcDir.app.views}/partial/favicons.html`, '<link rel="favicons" href="..." />', cb)
-})
-
-/* $ gulp favicons:make */
-gulp.task('favicons:make', function () {
-  // Actually generate the favicon images
   return gulp.src(`${config.srcDir.app.root}/asset/favicon.png`)
     .pipe(favicons({
       appName:        pkg.name,
@@ -45,7 +27,7 @@ gulp.task('favicons:make', function () {
       url:            pkg.homepage,
       logging:        config.verbose,
       path:           config.buildDir.app.favicons.replace(config.buildDir.app.root + '/', ''),
-      html:           `${config.srcDir.app.views}/partial/favicons.html`,
+      html:           `${config.srcDir.app.views}/partial/favicons.njk`,
     }))
     .pipe(gulp.dest(config.srcDir.app.favicons))
 })

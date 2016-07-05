@@ -1,6 +1,6 @@
 {
-    "project_logo": "/asset/image/logo-silvvr.png",
-    "project_favicon": "favicon.png",
+    "project_logo": "/asset/svg/silvvr-logo/svr-logo-partial-lightbg.svg",
+    "project_favicon": "/asset/favicon/favicon-230x230.png",
     "project_name": "Silvvr",
     "project_url": "https://github.com/keezoid/silvvr",
     "copyright_start_year": 2016,
