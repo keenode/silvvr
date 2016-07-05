@@ -1,0 +1,39 @@
+/**
+ * app/scss/base-style/control/radio
+ * Form radio styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+%radio {
+  margin: 5px 0;
+
+  &.disabled {
+    color: color('gray');
+
+    label {
+      cursor: not-allowed;
+    }
+  }
+
+  input {
+    margin: 0 5px 0 0;
+  }
+}
+
+%radio-inline {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.disabled {
+    color: color('gray');
+
+    label {
+      cursor: not-allowed;
+    }
+  }
+}

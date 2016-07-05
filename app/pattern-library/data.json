@@ -245,6 +245,162 @@
                     "title": "Default Divider"
                 }
             ]
+        },
+        {
+            "name": "buttons",
+            "title": "Buttons",
+            "components": [
+                {
+                    "group": "buttons",
+                    "name": "default",
+                    "title": "Default Button",
+                    "width": "half"
+                },
+                {
+                    "group": "buttons",
+                    "name": "large",
+                    "title": "Large Button",
+                    "width": "half"
+                },
+                {
+                    "group": "buttons",
+                    "name": "secondary",
+                    "title": "Secondary Button",
+                    "width": "half"
+                }
+            ]
+        },
+        {
+            "name": "code",
+            "title": "Code",
+            "components": [
+                {
+                    "group": "code",
+                    "name": "inline",
+                    "title": "Inline Code",
+                    "width": "half"
+                },
+                {
+                    "group": "code",
+                    "name": "user-input",
+                    "title": "User Input",
+                    "width": "half"
+                },
+                {
+                    "group": "code",
+                    "name": "block",
+                    "title": "Code Block"
+                },
+                {
+                    "group": "code",
+                    "name": "variables",
+                    "title": "Variables",
+                    "width": "half"
+                },
+                {
+                    "group": "code",
+                    "name": "sample-output",
+                    "title": "Sample Output",
+                    "width": "half"
+                }
+            ]
+        },
+        {
+            "name": "tables",
+            "title": "Tables",
+            "components": [
+                {
+                    "group": "tables",
+                    "name": "basic",
+                    "title": "Basic Table"
+                },
+                {
+                    "name": "striped",
+                    "title": "Striped Table",
+                    "group": "tables"
+                },
+                {
+                    "group": "tables",
+                    "name": "bordered",
+                    "title": "Bordered Table"
+                },
+                {
+                    "group": "tables",
+                    "name": "hover",
+                    "title": "Hoverable Rows Table"
+                },
+                {
+                    "group": "tables",
+                    "name": "condensed",
+                    "title": "Condensed Table"
+                }
+            ]
+        },
+        {
+            "name": "controls",
+            "title": "Controls",
+            "components": [
+                {
+                    "name": "input-text",
+                    "title": "Text Input",
+                    "width": "half",
+                    "group": "controls"
+                },
+                {
+                    "group": "controls",
+                    "name": "input-password",
+                    "title": "Password Input",
+                    "width": "half"
+                },
+                {
+                    "name": "input-number",
+                    "title": "Number Input",
+                    "width": "half",
+                    "group": "controls"
+                },
+                {
+                    "group": "controls",
+                    "name": "textarea",
+                    "title": "Textarea",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "checkbox-stacked",
+                    "title": "Checkboxes (Stacked)",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "checkbox-inline",
+                    "title": "Checkboxes (Inline)",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "radio-stacked",
+                    "title": "Radios (Stacked)",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "radio-inline",
+                    "title": "Radios (Inline)",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "select",
+                    "title": "Select",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "select-multiple",
+                    "title": "Select (Multiple)",
+                    "width": "half"
+                }
+            ]
         }
     ],
     "version": "1.5.10"

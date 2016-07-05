@@ -38,6 +38,13 @@ address { @extend %address; }
 // --- Blockquote -----------------------------------------
 blockquote { @extend %blockquote; }
 
+// --- Link -----------------------------------------------
+a { @extend %inline-link; }
+
+/* -------------------------------------------------------- */
+/* --- LISTS ---------------------------------------------- */
+/* -------------------------------------------------------- */
+
 // --- List -----------------------------------------------
 ul               { @extend %list-unordered; }
 ul.list-unstyled { @extend %list-unstyled; }
@@ -52,10 +59,11 @@ ol.list--condensed {
 dl               { @extend %description-list; }
 dl.dl-horizontal { @extend %description-list-horizontal; }
 
-// --- Link -----------------------------------------------
-a { @extend %inline-link; }
+/* -------------------------------------------------------- */
+/* --- DIVIDERS ------------------------------------------- */
+/* -------------------------------------------------------- */
 
-// --- Divider --------------------------------------------
+// --- Default --------------------------------------------
 hr { @extend %divider; }
 
 /* -------------------------------------------------------- */
@@ -67,9 +75,6 @@ hr { @extend %divider; }
 
 // --- Secondary ------------------------------------------
 .btn--secondary { @extend %btn-secondary; }
-
-// --- Fixed Width ----------------------------------------
-.btn--fixed-width { @extend %btn-fixed-width; }
 
 // --- Large ----------------------------------------------
 .btn--large { @extend %btn-large; }
@@ -114,11 +119,8 @@ table.table--hover { @extend %table-hover; }
 table.table--condensed { @extend %table-condensed; }
 
 /* -------------------------------------------------------- */
-/* --- FORM ----------------------------------------------- */
+/* --- CONTROLS ------------------------------------------- */
 /* -------------------------------------------------------- */
-
-// --- Layout ---------------------------------------------
-.form-group { @extend %form-group; }
 
 // --- Input ----------------------------------------------
 input { @extend %input; }
@@ -140,9 +142,3 @@ label { @extend %label; }
 // --- Select ---------------------------------------------
 .select { @extend %select; }
 select[multiple].select { @extend %select-multiple; }
-
-// --- Inline ---------------------------------------------
-.form--inline { @extend %form-inline; }
-
-// --- Horizontal -----------------------------------------
-.form--horizontal { @extend %form-horizontal; }
