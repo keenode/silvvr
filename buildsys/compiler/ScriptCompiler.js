@@ -30,7 +30,7 @@ class ScriptCompiler {
       .pipe(plumber({
         errorHandler: function (err) {
           gutil.beep()
-          Logger.error(`JavaScript ERROR >> ${err.name} :\n ${err.message}`)
+          Logger.error(`JavaScript ERROR >>\n${err.name} :\n ${err.message}`)
           this.emit('end')
         }
       }))

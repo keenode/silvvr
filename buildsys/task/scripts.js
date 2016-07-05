@@ -18,7 +18,7 @@ gulp.task('scripts', (cb) => {
   runSequence(
     [
       'scripts:app',
-      'scripts:styleguide',
+      // 'scripts:styleguide',
     ],
   function () {
     Logger.taskComplete('FINISHED TASK : scripts')
@@ -36,10 +36,10 @@ gulp.task('scripts:app', function () {
 })
 
 /* $ gulp scripts:styleguide */
-gulp.task('scripts:styleguide', function () {
-  return ScriptCompiler.compileGlob(
-    `${config.srcDir.styleguide.scripts}/**/*.js`,
-    config.buildDir.styleguide.scripts,
-    'styleguide'
-  )
-})
+// gulp.task('scripts:styleguide', function () {
+//   return ScriptCompiler.compileGlob(
+//     `${config.srcDir.styleguide.scripts}/**/*.js`,
+//     config.buildDir.styleguide.scripts,
+//     'styleguide'
+//   )
+// })

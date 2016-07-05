@@ -29,7 +29,7 @@ class StyleCompiler {
     .pipe(plumber({
       errorHandler: function (err) {
         gutil.beep()
-        Logger.error(`CSS ERROR >> ${err.name} :\n ${err.message}`)
+        Logger.error(`SASS ERROR >>\n${err.name} :\n ${err.message}`)
         this.emit('end')
       }
     }))

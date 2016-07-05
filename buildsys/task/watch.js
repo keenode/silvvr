@@ -56,8 +56,8 @@ gulp.task('watch', function () {
     gulp.start('scripts:styleguide')
   })
 
-  watch(`${config.srcDir.app.root}/**/*.html`, {
-    name: 'HTML Watcher',
+  watch(`${config.srcDir.app.root}/**/*.njk`, {
+    name: 'Nunjucks Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('template-change')

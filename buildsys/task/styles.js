@@ -18,7 +18,7 @@ gulp.task('styles', (cb) => {
   runSequence(
     [
       'styles:app',
-      'styles:styleguide',
+      // 'styles:styleguide',
     ],
   function () {
     Logger.taskComplete('FINISHED TASK : styles')
@@ -36,10 +36,10 @@ gulp.task('styles:app', function () {
 })
 
 /* $ gulp styles:styleguide */
-gulp.task('styles:styleguide', function () {
-  return StyleCompiler.compileGlob(
-    `${config.srcDir.styleguide.styles}/**/*.{scss,sass}`,
-    config.buildDir.styleguide.styles,
-    'styleguide'
-  )
-})
+// gulp.task('styles:styleguide', function () {
+//   return StyleCompiler.compileGlob(
+//     `${config.srcDir.styleguide.styles}/**/*.{scss,sass}`,
+//     config.buildDir.styleguide.styles,
+//     'styleguide'
+//   )
+// })
