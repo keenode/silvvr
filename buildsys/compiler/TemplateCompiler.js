@@ -4,7 +4,8 @@
  * @author Keenan Staffieri
 */
 
-import nunjucks from 'gulp-nunjucks'
+import gnunjucks from 'gulp-nunjucks'
+import nunjucks from 'nunjucks'
 import htmlmin from 'gulp-htmlmin'
 import browserSync from 'browser-sync'
 import replace from 'gulp-replace'
@@ -41,7 +42,7 @@ class TemplateCompiler {
       //   // Only compute page dependencies for views within 'pages' dir
       //   return fileInsideDir ? PageDependenciesHandler.computeDependencies(stream, file) : stream
       // }))
-      .pipe(nunjucks.compile())
+      .pipe(gnunjucks.compile({}, { env: new nunjucks.Environment(new nunjucks.FileSystemLoader('./app/view')) }))
       .pipe(replace('<%= API_URL =%>', apiUrls[env]))
       .pipe(rename({ extname: '.html' }))
       .pipe(canBundle ? useref({ searchPath: buildOnlyMode ? './.tmp' : './public' }) : gutil.noop())

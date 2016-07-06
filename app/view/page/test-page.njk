@@ -1,9 +1,9 @@
 {#
-  Page: <%= PAGE_NAME =%>
+  Page: Test Page
   ---------------------------------------------
-  Reference: <%= PAGE_REF =%>
-  app/view/page<%= PAGE_DIRPATH =%>/<%= PAGE_REF =%>
-  @author <%= AUTHOR =%>
+  Reference: test-page
+  app/view/page/test-page
+  @author Keenan Staffieri
 #}
 
 {% extends 'layout/layout.njk' %}
@@ -11,31 +11,32 @@
 {# --- additional stylesheets ----------------------------- #}
 
 {% block stylesheets %}
-<link rel="stylesheet" href="css/page/<%= PAGE_REF =%>.css">
-{# <link rel="stylesheet" href="{{ '/css/page/<%= PAGE_REF =%>.css' | cachebust }}"> #}
+<link rel="stylesheet" href="css/page/test-page.css">
+{# <link rel="stylesheet" href="{{ '/css/page/test-page.css' | cachebust }}"> #}
 {% endblock %}
 
 {# --- content -------------------------------------------- #}
 
 {% block content %}
 
-<div class="page-wrap page-wrap--<%= PAGE_REF =%>" data-page-ref="<%= PAGE_REF =%>" data-page-name="<%= PAGE_NAME =%>">
+<div class="page-wrap page-wrap--test-page" data-page-ref="test-page" data-page-name="Test Page">
 
   {# Component: Copy-A #}
-  {% include 'component/copy.njk' with {
+  {% include 'component/copy.njk' %}
+  {# {% include 'component/copy.njk' with {
     headline: 'Copy Component',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
-  } only %}
+  } only %} #}
 
-</div> {# .page-wrap--<%= PAGE_REF =%> #}
+</div> {# .page-wrap--test-page #}
 
 {% endblock %}
 
 {# --- additional scripts --------------------------------- #}
 
 {% block scripts %}
-<!-- build:js /js/page/<%= PAGE_REF =%>.js -->
+<!-- build:js /js/page/test-page.js -->
 <script type="text/javascript" src="/js/component/_base/Component.js"></script>
-<script type="text/javascript" src="/js/page<%= PAGE_DIRPATH =%>/<%= PAGE_REF =%>.js"></script>
+<script type="text/javascript" src="/js/page/test-page.js"></script>
 <!-- endbuild -->
 {% endblock %}

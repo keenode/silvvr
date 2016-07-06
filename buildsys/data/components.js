@@ -5,5 +5,11 @@
 */
 
 export default [
+{
+  ref: 'copy',
+  name: 'Copy',
+  dirPath: '',
+  scssPath: 'copy',
+},
 // COMPONENT AUTOMATION !! DON'T TOUCH
 ]

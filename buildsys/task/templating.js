@@ -18,7 +18,7 @@ gulp.task('templating', (cb) => {
   Logger.task('RUNNING TASK : templating')
   runSequence(
     'templating:app',
-    'templating:styleguide',
+    // 'templating:styleguide',
   function () {
     Logger.taskComplete('FINISHED TASK : templating')
     cb()
@@ -29,19 +29,20 @@ gulp.task('templating', (cb) => {
 gulp.task('templating:app', function () {
   return TemplateCompiler.compileGlob(
     `${config.srcDir.app.root}/index.njk`,
+    // `${config.srcDir.app.root}/view/page/test-page.njk`,
     config.buildDir.app.root,
     'app'
   )
 })
 
 /* $ gulp templating:styleguide */
-gulp.task('templating:styleguide', function () {
-  return TemplateCompiler.compileGlob(
-    `${config.srcDir.styleguide.root}/index.njk`,
-    config.buildDir.styleguide.root,
-    'styleguide'
-  )
-})
+// gulp.task('templating:styleguide', function () {
+//   return TemplateCompiler.compileGlob(
+//     `${config.srcDir.styleguide.root}/index.njk`,
+//     config.buildDir.styleguide.root,
+//     'styleguide'
+//   )
+// })
 
 
 /**

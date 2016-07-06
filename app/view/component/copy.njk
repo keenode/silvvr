@@ -1,0 +1,44 @@
+{#
+  Copy
+  ----------------------------------------------------------------------
+  app/view/component/copy
+  @author Keenan Staffieri
+  Sample Embed Code:
+#}
+{# Component: Copy #}
+{#
+{% include 'component/copy.html' with {
+  headline: 'New Component',
+  description: 'Welcome to your new component!',
+} only %}
+#}
+
+{% set ns = 'component-copy' %}
+
+{% set extraClasses = '' %}
+
+{% if theme %}
+  {% set extraClasses += ' ' + ns + '--' + theme %}
+{% endif %}
+
+{% if customClasses %}
+  {% set extraClasses += ' ' + customClasses %}
+{% endif %}
+
+{% if ref %}
+  {% set refId = 'id="' + ref + '" ' %}
+{% endif %}
+
+<section {{ refId }}class="component {{ns}}{{ extraClasses }}" data-component-name="Copy">
+  <div class="{{ns}}__container">
+
+    <h2 class="{{ns}}__headline">
+      {{ headline }}
+    </h2>
+
+    <p class="{{ns}}__description">
+      {{ description }}
+    </p>
+
+  </div> {# __container #}
+</section> {# END #}
