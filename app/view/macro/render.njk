@@ -1,3 +1,8 @@
 {% macro partial(templatePath, opts) %}
   {% include 'partial/' + templatePath + '.njk' %}
 {% endmacro %}
+
+{% macro component(componentPath, opts) %}
+  {% include 'component/' + componentPath + '.njk' %}
+{% endmacro %}
+

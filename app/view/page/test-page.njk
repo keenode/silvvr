@@ -6,6 +6,8 @@
   @author Keenan Staffieri
 #}
 
+{% import 'macro/render.njk' as render %}
+
 {% extends 'layout/layout.njk' %}
 
 {# --- additional stylesheets ----------------------------- #}
@@ -21,12 +23,8 @@
 
 <div class="page-wrap page-wrap--test-page" data-page-ref="test-page" data-page-name="Test Page">
 
-  {# Component: Copy-A #}
-  {% include 'component/copy.njk' %}
-  {# {% include 'component/copy.njk' with {
-    headline: 'Copy Component',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
-  } only %} #}
+  {# Component: Copy Block #}
+  {{ render.component('copy-block') }}
 
 </div> {# .page-wrap--test-page #}
 

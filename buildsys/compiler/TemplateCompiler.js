@@ -4,6 +4,7 @@
  * @author Keenan Staffieri
 */
 
+import fs from 'fs'
 import gnunjucks from 'gulp-nunjucks'
 import nunjucks from 'nunjucks'
 import htmlmin from 'gulp-htmlmin'
@@ -13,14 +14,14 @@ import rename from 'gulp-rename'
 import gutil from 'gulp-util'
 import useref from 'gulp-useref'
 import uglify from 'gulp-uglify'
-import fs from 'fs'
 import foreach from 'gulp-foreach'
 import PageDependenciesHandler from '../class/PageDependenciesHandler'
 import apiUrls from '../config/api-urls'
 
 class TemplateCompiler {
 
-  static compileGlob (globList, destPath, taskName='') {
+  // static compileGlob (globList, destPath, taskName='') {
+  static compileTemplate (templateFilePath, destPath, taskName='') {
 
     if (taskName !== '') taskName = ':' + taskName
 
@@ -34,7 +35,8 @@ class TemplateCompiler {
     /**
       Actually perform various transformations on the file(s).
     */
-    return gulp.src(globList)
+    // return gulp.src(globList)
+    return gulp.src(templateFilePath)
       // .pipe(foreach(function (stream, file) {
       //   let a = fs.realpathSync(process.cwd() + '/app/view/page')
       //   let b = fs.realpathSync(file.path)

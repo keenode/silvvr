@@ -21,11 +21,8 @@
 
 <div class="page-wrap page-wrap--<%= PAGE_REF =%>" data-page-ref="<%= PAGE_REF =%>" data-page-name="<%= PAGE_NAME =%>">
 
-  {# Component: Copy-A #}
-  {% include 'component/copy.njk' with {
-    headline: 'Copy Component',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cupiditate!',
-  } only %}
+  {# Component: Copy Block #}
+  {{ render.component('copy-block') }}
 
 </div> {# .page-wrap--<%= PAGE_REF =%> #}
 

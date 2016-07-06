@@ -7,6 +7,8 @@
 */
 
 import runSequence from 'run-sequence'
+import foreach from 'gulp-foreach'
+import PageDependenciesHandler from '../class/PageDependenciesHandler'
 import TemplateCompiler from '../compiler/TemplateCompiler'
 
 /**
@@ -27,12 +29,34 @@ gulp.task('templating', (cb) => {
 
 /* $ gulp templating:app */
 gulp.task('templating:app', function () {
-  return TemplateCompiler.compileGlob(
-    `${config.srcDir.app.root}/index.njk`,
-    // `${config.srcDir.app.root}/view/page/test-page.njk`,
-    config.buildDir.app.root,
-    'app'
-  )
+  return gulp.src([
+      `${config.srcDir.app.root}/index.njk`,
+      `${config.srcDir.app.views}/page/**/*.njk`
+    ])
+    .pipe(foreach(function (stream, file) {
+      // let a = fs.realpathSync(process.cwd() + '/app/view/page')
+      // let b = fs.realpathSync(file.path)
+      // let fileInsideDir = b.indexOf(a) == 0
+      // // Only compute page dependencies for views within 'pages' dir
+      // return fileInsideDir ? PageDependenciesHandler.computeDependencies(stream, file) : stream
+
+      PageDependenciesHandler.computeDependencies(stream, file)
+
+      TemplateCompiler.compileTemplate(
+        file.path,
+        config.buildDir.app.root,
+        'app'
+      )
+      return stream
+    }))
+
+  // return TemplateCompiler.compileTemplate(
+  //   // [`${config.srcDir.app.root}/index.njk`,`${config.srcDir.app.root}/view/page/**/*.njk`],
+  //   `${config.srcDir.app.root}/index.njk`,
+  //   // `${config.srcDir.app.root}/view/page/test-page.njk`,
+  //   config.buildDir.app.root,
+  //   'app'
+  // )
 })
 
 /* $ gulp templating:styleguide */

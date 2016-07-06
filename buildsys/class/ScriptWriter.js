@@ -16,8 +16,8 @@ class ScriptWriter {
   static compileScript (bundleScriptName, scriptPaths, destPath) {
 
     // Get build environment settings
-    var canUglify     = config.env[env].js.uglify
-    var useSourcemaps = config.env[env].js.sourcemaps
+    var canUglify     = config.env[env].scripts.uglify
+    var useSourcemaps = config.env[env].scripts.sourcemaps
 
     /**
         Actually perform various transformations on the file(s).

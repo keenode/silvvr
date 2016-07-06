@@ -6,10 +6,10 @@
 
 export default [
 {
-  ref: 'copy',
-  name: 'Copy',
+  ref: 'copy-block',
+  name: 'Copy Block',
   dirPath: '',
-  scssPath: 'copy',
+  scssPath: 'copy-block',
 },
 // COMPONENT AUTOMATION !! DON'T TOUCH
 ]
