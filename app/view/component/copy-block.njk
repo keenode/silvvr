@@ -8,34 +8,29 @@
 {# Namespace #}
 {% set ns = 'component-copy-block' %}
 
-{% if opts.id %}
-  {% set id = 'id="' + opts.id + '" ' %}
-{% else %}
-  {% set id = '' %}
-{% endif %}
+{# Component Reference ID #}
+{% set componentRef = 'copy-block' %}
 
-{% if opts.tagName %}
-  {% set tagName = opts.tagName %}
-{% else %}
-  {% set tagName = 'section' %}
-{% endif %}
+{# Component Name #}
+{% set componentName = 'Copy Block' %}
 
-{% set appendClasses = '' %}
-{% if opts.modifier %}
-  {% set appendClasses = appendClasses + ' ' + ns + '--' + opts.modifier %}
-{% endif %}
+{# Extend base component, bootstrap variables #}
+{% extends 'component/_base/component.njk' %}
 
-{% if opts.customClasses %}
-  {% for class in opts.customClasses %}
-    {% set appendClasses = appendClasses + ' ' + class %}
-  {% endfor %}
-{% endif %}
+{# BEGIN: Component definition block ----------------------------- #}
+{% block component %}
 
-<{{ tagName }} {{ id | safe }}class="component {{ns}}{{ appendClasses }}" data-component-name="Copy Block">
+<div class="{{ns}}__container">
+
   <h2 class="{{ns}}__heading">
     {{ opts.heading | safe }}
   </h2>
+
   <div class="{{ns}}__content">
     {{ opts.content | safe }}
   </div>
-</{{ tagName }}> {# END #}
+
+</div> {# __container #}
+
+{% endblock %}
+{# END: Component definition block ----------------------------- #}

@@ -1,0 +1,31 @@
+{# If defined, Assign id #}
+{% if opts.id %}
+  {% set id = 'id="' + opts.id + '" ' %}
+{% else %}
+  {% set id = '' %}
+{% endif %}
+
+{# If defined, override default HTML tag #}
+{% if opts.tagName %}
+  {% set tagName = opts.tagName %}
+{% else %}
+  {% set tagName = 'section' %}
+{% endif %}
+
+{# If defined, append modifier class #}
+{% set appendClasses = '' %}
+{% if opts.modifier %}
+  {% set appendClasses = appendClasses + ' ' + ns + '--' + opts.modifier %}
+{% endif %}
+
+{# If defined, append custom classes #}
+{% if opts.customClasses %}
+  {% for class in opts.customClasses %}
+    {% set appendClasses = appendClasses + ' ' + class %}
+  {% endfor %}
+{% endif %}
+
+{# Component Block #}
+<{{ tagName }} {{ id | safe }}class="component {{ns}}{{ appendClasses }}" data-component-ref="{{ componentRef }}" data-component-name="{{ componentName }}">
+  {% block component %}{% endblock %}
+</{{ tagName }}> {# END #}

@@ -3,42 +3,34 @@
   ----------------------------------------------------------------------
   app/view/component<%= COMPONENT_DIRPATH =%>/<%= COMPONENT_REF =%>
   @author <%= AUTHOR =%>
-  Sample Embed Code:
-#}
-{# Component: <%= COMPONENT_NAME =%> #}
-{#
-{% include 'component<%= COMPONENT_DIRPATH =%>/<%= COMPONENT_REF =%>.html' with {
-  headline: 'New Component',
-  description: 'Welcome to your new component!',
-} only %}
 #}
 
+{# Namespace #}
 {% set ns = 'component-<%= COMPONENT_REF =%>' %}
 
-{% set extraClasses = '' %}
+{# Component Reference ID #}
+{% set componentRef = '<%= COMPONENT_REF =%>' %}
 
-{% if theme %}
-  {% set extraClasses += ' ' + ns + '--' + theme %}
-{% endif %}
+{# Component Name #}
+{% set componentName = '<%= COMPONENT_NAME =%>' %}
 
-{% if customClasses %}
-  {% set extraClasses += ' ' + customClasses %}
-{% endif %}
+{# Extend base component, bootstrap variables #}
+{% extends 'component/_base/component.njk' %}
 
-{% if ref %}
-  {% set refId = 'id="' + ref + '" ' %}
-{% endif %}
+{# BEGIN: Component definition block ----------------------------- #}
+{% block component %}
 
-<section {{ refId }}class="component {{ns}}{{ extraClasses }}" data-component-name="<%= COMPONENT_NAME =%>">
-  <div class="{{ns}}__container">
+<div class="{{ns}}__container">
 
-    <h2 class="{{ns}}__headline">
-      {{ headline }}
-    </h2>
+  <h2 class="{{ns}}__heading">
+    {{ opts.heading | safe }}
+  </h2>
 
-    <p class="{{ns}}__description">
-      {{ description }}
-    </p>
+  <div class="{{ns}}__content">
+    {{ opts.content | safe }}
+  </div>
 
-  </div> {# __container #}
-</section> {# END #}
+</div> {# __container #}
+
+{% endblock %}
+{# END: Component definition block ----------------------------- #}
