@@ -3,14 +3,39 @@
   ----------------------------------------------------------------------
   app/view/component/copy-block
   @author Keenan Staffieri
-  Sample Embed Code:
-#}
-{# Component: Copy Block #}
-{#
-{% include 'component/copy-block.html' with {
-  headline: 'New Component',
-  description: 'Welcome to your new component!',
-} only %}
 #}
 
-<h1>Copy Block</h1>
+{# Namespace #}
+{% set ns = 'component-copy-block' %}
+
+{% if opts.id %}
+  {% set id = 'id="' + opts.id + '" ' %}
+{% else %}
+  {% set id = '' %}
+{% endif %}
+
+{% if opts.tagName %}
+  {% set tagName = opts.tagName %}
+{% else %}
+  {% set tagName = 'section' %}
+{% endif %}
+
+{% set appendClasses = '' %}
+{% if opts.modifier %}
+  {% set appendClasses = appendClasses + ' ' + ns + '--' + opts.modifier %}
+{% endif %}
+
+{% if opts.customClasses %}
+  {% for class in opts.customClasses %}
+    {% set appendClasses = appendClasses + ' ' + class %}
+  {% endfor %}
+{% endif %}
+
+<{{ tagName }} {{ id | safe }}class="component {{ns}}{{ appendClasses }}" data-component-name="Copy Block">
+  <h2 class="{{ns}}__heading">
+    {{ opts.heading | safe }}
+  </h2>
+  <div class="{{ns}}__content">
+    {{ opts.content | safe }}
+  </div>
+</{{ tagName }}> {# END #}

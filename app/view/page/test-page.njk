@@ -24,7 +24,10 @@
 <div class="page-wrap page-wrap--test-page" data-page-ref="test-page" data-page-name="Test Page">
 
   {# Component: Copy Block #}
-  {{ render.component('copy-block') }}
+  {{ render.component('copy-block', {
+    heading: 'Hello, World!',
+    content: '<p>Say "Hello" to the first-ever component!</p>'
+  }) }}
 
 </div> {# .page-wrap--test-page #}
 
