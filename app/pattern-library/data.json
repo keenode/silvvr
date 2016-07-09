@@ -19,10 +19,10 @@
         "background_color": "#FFFFFF",
         "code_highlight_theme": "github",
         "override_code_highlight_bg": "#F9FAFC",
-        "sample_dark_background": "#333333",
+        "sample_dark_background": "#2B2B2B",
         "show_project_name": true,
         "show_version": true,
-        "max_width": null
+        "max_width": 1200
     },
     "assets": {
         "css": [

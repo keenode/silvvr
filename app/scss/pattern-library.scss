@@ -67,3 +67,16 @@
 
   code { background-color: inherit; }
 }
+
+.ndpl-component__code pre {
+  padding: inherit;
+  color: inherit;
+  font-family: monospace;
+  font-size: inherit;
+  background-color: inherit;
+}
+
+.ndpl-component__code code,
+.ndpl-info code {
+  font-family: monospace;
+}
