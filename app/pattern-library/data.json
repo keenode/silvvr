@@ -34,7 +34,7 @@
     "font_libraries": {
         "typekit_code": null,
         "typography_web_fonts": null,
-        "google_web_fonts": null
+        "google_web_fonts": "https://fonts.googleapis.com/css?family=Raleway:400,700|Secular+One"
     },
     "content": {
         "show_first_page_on_load": true,
@@ -157,10 +157,10 @@
                     "width": "half"
                 },
                 {
-                    "group": "typography",
-                    "name": "itatlic-text",
-                    "title": "Itatlic Text",
-                    "width": "half"
+                    "name": "italic-text",
+                    "title": "Italic Text",
+                    "width": "half",
+                    "group": "typography"
                 },
                 {
                     "group": "typography",

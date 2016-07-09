@@ -8,6 +8,12 @@
 $fontFamily--base: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
 $fontFamily--headings: 'Secular One', 'Helvetica Neue', Helvetica, sans-serif;
 
+/**
+  Force font classes
+*/
+.font--raleway { font-family: 'Raleway'; }
+.font--secular-one { font-family: 'Secular One'; }
+
 @mixin font ($font-family, $weight: 400) {
   font-family: $font-family;
   font-weight: $weight;
