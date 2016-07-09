@@ -18,7 +18,6 @@
   border: 0;
   cursor: pointer;
   transition: background-color 100ms ease-out;
-  @include font-aa;
 
   &:hover {
     color: white;

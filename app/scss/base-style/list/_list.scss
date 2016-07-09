@@ -10,7 +10,6 @@
 %default-list {
   margin: 10px 0 50px 0;
   padding: 0 0 0 30px;
-  @include font-aa;
 
   ul,
   ol {
@@ -55,7 +54,7 @@
 }
 
 // --- Condensed List -------------------------------------
-%list--condensed {
+%list-condensed {
   li {
     margin: 10px 0;
     font-size: 14px;

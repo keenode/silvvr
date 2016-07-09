@@ -59,9 +59,9 @@ ul               { @extend %list-unordered; }
 ul.list-unstyled { @extend %list-unstyled; }
 ul.list-inline   { @extend %list-inline; }
 ol               { @extend %list-ordered; }
-ul.list--condensed,
-ol.list--condensed {
-  @extend %list--condensed;
+ul.list-condensed,
+ol.list-condensed {
+  @extend %list-condensed;
 }
 
 // --- Description ----------------------------------------
