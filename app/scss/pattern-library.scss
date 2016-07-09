@@ -55,10 +55,14 @@
   }
 
   p {
-    margin: inherit;
+    margin-top: inherit;
     font-size: inherit;
     line-height: inherit;
     -webkit-font-smoothing: auto;
+  }
+
+  a {
+    font-weight: inherit;
   }
 
   code { background-color: inherit; }
