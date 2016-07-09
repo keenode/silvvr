@@ -1,0 +1,36 @@
+{#
+  Nest Comp
+  ----------------------------------------------------------------------
+  app/view/component/nested/nest-comp
+  @author Keenan Staffieri
+#}
+
+{# Namespace #}
+{% set ns = 'component-nest-comp' %}
+
+{# Component Reference ID #}
+{% set componentRef = 'nest-comp' %}
+
+{# Component Name #}
+{% set componentName = 'Nest Comp' %}
+
+{# Extends base component, bootstrap variables #}
+{% extends 'component/_base/component.njk' %}
+
+{# BEGIN: Component definition block ----------------------------- #}
+{% block component %}
+
+<div class="{{ns}}__container">
+
+  <h2 class="{{ns}}__heading">
+    {{ opts.heading | safe }}
+  </h2>
+
+  <div class="{{ns}}__content">
+    {{ opts.content | safe }}
+  </div>
+
+</div> {# __container #}
+
+{% endblock %}
+{# END: Component definition block ----------------------------- #}

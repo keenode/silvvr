@@ -1,0 +1,23 @@
+/**
+ * app/scss/component/nested/nest-comp
+ * Nest Comp component styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- variables ------------------------------------------ */
+
+// Namespace
+$ns: '.component-nest-comp';
+
+/* --- styles --------------------------------------------- */
+
+#{$ns} {
+  &__container {
+    @extend %component-container;
+  }
+
+  &__heading {
+    color: red;
+    text-align: center;
+  }
+}

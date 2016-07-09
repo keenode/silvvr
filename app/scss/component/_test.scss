@@ -1,0 +1,18 @@
+/**
+ * app/scss/component/test
+ * Test component styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- variables ------------------------------------------ */
+
+// Namespace
+$ns: '.component-test';
+
+/* --- styles --------------------------------------------- */
+
+#{$ns} {
+  &__container {
+    @extend %component-container;
+  }
+}

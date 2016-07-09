@@ -4,23 +4,16 @@
  * @author Keenan Staffieri
 */
 
-import fs from 'fs'
 import gnunjucks from 'gulp-nunjucks'
 import nunjucks from 'nunjucks'
-import htmlmin from 'gulp-htmlmin'
-import browserSync from 'browser-sync'
 import replace from 'gulp-replace'
 import rename from 'gulp-rename'
 import gutil from 'gulp-util'
 import useref from 'gulp-useref'
-import uglify from 'gulp-uglify'
-import foreach from 'gulp-foreach'
-import PageDependenciesHandler from '../class/PageDependenciesHandler'
 import apiUrls from '../config/api-urls'
 
 class TemplateCompiler {
 
-  // static compileGlob (globList, destPath, taskName='') {
   static compileTemplate (templateFilePath, destPath, taskName='') {
 
     if (taskName !== '') taskName = ':' + taskName
@@ -30,7 +23,7 @@ class TemplateCompiler {
     const canBundle = config.env[env].scripts.bundle
 
     /**
-      Actually perform various transformations on the file(s).
+      Compile Nunjucks template file and output to destPath.
     */
     return gulp.src(templateFilePath)
       .pipe(gnunjucks.compile({}, {

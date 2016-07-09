@@ -14,7 +14,10 @@ import PageDependenciesHandler from '../class/PageDependenciesHandler'
 */
 gulp.task('page-scripts-bundle', function () {
   Logger.task('RUNNING TASK : page-scripts-bundle')
-  return gulp.src(`${config.srcDir.app.pages}/**/*.html`)
+  return gulp.src([
+      `${config.srcDir.app.root}/index.njk`,
+      `${config.srcDir.app.pages}/**/*.njk`,
+    ])
     .pipe(foreach(function (stream, file) {
       return PageDependenciesHandler.computeDependencies(stream, file, true, true)
     }))

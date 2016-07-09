@@ -8,7 +8,7 @@
 
 import runSequence from 'run-sequence'
 import watch from 'gulp-watch'
-import browserSync from 'browser-sync'
+import browserSync from 'browser-sync';
 
 /**
   $ gulp watch
@@ -35,26 +35,30 @@ gulp.task('watch', function () {
     gulp.start('styles:app')
   })
 
-  watch(`${config.srcDir.styleguide.styles}/**/*.{scss,sass}`, {
-    name: 'Styleguide Styles Watcher',
-    verbose: config.verbose
-  }, function () {
-    gulp.start('styles:styleguide')
-  })
+  // watch(`${config.srcDir.styleguide.styles}/**/*.{scss,sass}`, {
+  //   name: 'Styleguide Styles Watcher',
+  //   verbose: config.verbose
+  // }, function () {
+  //   gulp.start('styles:styleguide')
+  // })
 
   watch(`${config.srcDir.app.scripts}/**/*.js`, {
     name: 'App Scripts Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('page-scripts-changed')
+  }).on('change', function () {
+    if (config.browserSync.allowReload) {
+      browserSync.reload()
+    }
   })
 
-  watch(`${config.srcDir.styleguide.scripts}/**/*.js`, {
-    name: 'Styleguide Scripts Watcher',
-    verbose: config.verbose
-  }, function () {
-    gulp.start('scripts:styleguide')
-  })
+  // watch(`${config.srcDir.styleguide.scripts}/**/*.js`, {
+  //   name: 'Styleguide Scripts Watcher',
+  //   verbose: config.verbose
+  // }, function () {
+  //   gulp.start('scripts:styleguide')
+  // })
 
   watch(`${config.srcDir.app.root}/**/*.njk`, {
     name: 'Nunjucks Watcher',

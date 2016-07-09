@@ -28,6 +28,24 @@
     content: '<p>Say "Hello" to the first-ever component!</p>'
   }) }}
 
+  {# Component: Test #}
+  {{ render.component('test', {
+    heading: 'Test block',
+    content: 'Yeah yeah...'
+  }) }}
+
+  {# Component: Nest Comp #}
+  {{ render.component('nested/nest-comp', {
+    heading: 'Nest Comp',
+    content: 'Yeah yeah...'
+  }) }}
+
+  {# Component: Nest Comp #}
+  {{ render.component('nested/nest-comp', {
+    heading: 'Nest Comp 2',
+    content: 'Yeah yeah...'
+  }) }}
+
 </div> {# .page-wrap--test-page #}
 
 {% endblock %}

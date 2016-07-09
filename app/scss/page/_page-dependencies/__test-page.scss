@@ -30,5 +30,7 @@
 
 
 // BEGIN: Import required component styles !! DON'T TOUCH
-@import '../../component/copy-block'
+@import '../../component/copy-block';
+@import '../../component/test';
+@import '../../component/nested/nest-comp';
 // END: Import required component styles !! DON'T TOUCH

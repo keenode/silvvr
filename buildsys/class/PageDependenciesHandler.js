@@ -85,7 +85,7 @@ class PageDependenciesHandler {
     for (let i = 0; i < componentNames.length; i++) {
       const foundComponent = ComponentCollection.getComponentByName(componentNames[i])
       if (foundComponent !== null) {
-        importString += `@import '${relativeUpDir}../../component/${foundComponent.scssPath}'\n`
+        importString += `@import '${relativeUpDir}../../component/${foundComponent.scssPath}';\n`
       }
     }
     importString += "// END: Import required component styles !! DON'T TOUCH"
