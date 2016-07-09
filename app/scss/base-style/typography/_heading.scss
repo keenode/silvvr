@@ -13,18 +13,9 @@
 %heading-4,
 %heading-5,
 %heading-6 {
+  @include font($fontFamily--headings, 400);
   @include font-aa;
 }
-
-// --- Styles shared by headings 1, 3-6
-%heading-1,
-%heading-3,
-%heading-4,
-%heading-5,
-%heading-6 {
-  @include font($fontFamily--base, 700);
-}
-
 
 /*
   Specific placeholder element heading styles
@@ -46,8 +37,6 @@
 // --- Heading 2 ------------------------------------------
 %heading-2 {
   margin: 30px 0 60px;
-  color: color('blue-s1');
-  @include font($fontFamily--base, 800);
   font-size: 55px;
   line-height: 56px;
   letter-spacing: -2px;

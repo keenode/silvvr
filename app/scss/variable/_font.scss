@@ -5,7 +5,8 @@
 */
 
 /* --- fonts --- */
-$fontFamily--base: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+$fontFamily--base: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+$fontFamily--headings: 'Secular One', 'Helvetica Neue', Helvetica, sans-serif;
 
 @mixin font ($font-family, $weight: 400) {
   font-family: $font-family;
