@@ -1,4 +1,9 @@
-{# If defined, Assign id #}
+{#
+  Component base bootstrapping logic.
+  - Setup standard component variables.
+#}
+
+{# If defined, assign id #}
 {% if opts.id %}
   {% set id = 'id="' + opts.id + '" ' %}
 {% else %}

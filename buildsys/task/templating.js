@@ -34,14 +34,11 @@ gulp.task('templating:app', function () {
       `${config.srcDir.app.views}/page/**/*.njk`
     ])
     .pipe(foreach(function (stream, file) {
-      // let a = fs.realpathSync(process.cwd() + '/app/view/page')
-      // let b = fs.realpathSync(file.path)
-      // let fileInsideDir = b.indexOf(a) == 0
-      // // Only compute page dependencies for views within 'pages' dir
-      // return fileInsideDir ? PageDependenciesHandler.computeDependencies(stream, file) : stream
 
+      // Compile dependencies for the template
       PageDependenciesHandler.computeDependencies(stream, file)
 
+      // Compile the Nunjucks template into HTML
       TemplateCompiler.compileTemplate(
         file.path,
         config.buildDir.app.root,

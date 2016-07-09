@@ -26,28 +26,23 @@ class TemplateCompiler {
     if (taskName !== '') taskName = ':' + taskName
 
     // Get build environment settings
-    var canMinifyHTML = config.env[env].html.minify
-    var canBundle = config.env[env].scripts.bundle
-
-    // TEMP: Override canBundle
-    canBundle = true
+    const canMinifyHTML = config.env[env].html.minify
+    const canBundle = config.env[env].scripts.bundle
 
     /**
       Actually perform various transformations on the file(s).
     */
-    // return gulp.src(globList)
     return gulp.src(templateFilePath)
-      // .pipe(foreach(function (stream, file) {
-      //   let a = fs.realpathSync(process.cwd() + '/app/view/page')
-      //   let b = fs.realpathSync(file.path)
-      //   let fileInsideDir = b.indexOf(a) == 0
-      //   // Only compute page dependencies for views within 'pages' dir
-      //   return fileInsideDir ? PageDependenciesHandler.computeDependencies(stream, file) : stream
-      // }))
-      .pipe(gnunjucks.compile({}, { env: new nunjucks.Environment(new nunjucks.FileSystemLoader('./app/view')) }))
+      .pipe(gnunjucks.compile({}, {
+        env: new nunjucks.Environment(
+          new nunjucks.FileSystemLoader('./app/view')
+        )
+      }))
       .pipe(replace('<%= API_URL =%>', apiUrls[env]))
       .pipe(rename({ extname: '.html' }))
-      .pipe(canBundle ? useref({ searchPath: buildOnlyMode ? './.tmp' : './public' }) : gutil.noop())
+      .pipe(canBundle ? useref({
+        searchPath: buildOnlyMode ? './.tmp' : './public'
+      }) : gutil.noop())
       .pipe(gulp.dest(destPath))
       .on('end', function () { return Logger.taskComplete('FINISHED TASK : templating' + taskName) })
   }

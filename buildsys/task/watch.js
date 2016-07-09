@@ -98,17 +98,6 @@ gulp.task('watch', function () {
     gulp.start('pattern-library')
   })
 
-  watch([
-    `${config.buildDir.app.root}/**/*`,
-    `${config.buildDir.styleguide.root}/**/*`,
-  ], {
-    name: 'Post-Build Watcher',
-    verbose: config.verbose
-  }).on('change', function () {
-    if (config.browserSync.allowReload) {
-      browserSync.reload()
-    }
-  })
 })
 
 gulp.task('page-scripts-changed', (cb) => {

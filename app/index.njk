@@ -1,10 +1,42 @@
+{#
+  Page: Index
+  ---------------------------------------------
+  Reference: index
+  app/index
+  @author Keenan Staffieri
+#}
+
+{% import 'macro/render.njk' as render %}
+
 {% extends 'layout/layout.njk' %}
+
+{# --- additional stylesheets ----------------------------- #}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="css/page/index.css">
+{% endblock %}
+
+{# --- content -------------------------------------------- #}
 
 {% block content %}
 
-<h2>Welcome to the boilerplate</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, commodi.</p>
-<a href="https://github.com/keezoid/silvvr">Github</a>
-<a href="https://twitter.com/keenode">Follow me on Twitter</a>
+<div class="page-wrap page-wrap--test-page" data-page-ref="test-page" data-page-name="Test Page">
 
+  {# Component: Copy Block #}
+  {{ render.component('copy-block', {
+    heading: 'Hello, World!',
+    content: '<p>Say "Hello" to the first-ever component!</p>'
+  }) }}
+
+</div> {# .page-wrap--test-page #}
+
+{% endblock %}
+
+{# --- additional scripts --------------------------------- #}
+
+{% block scripts %}
+<!-- build:js /js/page/index.js -->
+<script type="text/javascript" src="/js/component/_base/Component.js"></script>
+<script type="text/javascript" src="/js/page/index.js"></script>
+<!-- endbuild -->
 {% endblock %}

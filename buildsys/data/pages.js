@@ -6,6 +6,13 @@
 
 export default [
 {
+  ref: 'index',
+  name: 'Index',
+  dirPath: '',
+  scssPath: 'index',
+  scriptPath: 'index',
+},
+{
   ref: 'test-page',
   name: 'Test Page',
   dirPath: '',

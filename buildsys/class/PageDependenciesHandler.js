@@ -20,15 +20,14 @@ class PageDependenciesHandler {
     /**
       Find page name
     */
-    // var pageName = /{#\s*Page:\s(.*?)\s/i.exec(file.contents)
-    var pageName = /{#\s*Page:\s(.*)\s/i.exec(file.contents)
+    let pageName = /{#\s*Page:\s(.*)\s/i.exec(file.contents)
     if (pageName !== null) {
       pageName = pageName[1]
 
       /**
         Find page reference name
       */
-      var pageRef = /{#\s*.*\s*.*\s*Reference:\s(.*?)\s/i.exec(file.contents)
+      let pageRef = /{#\s*.*\s*.*\s*Reference:\s(.*?)\s/i.exec(file.contents)
       if (pageRef !== null) {
         pageRef = pageRef[1]
 
@@ -37,14 +36,14 @@ class PageDependenciesHandler {
         }
 
         /**
-            Find component names
+          Find component names
         */
-        var componentMatches = file.contents.toString().match(/{#\s*Component\:\s*(.*?)\s*#}/ig)
-        var componentNames = []
+        const componentMatches = file.contents.toString().match(/{#\s*Component\:\s*(.*?)\s*#}/ig)
+        let componentNames = []
 
         if (componentMatches !== null) {
-          for (var i = 0; i < componentMatches.length; i++) {
-            var componentName = /{#\s*Component\:\s*(.*?)\s*#}/ig.exec(componentMatches[i])[1]
+          for (let i = 0; i < componentMatches.length; i++) {
+            const componentName = /{#\s*Component\:\s*(.*?)\s*#}/ig.exec(componentMatches[i])[1]
             componentNames.push(componentName)
           }
         }
@@ -78,16 +77,16 @@ class PageDependenciesHandler {
     Logger.info(`Writing component style dependencies for '${pageRef}'...`)
 
     // Prepare scss import lines for file
-    var importString = "// BEGIN: Import required component styles !! DON'T TOUCH\n"
-    for (var i = 0; i < componentNames.length; i++) {
-      var foundComponent = ComponentCollection.getComponentByName(componentNames[i])
+    let importString = "// BEGIN: Import required component styles !! DON'T TOUCH\n"
+    for (let i = 0; i < componentNames.length; i++) {
+      const foundComponent = ComponentCollection.getComponentByName(componentNames[i])
       if (foundComponent !== null) {
         importString += `@import '../../component/${foundComponent.scssPath}'\n`
       }
     }
     importString += "// END: Import required component styles !! DON'T TOUCH"
 
-    var pageDependsFilePath = `${config.srcDir.app.pageStyleDependencies}/__${pageRef}.scss`
+    const pageDependsFilePath = `${config.srcDir.app.pageStyleDependencies}/__${pageRef}.scss`
 
     /**
       Now read / write required component SASS imports
@@ -96,7 +95,7 @@ class PageDependenciesHandler {
 
       if (err) return Logger.error(err)
 
-      var result = data.replace(/\/\/ BEGIN: Import required component styles !! DON'T TOUCH\s*([^<]*)\s*\/\/ END: Import required component styles !! DON'T TOUCH/i, importString)
+      const result = data.replace(/\/\/ BEGIN: Import required component styles !! DON'T TOUCH\s*([^<]*)\s*\/\/ END: Import required component styles !! DON'T TOUCH/i, importString)
 
       fs.writeFileSync(pageDependsFilePath, result, 'utf8', function (err) {
         if (err) return Logger.error(err)
@@ -109,10 +108,10 @@ class PageDependenciesHandler {
 
     Logger.info(`Bundling component script dependencies for '${pageRef}'...`)
 
-    var scriptPaths = []
+    let scriptPaths = []
 
-    for (var i = 0; i < componentNames.length; i++) {
-      var foundComponent = ComponentCollection.getComponentByName(componentNames[i])
+    for (let i = 0; i < componentNames.length; i++) {
+      const foundComponent = ComponentCollection.getComponentByName(componentNames[i])
       if (foundComponent !== null) {
         scriptPaths.push(`${config.buildDir.app.scripts}/component/${foundComponent.scriptPath}.js`)
       }
