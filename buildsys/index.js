@@ -68,10 +68,10 @@ if (config.env[env].cachebustAssets) {
   Require all gulp tasks
 */
 Logger.notice('Autoloading tasks...')
-var tasks = fs.readdirSync('./buildsys/task/')
+const tasks = fs.readdirSync('./buildsys/task/')
 tasks.forEach(function (task) {
   if (/\.js/.test(task)) {
-    Logger.info(`Requiring task ${task}...`)
+    // Logger.info(`Requiring task ${task}...`)
     require(`./task/${task}`)
   }
 })
@@ -80,9 +80,3 @@ tasks.forEach(function (task) {
   Require gulp commands
 */
 require('./commands')
-
-// Determine if a task was passed
-if (typeof argv.task === 'string') {
-  console.log(argv);
-  gulp.start(argv.task)
-}

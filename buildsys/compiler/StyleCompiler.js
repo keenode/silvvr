@@ -29,12 +29,13 @@ class StyleCompiler {
     .pipe(plumber({
       errorHandler: function (err) {
         gutil.beep()
-        Logger.error(`SASS ERROR >>\n${err.name} :\n ${err.message}`)
+        Logger.error('SASS ERROR >>')
+        console.log(err.message)
         this.emit('end')
       }
     }))
     .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
-    .pipe(sass({ outputStyle: sassOutputStyle }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: sassOutputStyle }))
     .pipe(autoprefixer({
       browsers: [ 'last 2 versions' ],
       cascade: false,
