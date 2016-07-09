@@ -8,7 +8,7 @@ import fs from 'fs'
 import Helpers from '../util/Helpers'
 import ComponentCollection from '../scaffolding/ComponentCollection'
 import PageCollection from '../scaffolding/PageCollection'
-import ScriptWriter from './ScriptWriter'
+import ScriptCompiler from '../compiler/ScriptCompiler'
 
 class PageDependenciesHandler {
 
@@ -117,12 +117,18 @@ class PageDependenciesHandler {
     for (let i = 0; i < componentNames.length; i++) {
       const foundComponent = ComponentCollection.getComponentByName(componentNames[i])
       if (foundComponent !== null) {
-        scriptPaths.push(`${config.buildDir.app.scripts}/component/${foundComponent.scriptPath}.js`)
+        if (foundComponent.scriptPath) {
+          scriptPaths.push(`${config.buildDir.app.scripts}/component/${foundComponent.scriptPath}.js`)
+        }
       }
     }
 
-    scriptPaths.push(`${config.buildDir.app.scripts}/page/${pageRef}.js`)
-    ScriptWriter.compileScript(pageRef + '.js', scriptPaths, config.buildDir.app.scripts + '/page')
+    const page = PageCollection.getPageByReference(pageRef)
+    if (page.scriptPath) {
+      scriptPaths.push(`${config.buildDir.app.scripts}/page/${page.dirPath}${pageRef}.js`)
+    }
+
+    ScriptCompiler.compileGlob(scriptPaths, `${config.buildDir.app.scripts}/page/${page.dirPath}`, 'bundle:' + pageRef, pageRef)
   }
 }
 

@@ -5,6 +5,7 @@
 */
 
 import babel from 'gulp-babel'
+import concat from 'gulp-concat'
 import uglify from 'gulp-uglify'
 import stripDebug from 'gulp-strip-debug'
 import sourcemaps from 'gulp-sourcemaps'
@@ -14,14 +15,14 @@ import plumber from 'gulp-plumber'
 
 class ScriptCompiler {
 
-  static compileGlob (globList, destPath, taskName='') {
+  static compileGlob (globList, destPath, taskName='', bundleScriptName=null) {
 
     if (taskName !== '') taskName = ':' + taskName
 
     // Get build environment settings
-    var canUglify     = config.env[env].scripts.uglify
-    var canStripDebug = config.env[env].scripts.stripDebug
-    var useSourcemaps = config.env[env].scripts.sourcemaps
+    const canUglify     = config.env[env].scripts.uglify
+    const canStripDebug = config.env[env].scripts.stripDebug
+    const useSourcemaps = config.env[env].scripts.sourcemaps
 
     /**
       Actually perform various transformations on the file(s).
@@ -35,9 +36,10 @@ class ScriptCompiler {
         }
       }))
       .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
-      .pipe(babel({ ignore: config.srcDir.app.scripts + '/vendor/*' }))
+      .pipe( ! bundleScriptName ? babel({ ignore: config.srcDir.app.scripts + '/vendor/*' }) : gutil.noop())
+      .pipe(bundleScriptName ? concat(bundleScriptName + '.js') : gutil.noop())
       .pipe(canStripDebug ? stripDebug() : gutil.noop())
-      .pipe(canUglify ? uglify() : gutil.noop())
+      .pipe(canUglify ? uglify({ compress: { drop_console: true } }) : gutil.noop())
       .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
       .pipe(gulp.dest(destPath))
       .on('end', function () { return Logger.taskComplete('FINISHED TASK : scripts' + taskName) })
