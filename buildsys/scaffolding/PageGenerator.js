@@ -21,8 +21,10 @@ class PageGenerator extends FileGenerator {
     const pageNameFormatted = options.name ? options.name : Helpers.ucBetweenDashSpace(pageRef)
 
     let dirPath = ''
+    let relativeUpDir = ''
     if (options.dirPath) {
       dirPath = '/' + options.dirPath
+      relativeUpDir = '../'.repeat(dirPath.split('/').length - 1)
     }
 
     let author = pkg.author.name
@@ -31,10 +33,11 @@ class PageGenerator extends FileGenerator {
     }
 
     const replaceProps = [
-      ['<%= PAGE_REF =%>',     pageRef],
-      ['<%= PAGE_NAME =%>',    pageNameFormatted],
-      ['<%= PAGE_DIRPATH =%>', dirPath],
-      ['<%= AUTHOR =%>',       author],
+      ['<%= PAGE_REF =%>',        pageRef],
+      ['<%= PAGE_NAME =%>',       pageNameFormatted],
+      ['<%= PAGE_DIRPATH =%>',    dirPath],
+      ['<%= AUTHOR =%>',          author],
+      ['<%= RELATIVE_UP_DIR =%>', relativeUpDir],
     ]
 
     // Generate View file

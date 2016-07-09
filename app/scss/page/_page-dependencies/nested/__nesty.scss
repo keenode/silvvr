@@ -1,0 +1,34 @@
+/**
+ * app/scss/page/_page-dependencies/nested/_nesty
+ * Import page dependant styles for Nesty.
+ * @author Keenan Staffieri
+*/
+
+/* --- Bourbon & Neat --- */
+
+// Bourbon
+@import '../../../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+
+// Neat
+@import '../../../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+
+/* --- variables --- */
+@import '../../../variable/_include';
+
+
+/* --- utilities --- */
+@import '../../../util/_include';
+
+
+/* --- base styles --- */
+@import '../../../base-style/_include';
+
+
+/* --- base component styles --- */
+@import '../../../component/_base/component';
+
+
+// BEGIN: Import required component styles !! DON'T TOUCH
+@import '../../../component/copy-block'
+// END: Import required component styles !! DON'T TOUCH

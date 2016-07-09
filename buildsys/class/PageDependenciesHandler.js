@@ -7,6 +7,7 @@
 import fs from 'fs'
 import Helpers from '../util/Helpers'
 import ComponentCollection from '../scaffolding/ComponentCollection'
+import PageCollection from '../scaffolding/PageCollection'
 import ScriptWriter from './ScriptWriter'
 
 class PageDependenciesHandler {
@@ -76,17 +77,20 @@ class PageDependenciesHandler {
 
     Logger.info(`Writing component style dependencies for '${pageRef}'...`)
 
+    const page = PageCollection.getPageByReference(pageRef)
+    const relativeUpDir = '../'.repeat(page.dirPath.split('/').length - 1)
+
     // Prepare scss import lines for file
     let importString = "// BEGIN: Import required component styles !! DON'T TOUCH\n"
     for (let i = 0; i < componentNames.length; i++) {
       const foundComponent = ComponentCollection.getComponentByName(componentNames[i])
       if (foundComponent !== null) {
-        importString += `@import '../../component/${foundComponent.scssPath}'\n`
+        importString += `@import '${relativeUpDir}../../component/${foundComponent.scssPath}'\n`
       }
     }
     importString += "// END: Import required component styles !! DON'T TOUCH"
 
-    const pageDependsFilePath = `${config.srcDir.app.pageStyleDependencies}/__${pageRef}.scss`
+    const pageDependsFilePath = `${config.srcDir.app.pageStyleDependencies}/${page.dirPath}__${pageRef}.scss`
 
     /**
       Now read / write required component SASS imports

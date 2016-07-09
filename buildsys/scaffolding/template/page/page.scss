@@ -4,4 +4,4 @@
  * @author <%= AUTHOR =%>
 */
 
-@import '_page-dependencies<%= PAGE_DIRPATH =%>/_<%= PAGE_REF =%>';
+@import '<%= RELATIVE_UP_DIR =%>_page-dependencies<%= PAGE_DIRPATH =%>/_<%= PAGE_REF =%>';
