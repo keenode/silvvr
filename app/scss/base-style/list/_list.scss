@@ -8,11 +8,13 @@
 
 // --- Default List ---------------------------------------
 %default-list {
-  margin: 10px 0 50px 0;
-  padding: 0 0 0 30px;
+  margin: 5px 0 25px 0;
+  padding: 0 0 0 15px;
   font-size: 16px;
 
   @include media ($small-up) {
+    margin: 10px 0 50px 0;
+    padding: 0 0 0 30px;
     font-size: 18px;
   }
 
@@ -22,8 +24,12 @@
   }
 
   li {
-    margin: 20px 0;
+    margin: 10px 0;
     color: color('gray-s1');
+
+    @include media ($small-up) {
+      margin: 20px 0;
+    }
   }
 }
 

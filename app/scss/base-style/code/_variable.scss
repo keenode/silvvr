@@ -8,5 +8,13 @@
 
 // --- Variable -------------------------------------------
 %variable {
-  
+  color: darkRed;
+  font-size: 14px;
+  line-height: 22px;
+  font-style: italic;
+
+  @include media ($small-up) {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }

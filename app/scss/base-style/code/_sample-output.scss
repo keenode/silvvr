@@ -8,9 +8,17 @@
 
 // --- Sample Output --------------------------------------
 %sample-output {
-  padding: 8px 10px 6px 10px;
-  color: white;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  display: inline-block;
+  padding: 10px 12px 8px;
+  color: color('misty-s2');
+  font-family: $fontFamily--code;
   font-size: 14px;
+  line-height: 22px;
   background-color: color('blue-s1');
+
+  @include media ($small-up) {
+    padding: 14px 16px 12px;
+    font-size: 16px;
+    line-height: 26px;
+  }
 }

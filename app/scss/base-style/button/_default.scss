@@ -9,6 +9,7 @@
 // --- Default Button -------------------------------------
 %btn {
   display: inline-block;
+  width: 100%;
   margin: 5px 0;
   padding: 19px 40px;
   background-color: color('aqua-s1');
@@ -23,5 +24,9 @@
   &:hover {
     color: white;
     background-color: color('aqua-s2');
+  }
+
+  @include media ($small-up) {
+    width: auto;
   }
 }

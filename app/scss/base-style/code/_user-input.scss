@@ -9,8 +9,9 @@
 // --- User Input -----------------------------------------
 %user-input {
   padding: 6px 8px 4px;
+  margin: 0 3px;
   color: color('gray-s1');
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: $fontFamily--code;
   font-size: 14px;
   background-color: white;
   border: 1px solid color('misty-s1');
