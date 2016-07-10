@@ -8,31 +8,32 @@
 
 // --- Marked Text ----------------------------------------
 %marked-text {
-  padding: 3px 8px 1px 8px;
-  color: white;
+  padding: 3px 7px 1px 7px;
   background-color: yellow;
 }
 
 // --- Deleted Text ---------------------------------------
 %deleted-text {
-  padding: 3px 8px 1px 8px;
+  padding: 3px 7px 1px 7px;
   background-color: pink;
+  text-decoration: line-through;
 }
 
 // --- Strikethrough Text ---------------------------------
 %strikethrough-text {
-  
+  text-decoration: line-through;
 }
 
 // --- Inserted Text --------------------------------------
 %inserted-text {
-  padding: 3px 8px 1px 8px;
+  padding: 3px 7px 1px 7px;
   background-color: lightGreen;
+  text-decoration: none;
 }
 
 // --- Underlined Text ------------------------------------
 %underlined-text {
-  
+  text-decoration: underline;
 }
 
 // --- Small Text -----------------------------------------
@@ -42,12 +43,12 @@
 
 // --- Bold Text ------------------------------------------
 %bold-text {
-  
+  font-weight: bold;
 }
 
 // --- Italic Text ----------------------------------------
 %italic-text {
-  
+  font-style: italic;
 }
 
 // --- Abbreviated Text -----------------------------------
@@ -59,5 +60,5 @@
 
 // --- Cited Text -----------------------------------------
 %cited-text {
-  
+  font-style: italic;
 }

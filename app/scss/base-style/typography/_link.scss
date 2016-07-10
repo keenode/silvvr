@@ -8,12 +8,12 @@
 
 // --- Inline Link ----------------------------------------
 %inline-link {
-  color: color('blue-s1');
+  color: color('aqua-s2');
   font-weight: 700;
   text-decoration: none;
-  transition: color 100ms ease-out;
+  transition: color 200ms $ease-out-cubic;
 
   &:hover {
-    color: #333;
+    color: color('aqua-s1');
   }
 }
