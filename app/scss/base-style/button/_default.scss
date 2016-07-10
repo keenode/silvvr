@@ -11,16 +11,17 @@
   display: inline-block;
   margin: 5px 0;
   padding: 19px 40px;
-  background-color: color('blue-s1');
+  background-color: color('aqua-s1');
   color: white;
+  letter-spacing: 1px;
   text-align: center;
   text-decoration: none;
   border: 0;
   cursor: pointer;
-  transition: background-color 100ms ease-out;
+  transition: background-color 200ms $ease-out-cubic;
 
   &:hover {
     color: white;
-    background-color: #333;
+    background-color: color('aqua-s2');
   }
 }

@@ -8,7 +8,6 @@
 
 // --- Secondary Button -----------------------------------
 %btn-secondary {
-  @extend %btn;
   background-color: color('gray-s1');
 
   &:hover {
