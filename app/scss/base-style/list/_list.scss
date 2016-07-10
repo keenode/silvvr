@@ -10,6 +10,11 @@
 %default-list {
   margin: 10px 0 50px 0;
   padding: 0 0 0 30px;
+  font-size: 16px;
+
+  @include media ($small-up) {
+    font-size: 18px;
+  }
 
   ul,
   ol {
@@ -17,7 +22,6 @@
   }
 
   li {
-    position: relative;
     margin: 20px 0;
     color: color('gray-s1');
   }
@@ -31,6 +35,10 @@
 // --- Ordered List ---------------------------------------
 %list-ordered {
   @extend %default-list;
+
+  ol > li {
+    list-style-type: lower-alpha;
+  }
 }
 
 // --- Unstyled List --------------------------------------
@@ -39,6 +47,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  ul li {
+    list-style: none;
+  }
 }
 
 // --- Inline List ------------------------------------------
