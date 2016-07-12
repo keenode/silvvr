@@ -8,7 +8,11 @@
 
 // --- Hover Table ----------------------------------------
 %table-hover {
+  tr {
+    transition: background-color 200ms $ease-out-cubic;
+  }
+
   tr:hover {
-    background-color: #eee;
+    background-color: color('misty-s2');
   }
 }

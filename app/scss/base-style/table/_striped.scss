@@ -9,6 +9,6 @@
 // --- Striped Table --------------------------------------
 %table-striped {
   tr:nth-of-type(even) {
-    background-color: tint(color('gray-s2'), 50%);
+    background-color: color('misty-s2');
   }
 }

@@ -8,7 +8,7 @@
 
 // --- Basic Table ----------------------------------------
 %table {
-  margin: 10px 0 20px 0;
+  margin: 10px 0 20px;
   width: 100%;
   border-spacing: 0;
 
@@ -25,12 +25,12 @@
   }
 
   thead tr th {
-    border-bottom: 2px solid color('gray-s2');
+    border-bottom: 2px solid color('misty-s1');
   }
 
   tbody tr td,
   tbody tr th {
-    border-bottom: 1px solid color('gray-s2');
+    border-bottom: 1px solid color('misty-s1');
   }
 
   tbody tr:last-child td,

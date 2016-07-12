@@ -10,20 +10,20 @@
 %table-bordered {
   td,
   th {
-    border-right: 1px solid color('gray-s2');
+    border-right: 1px solid color('misty-s1');
   }
 
   td:first-child,
   th:first-child {
-    border-left: 1px solid color('gray-s2');
+    border-left: 1px solid color('misty-s1');
   }
 
   thead tr th {
-    border-top: 1px solid color('gray-s2');
+    border-top: 1px solid color('misty-s1');
   }
 
   tbody tr:last-child td,
   tbody tr:last-child th {
-    border-bottom: 1px solid color('gray-s2');
+    border-bottom: 1px solid color('misty-s1');
   }
 }
