@@ -131,8 +131,15 @@ table.table--condensed { @extend %table-condensed; }
 /* --- CONTROLS ------------------------------------------- */
 /* -------------------------------------------------------- */
 
-// --- Input ----------------------------------------------
+// --- All Inputs -----------------------------------------
 input { @extend %input; }
+
+// --- Text Input -----------------------------------------
+input[type='text'],
+input[type='password'] { @extend %input-text; }
+
+// --- Number Input ---------------------------------------
+input[type='number'] { @extend %input-number; }
 
 // --- Textarea -------------------------------------------
 textarea { @extend %textarea; }

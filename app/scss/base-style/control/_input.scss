@@ -6,21 +6,34 @@
 
 /* --- placeholder selectors ------------------------------ */
 
-// --- Input ----------------------------------------------
+// --- All Inputs -----------------------------------------
 %input {
-  min-width: 300px;
   margin: 5px 0;
   padding: 15px;
-  color: #3a3a3a;
-  font-size: 13px;
-  border: 1px solid #dedede;
+  border: 1px solid color('misty-s1');
 
   &[disabled] {
-    background-color: #eee;
+    background-color: color('misty-s2');
     cursor: not-allowed;
   }
 
   &[readonly] {
     cursor: not-allowed;
   }
+}
+
+// --- Text Input ---------------------------------------==
+%input-text {
+  width: 100%;
+
+  @include media ($small-up) {
+    width: 300px;
+    max-width: 100%;
+  }
+}
+
+// --- Number Input ---------------------------------------
+%input-number {
+  width: auto;
+  text-align: center;
 }

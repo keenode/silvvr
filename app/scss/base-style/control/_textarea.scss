@@ -9,5 +9,10 @@
 // --- Textarea -------------------------------------------
 %textarea {
   @extend %input;
-  min-width: 600px;
+  width: 100%;
+
+  @include media ($small-up) {
+    width: 600px;
+    max-width: 100%;
+  }
 }

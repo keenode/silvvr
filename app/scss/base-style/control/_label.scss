@@ -8,5 +8,9 @@
 
 // --- Label ----------------------------------------------
 %label {
-  font-size: 13px;
+  font-size: 14px;
+
+  @include media ($small-up) {
+    font-size: 16px;
+  }
 }
