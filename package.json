@@ -1,6 +1,6 @@
 {
   "name": "silvvr",
-  "version": "0.4.5",
+  "version": "0.5.0",
   "main": "gulpfile.babel.js",
   "description": "Frontend Gulp build system and boilerplate.",
   "author": {

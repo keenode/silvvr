@@ -1,10 +1,10 @@
 # silvvr
 
-**v0.4.1**
+**v0.5.0**
 
 #### Front-End Gulp build system and boilerplate.
 
-Automate your web development process with ease! When changes are made to your code, **silvvr** automatically sets up a browsersync server, compiles SASS, bundles & uglifies JavaScript, minifies images & SVGs -- all in seconds!
+Automate your web development process with ease! When changes are made to your code, **silvvr** automatically sets up a browsersync server, compiles SASS, bundles & uglifies JavaScript -- all in seconds!
 
 ## Features
 * Run *Development*, *Staging*, or *Production* build environments:
@@ -14,14 +14,14 @@ Automate your web development process with ease! When changes are made to your c
 * Starts up a **browsersync server**, so changes are immediately apparent on your browser.
 * **SASS** w/ **autoprefixer**, and other helpful plugins.
 * **JavaScript bundling and uglify**.
-* **Image minification** for SVGs, PNGs, JPGs, and GIFs.
-* **HTML minification**.
 * **Favicons generator**.
 * Watches all asset folders and automatically copies those files to their corresponding destination folders.
 * Includes **Bourbon and Neat** -- http://bourbon.io/
+* Scaffold pages and components for rapid development.
+* Compile **Nunjucks** templates.
 
 ## Requirements
-**NodeJS 5.11 or greater is recommended** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
+**NodeJS 6.3 or greater is recommended** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
 
 ## Install
 To install **silvvr**, simply clone this repo and create your own repo instance. 
@@ -39,7 +39,7 @@ To install **silvvr**, simply clone this repo and create your own repo instance.
 
         npm install
 
-4. Run `gulp generate-favicons` to generate favicons from `app/assets/favicon.png`.
+4. Run `gulp generate-favicons` to generate favicons from `app/asset/favicon.png`.
 
 5. Now run `gulp` --this will start **silvvr** in development mode.
 
@@ -59,16 +59,16 @@ To install **silvvr**, simply clone this repo and create your own repo instance.
 * `gulp <--env> --build`
     Start **silvvr** in build-only mode. Files are only generated. No file watching or server is initiated.
 
-* `gulp make --page <page-name> <--name> <Page Name>`
+* `gulp make:page --ref <page-ref> [--name <Page Name> --dir <path/to/page> --author <Author Name> --noscript]`
     Scaffold files to generate a new page.
 
-* `gulp make --component <component-name> --folder <folder> <--name> <Component Name> <--noscript>`
+* `gulp make:component --ref <component-ref> [--name <component Name> --dir <path/to/component> --author <Author Name> --noscript]`
     Scaffold files to generate a new component.
 
-* `gulp delete --page <page-name>`
+* `gulp delete:page --ref <page-ref>`
     Delete scaffolded files for a given page.
 
-* `gulp delete --component <component-name> --folder <folder>`
+* `gulp delete:component --ref <component-ref>`
     Delete scaffolded files for a given component.
 
 ## Recommendations
@@ -77,7 +77,7 @@ To install **silvvr**, simply clone this repo and create your own repo instance.
 * You should update `/app/humans.txt` with your information.
 
 ## Warnings
-* Never, ever, add new files or make changes to anything within the destination folder `dist`. **This folder is removed and regenerated when silvvr starts**.
+* Never, ever, add new files or make changes to anything within the destination folder `public`. **This folder is removed and regenerated when silvvr starts**.
 
 ## Contact Me
 If you have questions, comments or concerns, feel free to reach me as follows:
