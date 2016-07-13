@@ -1,11 +1,20 @@
 /**
- * scss/base-style/code/variable
+ * app/scss/base-style/code/variable
  * Code variables styles.
  * @author Keenan Staffieri
 */
 
 /* --- placeholder selectors ------------------------------ */
 
+// --- Variable -------------------------------------------
 %variable {
-    
+  color: darkRed;
+  font-size: 14px;
+  line-height: 22px;
+  font-style: italic;
+
+  @include media ($small-up) {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }

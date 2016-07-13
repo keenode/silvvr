@@ -1,13 +1,14 @@
 /**
- * scss/base-style/table/striped
+ * app/scss/base-style/table/striped
  * Striped table styles.
  * @author Keenan Staffieri
 */
 
 /* --- placeholder selectors ------------------------------ */
 
+// --- Striped Table --------------------------------------
 %table-striped {
-    tr:nth-of-type(even) {
-        background-color: tint(color('gray-light'), 50%);
-    }
+  tr:nth-of-type(even) {
+    background-color: color('misty-s2');
+  }
 }

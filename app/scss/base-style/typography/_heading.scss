@@ -1,100 +1,103 @@
 /**
- * scss/base-style/typography/heading
+ * app/scss/base-style/typography/heading
  * Headings styles.
  * @author Keenan Staffieri
 */
 
 /* --- placeholder selectors ------------------------------ */
 
-// --- Styles shared by headings 1-6
+// --- Styles shared by headings 1-2
 %heading-1,
-%heading-2,
+%heading-2 {
+  @include font($fontFamily--headings, 400);
+}
+
+// --- Styles shared by headings 3-6
 %heading-3,
 %heading-4,
 %heading-5,
 %heading-6 {
-    @include font-aa;
+  @include font($fontFamily--base, 700);
 }
-
-// --- Styles shared by headings 1, 3-6
-%heading-1,
-%heading-3,
-%heading-4,
-%heading-5,
-%heading-6 {
-    @include font($fontFamily--base, 700);
-}
-
 
 /*
-    Specific placeholder element heading styles
+  Specific placeholder element heading styles
 */
 
+// --- Heading 1 ------------------------------------------
 %heading-1 {
-    margin: 40px 0 80px;
-    font-size: 55px;
-    line-height: 56px;
-    letter-spacing: -3px;
+  margin: 10px 0 30px;
+  font-size: 50px;
+  line-height: 56px;
 
-    @include media($small-up) {
-        font-size: 142px;
-        line-height: 120px;
-    }
+  @include media ($small-up) {
+    margin: 20px 0 60px;
+    font-size: 100px;
+    line-height: 112px;
+  }
 }
 
+// --- Heading 2 ------------------------------------------
 %heading-2 {
-    margin: 30px 0 60px;
-    color: color('blue');
-    @include font($fontFamily--base, 800);
-    font-size: 55px;
-    line-height: 56px;
-    letter-spacing: -2px;
+  color: color('gray-s1');
+  margin: 10px 0 20px;
+  font-size: 40px;
+  line-height: 46px;
 
-    @include media($small-up) {
-        font-size: 90px;
-        line-height: 90px;
-    }
-}
-
-%heading-3 {
+  @include media ($small-up) {
     margin: 20px 0 40px;
-    font-size: 38px;
-    line-height: 40px;
-    letter-spacing: -2px;
-
-    @include media($small-up) {
-        font-size: 80px;
-        line-height: 80px;
-    }
+    font-size: 80px;
+    line-height: 90px;
+  }
 }
 
+// --- Heading 3 ------------------------------------------
+%heading-3 {
+  margin: 10px 0 20px;
+  font-size: 32px;
+  line-height: 40px;
+
+  @include media ($small-up) {
+    margin: 20px 0 40px;
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+// --- Heading 4 ------------------------------------------
 %heading-4 {
-    margin: 10px 0 30px;
-    font-size: 30px;
-    line-height: 40px;
-    letter-spacing: -1px;
+  margin: 10px 0 15px;
+  font-size: 26px;
+  line-height: 32px;
 
-    @include media($small-up) {
-        font-size: 45px;
-        line-height: 48px;
-    }
+  @include media ($small-up) {
+    margin: 15px 0 30px;
+    font-size: 48px;
+    line-height: 58px;
+  }
 }
 
+// --- Heading 5 ------------------------------------------
 %heading-5 {
-    margin: 10px 0 20px;
-    font-size: 38px;
-    line-height: 40px;
-    letter-spacing: -1px;
+  margin: 8px 0 12px;
+  font-size: 22px;
+  line-height: 26px;
+
+  @include media ($small-up) {
+    margin: 10px 0 15px;
+    font-size: 32px;
+    line-height: 42px;
+  }
 }
 
+// --- Heading 6 ------------------------------------------
 %heading-6 {
-    margin: 5px 0 10px;
-    font-size: 18px;
-    line-height: 34px;
-    letter-spacing: -1px;
+  margin: 5px 0 10px;
+  font-size: 18px;
+  line-height: 24px;
 
-    @include media($small-up) {
-        font-size: 28px;
-        line-height: 36px;
-    }
+  @include media ($small-up) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }

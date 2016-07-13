@@ -1,18 +1,19 @@
 /**
- * scss/base-style/typography/link
+ * app/scss/base-style/typography/link
  * Link styles.
  * @author Keenan Staffieri
 */
 
 /* --- placeholder selectors ------------------------------ */
 
+// --- Inline Link ----------------------------------------
 %inline-link {
-    color: color('blue');
-    font-weight: 700;
-    text-decoration: none;
-    transition: color 100ms ease-out;
+  color: color('aqua-s2');
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 200ms $ease-out-cubic;
 
-    &:hover {
-        color: #333;
-    }
+  &:hover {
+    color: color('aqua-s1');
+  }
 }

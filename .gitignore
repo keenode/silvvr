@@ -5,12 +5,11 @@
 .AppleDouble
 .LSOverride
 
-# Bower & Node Modules
+# Node
 node_modules
-bower_components
 npm-debug.log
 
-# General Files
+# General files
 .sass-cache
 .hg
 .idea
@@ -20,6 +19,5 @@ npm-debug.log
 .tmp
 .scssc
 
-# Silvvr Files
-dist
-app/assets/favicons
+# Silvvr files
+public

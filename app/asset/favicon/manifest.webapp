@@ -1,11 +1,11 @@
 {
-  "version": "0.2.0",
+  "version": "0.5.0",
   "name": "silvvr",
-  "description": "Front-End Gulp build system and boilerplate.",
+  "description": "Frontend Gulp build system and boilerplate.",
   "icons": {
-    "60": "firefox_app_60x60.png",
-    "128": "firefox_app_128x128.png",
-    "512": "firefox_app_512x512.png"
+    "60": "asset/favicon/firefox_app_60x60.png",
+    "128": "asset/favicon/firefox_app_128x128.png",
+    "512": "asset/favicon/firefox_app_512x512.png"
   },
   "developer": {
     "name": null,

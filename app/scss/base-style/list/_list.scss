@@ -1,0 +1,80 @@
+/**
+ * app/scss/base-style/list/list
+ * List styles.
+ * @author Keenan Staffieri
+*/
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Default List ---------------------------------------
+%default-list {
+  margin: 5px 0 25px 0;
+  padding: 0 0 0 15px;
+  font-size: 16px;
+
+  @include media ($small-up) {
+    margin: 10px 0 50px 0;
+    padding: 0 0 0 30px;
+    font-size: 18px;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+  }
+
+  li {
+    margin: 10px 0;
+    color: color('gray-s1');
+
+    @include media ($small-up) {
+      margin: 20px 0;
+    }
+  }
+}
+
+// --- Unordered List -------------------------------------
+%list-unordered {
+  @extend %default-list;
+}
+
+// --- Ordered List ---------------------------------------
+%list-ordered {
+  @extend %default-list;
+
+  ol > li {
+    list-style-type: lower-alpha;
+  }
+}
+
+// --- Unstyled List --------------------------------------
+%list-unstyled {
+  @extend %default-list;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  ul li {
+    list-style: none;
+  }
+}
+
+// --- Inline List ------------------------------------------
+%list-inline {
+  @extend %list-unstyled;
+
+  li {
+    display: inline-block;
+    padding: 0 15px;
+  }
+
+  li:first-child { padding-left: 0; }
+}
+
+// --- Condensed List -------------------------------------
+%list-condensed {
+  li {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+}

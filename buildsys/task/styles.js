@@ -6,44 +6,40 @@
  * 'gulp styles'
 */
 
-import sass from 'gulp-sass';
-import autoprefixer from 'gulp-autoprefixer'
-import sourcemaps from 'gulp-sourcemaps';
-import browserSync from 'browser-sync';
-import gutil from 'gulp-util';
-import plumber from 'gulp-plumber';
+import runSequence from 'run-sequence'
+import StyleCompiler from '../compiler/StyleCompiler'
 
+/**
+  $ gulp styles
+  > Preprocess styles for application and styleguide.
+*/
+gulp.task('styles', (cb) => {
+  Logger.task('RUNNING TASK : styles')
+  runSequence(
+    [
+      'styles:app',
+      // 'styles:styleguide',
+    ],
+  function () {
+    Logger.taskComplete('FINISHED TASK : styles')
+    cb()
+  })
+})
 
-/* $ gulp styles */
+/* $ gulp styles:app */
+gulp.task('styles:app', function () {
+  return StyleCompiler.compileGlob(
+    `${config.srcDir.app.styles}/**/*.{scss,sass}`,
+    config.buildDir.app.styles,
+    'app'
+  )
+})
 
-gulp.task('styles', function () {
-
-    Logger.task('RUNNING TASK : styles');
-
-    // Get build environment settings
-    var optimizeCSS   = config.env[env].css.optimize,
-        useSourcemaps = config.env[env].css.sourcemaps;
-
-    var sassOutputStyle = 'expanded';
-    if(optimizeCSS) { sassOutputStyle = 'compressed'; }
-
-    // Copy and process css files to build dir
-    return gulp.src(`${config.appDir.css}/**/*.{scss,sass}`)
-        .pipe(plumber({
-            errorHandler: function (err) {
-                gutil.beep();
-                Logger.error(`CSS ERROR >> ${err.name} :\n ${err.message}`);
-                this.emit('end');
-            }
-        }))
-        .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
-        .pipe(sass({ outputStyle: sassOutputStyle }).on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: [ 'last 2 versions' ],
-            cascade: false
-        }))
-        .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
-        .pipe(gulp.dest(config.buildDir.css))
-        .pipe(config.browserSync.injectCSS ? browserSync.stream() : gutil.noop())
-        .on('end', function () { return Logger.taskComplete('FINISHED TASK : styles'); });
-});
+/* $ gulp styles:styleguide */
+// gulp.task('styles:styleguide', function () {
+//   return StyleCompiler.compileGlob(
+//     `${config.srcDir.styleguide.styles}/**/*.{scss,sass}`,
+//     config.buildDir.styleguide.styles,
+//     'styleguide'
+//   )
+// })

@@ -1,0 +1,408 @@
+{
+    "project_logo": "/asset/svg/silvvr-logo/svr-logo-partial-lightbg.svg",
+    "project_favicon": "/asset/favicon/favicon-230x230.png",
+    "project_name": "Silvvr",
+    "project_url": "https://github.com/keezoid/silvvr",
+    "copyright_start_year": 2016,
+    "client_name": "Keenan Staffieri",
+    "client_url": "http://keenanstaffieri.com",
+    "creators": [
+        {
+            "name": "Keenan Staffieri",
+            "url": "http://keenanstaffieri.com"
+        }
+    ],
+    "theme": {
+        "border_color": "#E0E6ED",
+        "highlight_color": "#F9FAFC",
+        "brand_color": "#258EA6",
+        "background_color": "#FFFFFF",
+        "code_highlight_theme": "github",
+        "override_code_highlight_bg": "#F9FAFC",
+        "sample_dark_background": "#2B2B2B",
+        "show_project_name": true,
+        "show_version": true,
+        "max_width": 1200
+    },
+    "assets": {
+        "css": [
+            "/css/pattern-library.css",
+            "/css/master.css"
+        ],
+        "js": []
+    },
+    "font_libraries": {
+        "typekit_code": null,
+        "typography_web_fonts": null,
+        "google_web_fonts": "https://fonts.googleapis.com/css?family=Raleway:400,700|Secular+One"
+    },
+    "content": {
+        "show_first_page_on_load": true,
+        "title": "Overview",
+        "pages": [
+            {
+                "name": "introduction",
+                "title": "Introduction",
+                "file": "./pages/intro.md"
+            }
+        ]
+    },
+    "groups": [
+        {
+            "name": "branding",
+            "title": "Branding",
+            "components": [
+                {
+                    "name": "color-palette",
+                    "title": "Color Palette",
+                    "type": "colors",
+                    "colors": [
+                        "#2B2B2B,#3F3F3F",
+                        "#6C6C6C,#B2B2B2",
+                        "#2B4C60,#38627C",
+                        "#258EA6,#2BAAC6",
+                        "#DEE0E2,#EFF1F3"
+                    ],
+                    "group": "branding"
+                },
+                {
+                    "name": "logo",
+                    "title": "Logo",
+                    "width": "half",
+                    "group": "branding"
+                },
+                {
+                    "group": "branding",
+                    "name": "logo-inverted",
+                    "title": "Inverted Logo",
+                    "width": "half",
+                    "options": {
+                        "sample_dark_background": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "typography",
+            "title": "Typography",
+            "components": [
+                {
+                    "group": "typography",
+                    "name": "fonts",
+                    "title": "Fonts"
+                },
+                {
+                    "group": "typography",
+                    "name": "headings",
+                    "title": "Headings"
+                },
+                {
+                    "group": "typography",
+                    "name": "lead-body-copy",
+                    "title": "Lead Body Copy",
+                    "width": "half"
+                },
+                {
+                    "name": "body-copy",
+                    "title": "Body Copy",
+                    "width": "half",
+                    "group": "typography"
+                },
+                {
+                    "group": "typography",
+                    "name": "links",
+                    "title": "Links",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "marked-text",
+                    "title": "Marked Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "deleted-text",
+                    "title": "Deleted Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "strikethrough-text",
+                    "title": "Strikethrough Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "inserted-text",
+                    "title": "Inserted Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "underline-text",
+                    "title": "Underline Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "small-text",
+                    "title": "Small Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "bold-text",
+                    "title": "Bold Text",
+                    "width": "half"
+                },
+                {
+                    "name": "italic-text",
+                    "title": "Italic Text",
+                    "width": "half",
+                    "group": "typography"
+                },
+                {
+                    "group": "typography",
+                    "name": "abbreviated-text",
+                    "title": "Abbreviated Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "cited-text",
+                    "title": "Cited Text",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "address",
+                    "title": "Address",
+                    "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "blockquotes",
+                    "title": "Blockquotes",
+                    "width": "half"
+                }
+            ]
+        },
+        {
+            "name": "lists",
+            "title": "Lists",
+            "components": [
+                {
+                    "group": "lists",
+                    "name": "unordered",
+                    "title": "Unordered List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "ordered",
+                    "title": "Ordered List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "unstyled",
+                    "title": "Unstyled List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "inline",
+                    "title": "Inline List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "condensed",
+                    "title": "Condensed List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "description",
+                    "title": "Description List",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "description-horizontal",
+                    "title": "Horizontal Description List",
+                    "width": "half"
+                }
+            ]
+        },
+        {
+            "name": "dividers",
+            "title": "Dividers",
+            "components": [
+                {
+                    "group": "dividers",
+                    "name": "default",
+                    "title": "Default Divider"
+                }
+            ]
+        },
+        {
+            "name": "buttons",
+            "title": "Buttons",
+            "components": [
+                {
+                    "group": "buttons",
+                    "name": "default",
+                    "title": "Default Button",
+                    "width": "half"
+                },
+                {
+                    "group": "buttons",
+                    "name": "large",
+                    "title": "Large Button",
+                    "width": "half"
+                },
+                {
+                    "group": "buttons",
+                    "name": "secondary",
+                    "title": "Secondary Button",
+                    "width": "half"
+                }
+            ]
+        },
+        {
+            "name": "code",
+            "title": "Code",
+            "components": [
+                {
+                    "group": "code",
+                    "name": "inline",
+                    "title": "Inline Code",
+                    "width": "half"
+                },
+                {
+                    "group": "code",
+                    "name": "user-input",
+                    "title": "User Input",
+                    "width": "half"
+                },
+                {
+                    "group": "code",
+                    "name": "block",
+                    "title": "Code Block"
+                },
+                {
+                    "group": "code",
+                    "name": "variables",
+                    "title": "Variables",
+                    "width": "half"
+                },
+                {
+                    "group": "code",
+                    "name": "sample-output",
+                    "title": "Sample Output",
+                    "width": "half"
+                }
+            ]
+        },
+        {
+            "name": "tables",
+            "title": "Tables",
+            "components": [
+                {
+                    "group": "tables",
+                    "name": "basic",
+                    "title": "Basic Table"
+                },
+                {
+                    "name": "striped",
+                    "title": "Striped Table",
+                    "group": "tables"
+                },
+                {
+                    "group": "tables",
+                    "name": "bordered",
+                    "title": "Bordered Table"
+                },
+                {
+                    "group": "tables",
+                    "name": "hover",
+                    "title": "Hoverable Rows Table"
+                },
+                {
+                    "group": "tables",
+                    "name": "condensed",
+                    "title": "Condensed Table"
+                }
+            ]
+        },
+        {
+            "name": "controls",
+            "title": "Controls",
+            "components": [
+                {
+                    "name": "input-text",
+                    "title": "Text Input",
+                    "width": "half",
+                    "group": "controls"
+                },
+                {
+                    "group": "controls",
+                    "name": "input-password",
+                    "title": "Password Input",
+                    "width": "half"
+                },
+                {
+                    "name": "input-number",
+                    "title": "Number Input",
+                    "width": "half",
+                    "group": "controls"
+                },
+                {
+                    "group": "controls",
+                    "name": "textarea",
+                    "title": "Textarea",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "checkbox-stacked",
+                    "title": "Checkboxes (Stacked)",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "checkbox-inline",
+                    "title": "Checkboxes (Inline)",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "radio-stacked",
+                    "title": "Radios (Stacked)",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "radio-inline",
+                    "title": "Radios (Inline)",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "select",
+                    "title": "Select",
+                    "width": "half"
+                },
+                {
+                    "group": "controls",
+                    "name": "select-multiple",
+                    "title": "Select (Multiple)",
+                    "width": "half"
+                }
+            ]
+        }
+    ],
+    "version": "1.5.10"
+}

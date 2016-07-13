@@ -1,26 +1,32 @@
 /**
- * scss/base-style/button/default
+ * app/scss/base-style/button/default
  * Button (default) styles.
  * @author Keenan Staffieri
 */
 
 /* --- placeholder selectors ------------------------------ */
 
+// --- Default Button -------------------------------------
 %btn {
-    display: inline-block;
-    margin: 5px 0;
-    padding: 19px 40px;
-    background-color: color('blue');
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border: 0;
-    cursor: pointer;
-    transition: background-color 100ms ease-out;
-    @include font-aa;
+  display: inline-block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 19px 40px;
+  background-color: color('aqua-s1');
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 200ms $ease-out-cubic;
 
-    &:hover {
-        color: white;
-        background-color: #333;
-    }
+  &:hover {
+    color: white;
+    background-color: color('aqua-s2');
+  }
+
+  @include media ($small-up) {
+    width: auto;
+  }
 }

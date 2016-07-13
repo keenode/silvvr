@@ -1,9 +1,9 @@
 /**
- * scss/variable/_include
+ * app/scss/variable/_include
  * Include SASS variables.
  * @author Keenan Staffieri
 */
 
+@import 'grid';
 @import 'color';
 @import 'font';
-@import 'grid';

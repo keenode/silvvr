@@ -1,0 +1,46 @@
+{#
+  Page: Index
+  ---------------------------------------------
+  Reference: index
+  app/index
+  @author Keenan Staffieri
+#}
+
+{% import 'macro/render.njk' as render %}
+
+{% extends 'layout/layout.njk' %}
+
+{# --- additional stylesheets ----------------------------- #}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="css/page/index.css">
+{% endblock %}
+
+{# --- content -------------------------------------------- #}
+
+{% block content %}
+
+<div class="page-wrap page-wrap--index" data-page-ref="index" data-page-name="Index">
+
+  <div class="page-inner">
+
+    {# Component: Copy Block #}
+    {{ render.component('copy-block', {
+      heading: 'Welcome',
+      content: '<p>Your journey has begun.</p>'
+    }) }}
+
+  </div> {# .page-inner #}
+
+</div> {# .page-wrap--index #}
+
+{% endblock %}
+
+{# --- additional scripts --------------------------------- #}
+
+{% block scripts %}
+<!-- build:js /js/page/index.js -->
+<script type="text/javascript" src="/js/component/_base/Component.js"></script>
+<script type="text/javascript" src="/js/page/index.js"></script>
+<!-- endbuild -->
+{% endblock %}

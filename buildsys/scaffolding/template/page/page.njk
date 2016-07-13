@@ -1,0 +1,40 @@
+{#
+  Page: <%= PAGE_NAME =%>
+  ---------------------------------------------
+  Reference: <%= PAGE_REF =%>
+  app/view/page<%= PAGE_DIRPATH =%>/<%= PAGE_REF =%>
+  @author <%= AUTHOR =%>
+#}
+
+{% extends 'layout/layout.njk' %}
+
+{# --- additional stylesheets ----------------------------- #}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="css/page<%= PAGE_DIRPATH =%>/<%= PAGE_REF =%>.css">
+{% endblock %}
+
+{# --- content -------------------------------------------- #}
+
+{% block content %}
+
+<div class="page-wrap page-wrap--<%= PAGE_REF =%>" data-page-ref="<%= PAGE_REF =%>" data-page-name="<%= PAGE_NAME =%>">
+
+  {# Component: Copy Block #}
+  {{ render.component('copy-block', {
+    heading: 'Hello, World!',
+    content: '<p>Say "Hello" to the first-ever component!</p>'
+  }) }}
+
+</div> {# .page-wrap--<%= PAGE_REF =%> #}
+
+{% endblock %}
+
+{# --- additional scripts --------------------------------- #}
+
+{% block scripts %}
+<!-- build:js /js/page<%= PAGE_DIRPATH =%>/<%= PAGE_REF =%>.js -->
+<script type="text/javascript" src="/js/component/_base/Component.js"></script>
+<script type="text/javascript" src="/js/page<%= PAGE_DIRPATH =%>/<%= PAGE_REF =%>.js"></script>
+<!-- endbuild -->
+{% endblock %}

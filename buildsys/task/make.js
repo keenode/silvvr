@@ -3,63 +3,152 @@
  * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Make
- * 'gulp make --page [page-name]'
+ * 'gulp make:page --ref <page-ref> [--name <Page Name> --dir <path/to/page> --author <Author Name> --noscript]'
+ * 'gulp make:component --ref <component-ref> [--name <component Name> --dir <path/to/component> --author <Author Name> --noscript]'
 */
 
-import PageGenerator from '../scaffolding/PageGenerator';
-import ComponentGenerator from '../scaffolding/ComponentGenerator';
-
+import PageGenerator from '../scaffolding/PageGenerator'
+import ComponentGenerator from '../scaffolding/ComponentGenerator'
 
 // Grab command line arguments
-var argv = require('yargs').argv;
+const argv = require('yargs').argv
 
 /**
-    $ gulp make
-    > Make scaffolding command handler.
+  $ gulp make
+  > Make command (no params)
 */
-gulp.task('make', function (cb) {
+gulp.task('make', (cb) => {
+  if (argv.help) {
+    Logger.help(`
+-- 'make' Command Help ------------------------------------
+You can easily scaffold boilerplate files for 'pages' and 'components' with these simple commands:
 
-    /**
-        Find out of --page flag was issued
-    */
-    if (argv.page) {
-        if (typeof argv.page === 'string') {
-            if (typeof argv.name === 'string') {
-                // Pass user-specified name to Page scaffolder
-                return PageGenerator.scaffold(argv.page, argv.name);
-            }
-            else {
-                return PageGenerator.scaffold(argv.page);
-            }
-        }
-        else {
-            Logger.warn('Please define a name for the page. \nEX: gulp make --page [page-name]');
-        }
+-- Scaffold a page:
+    gulp make:page --ref <page-ref>
+
+-- Scaffold a component:
+    gulp make:component --ref <component-ref>
+`)
+  } else {
+    Logger.warn('Please specify what you\'d like to make. \nEX: gulp make:page --ref <page-ref>\n\ngulp make --help for more info.')
+  }
+})
+
+/**
+  $ gulp make:page
+  > Make page scaffolding handler.
+*/
+gulp.task('make:page', (cb) => {
+
+  if (argv.help) {
+    Logger.help(`
+-- 'make:page' Command Help -------------------------------
+
+  gulp make:page --ref <page-ref> [--name <Page Name> --dir <path/to/page> --author <Author Name> --noscript]
+
+  @params
+    ref:
+      Stands for page reference. This value is essentially used as an identifier for the page throughout the build system. Please do not use spaces, use dashes instead. (i.e. 'my-homepage' would be valid, NOT 'my homepage').
+
+    name (optional):
+      Formal name for the page. If this parameter is not specified, the system will generate one for you. (i.e. The page reference 'my-homepage', will automatically translate into 'My Homepage'). Dashes are stripped out and the first letter of each word is capitalized.
+
+    dir (optional):
+      You can scaffold page files into any nested subdirectory for better organization. (i.e. --dir about/team).
+
+    author (optional):
+      Override the default author as defined in the package.json.
+
+    noscript (optional):
+      No JavaScript file will be generated if this flag is passed.
+`)
+    return false
+  }
+
+  const pageRef = argv.ref
+  const pageName = argv.name
+  const pageDirPath = argv.dir
+
+  if (typeof pageRef === 'string') {
+
+    let options = {}
+
+    // Assign user-specified page name if provided
+    if (typeof pageName === 'string') {
+      options.name = pageName
     }
 
-    /**
-        Find out if --component flag was issued
-    */
-    else if (argv.component) {
-        if (typeof argv.component === 'string') {
-            if (typeof argv.folder === 'string') {
-                if (typeof argv.name === 'string') {
-                    // Pass user-specified name to Component scaffolder
-                    return ComponentGenerator.scaffold(argv.component, argv.folder, argv.noscript, argv.name);
-                }
-                else {
-                    return ComponentGenerator.scaffold(argv.component, argv.folder, argv.noscript);
-                }
-            }
-            else {
-                Logger.warn('Please specify a folder to scaffold the component. \nEX: gulp make --component [component-name] --folder [folder-name]');
-            }
-        }
-        else {
-            Logger.warn('Please define a name for the component. \nEX: gulp make --component [component-name]');
-        }
+    if (typeof pageDirPath === 'string') {
+      options.dirPath = pageDirPath
     }
-    else {
-        Logger.warn("Please specify what you'd like to make. \nEX: gulp make --page [page-name]");
+
+    options.author = argv.author
+
+    options.noscript = argv.noscript
+
+    // Now generate files for a page with the given params
+    return PageGenerator.scaffold(pageRef, options)
+
+  } else {
+    Logger.warn('Please define a reference name for the page. \nEX: gulp make:page --ref <page-ref>')
+  }
+})
+
+/**
+  $ gulp make:component
+  > Make component scaffolding handler.
+*/
+gulp.task('make:component', (cb) => {
+
+  if (argv.help) {
+    Logger.help(`
+-- 'make:component' Command Help --------------------------
+
+  gulp make:component --ref <component-ref> [--name <component Name> --dir <path/to/component> --author <Author Name> --noscript]
+
+  @params
+    ref:
+      Stands for component reference. This value is essentially used as an identifier for the component throughout the build system. Please do not use spaces, use dashes instead. (i.e. 'my-component' would be valid, NOT 'my component').
+
+    name (optional):
+      Formal name for the component. If this parameter is not specified, the system will generate one for you. (i.e. The component reference 'my-component', will automatically translate into 'My Component'). Dashes are stripped out and the first letter of each word is capitalized.
+
+    dir (optional):
+      You can scaffold component files into any nested subdirectory for better organization. (i.e. --dir slider/large).
+
+    author (optional):
+      Override the default author as defined in the package.json.
+
+    noscript (optional):
+      No JavaScript file will be generated if this flag is passed.
+`)
+    return false
+  }
+
+  const componentRef = argv.ref
+  const componentName = argv.name
+  const componentDirPath = argv.dir
+
+  if (typeof componentRef === 'string') {
+
+    let options = {}
+
+    if (typeof componentName === 'string') {
+      options.name = componentName
     }
-});
+
+    if (typeof componentDirPath === 'string') {
+      options.dirPath = componentDirPath
+    }
+
+    options.author = argv.author
+
+    options.noscript = argv.noscript
+
+    // Now generate files for a component with the given params
+    return ComponentGenerator.scaffold(componentRef, options)
+
+  } else {
+    Logger.warn('Please define a reference name for the component. \nEX: gulp make:component --ref <component-ref>')
+  }
+})

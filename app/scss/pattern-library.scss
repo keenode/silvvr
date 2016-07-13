@@ -1,0 +1,87 @@
+/**
+ * app/scss/pattern-library
+ * Pattern library styles go here.
+ * @author Keenan Staffieri
+*/
+
+/**
+  Style corrections
+  - Fix broken styles from master.css import.
+*/
+
+.ndpl-nav__title {
+  line-height: inherit;
+}
+
+.ndpl-sidebar__title,
+.ndpl-library__title,
+.ndpl-component__title,
+.ndpl-loading__title {
+  margin-top: 0;
+  letter-spacing: 0;
+  -webkit-font-smoothing: auto;
+}
+
+.ndpl-nav__item,
+.ndpl-nav__child-item {
+  margin: 0;
+  -webkit-font-smoothing: auto;
+}
+
+.ndpl-info__item {
+  margin: 0;
+  color: white;
+  -webkit-font-smoothing: auto;
+}
+
+.ndpl-copyright p {
+  -webkit-font-smoothing: auto;
+}
+
+.ndpl-copyright a {
+  font-weight: inherit;
+}
+
+.ndpl-page {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: inherit;
+    letter-spacing: 0;
+    -webkit-font-smoothing: auto;
+  }
+
+  p {
+    margin-top: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    -webkit-font-smoothing: auto;
+  }
+
+  a {
+    font-weight: inherit;
+  }
+
+  code { background-color: inherit; }
+}
+
+.ndpl-component__code pre {
+  padding: inherit;
+  color: inherit;
+  font-family: monospace;
+  font-size: inherit;
+  background-color: inherit;
+}
+
+.ndpl-component__code code,
+.ndpl-info code {
+  font-family: monospace;
+}
+
+.ndpl-component__description code {
+  color: inherit;
+}
