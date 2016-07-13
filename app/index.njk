@@ -20,15 +20,19 @@
 
 {% block content %}
 
-<div class="page-wrap page-wrap--test-page" data-page-ref="test-page" data-page-name="Test Page">
+<div class="page-wrap page-wrap--index" data-page-ref="index" data-page-name="Index">
 
-  {# Component: Copy Block #}
-  {{ render.component('copy-block', {
-    heading: 'Hello, World!',
-    content: '<p>Say "Hello" to the first-ever component! Click <a href="#">here</a> for more details.</p>'
-  }) }}
+  <div class="page-inner">
 
-</div> {# .page-wrap--test-page #}
+    {# Component: Copy Block #}
+    {{ render.component('copy-block', {
+      heading: 'Welcome',
+      content: '<p>Your journey has begun.</p>'
+    }) }}
+
+  </div> {# .page-inner #}
+
+</div> {# .page-wrap--index #}
 
 {% endblock %}
 
