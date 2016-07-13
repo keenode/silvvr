@@ -53,10 +53,8 @@ gulp.task('templating:app', function () {
 
 /* $ gulp templating:vendor-scripts */
 gulp.task('templating:vendor-scripts', function () {
-  setTimeout(function () { // sorry
-    const canUglify = config.env[env].scripts.uglify
-    return gulp.src(`${config.buildDir.app.scripts}/vendor.js`)
-      .pipe(canUglify ? uglify() : gutil.noop())
-      .pipe(gulp.dest(config.buildDir.app.scripts))
-  }, 1000)
+  const canUglify = config.env[env].scripts.uglify
+  return gulp.src(`${config.buildDir.app.scripts}/vendor.js`)
+    .pipe(canUglify ? uglify() : gutil.noop())
+    .pipe(gulp.dest(config.buildDir.app.scripts))
 })

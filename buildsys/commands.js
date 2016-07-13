@@ -22,7 +22,7 @@ import runSequence from 'run-sequence'
 gulp.task('default', (cb) => {
 
   // Log build mode setting
-  var buildModeText = 'DEVELOPMENT'
+  let buildModeText = 'DEVELOPMENT'
   if      (env === 'stage') { buildModeText = 'STAGING'    }
   else if (env === 'prod')  { buildModeText = 'PRODUCTION' }
 
@@ -39,13 +39,13 @@ gulp.task('default', (cb) => {
     /**
         Override 'public' dir build folder to '.tmp' for build process compilation.
     */
-    var rootReplace = config.buildDir.app.root
+    const rootReplace = config.buildDir.app.root
     config.oldBuildDir = {}
-    for (var folder in config.buildDir) {
+    for (let folder in config.buildDir.app) {
       // Copy over original build dir properties
-      config.oldBuildDir[folder] = config.buildDir[folder]
+      config.oldBuildDir[folder] = config.buildDir.app[folder]
       // Assign new build dir properties with tmp folder replacing original properties
-      config.buildDir[folder] = config.buildDir[folder].replace(rootReplace, './.tmp')
+      config.buildDir.app[folder] = config.buildDir.app[folder].replace(rootReplace, './.tmp')
     }
   }
 

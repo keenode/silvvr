@@ -37,7 +37,9 @@ class TemplateCompiler {
         searchPath: buildOnlyMode ? './.tmp' : './public'
       }) : gutil.noop())
       .pipe(gulp.dest(destPath))
-      .on('end', function () { return Logger.taskComplete('FINISHED TASK : templating' + taskName) })
+      .on('end', function () {
+        return Logger.taskComplete('FINISHED TASK : templating' + taskName)
+      })
   }
 }
 
