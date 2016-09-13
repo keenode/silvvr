@@ -2,7 +2,7 @@
  * app/scss/variable/font
  * Import all custom webfonts.
  * @author Keenan Staffieri
-*/
+ */
 
 /* --- fonts --- */
 $fontFamily--base: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
@@ -11,7 +11,7 @@ $fontFamily--code: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 
 /**
   Force font classes
-*/
+ */
 .font--raleway { font-family: 'Raleway'; }
 .font--secular-one { font-family: 'Secular One'; }
 
@@ -22,7 +22,7 @@ $fontFamily--code: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 
 /**
   Include your own fonts here!
-*/
+ */
 
 // Example usage:
 // @include font-face('My-Font', '../assets/fonts/my-font-family/my-font');
@@ -30,7 +30,7 @@ $fontFamily--code: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 /**
   font-face
   Include required file types for custom webfont rendering.
-*/
+ */
 @mixin font-face ($family, $src, $weight: normal, $style: normal) {
   @font-face {
     font-family: $family;

@@ -2,7 +2,7 @@
  * app/script/component/Component
  * Component base class.
  * @author Keenan Staffieri
-*/
+ */
 
 class Component {
   baseClass = 'sg-component'

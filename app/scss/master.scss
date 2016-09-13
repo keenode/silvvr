@@ -2,7 +2,7 @@
  * app/scss/master
  * All application base styles, functions, mixins, etc. are imported here.
  * @author Keenan Staffieri
-*/
+ */
 
 /* --- Bourbon & Neat --- */
 
@@ -38,6 +38,3 @@ body {
 /* --- partials --- */
 @import 'partial/header/_include',
         'partial/footer/_include';
-
-/* --- page-specific styles --- */
-// @import 'page/index'; // TODO: Scaffold index page.
