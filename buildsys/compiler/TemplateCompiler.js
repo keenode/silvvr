@@ -6,7 +6,7 @@
 
 import gnunjucks from 'gulp-nunjucks'
 import nunjucks from 'nunjucks'
-import replace from 'gulp-replace'
+import batchReplace from 'gulp-batch-replace'
 import rename from 'gulp-rename'
 import gutil from 'gulp-util'
 import useref from 'gulp-useref'
@@ -22,6 +22,11 @@ class TemplateCompiler {
     const canMinifyHTML = config.env[env].html.minify
     const canBundle = config.env[env].scripts.bundle
 
+    const replaceProps = [
+      ['<%= API_URL =%>', apiUrls[env]],
+      ['<%= CACHEBUST_HASH =%>', CACHEBUST_HASH ? '?v=' + CACHEBUST_HASH : ''],
+    ]
+
     /**
       Compile Nunjucks template file and output to destPath.
      */
@@ -31,7 +36,7 @@ class TemplateCompiler {
           new nunjucks.FileSystemLoader('./app/view')
         )
       }))
-      .pipe(replace('<%= API_URL =%>', apiUrls[env]))
+      .pipe(batchReplace(replaceProps))
       .pipe(rename({ extname: '.html' }))
       .pipe(canBundle ? useref({
         searchPath: buildOnlyMode ? './.tmp' : './public'

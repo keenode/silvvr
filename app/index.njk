@@ -13,7 +13,7 @@
 {# --- additional stylesheets ----------------------------- #}
 
 {% block stylesheets %}
-<link rel="stylesheet" href="css/page/index.css">
+<link rel="stylesheet" href="css/page/index.css<%= CACHEBUST_HASH =%>">
 {% endblock %}
 
 {# --- content -------------------------------------------- #}

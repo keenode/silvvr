@@ -11,7 +11,7 @@
 {# --- additional stylesheets ----------------------------- #}
 
 {% block stylesheets %}
-<link rel="stylesheet" href="css/page<%= PAGE_DIRPATH =%>/<%= PAGE_REF =%>.css">
+<link rel="stylesheet" href="css/page<%= PAGE_DIRPATH =%>/<%= PAGE_REF =%>.css<%= CACHEBUST_HASH =%>">
 {% endblock %}
 
 {# --- content -------------------------------------------- #}

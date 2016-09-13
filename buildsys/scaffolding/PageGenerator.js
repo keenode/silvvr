@@ -33,10 +33,10 @@ class PageGenerator extends FileGenerator {
     }
 
     const replaceProps = [
-      ['<%= PAGE_REF =%>',        pageRef],
-      ['<%= PAGE_NAME =%>',       pageNameFormatted],
-      ['<%= PAGE_DIRPATH =%>',    dirPath],
-      ['<%= AUTHOR =%>',          author],
+      ['<%= PAGE_REF =%>', pageRef],
+      ['<%= PAGE_NAME =%>', pageNameFormatted],
+      ['<%= PAGE_DIRPATH =%>', dirPath],
+      ['<%= AUTHOR =%>', author],
       ['<%= RELATIVE_UP_DIR =%>', relativeUpDir],
     ]
 
