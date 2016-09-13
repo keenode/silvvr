@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Serve
  * 'gulp serve'
-*/
+ */
 
 import browserSync from 'browser-sync'
 
@@ -12,7 +12,7 @@ import browserSync from 'browser-sync'
 gulp.task('serve', function () {
 
   // Only serve files if build-only mode is off
-  if( ! buildOnlyMode) {
+  if ( ! buildOnlyMode) {
 
     Logger.task('RUNNING TASK : serve')
 

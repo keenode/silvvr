@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Images
  * 'gulp images'
-*/
+ */
 
 /* $ gulp images */
 gulp.task('images', function () {

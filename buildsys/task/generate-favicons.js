@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Generate Favicons
  * 'gulp generate-favicons'
-*/
+ */
 
 import favicons from 'gulp-favicons'
 import pkg from '../../package.json'
@@ -12,7 +12,7 @@ import pkg from '../../package.json'
 /**
   $ gulp generate-favicons
   > Generate supported favicon images for varying devices.
-*/
+ */
 gulp.task('generate-favicons', (cb) => {
 
   Logger.task('RUNNING TASK : generate-favicons')

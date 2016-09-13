@@ -2,7 +2,7 @@
  * buildsys/config/config
  * Build configuration settings.
  * @author Keenan Staffieri
-*/
+ */
 
 // Application source directory
 const APP_ROOT = './app'
@@ -19,7 +19,7 @@ export default {
 
   /**
     BrowserSync server settings for development.
-  */
+   */
   browserSync: {
     allowReload: true, // Reload the page when file changes are made?
     injectCSS:   true, // Inject CSS changes after .css files are saved?
@@ -31,7 +31,7 @@ export default {
 
   /**
     Environment-specific build settings
-  */
+   */
   env: {
 
     /**
@@ -46,12 +46,12 @@ export default {
         js.sourcemaps:  (true) Generate JS sourcemaps for easier debugging.
         cachebustAssets: Append hash to asset urls for cache busting.
       }
-    */
+     */
 
     /**
       'Development' environment build settings
       Command: 'gulp'
-    */
+     */
     dev: {
       html: {
         minify: false,
@@ -72,7 +72,7 @@ export default {
     /**
       'Staging' environment build settings
       Command: 'gulp --stage'
-    */
+     */
     stage: {
       html: {
         minify: true,
@@ -93,7 +93,7 @@ export default {
     /**
       'Production' environment build settings
       Command: 'gulp --prod'
-    */
+     */
     prod: {
       html: {
         minify: true,

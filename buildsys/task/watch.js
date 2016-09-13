@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Watch
  * 'gulp watch'
-*/
+ */
 
 import runSequence from 'run-sequence'
 import watch from 'gulp-watch'
@@ -13,7 +13,7 @@ import browserSync from 'browser-sync';
 /**
   $ gulp watch
   > Watch files for changes and run associated build tasks.
-*/
+ */
 gulp.task('watch', function () {
 
   // Only watch files if build-only mode is off

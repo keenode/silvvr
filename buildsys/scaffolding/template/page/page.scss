@@ -2,6 +2,6 @@
  * app/scss/page<%= PAGE_DIRPATH =%>/<%= PAGE_REF =%>
  * <%= PAGE_NAME =%> page specific styles.
  * @author <%= AUTHOR =%>
-*/
+ */
 
 @import '<%= RELATIVE_UP_DIR =%>_page-dependencies<%= PAGE_DIRPATH =%>/_<%= PAGE_REF =%>';

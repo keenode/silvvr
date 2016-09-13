@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: SVGs
  * 'gulp svgs'
-*/
+ */
 
 /* $ gulp svgs */
 gulp.task('svgs', function () {

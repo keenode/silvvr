@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Fonts
  * 'gulp fonts'
-*/
+ */
 
 /* $ gulp fonts */
 gulp.task('fonts', function () {

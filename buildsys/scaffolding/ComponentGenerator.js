@@ -2,7 +2,7 @@
  * buildsys/scaffolding/ComponentGenerator
  * Scaffold files for new components.
  * @author Keenan Staffieri
-*/
+ */
 
 import fs from 'fs'
 import del from 'del'

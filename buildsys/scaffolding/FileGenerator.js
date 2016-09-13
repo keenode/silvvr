@@ -2,7 +2,7 @@
  * buildsys/scaffolding/FileGenerator
  * Scaffold a file.
  * @author Keenan Staffieri
-*/
+ */
 
 import fs from 'fs'
 import rename from 'gulp-rename'

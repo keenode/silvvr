@@ -10,7 +10,7 @@
  * 'gulp generate-favicons' - Generate a series of favicon images and write to a template.
  * ------------------------------------------------------------------------------------------------
  * Note: You can combine flags i.e. 'gulp --prod --build'
-*/
+ */
 
 import runSequence from 'run-sequence'
 
@@ -18,7 +18,7 @@ import runSequence from 'run-sequence'
 
 /**
  * Default task
-*/
+ */
 gulp.task('default', (cb) => {
 
   // Log build mode setting
@@ -32,13 +32,13 @@ gulp.task('default', (cb) => {
     > If the '--build' flag is passed, all files will output to a '.tmp' dir.
     > The original 'public' dir will not be deleted until all files are processed.
     > After all tasks finish, contents of the '.tmp' dir will be copied over to the 'public' dir.
-  */
+   */
   if (buildOnlyMode) {
     Logger.notice('Build-only mode. File watching is disabled.')
 
     /**
         Override 'public' dir build folder to '.tmp' for build process compilation.
-    */
+     */
     const rootReplace = config.buildDir.app.root
     config.oldBuildDir = {}
     for (let folder in config.buildDir.app) {

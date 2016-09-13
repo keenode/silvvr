@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Cachebust CSS URLs
  * 'gulp cachebust-css-urls'
-*/
+ */
 
 import gutil from 'gulp-util'
 import cssnano from 'gulp-cssnano'

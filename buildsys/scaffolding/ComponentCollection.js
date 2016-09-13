@@ -2,7 +2,7 @@
  * buildsys/scaffolding/ComponentCollection
  * Component collection operations class.
  * @author Keenan Staffieri
-*/
+ */
 
 import components from '../data/components'
 

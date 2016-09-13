@@ -2,7 +2,7 @@
  * buildsys/compiler/StyleCompiler
  * Run SASS preprocessing and distribute.
  * @author Keenan Staffieri
-*/
+ */
 
 import sass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'

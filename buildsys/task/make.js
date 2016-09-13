@@ -5,7 +5,7 @@
  * TASK: Make
  * 'gulp make:page --ref <page-ref> [--name <Page Name> --dir <path/to/page> --author <Author Name> --noscript]'
  * 'gulp make:component --ref <component-ref> [--name <component Name> --dir <path/to/component> --author <Author Name> --noscript]'
-*/
+ */
 
 import PageGenerator from '../scaffolding/PageGenerator'
 import ComponentGenerator from '../scaffolding/ComponentGenerator'
@@ -16,7 +16,7 @@ const argv = require('yargs').argv
 /**
   $ gulp make
   > Make command (no params)
-*/
+ */
 gulp.task('make', (cb) => {
   if (argv.help) {
     Logger.help(`
@@ -37,7 +37,7 @@ You can easily scaffold boilerplate files for 'pages' and 'components' with thes
 /**
   $ gulp make:page
   > Make page scaffolding handler.
-*/
+ */
 gulp.task('make:page', (cb) => {
 
   if (argv.help) {
@@ -97,7 +97,7 @@ gulp.task('make:page', (cb) => {
 /**
   $ gulp make:component
   > Make component scaffolding handler.
-*/
+ */
 gulp.task('make:component', (cb) => {
 
   if (argv.help) {

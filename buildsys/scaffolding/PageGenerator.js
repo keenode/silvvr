@@ -2,7 +2,7 @@
  * buildsys/scaffolding/PageGenerator
  * Scaffold files for new pages.
  * @author Keenan Staffieri
-*/
+ */
 
 import fs from 'fs'
 import del from 'del'

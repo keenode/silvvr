@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Templating
  * 'gulp templating'
-*/
+ */
 
 import runSequence from 'run-sequence'
 import foreach from 'gulp-foreach'
@@ -17,7 +17,7 @@ import TemplateCompiler from '../compiler/TemplateCompiler'
   $ gulp templating
   > Process .html files with Swig templating system.
   > Set up JavaScript bundles and minify .html files.
-*/
+ */
 gulp.task('templating', (cb) => {
   Logger.task('RUNNING TASK : templating')
   runSequence(

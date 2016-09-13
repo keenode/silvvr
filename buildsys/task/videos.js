@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Videos
  * 'gulp videos'
-*/
+ */
 
 /* $ gulp videos */
 gulp.task('videos', function () {

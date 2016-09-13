@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Rootfiles
  * 'gulp rootfiles'
-*/
+ */
 
 /* $ gulp rootfiles */
 gulp.task('rootfiles', function () {

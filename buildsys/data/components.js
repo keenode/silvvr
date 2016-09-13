@@ -2,7 +2,7 @@
  * buildsys/data/components
  * Build property data for each component.
  * @author Keenan Staffieri
-*/
+ */
 
 export default [
 {

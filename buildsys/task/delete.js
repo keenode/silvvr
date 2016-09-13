@@ -5,7 +5,7 @@
  * TASK: Make
  * 'gulp delete:page --ref <page-ref>'
  * 'gulp delete:component --ref <component-ref>'
-*/
+ */
 
 import PageGenerator from '../scaffolding/PageGenerator'
 import ComponentGenerator from '../scaffolding/ComponentGenerator'
@@ -16,7 +16,7 @@ const argv = require('yargs').argv
 /**
   $ gulp delete
   > Delete scaffolded files command handler.
-*/
+ */
 gulp.task('delete', (cb) => {
   if (argv.help) {
     Logger.help(`

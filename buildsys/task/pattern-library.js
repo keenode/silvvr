@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Pattern Library
  * 'gulp pattern-library'
-*/
+ */
 
 /* $ gulp pattern-library */
 gulp.task('pattern-library', function () {

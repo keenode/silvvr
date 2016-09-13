@@ -2,7 +2,7 @@
  * buildsys/classes/PageDependenciesHandler
  * Write scripts and bundles.
  * @author Keenan Staffieri
-*/
+ */
 
 import fs from 'fs'
 import Helpers from '../util/Helpers'
@@ -20,14 +20,14 @@ class PageDependenciesHandler {
 
     /**
       Find page name
-    */
+     */
     let pageName = /{#\s*Page:\s(.*)\s/i.exec(file.contents)
     if (pageName !== null) {
       pageName = pageName[1]
 
       /**
         Find page reference name
-      */
+       */
       let pageRef = /{#\s*.*\s*.*\s*Reference:\s(.*?)\s/i.exec(file.contents)
       if (pageRef !== null) {
         pageRef = pageRef[1]
@@ -38,7 +38,7 @@ class PageDependenciesHandler {
 
         /**
           Find component names
-        */
+         */
         const componentMatches = file.contents.toString().match(/{#\s*Component\:\s*(.*?)\s*#}/ig)
         let componentNames = []
 
@@ -94,7 +94,7 @@ class PageDependenciesHandler {
 
     /**
       Now read / write required component SASS imports
-    */
+     */
     fs.readFile(pageDependsFilePath, 'utf8', function (err, data) {
 
       if (err) return Logger.error(err)

@@ -2,7 +2,7 @@
  * buildsys/compiler/ScriptCompiler
  * Transpiling scripts with Babel and distribute.
  * @author Keenan Staffieri
-*/
+ */
 
 import babel from 'gulp-babel'
 import concat from 'gulp-concat'
@@ -26,7 +26,7 @@ class ScriptCompiler {
 
     /**
       Actually perform various transformations on the file(s).
-    */
+     */
     return gulp.src(globList)
       .pipe(plumber({
         errorHandler: function (err) {

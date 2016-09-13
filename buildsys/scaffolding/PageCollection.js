@@ -2,7 +2,7 @@
  * buildsys/scaffolding/PageCollection
  * Page collection operations class.
  * @author Keenan Staffieri
-*/
+ */
 
 import pages from '../data/pages'
 

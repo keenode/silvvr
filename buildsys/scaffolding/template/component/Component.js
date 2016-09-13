@@ -2,7 +2,7 @@
  * app/script/component<%= COMPONENT_DIRPATH =%>/<%= COMPONENT_SCRIPTNAME =%>
  * <%= COMPONENT_NAME =%> component script.
  * @author <%= AUTHOR =%>
-*/
+ */
 
 class <%= COMPONENT_SCRIPTNAME =%> extends Component {
   constructor (selectorQuery) {

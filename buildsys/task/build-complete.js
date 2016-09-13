@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Build Complete
  * 'gulp build-complete'
-*/
+ */
 
 import del from 'del'
 import runSequence from 'run-sequence'
@@ -12,7 +12,7 @@ import runSequence from 'run-sequence'
 /**
   $ gulp build-complete
   > Copies files from '.tmp' into 'public'.
-*/
+ */
 gulp.task('build-complete', (cb) => {
   Logger.task('RUNNING TASK : build-complete')
   runSequence(

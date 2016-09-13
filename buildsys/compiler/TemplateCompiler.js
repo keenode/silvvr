@@ -2,7 +2,7 @@
  * buildsys/compiler/TemplateCompiler
  * Compile Nunjucks (.njk) templates and distribute.
  * @author Keenan Staffieri
-*/
+ */
 
 import gnunjucks from 'gulp-nunjucks'
 import nunjucks from 'nunjucks'
@@ -24,7 +24,7 @@ class TemplateCompiler {
 
     /**
       Compile Nunjucks template file and output to destPath.
-    */
+     */
     return gulp.src(templateFilePath)
       .pipe(gnunjucks.compile({}, {
         env: new nunjucks.Environment(

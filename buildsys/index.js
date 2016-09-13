@@ -2,7 +2,7 @@
  * buildsys/index
  * Index of buildsys. Handles autoloading of all tasks and setting up environment.
  * @author Keenan Staffieri
-*/
+ */
 
 import gulp from 'gulp'
 import fs from 'fs'
@@ -16,20 +16,20 @@ const argv = require('yargs').argv
 
 /**
   Set build environment (dev, stage, or prod)
-*/
+ */
 var env = 'dev'
 if      (argv.stage) { env = 'stage' }
 else if (argv.prod)  { env = 'prod'  }
 
 /**
   Build-only mode?
-*/
+ */
 var buildOnlyMode = false
 if (argv.build) { buildOnlyMode = true }
 
 /**
   Globals
-*/
+ */
 
 // Make environment globally accessible
 global.env = env
@@ -48,7 +48,7 @@ global.buildOnlyMode = buildOnlyMode
 
 /**
   Startup Banner log
-*/
+ */
 Logger.banner('S I L V V R  Started')
 Logger.header(`${pkg.name} @version ${pkg.version}`)
 Logger.header(`By ${pkg.author.name} <${pkg.author.url}>`)
@@ -56,7 +56,7 @@ Logger.header(`By ${pkg.author.name} <${pkg.author.url}>`)
 /**
   Set cachebusting unique hash value if enabled
   for current build environment
-*/
+ */
 global.CACHEBUST_HASH = false
 if (config.env[env].cachebustAssets) {
   let currentDate = (new Date()).valueOf().toString()
@@ -66,7 +66,7 @@ if (config.env[env].cachebustAssets) {
 
 /**
   Require all gulp tasks
-*/
+ */
 Logger.notice('Autoloading tasks...')
 const tasks = fs.readdirSync('./buildsys/task/')
 tasks.forEach(function (task) {
@@ -78,5 +78,5 @@ tasks.forEach(function (task) {
 
 /**
   Require gulp commands
-*/
+ */
 require('./commands')

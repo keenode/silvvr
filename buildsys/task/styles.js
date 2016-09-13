@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Styles
  * 'gulp styles'
-*/
+ */
 
 import runSequence from 'run-sequence'
 import StyleCompiler from '../compiler/StyleCompiler'
@@ -12,7 +12,7 @@ import StyleCompiler from '../compiler/StyleCompiler'
 /**
   $ gulp styles
   > Preprocess styles for application and styleguide.
-*/
+ */
 gulp.task('styles', (cb) => {
   Logger.task('RUNNING TASK : styles')
   runSequence(

@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Favicons
  * 'gulp favicons'
-*/
+ */
 
 import fs from 'fs'
 import runSequence from 'run-sequence'

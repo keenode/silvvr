@@ -2,13 +2,13 @@
  * buildsys/util/Helpers
  * Helper utility functions.
  * @author Keenan Staffieri
-*/
+ */
 
 class Helpers {
 
   /**
     Format string: Uppercase letters between spaces and dashes '-'
-  */
+   */
   static ucBetweenDashSpace (text) {
     return text.replace(/\w\S*/g, function (text) {
       if (text.indexOf('-') !== -1) {
@@ -28,7 +28,7 @@ class Helpers {
   /**
     Format Filename: Ensure that filenames for JavaScript files obey the format
     MyComponent.js instead of my-component.js
-  */
+   */
   static makeScriptName (text) {
     if (text.indexOf('-') !== -1) {
       let formattedText = ''
@@ -46,7 +46,7 @@ class Helpers {
   /**
     @param array - Array of items
     @return Array with duplicate items removed
-  */
+   */
   static uniqueItemsOnly (array) {
     let a = []
     for (let i = 0; i < array.length; i++ ) {

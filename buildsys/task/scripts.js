@@ -4,7 +4,7 @@
  * ------------------------------------
  * TASK: Scripts
  * 'gulp scripts'
-*/
+ */
 
 import runSequence from 'run-sequence'
 import ScriptCompiler from '../compiler/ScriptCompiler'
@@ -12,7 +12,7 @@ import ScriptCompiler from '../compiler/ScriptCompiler'
 /**
   $ gulp scripts
   > Compile scripts for application and styleguide.
-*/
+ */
 gulp.task('scripts', (cb) => {
   Logger.task('RUNNING TASK : scripts')
   runSequence(
