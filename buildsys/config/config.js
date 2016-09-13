@@ -42,7 +42,7 @@ export default {
         css.sourcemaps: (true) Generate CSS sourcemaps for easier debugging.
         js.bundle:      (true) Enable bundled JS files.
         js.uglify:      (true) Minify JS.
-        js.stripDebug:  (true) Remove console.log and alerts from all JS.
+        js.stripDebug:  (true) Remove console.log and alerts from all JS (only strips if uglify is set to true).
         js.sourcemaps:  (true) Generate JS sourcemaps for easier debugging.
         cachebustAssets: Append hash to asset urls for cache busting.
       }

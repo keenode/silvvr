@@ -7,7 +7,6 @@
 import babel from 'gulp-babel'
 import concat from 'gulp-concat'
 import uglify from 'gulp-uglify'
-import stripDebug from 'gulp-strip-debug'
 import sourcemaps from 'gulp-sourcemaps'
 import browserSync from 'browser-sync'
 import gutil from 'gulp-util'
@@ -39,8 +38,7 @@ class ScriptCompiler {
       .pipe(useSourcemaps ? sourcemaps.init() : gutil.noop())
       .pipe( ! bundleScriptName ? babel({ ignore: config.srcDir.app.scripts + '/vendor/*' }) : gutil.noop())
       .pipe(bundleScriptName ? concat(bundleScriptName + '.js') : gutil.noop())
-      .pipe(canStripDebug ? stripDebug() : gutil.noop())
-      .pipe(canUglify ? uglify({ compress: { drop_console: true } }) : gutil.noop())
+      .pipe(canUglify ? uglify({ compress: { drop_console: canStripDebug } }) : gutil.noop())
       .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
       .pipe(gulp.dest(destPath))
       .on('end', function () { return Logger.taskComplete('FINISHED TASK : scripts' + taskName) })
