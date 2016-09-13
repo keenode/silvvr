@@ -1,16 +1,7 @@
 /**
  * app/scss/partial/header/_include
- * Header partial styles.
+ * Header includes.
  * @author Keenan Staffieri
  */
 
-.header {
-  &__container {
-    @extend %outer-container;
-  }
-
-  &__title {
-    margin: 50px 0 40px;
-    text-align: center;
-  }
-}
+@import 'header';

@@ -1,18 +1,7 @@
 /**
  * app/scss/partial/footer/_include
- * Footer partial styles.
+ * Footer includes.
  * @author Keenan Staffieri
  */
 
-.footer {
-  padding: 50px 0;
-
-  &__container {
-    @extend %outer-container;
-  }
-
-  &__copyright {
-    display: block;
-    text-align: center;
-  }
-}
+@import 'footer';
