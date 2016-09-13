@@ -14,7 +14,7 @@ import apiUrls from '../config/api-urls'
 
 class TemplateCompiler {
 
-  static compileTemplate (templateFilePath, destPath, taskName='') {
+  static compileTemplate (templateFilePath, destPath, taskName='', cb) {
 
     if (taskName !== '') taskName = ':' + taskName
 
@@ -38,6 +38,7 @@ class TemplateCompiler {
       }) : gutil.noop())
       .pipe(gulp.dest(destPath))
       .on('end', function () {
+        cb()
         return Logger.taskComplete('FINISHED TASK : templating' + taskName)
       })
   }

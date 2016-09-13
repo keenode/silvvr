@@ -42,12 +42,15 @@ gulp.task('templating:app', function () {
       PageDependenciesHandler.computeDependencies(stream, file)
 
       // Compile the Nunjucks template into HTML
-      TemplateCompiler.compileTemplate(
+      return TemplateCompiler.compileTemplate(
         file.path,
         config.buildDir.app.root,
-        'app'
+        'app',
+        function () {
+          return stream
+        }
       )
-      return stream
+      // return stream
     }))
 })
 
