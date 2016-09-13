@@ -21,7 +21,7 @@ Automate your web development process with ease! When changes are made to your c
 * Compile **Nunjucks** templates.
 
 ## Requirements
-**NodeJS 6.3 or greater is recommended** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
+**NodeJS 6.5 or greater is recommended** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
 
 ## Install
 To install **silvvr**, simply clone this repo and create your own repo instance. 
