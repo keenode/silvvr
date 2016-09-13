@@ -6,7 +6,7 @@
   Frontend Gulp build system and boilerplate.
   @author Keenan Staffieri <http://keenanstaffieri.com>
   Twitter: @keenode
-*/
+ */
 
 // Application root directory
 global.APP_ROOT = __dirname
