@@ -4,8 +4,6 @@
   @author Keenan Staffieri
  */
 
-'use strict';
-
 import Router from 'koa-router'
 
 const router = new Router()
