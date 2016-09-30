@@ -1,13 +1,17 @@
 /**
-  api/api.js
+  api/app.js
   API Server.
   @author Keenan Staffieri
+  Helpful Koa 2 API boilerplate reference: https://github.com/superalsrk/koa2-boilerplate
  */
 
-const Koa = require('koa')
+'use strict';
+
+// const Koa = require('koa')
+import Koa from 'koa'
+import routes from './routes'
+
 const app = new Koa()
-const router = require('koa-router')()
-// const serve = require('koa-static')
 
 const API_PORT = 9000
 
@@ -36,25 +40,8 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}`)
 })
 
-// Routes
-
-// router.get('/admin', async (ctx, next) => {
-//   // await ctx.render('index')
-//   // await ctx.render('./public/admin/index.html')
-// })
-
-router.get('/test', (ctx, next) => {
-  ctx.body = 'Test Page'
-})
-
-router.get('/api', (ctx, next) => {
-  ctx.body = 'Welcome to the Silvvr API.'
-})
-
 // Use router middleware
-app
-  .use(router.routes())
-  .use(router.allowedMethods())
+app.use(routes())
 
 // Start API server
 app.listen(API_PORT, function () {

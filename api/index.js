@@ -13,4 +13,4 @@ require('babel-core/register')
 require('babel-polyfill')
 
 // Require the rest of the API that needs to be transpiled after the hook
-require('./api')
+require('./app')
