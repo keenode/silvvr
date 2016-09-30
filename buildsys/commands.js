@@ -1,5 +1,5 @@
 /**
- * commands.js
+ * buildsys/commands.js
  * Silvvr gulp task series commands are defined here.
  * ------------------------------------------------------------------------------------------------
  * 'gulp'         - Runs a series of tasks for building the app. The following flags can be passed:
@@ -67,6 +67,7 @@ gulp.task('default', (cb) => {
     'serve',
     'watch',
     'build-complete',
+    'api-server',
   function () {
     if( ! buildOnlyMode) {
       Logger.notice('Watching files for changes...')

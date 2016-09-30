@@ -10,6 +10,7 @@
   "homepage": "https://github.com/keezoid/silvvr",
   "scripts": {
     "dev": "gulp",
+    "stage": "gulp --stage",
     "prod": "gulp --prod",
     "build": "gulp --prod --build"
   },
@@ -49,6 +50,7 @@
     "gulp-foreach": "0.1.0",
     "gulp-if": "2.0.1",
     "gulp-modify-css-urls": "0.2.2",
+    "gulp-nodemon": "^2.2.1",
     "gulp-nunjucks": "2.2.0",
     "gulp-plumber": "1.1.0",
     "gulp-rename": "1.2.2",
@@ -59,13 +61,18 @@
     "gulp-useref": "3.1.2",
     "gulp-util": "3.0.7",
     "gulp-watch": "4.3.9",
+    "nodemon": "^1.10.2",
     "run-sequence": "1.2.2",
     "yargs": "5.0.0"
   },
   "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-stage-3": "^6.16.0",
     "bourbon": "4.2.7",
     "bourbon-neat": "1.8.0",
     "jquery": "3.1.0",
+    "koa": "^2.0.0-alpha.7",
+    "koa-router": "^7.0.1",
     "normalize.css": "4.2.0"
   }
 }
