@@ -2,20 +2,19 @@
   api/app.js
   API Server.
   @author Keenan Staffieri
-  Helpful Koa 2 API boilerplate reference: https://github.com/superalsrk/koa2-boilerplate
+  -- Helpful Koa 2 API boilerplate reference: https://github.com/superalsrk/koa2-boilerplate
  */
 
 'use strict';
 
 import Koa from 'koa'
+import baseconfig from './config/base'
+import config from './config/config'
 import routes from './routes'
 
 const app = new Koa()
 
-const API_PORT = 9000
-
-app.name = 'Silvvr Application'
-app.env = 'dev'
+baseconfig(app)
 
 // x-response-time
 app.use(async (ctx, next) => {
@@ -37,6 +36,6 @@ app.use(async (ctx, next) => {
 app.use(routes())
 
 // Start API server
-app.listen(API_PORT, function () {
-  console.log('API server listening on port ' + API_PORT)
+app.listen(config.app.port, function () {
+  console.log(app.name + ' listening on port ' + config.app.port)
 })
