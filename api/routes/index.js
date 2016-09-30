@@ -17,11 +17,11 @@ router.get('/', async (ctx, next) => {
   ctx.body = 'Welcome to Silvvr API server.'
 })
 
+router.use('/api', RouterAPI.routes(), RouterAPI.allowedMethods())
+
 router.get('*', async (ctx, next) => {
   ctx.body = { status : 404 }
 })
-
-router.use('/api',  RouterAPI.routes(), RouterAPI.allowedMethods())
 
 export default function routes() {
   return compose(

@@ -7,7 +7,6 @@
 
 'use strict';
 
-// const Koa = require('koa')
 import Koa from 'koa'
 import routes from './routes'
 
@@ -17,12 +16,6 @@ const API_PORT = 9000
 
 app.name = 'Silvvr Application'
 app.env = 'dev'
-
-// Serve static 'public' directory
-// app.use(serve(APP_ROOT + '/public'))
-
-// Servce static 'node_modules' directory (development mode only)
-// app.use(serve(APP_ROOT + '/node_modules'))
 
 // x-response-time
 app.use(async (ctx, next) => {
