@@ -1,0 +1,35 @@
+/**
+ * admin/scss/base-style/control/checkbox
+ * Form checkbox styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Checkbox -------------------------------------------
+%checkbox {
+  margin: 10px 0;
+
+  &.checkbox--disabled {
+    color: color('gray-s2');
+
+    input { opacity: 0.75; }
+    label { cursor: not-allowed; }
+  }
+
+  input { margin: 0 5px 0 0; }
+}
+
+// --- Inline Checkbox ------------------------------------
+%checkbox-inline {
+  margin-right: 20px;
+
+  &:last-child { margin-right: 0; }
+
+  &.checkbox--disabled {
+    color: color('gray-s2');
+    cursor: not-allowed;
+
+    input { opacity: 0.75; }
+  }
+}

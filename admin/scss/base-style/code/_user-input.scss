@@ -1,0 +1,28 @@
+/**
+ * admin/scss/base-style/code/user-input
+ * User input styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- User Input -----------------------------------------
+%user-input {
+  padding: 6px 8px 4px;
+  margin: 0 3px;
+  color: color('gray-s1');
+  font-family: $fontFamily--code;
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid color('misty-s1');
+  border-radius: 6px;
+
+  @include media ($small-up) {
+    font-size: 16px;
+  }
+
+  kbd {
+    padding: 0;
+    border: 0;
+  }
+}

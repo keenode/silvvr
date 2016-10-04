@@ -1,0 +1,160 @@
+/**
+ * admin/scss/base-style/base-extends
+ * Base extended elements.
+ * @author Keenan Staffieri
+ */
+
+/* -------------------------------------------------------- */
+/* --- BRANDING ------------------------------------------- */
+/* -------------------------------------------------------- */
+
+// --- Logo -----------------------------------------------
+.logo           { @extend %logo; }
+.logo--inverted { @extend %logo--inverted; }
+.logo--small    { @extend %logo--small; }
+
+/* -------------------------------------------------------- */
+/* --- TYPOGRAPHY ----------------------------------------- */
+/* -------------------------------------------------------- */
+
+// --- Heading --------------------------------------------
+h1 { @extend %heading-1; }
+h2 { @extend %heading-2; }
+h3 { @extend %heading-3; }
+h4 { @extend %heading-4; }
+h5 { @extend %heading-5; }
+h6 { @extend %heading-6; }
+
+// --- Body Copy ------------------------------------------
+p      { @extend %body-copy; }
+p.lead { @extend %lead-body-copy; }
+
+// --- Inline Text Elements -------------------------------
+mark        { @extend %marked-text; }
+del         { @extend %deleted-text; }
+s           { @extend %strikethrough-text !optional; }
+ins         { @extend %inserted-text; }
+u           { @extend %underlined-text !optional; }
+small       { @extend %small-text; }
+b, strong   { @extend %bold-text !optional; }
+i, em       { @extend %italic-text !optional; }
+abbr[title] { @extend %abbreviated-text; }
+cite        { @extend %cited-text !optional; }
+
+// --- Address --------------------------------------------
+address { @extend %address; }
+
+// --- Blockquote -----------------------------------------
+blockquote { @extend %blockquote; }
+
+// --- Link -----------------------------------------------
+a { @extend %inline-link; }
+
+/* -------------------------------------------------------- */
+/* --- LISTS ---------------------------------------------- */
+/* -------------------------------------------------------- */
+
+// --- List -----------------------------------------------
+ul               { @extend %list-unordered; }
+ul.list-unstyled { @extend %list-unstyled; }
+ul.list-inline   { @extend %list-inline; }
+ol               { @extend %list-ordered; }
+ul.list-condensed,
+ol.list-condensed {
+  @extend %list-condensed;
+}
+
+// --- Description ----------------------------------------
+dl               { @extend %description-list; }
+dl.dl-horizontal { @extend %description-list-horizontal; }
+
+/* -------------------------------------------------------- */
+/* --- DIVIDERS ------------------------------------------- */
+/* -------------------------------------------------------- */
+
+// --- Default --------------------------------------------
+hr { @extend %divider; }
+
+/* -------------------------------------------------------- */
+/* --- BUTTONS -------------------------------------------- */
+/* -------------------------------------------------------- */
+
+// --- Default --------------------------------------------
+.btn { @extend %btn; }
+
+// --- Large ----------------------------------------------
+.btn--large { @extend %btn-large; }
+
+// --- Secondary ------------------------------------------
+.btn--secondary { @extend %btn-secondary; }
+
+/* -------------------------------------------------------- */
+/* --- CODE ----------------------------------------------- */
+/* -------------------------------------------------------- */
+
+// --- Inline ---------------------------------------------
+code          { @extend %code-inline; }
+code.no-style { @extend %code-nostyle !optional; }
+
+// --- User Input -----------------------------------------
+kbd { @extend %user-input; }
+
+// --- Block ----------------------------------------------
+pre { @extend %code-block; }
+
+// --- Variable -------------------------------------------
+var { @extend %variable !optional; }
+
+// --- Sample Output --------------------------------------
+samp { @extend %sample-output; }
+
+/* -------------------------------------------------------- */
+/* --- TABLE ---------------------------------------------- */
+/* -------------------------------------------------------- */
+
+// --- Basic ----------------------------------------------
+table.table { @extend %table; }
+
+// --- Striped --------------------------------------------
+table.table--striped { @extend %table-striped; }
+
+// --- Bordered -------------------------------------------
+table.table--bordered { @extend %table-bordered; }
+
+// --- Hover ----------------------------------------------
+table.table--hover { @extend %table-hover; }
+
+// --- Condensed ------------------------------------------
+table.table--condensed { @extend %table-condensed; }
+
+/* -------------------------------------------------------- */
+/* --- CONTROLS ------------------------------------------- */
+/* -------------------------------------------------------- */
+
+// --- All Inputs -----------------------------------------
+input { @extend %input; }
+
+// --- Text Input -----------------------------------------
+input[type='text'],
+input[type='password'] { @extend %input-text; }
+
+// --- Number Input ---------------------------------------
+input[type='number'] { @extend %input-number; }
+
+// --- Textarea -------------------------------------------
+textarea { @extend %textarea; }
+
+// --- Label ----------------------------------------------
+label { @extend %label; }
+
+// --- Checkbox -------------------------------------------
+.checkbox { @extend %checkbox; }
+.checkbox--inline { @extend %checkbox-inline; }
+
+// --- Radio ----------------------------------------------
+.radio { @extend %radio; }
+.radio--inline { @extend %radio-inline; }
+
+// --- Select ---------------------------------------------
+.select { @extend %select; }
+select[multiple].select { @extend %select-multiple; }

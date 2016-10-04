@@ -1,0 +1,65 @@
+/**
+ * admin/scss/base-style/list/description
+ * Description styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Description List -----------------------------------
+%description-list {
+  dt {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+
+    @include media ($small-up) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  dd {
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include media ($small-up) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+// --- Horizontal Description List ------------------------
+%description-list-horizontal {
+  dt {
+    float: left;
+    clear: left;
+    width: 180px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;;
+    overflow: hidden;
+
+    @include media ($small-up) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  dd {
+    margin-left: 200px;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include media ($small-up) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

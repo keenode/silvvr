@@ -1,0 +1,16 @@
+/**
+ * admin/scss/base-style/table/condensed
+ * Condensed table styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Condensed Table ------------------------------------
+%table-condensed {
+  th,
+  td {
+    padding: 5px 7px 3px 7px;
+    font-size: 75%;
+  }
+}

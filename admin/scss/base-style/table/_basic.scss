@@ -1,0 +1,40 @@
+/**
+ * admin/scss/base-style/table/basic
+ * Basic table styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Basic Table ----------------------------------------
+%table {
+  margin: 10px 0 20px;
+  width: 100%;
+  border-spacing: 0;
+
+  caption {
+    margin-bottom: 5px;
+    color: color('gray-s1');
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 9px 12px 7px 12px;
+    text-align: left;
+  }
+
+  thead tr th {
+    border-bottom: 2px solid color('misty-s1');
+  }
+
+  tbody tr td,
+  tbody tr th {
+    border-bottom: 1px solid color('misty-s1');
+  }
+
+  tbody tr:last-child td,
+  tbody tr:last-child th {
+    border-bottom: none;
+  }
+}

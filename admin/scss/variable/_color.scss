@@ -1,0 +1,30 @@
+/**
+ * admin/scss/variable/color
+ * Theme colors.
+ * @author Keenan Staffieri
+ */
+
+/* --- colors map --- */
+$colors: (
+  // Black
+  'black-s1': #2B2B2B,
+  'black-s2': #3F3F3F,
+  // Gray
+  'gray-s1': #6C6C6C,
+  'gray-s2': #B2B2B2,
+  // Blue
+  'blue-s1': #2B4C60,
+  'blue-s2': #38627C,
+  // Aqua
+  'aqua-s1': #258EA6,
+  'aqua-s2': #2BAAC6,
+  // Misty
+  'misty-s1': #DEE0E2,
+  'misty-s2': #EFF1F3,
+);
+
+/* --- background color --- */
+$pageBgColor: color('misty-s1');
+
+/* --- font colors --- */
+$fontColor--base: #3a3a3a;

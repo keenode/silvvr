@@ -1,0 +1,31 @@
+/**
+ * admin/scss/base-style/typography/body-copy
+ * Body copy styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Body Copy ------------------------------------------
+%body-copy {
+  margin: 5px 0 20px;
+  font-size: 16px;
+  line-height: 28px;
+
+  @include media ($small-up) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+// --- Lead Body Copy -------------------------------------
+%lead-body-copy {
+  margin: 7px 0 22px;
+  font-size: 18px;
+  line-height: 32px;
+
+  @include media ($small-up) {
+    font-size: 20px;
+    line-height: 36px;
+  }
+}

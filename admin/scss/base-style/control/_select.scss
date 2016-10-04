@@ -1,0 +1,36 @@
+/**
+ * admin/scss/base-style/control/select
+ * Form select styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Select ---------------------------------------------
+%select {
+  margin: 5px 0;
+  @include size(100% 35px);
+  width: 100%;
+  background-color: color('misty-s2');
+  border: 1px solid color('misty-s1');
+  border-radius: 0;
+
+  @include media ($small-up) {
+    width: 300px;
+    max-width: 100%;
+  }
+}
+
+// --- Multiple Select ------------------------------------
+%select-multiple {
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+
+  @include media ($small-up) {
+    width: 300px;
+    max-width: 100%;
+  }
+
+  option { padding: 5px; }
+}

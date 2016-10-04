@@ -1,0 +1,31 @@
+/**
+ * admin/scss/base-style/branding/logo
+ * Logo styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Logo -----------------------------------------------
+%logo {
+  display: inline-block;
+  margin: 10px;
+  @include size(240px);
+  text-indent: -9999px;
+  background: url('../asset/svg/silvvr-logo/svr-logo-full-darkbg.svg') no-repeat;
+}
+
+// --- Inverted Logo --------------------------------------
+%logo--inverted {
+  background: url('../asset/svg/silvvr-logo/svr-logo-full-lightbg.svg') no-repeat;
+}
+
+// --- Small Logo -----------------------------------------
+%logo--small {
+  @include size(120px);
+  background: url('../asset/svg/silvvr-logo/svr-logo-full-darkbg--small.svg') no-repeat;
+
+  &.logo--inverted {
+    background: url('../asset/svg/silvvr-logo/svr-logo-full-lightbg--small.svg') no-repeat;
+  }
+}

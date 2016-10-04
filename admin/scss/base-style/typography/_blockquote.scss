@@ -1,0 +1,43 @@
+/**
+ * admin/scss/base-style/typography/blockquote
+ * Blockquote styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Blockquote -----------------------------------------
+%blockquote {
+  margin: 10px 0 20px;
+  padding: 20px 0 20px 40px;
+  border-left: 8px solid color('blue-s2');
+
+  @include media ($small-up) {
+    border-size: 10px;
+  }
+
+  p {
+    margin: 0;
+    font-style: italic;
+
+    &:before,
+    &:after {
+      padding: 3px;
+      color: color('gray-s2');
+      font-family: Arial, sans-serif;
+      font-size: 150%;
+    }
+
+    &:before { content: '\201C'; }
+    &:after { content: '\201D'; }
+  }
+
+  footer {
+    color: color('gray-s2');
+    margin-top: 5px;
+
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}

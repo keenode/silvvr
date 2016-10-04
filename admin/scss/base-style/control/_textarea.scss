@@ -1,0 +1,18 @@
+/**
+ * admin/scss/base-style/control/textarea
+ * Form textarea styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Textarea -------------------------------------------
+%textarea {
+  @extend %input;
+  width: 100%;
+
+  @include media ($small-up) {
+    width: 600px;
+    max-width: 100%;
+  }
+}

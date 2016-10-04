@@ -1,0 +1,16 @@
+/**
+ * admin/scss/base-style/control/label
+ * Form label styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Label ----------------------------------------------
+%label {
+  font-size: 14px;
+
+  @include media ($small-up) {
+    font-size: 16px;
+  }
+}

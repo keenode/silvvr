@@ -1,0 +1,14 @@
+/**
+ * admin/scss/base-style/table/striped
+ * Striped table styles.
+ * @author Keenan Staffieri
+ */
+
+/* --- placeholder selectors ------------------------------ */
+
+// --- Striped Table --------------------------------------
+%table-striped {
+  tr:nth-of-type(even) {
+    background-color: color('misty-s2');
+  }
+}
