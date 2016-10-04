@@ -14,9 +14,7 @@ import apiUrls from '../config/api-urls'
 
 class TemplateCompiler {
 
-  static compileTemplate (templateFilePath, destPath, taskName='', cb) {
-
-    if (taskName !== '') taskName = ':' + taskName
+  static compileTemplate (templateFilePath, destPath, setName, cb) {
 
     // Get build environment settings
     const canMinifyHTML = config.env[env].html.minify
@@ -33,7 +31,7 @@ class TemplateCompiler {
     return gulp.src(templateFilePath)
       .pipe(gnunjucks.compile({}, {
         env: new nunjucks.Environment(
-          new nunjucks.FileSystemLoader('./app/view')
+          new nunjucks.FileSystemLoader(`./${setName}/view`)
         )
       }))
       .pipe(batchReplace(replaceProps))
@@ -44,7 +42,7 @@ class TemplateCompiler {
       .pipe(gulp.dest(destPath))
       .on('end', function () {
         cb()
-        return Logger.taskComplete('FINISHED TASK : templating' + taskName)
+        return Logger.taskComplete('FINISHED TASK : templating:' + setName)
       })
   }
 }

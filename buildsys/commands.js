@@ -54,8 +54,10 @@ gulp.task('default', (cb) => {
     [ // Run these tasks in parallel...
       'styles',
       'scripts',
-      'images',
-      'svgs',
+      'images:app',
+      'images:admin',
+      'svgs:app',
+      'svgs:admin',
       'favicons',
       'fonts',
       'videos',

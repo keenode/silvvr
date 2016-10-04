@@ -142,10 +142,8 @@ export default {
       styles:  SRC_DIRS.ADMIN + '/scss',
       scripts: SRC_DIRS.ADMIN + '/script',
       views:   SRC_DIRS.ADMIN + '/view',
-      fonts:   SRC_DIRS.ADMIN + '/asset/font',
       images:  SRC_DIRS.ADMIN + '/asset/image',
       svgs:    SRC_DIRS.ADMIN + '/asset/svg',
-      videos:  SRC_DIRS.ADMIN + '/asset/video',
     },
   },
 
@@ -169,10 +167,8 @@ export default {
       root:     BUILD_DIRS.ADMIN,
       styles:   BUILD_DIRS.ADMIN + '/css',
       scripts:  BUILD_DIRS.ADMIN + '/js',
-      favicons: BUILD_DIRS.ADMIN + '/asset/favicon',
-      fonts:    BUILD_DIRS.ADMIN + '/asset/font',
       images:   BUILD_DIRS.ADMIN + '/asset/image',
-      videos:   BUILD_DIRS.ADMIN + '/asset/video',
+      svgs:     BUILD_DIRS.ADMIN + '/asset/svg',
     },
   },
 }

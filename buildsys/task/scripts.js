@@ -11,14 +11,14 @@ import ScriptCompiler from '../compiler/ScriptCompiler'
 
 /**
   $ gulp scripts
-  > Compile scripts for application and styleguide.
+  > Compile scripts for application and admin.
  */
 gulp.task('scripts', (cb) => {
   Logger.task('RUNNING TASK : scripts')
   runSequence(
     [
       'scripts:app',
-      // 'scripts:styleguide',
+      'scripts:admin'
     ],
   function () {
     Logger.taskComplete('FINISHED TASK : scripts')
@@ -36,10 +36,10 @@ gulp.task('scripts:app', function () {
 })
 
 /* $ gulp scripts:styleguide */
-// gulp.task('scripts:styleguide', function () {
-//   return ScriptCompiler.compileGlob(
-//     `${config.srcDir.styleguide.scripts}/**/*.js`,
-//     config.buildDir.styleguide.scripts,
-//     'styleguide'
-//   )
-// })
+gulp.task('scripts:admin', function () {
+  return ScriptCompiler.compileGlob(
+    `${config.srcDir.admin.scripts}/**/*.js`,
+    config.buildDir.admin.scripts,
+    'admin'
+  )
+})

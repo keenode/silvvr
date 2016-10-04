@@ -15,7 +15,7 @@ import TemplateCompiler from '../compiler/TemplateCompiler'
 
 /**
   $ gulp templating
-  > Process .html files with Swig templating system.
+  > Process .njk files with Nunjucks templating system.
   > Set up JavaScript bundles and minify .html files.
  */
 gulp.task('templating', (cb) => {
@@ -23,7 +23,7 @@ gulp.task('templating', (cb) => {
   runSequence(
     'templating:app',
     'templating:vendor-scripts',
-    // 'templating:styleguide',
+    'templating:admin',
   function () {
     Logger.taskComplete('FINISHED TASK : templating')
     cb()
@@ -32,27 +32,37 @@ gulp.task('templating', (cb) => {
 
 /* $ gulp templating:app */
 gulp.task('templating:app', function () {
+  return compileTemplateSet('app')
+})
+
+/* $ gulp templating:admin */
+gulp.task('templating:admin', function () {
+  return compileTemplateSet('admin')
+})
+
+function compileTemplateSet (name) {
   return gulp.src([
-      `${config.srcDir.app.root}/index.njk`,
-      `${config.srcDir.app.views}/page/**/*.njk`
+      `${config.srcDir[name].root}/index.njk`,
+      `${config.srcDir[name].views}/page/**/*.njk`
     ])
     .pipe(foreach(function (stream, file) {
 
-      // Compile dependencies for the template
-      PageDependenciesHandler.computeDependencies(stream, file)
+      // Compile dependencies for the template IF app set
+      if (name === 'app') {
+        PageDependenciesHandler.computeDependencies(stream, file)
+      }
 
       // Compile the Nunjucks template into HTML
       return TemplateCompiler.compileTemplate(
         file.path,
-        config.buildDir.app.root,
-        'app',
+        config.buildDir[name].root,
+        name,
         function () {
           return stream
         }
       )
-      // return stream
     }))
-})
+}
 
 /* $ gulp templating:vendor-scripts */
 gulp.task('templating:vendor-scripts', function () {
