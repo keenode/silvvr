@@ -18,7 +18,13 @@ gulp.task('serve', function () {
 
     return browserSync.init({
       server: {
-        baseDir: [config.buildDir.app.root, './node_modules']
+        baseDir: [
+          config.buildDir.app.root,
+          './node_modules'
+        ],
+        routes: {
+          '/admin': config.buildDir.app.root + '/admin'
+        }
       },
       ui: {
         port: config.browserSync.uiPort
