@@ -8,7 +8,6 @@
 
 import runSequence from 'run-sequence'
 import watch from 'gulp-watch'
-import browserSync from 'browser-sync';
 
 /**
   $ gulp watch
@@ -21,7 +20,10 @@ gulp.task('watch', function () {
 
   Logger.task('RUNNING TASK : watch')
 
-  watch(`${config.srcDir.app.root}/*`, {
+  watch([
+      `${config.srcDir.app.root}/*`,
+      `!${config.srcDir.admin.root}/*`
+  ], {
     name: 'Rootfiles Watcher',
     verbose: config.verbose
   }, function () {
@@ -35,50 +37,67 @@ gulp.task('watch', function () {
     gulp.start('styles:app')
   })
 
-  // watch(`${config.srcDir.styleguide.styles}/**/*.{scss,sass}`, {
-  //   name: 'Styleguide Styles Watcher',
-  //   verbose: config.verbose
-  // }, function () {
-  //   gulp.start('styles:styleguide')
-  // })
+  watch(`${config.srcDir.admin.styles}/**/*.{scss,sass}`, {
+    name: 'Admin Styles Watcher',
+    verbose: config.verbose
+  }, function () {
+    gulp.start('styles:admin')
+  })
 
   watch(`${config.srcDir.app.scripts}/**/*.js`, {
     name: 'App Scripts Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('page-scripts-changed')
-  }).on('change', function () {
-    if (config.browserSync.allowReload) {
-      browserSync.reload()
-    }
   })
 
-  // watch(`${config.srcDir.styleguide.scripts}/**/*.js`, {
-  //   name: 'Styleguide Scripts Watcher',
-  //   verbose: config.verbose
-  // }, function () {
-  //   gulp.start('scripts:styleguide')
-  // })
+  watch(`${config.srcDir.admin.scripts}/**/*.js`, {
+    name: 'Admin Scripts Watcher',
+    verbose: config.verbose
+  }, function () {
+    gulp.start('scripts:admin')
+  })
 
   watch(`${config.srcDir.app.root}/**/*.njk`, {
-    name: 'Nunjucks Watcher',
+    name: 'App Nunjucks Watcher',
     verbose: config.verbose
   }, function () {
     gulp.start('template-change')
   })
 
-  watch(`${config.srcDir.app.images}/**/*.{png,jpg,jpeg,gif}`, {
-    name: 'Images Watcher',
+  watch(`${config.srcDir.admin.root}/**/*.njk`, {
+    name: 'Admin Nunjucks Watcher',
     verbose: config.verbose
   }, function () {
-    gulp.start('images')
+    gulp.start('templating:admin')
+  })
+
+  watch(`${config.srcDir.app.images}/**/*.{png,jpg,jpeg,gif}`, {
+    name: 'App Images Watcher',
+    verbose: config.verbose
+  }, function () {
+    gulp.start('images:app')
+  })
+
+  watch(`${config.srcDir.admin.images}/**/*.{png,jpg,jpeg,gif}`, {
+    name: 'Admin Images Watcher',
+    verbose: config.verbose
+  }, function () {
+    gulp.start('images:admin')
   })
 
   watch(`${config.srcDir.app.images}/**/*.svg`, {
-    name: 'SVGs Watcher',
+    name: 'App SVGs Watcher',
     verbose: config.verbose
   }, function () {
-    gulp.start('svgs')
+    gulp.start('svgs:app')
+  })
+
+  watch(`${config.srcDir.admin.images}/**/*.svg`, {
+    name: 'Admin SVGs Watcher',
+    verbose: config.verbose
+  }, function () {
+    gulp.start('svgs:admin')
   })
 
   watch(`${config.srcDir.app.fonts}/**/*`, {
@@ -103,6 +122,10 @@ gulp.task('watch', function () {
   })
 
 })
+
+/**
+  Bundled Watcher Tasks...
+ */
 
 gulp.task('page-scripts-changed', (cb) => {
   return runSequence(

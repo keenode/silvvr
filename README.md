@@ -11,17 +11,17 @@ Automate your web development process with ease! When changes are made to your c
     * By default, *Development* mode will compile your app with unminified JavaScript & CSS (making things easier to debug).
     * By default, *Staging* and *Production* modes will compile your app with minified and bundled JavaScript & CSS (optimized for performance).
 * Build **configuration file** to change development server port numbers, build destinations, and other build options.
-* Starts up a **browsersync server**, so changes are immediately apparent on your browser.
+* Starts up a **browsersync server**.
 * **SASS** w/ **autoprefixer**, and other helpful plugins.
 * **JavaScript bundling and uglify**.
 * **Favicons generator**.
 * Watches all asset folders and automatically copies those files to their corresponding destination folders.
-* Includes **Bourbon and Neat** -- http://bourbon.io/
+* Includes **Bourbon and Neat** -- http://bourbon.io
 * Scaffold pages and components for rapid development.
 * Compile **Nunjucks** templates.
 
 ## Requirements
-**NodeJS 6.5 or greater is recommended** -- http://nodejs.org/ for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh/
+**NodeJS 6.5 or greater is recommended** -- http://nodejs.org for **silvvr** to operate. It is preferable that you install NodeJS via Homebrew -- http://brew.sh
 
 ## Install
 To install **silvvr**, simply clone this repo and create your own repo instance. 

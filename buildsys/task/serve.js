@@ -34,8 +34,7 @@ gulp.task('serve', function () {
       logPrefix: 'Silvvr',
       logFileChanges: config.verbose,
       logConnections: config.verbose,
-      notify: false,
-      injectChanges: true,
+      notify: false
     })
   }
 })

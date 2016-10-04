@@ -25,10 +25,8 @@ export default {
     BrowserSync server settings for development.
    */
   browserSync: {
-    allowReload: true, // Reload the page when file changes are made?
-    injectCSS:   true, // Inject CSS changes after .css files are saved?
-    port:        8000, // Server port I.E. http://localhost:8000
-    uiPort:      8080, // BrowserSync UI port I.E. http://localhost:8080
+    port:   8000, // Server port I.E. http://localhost:8000
+    uiPort: 8080, // BrowserSync UI port I.E. http://localhost:8080
     // Do you want your default browser to launch when starting Silvvr?
     openBrowserOnStartup: false,
   },

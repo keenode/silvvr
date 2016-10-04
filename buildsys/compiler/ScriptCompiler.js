@@ -8,7 +8,6 @@ import babel from 'gulp-babel'
 import concat from 'gulp-concat'
 import uglify from 'gulp-uglify'
 import sourcemaps from 'gulp-sourcemaps'
-import browserSync from 'browser-sync'
 import gutil from 'gulp-util'
 import plumber from 'gulp-plumber'
 

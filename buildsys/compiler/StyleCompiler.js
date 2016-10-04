@@ -7,7 +7,6 @@
 import sass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
 import sourcemaps from 'gulp-sourcemaps'
-import browserSync from 'browser-sync'
 import gutil from 'gulp-util'
 import plumber from 'gulp-plumber'
 
@@ -18,7 +17,7 @@ class StyleCompiler {
   if (taskName !== '') taskName = ':' + taskName
 
   // Get build environment settings
-  var optimizeCSS   = config.env[env].styles.optimize
+  var optimizeCSS = config.env[env].styles.optimize
   var useSourcemaps = config.env[env].styles.sourcemaps
 
   var sassOutputStyle = 'expanded'
@@ -42,7 +41,6 @@ class StyleCompiler {
     }))
     .pipe(useSourcemaps ? sourcemaps.write('sourcemaps') : gutil.noop())
     .pipe(gulp.dest(destPath))
-    .pipe(config.browserSync.injectCSS ? browserSync.stream() : gutil.noop())
     .on('end', function () { return Logger.taskComplete('FINISHED TASK : styles' + taskName) })
   }
 }
