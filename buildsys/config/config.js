@@ -5,12 +5,16 @@
  */
 
 // Application source directory
-const APP_ROOT = './app'
-const STYLEGUIDE_ROOT = './styleguide'
+const SRC_DIRS = {
+  APP: './app',
+  ADMIN: './admin'
+}
 
 // Application build directory
-const APP_BUILD_ROOT = './public'
-const STYLEGUIDE_BUILD_ROOT = './public/styleguide'
+const BUILD_DIRS = {
+  APP: './public',
+  ADMIN: './public/admin'
+}
 
 export default {
 
@@ -116,31 +120,32 @@ export default {
 
     // Application source directory structure (app folder)
     app: {
-      root:                  APP_ROOT,
-      styles:                APP_ROOT + '/scss',
-      pageStyleDependencies: APP_ROOT + '/scss/page/_page-dependencies',
-      scripts:               APP_ROOT + '/script',
-      views:                 APP_ROOT + '/view',
-      components:            APP_ROOT + '/view/component',
-      pages:                 APP_ROOT + '/view/page',
-      favicon:               APP_ROOT + '/asset/favicon.png', // Image file used to generate favicons
-      favicons:              APP_ROOT + '/asset/favicon',
-      fonts:                 APP_ROOT + '/asset/font',
-      images:                APP_ROOT + '/asset/image',
-      svgs:                  APP_ROOT + '/asset/svg',
-      videos:                APP_ROOT + '/asset/video',
-      patternLibrary:        APP_ROOT + '/pattern-library',
+      root:                  SRC_DIRS.APP,
+      styles:                SRC_DIRS.APP + '/scss',
+      pageStyleDependencies: SRC_DIRS.APP + '/scss/page/_page-dependencies',
+      scripts:               SRC_DIRS.APP + '/script',
+      views:                 SRC_DIRS.APP + '/view',
+      components:            SRC_DIRS.APP + '/view/component',
+      pages:                 SRC_DIRS.APP + '/view/page',
+      favicon:               SRC_DIRS.APP + '/asset/favicon.png', // Image file used to generate favicons
+      favicons:              SRC_DIRS.APP + '/asset/favicon',
+      fonts:                 SRC_DIRS.APP + '/asset/font',
+      images:                SRC_DIRS.APP + '/asset/image',
+      svgs:                  SRC_DIRS.APP + '/asset/svg',
+      videos:                SRC_DIRS.APP + '/asset/video',
+      patternLibrary:        SRC_DIRS.APP + '/pattern-library',
     },
 
-    // Styleguide source directory structure (styleguide folder)
-    styleguide: {
-      root:    STYLEGUIDE_ROOT,
-      styles:  STYLEGUIDE_ROOT + '/scss',
-      scripts: STYLEGUIDE_ROOT + '/script',
-      views:   STYLEGUIDE_ROOT + '/view',
-      fonts:   STYLEGUIDE_ROOT + '/asset/font',
-      images:  STYLEGUIDE_ROOT + '/asset/image',
-      videos:  STYLEGUIDE_ROOT + '/asset/video',
+    // Admin source directory structure (admin folder)
+    admin: {
+      root:    SRC_DIRS.ADMIN,
+      styles:  SRC_DIRS.ADMIN + '/scss',
+      scripts: SRC_DIRS.ADMIN + '/script',
+      views:   SRC_DIRS.ADMIN + '/view',
+      fonts:   SRC_DIRS.ADMIN + '/asset/font',
+      images:  SRC_DIRS.ADMIN + '/asset/image',
+      svgs:    SRC_DIRS.ADMIN + '/asset/svg',
+      videos:  SRC_DIRS.ADMIN + '/asset/video',
     },
   },
 
@@ -148,26 +153,26 @@ export default {
 
     // Application build directory structure (public folder)
     app: {
-      root:           APP_BUILD_ROOT,
-      styles:         APP_BUILD_ROOT + '/css',
-      scripts:        APP_BUILD_ROOT + '/js',
-      favicons:       APP_BUILD_ROOT + '/asset/favicon',
-      fonts:          APP_BUILD_ROOT + '/asset/font',
-      images:         APP_BUILD_ROOT + '/asset/image',
-      svgs:           APP_BUILD_ROOT + '/asset/svg',
-      videos:         APP_BUILD_ROOT + '/asset/video',
-      patternLibrary: APP_BUILD_ROOT + '/pattern-library',
+      root:           BUILD_DIRS.APP,
+      styles:         BUILD_DIRS.APP + '/css',
+      scripts:        BUILD_DIRS.APP + '/js',
+      favicons:       BUILD_DIRS.APP + '/asset/favicon',
+      fonts:          BUILD_DIRS.APP + '/asset/font',
+      images:         BUILD_DIRS.APP + '/asset/image',
+      svgs:           BUILD_DIRS.APP + '/asset/svg',
+      videos:         BUILD_DIRS.APP + '/asset/video',
+      patternLibrary: BUILD_DIRS.APP + '/pattern-library',
     },
 
-    // Styleguide build directory structure (public/styleguide folder)
-    styleguide: {
-      root:     STYLEGUIDE_BUILD_ROOT,
-      styles:   STYLEGUIDE_BUILD_ROOT + '/css',
-      scripts:  STYLEGUIDE_BUILD_ROOT + '/js',
-      favicons: STYLEGUIDE_BUILD_ROOT + '/asset/favicon',
-      fonts:    STYLEGUIDE_BUILD_ROOT + '/asset/font',
-      images:   STYLEGUIDE_BUILD_ROOT + '/asset/image',
-      videos:   STYLEGUIDE_BUILD_ROOT + '/asset/video',
+    // admin build directory structure (public/admin folder)
+    admin: {
+      root:     BUILD_DIRS.ADMIN,
+      styles:   BUILD_DIRS.ADMIN + '/css',
+      scripts:  BUILD_DIRS.ADMIN + '/js',
+      favicons: BUILD_DIRS.ADMIN + '/asset/favicon',
+      fonts:    BUILD_DIRS.ADMIN + '/asset/font',
+      images:   BUILD_DIRS.ADMIN + '/asset/image',
+      videos:   BUILD_DIRS.ADMIN + '/asset/video',
     },
   },
 }

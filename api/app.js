@@ -25,7 +25,7 @@ app.use(routes())
 
 // Start API server
 app.listen(config.app.port, function () {
-  console.log(app.name + ' listening on port ' + config.app.port)
+  console.log(config.app.name + ' listening on port ' + config.app.port)
 })
 
 export default app
